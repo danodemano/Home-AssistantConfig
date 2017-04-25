@@ -1,0 +1,275 @@
+  - alias: Turn on lights when sun sets
+    trigger:
+      platform: sun
+      event: sunset
+      offset: "-00:10:00"
+    action:
+      service: switch.turn_on
+      entity_id: group.outdoor_lights
+
+  - alias: Turn off lights when sun rises
+    trigger:
+      platform: sun
+      event: sunrise
+      offset: "+00:10:00"
+    action:
+      service: switch.turn_off
+      entity_id: group.outdoor_lights
+
+  - alias: Turn Norbert on in AM
+    trigger:
+      platform: time
+      after: '07:30:00'
+    action:
+      service: switch.turn_on
+      entity_id: group.norbert
+
+  - alias: Turn Norbert off in PM
+    trigger:
+      platform: time
+      after: '20:30:00'
+    action:
+        - service: switch.turn_off
+          entity_id: group.norbert
+
+  - alias: 'Turn off dining room light when at <50 brightness for set duration'
+    trigger:
+      - platform: template
+        value_template: '{{ (as_timestamp (now()) -as_timestamp (states.light.dining_room_36.last_updated))|float >= 300 and  (states.light.dining_room_36.attributes.brightness | float <= 50) }}'
+    condition:
+      condition: template
+      value_template: '{{ states.light.dining_room_36.attributes.brightness | float <= 50 }}'
+    action:
+      service: switch.turn_off
+      entity_id: light.dining_room_36
+
+#####################################
+#  - alias: Turn on den light when sun sets
+#    trigger:
+#      platform: sun
+#      event: sunset
+#      offset: "-00:10:00"
+#    action:
+#      service: light.turn_on
+#      data_template:
+#        entity_id: light.den_1
+#        brightness: 255
+#        rgb_color: [ 255,220,69 ]
+
+#  - alias: Change den light color to red when Norbert goes off
+#    trigger:
+#      platform: time
+#      after: '20:35:00'
+#    action:
+#      service: light.turn_on
+#      data_template:
+#        entity_id: light.den_1
+#        brightness: 255
+#        rgb_color: [ 255, 0, 0 ]
+
+#  - alias: Turn den off and master on at a semi-random time
+#    trigger:
+#      - platform: template
+#        value_template: "{{ is_state('sensor.time', states('input_slider.random_hour')|int ~ ':' ~ states('input_slider.random_minute')|int) }}"
+#    action:
+#      - service: light.turn_off
+#        entity_id: light.den_1
+#      - service: light.turn_on
+#        entity_id: light.master_1
+#      - service: homeassistant.turn_on
+#        entity_id: script.timed_lamp
+
+#  - alias: Turn on lights for overnight
+#    trigger:
+#      platform: time
+#      after: '22:30:00'
+#    action:
+#      service: switch.turn_on
+#      entity_id: switch.front_outside_lights_30
+
+#  - alias: Turn off lights in the early morning
+#    trigger:
+#      platform: time
+#      after: '06:00:00'
+#    action:
+#      service: switch.turn_off
+#      entity_id: switch.front_outside_lights_30
+#####################################
+
+  - alias: 'Turn on humidifier and such school/work night'
+    trigger:
+      platform: time
+      after: '21:00:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - sun
+    action:
+      service: switch.turn_on
+      entity_id: switch.master_night_stuff_42
+
+  - alias: 'Turn on humidifier and such weekend night'
+    trigger:
+      platform: time
+      after: '22:00:00'
+    condition:
+      condition: time
+      weekday:
+        - fri
+        - sat
+    action:
+      service: switch.turn_on
+      entity_id: switch.master_night_stuff_42
+
+  - alias: 'Turn off kids TV school night'
+    trigger:
+      platform: time
+      after: '21:00:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - sun
+    action:
+      service: switch.turn_off
+      entity_id: switch.kids_tv_38
+
+  - alias: 'Turn off kids TV weekend night'
+    trigger:
+      platform: time
+      after: '22:00:00'
+    condition:
+      condition: time
+      weekday:
+        - fri
+        - sat
+    action:
+      service: switch.turn_off
+      entity_id: switch.kids_tv_38
+
+  - alias: 'Turn on kids TV school days'
+    trigger:
+      platform: time
+      after: '06:00:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    action:
+      service: switch.turn_on
+      entity_id: switch.kids_tv_38
+
+  - alias: 'Turn on kids TV weekend days'
+    trigger:
+      platform: time
+      after: '08:00:00'
+    condition:
+      condition: time
+      weekday:
+        - sat
+        - sun
+    action:
+      service: switch.turn_on
+      entity_id: switch.kids_tv_38
+
+  - alias: Turn on living room light when sun sets
+    trigger:
+      platform: sun
+      event: sunset
+      offset: "-00:60:00"
+    action:
+      service: switch.turn_on
+      entity_id: switch.living_room_37
+
+  - alias: Flood Water Heater
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.leak_water_heater_21
+        state: 'on'
+    action:
+      - service: notify.dantext
+        data:
+          message: 'WATER DETECTED BY WATER HEATER!'
+      - service: notify.danemail
+        data:
+          message: 'WATER DETECTED BY WATER HEATER!'
+      - service: notify.shelleytext
+        data:
+          message: 'WATER DETECTED BY WATER HEATER!'
+      - service: notify.shelleyemail
+        data:
+          message: 'WATER DETECTED BY WATER HEATER!'
+
+  - alias: Flood Wet Corner
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.leak_wet_corner_44
+        state: 'on'
+    action:
+      - service: notify.dantext
+        data:
+          message: 'WATER DETECTED IN WET CORNER!'
+      - service: notify.danemail
+        data:
+          message: 'WATER DETECTED IN WET CORNER!'
+      - service: notify.shelleytext
+        data:
+          message: 'WATER DETECTED IN WET CORNER!'
+      - service: notify.shelleyemail
+        data:
+          message: 'WATER DETECTED IN WET CORNER!'
+
+  - alias: Flood Sump Pump
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.leak_sump_pump_43
+        state: 'on'
+    action:
+      - service: notify.dantext
+        data:
+          message: 'WATER DETECTED BY SUMP PUMP!'
+      - service: notify.danemail
+        data:
+          message: 'WATER DETECTED BY SUMP PUMP!'
+      - service: notify.shelleytext
+        data:
+          message: 'WATER DETECTED BY SUMP PUMP!'
+      - service: notify.shelleyemail
+        data:
+          message: 'WATER DETECTED BY SUMP PUMP!'
+
+  - alias: set_random_time
+    trigger:
+      - platform: time
+        after: '21:00:00'
+    action:
+      - service: input_slider.select_value
+        data_template:
+          entity_id: input_slider.random_hour
+          # The endpoint is omitted, see: http://jinja.pocoo.org/docs/dev/templates/#range
+          value: '{{ (range(22, 24)|random) }}'
+      - service: input_slider.select_value
+        data_template:
+          entity_id: input_slider.random_minute
+          value: '{{ (range(15, 46)|random) }}'
+
+  - alias: Update notifications
+    trigger:
+      - platform: state
+        entity_id: updater.updater
+    action:
+      service: notify.danemail
+      data: 
+        title: 'New Home Assistant Release'
+        message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
