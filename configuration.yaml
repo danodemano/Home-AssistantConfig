@@ -62,11 +62,13 @@ recorder:
     purge_days: 3
     db_url: !secret recorder_db_url
 
+#Connect to the Hue hub
 light:
   platform: hue
   host: 192.168.9.204
   scan_interval: 30
-  
+
+#All notifications piped through Sophos UTM gateway
 notify:
   - name: danemail
     platform: smtp
@@ -102,17 +104,11 @@ google:
 ifttt:
   key: !secret ifttt_key
 
-ffmpeg:
-  ffmpeg_bin: /usr/bin/avconv
-
-shell_command:
-  toggle_tv: curl -g 'http://192.168.9.201:8081/json?pass=arduino&plain=[{%22type%22:%22raw%22,%22data%22:[2450,600,%201250,600,%20700,600,%201250,600,%20700,600,%201250,600,%20700,600,%20700,600,%201250,600,%20700,600,%20700,600,%20700,600,%20700],%22khz%22:50,%22pulse%22:10}]'
-  tplink_den_on: tplight on 192.168.9.199
-  tplink_den_off: tplight off 192.168.9.199
-
+#Vera integration
 vera:
   vera_controller_url: http://192.168.9.205:3480/
 
+#InfluxDB/Grafa integration
 influxdb:
   host: 192.168.9.52
   database: hass
@@ -129,11 +125,18 @@ influxdb:
     - sensor.climate_main_temperature2
     - sensor.main_thermostat_relative_humidity_31_5_3
 
+#MyQ garage door integration
 cover:
   - platform: myq
     username: !secret myq_username
     password: !secret myq_password
     type: chamberlain
+
+#Shell commands for IR blaster and TP-link bulb
+shell_command:
+  toggle_tv: curl -g 'http://192.168.9.201:8081/json?pass=arduino&plain=[{%22type%22:%22raw%22,%22data%22:[2450,600,%201250,600,%20700,600,%201250,600,%20700,600,%201250,600,%20700,600,%20700,600,%201250,600,%20700,600,%20700,600,%20700,600,%20700],%22khz%22:50,%22pulse%22:10}]'
+  tplink_den_on: tplight on 192.168.9.199
+  tplink_den_off: tplight off 192.168.9.199
 
 sensor: !include sensors.yaml
 
