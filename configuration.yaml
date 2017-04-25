@@ -62,36 +62,6 @@ recorder:
     purge_days: 3
     db_url: !secret recorder_db_url
 
-#zwave:
-#  usb_path: /dev/ttyACM0
-#  polling_interval: 10000
-#  device_config_domain:
-#    light:
-#      polling_intensity: 1
-#      refresh_value: 2
-#      delay: 3
-#  device_config:
-#    climate.main_thermostat_39:
-#      polling_intensity: 1
-#      refresh_value: 2
-#      delay: 3
-#    sensor.ac_energy_32_0:
-#      polling_intensity: 1
-#      refresh_value: 2
-#      delay: 3
-#    sensor.dryer_energy_33_0:
-#      polling_intensity: 1
-#      refresh_value: 2
-#      delay: 3
-#    sensor.furnace1_energy_34_0:
-#      polling_intensity: 1
-#      refresh_value: 2
-#      delay: 3
-#    sensor.furnace2_energy_35_0:
-#      polling_intensity: 1
-#      refresh_value: 2
-#      delay: 3
-
 light:
   platform: hue
   host: 192.168.9.204
@@ -136,20 +106,12 @@ ffmpeg:
   ffmpeg_bin: /usr/bin/avconv
 
 shell_command:
-  #toggle_amp: curl "http://192.168.9.201:8081/msg?code=4B36D32C:NEC:32&pulse=2&pass=arduino"
   toggle_tv: curl -g 'http://192.168.9.201:8081/json?pass=arduino&plain=[{%22type%22:%22raw%22,%22data%22:[2450,600,%201250,600,%20700,600,%201250,600,%20700,600,%201250,600,%20700,600,%20700,600,%201250,600,%20700,600,%20700,600,%20700,600,%20700],%22khz%22:50,%22pulse%22:10}]'
   tplink_den_on: tplight on 192.168.9.199
   tplink_den_off: tplight off 192.168.9.199
 
-#wink:
-#  email: !secret wink_email
-#  password: !secret wink_password
-#  client_id: !secret wink_client_id
-#  client_secret: !secret wink_client_secret
-
 vera:
   vera_controller_url: http://192.168.9.205:3480/
-#  lights: [22]
 
 influxdb:
   host: 192.168.9.52
@@ -258,25 +220,6 @@ media_player:
     name: Onkyo Den
 
 group: !include groups.yaml
-
-#input_select:
-#  hvac_operation_mode:
-#    name: 'Operating Mode'
-#    options:
-#      - 'Auto'
-#      - 'Cool'
-#      - 'Heat'
-#      - 'Aux Heat'
-#      - 'Off'
-#    initial: Cool
-#    icon: mdi:settings
-#  hvac_fan_mode:
-#    name: 'Fan Mode'
-#    options:
-#      - 'Auto'
-#      - 'On'
-#    initial: Auto
-#    icon: mdi:fan
 
 input_slider:
   random_hour:
