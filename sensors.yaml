@@ -10,11 +10,11 @@
         value_template: '{% if states.switch.hot_water_heater_19.state %}{{ states.switch.hot_water_heater_19.attributes.current_power_w|round }}{% endif %}'
       climate_main_temperature:
         friendly_name: 'Target Temperature'
-        unit_of_measurement: '°F'
+        unit_of_measurement: 'Â°F'
         value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.temperature }}{% endif %}'
       climate_main_temperature2:
         friendly_name: 'Inside Temperature'
-        unit_of_measurement: '°F'
+        unit_of_measurement: 'Â°F'
         value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.current_temperature }}{% endif %}'
       climate_main_battery:
         friendly_name: 'Thermostat'
