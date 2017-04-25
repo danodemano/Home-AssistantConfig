@@ -1,0 +1,1492 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_lat
+  longitude: !secret home_lon
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret home_elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+
+  customize:
+      switch.front_walk_lights_31:
+        friendly_name: Front Walk Lights
+        emulated_hue_name: Front Walk Lights
+      switch.norbert_22:
+        friendly_name: Norbert
+      switch.patio_light_32:
+        friendly_name: Patio Light
+      switch.front_outside_lights_30:
+        friendly_name: Front Outside Lights
+      switch.master_night_stuff_42:
+        friendly_name: Master Night Stuff
+      sensor.pws_temp_f:
+        friendly_name: Outside Temp
+      sensor.pws_alerts:
+        friendly_name: Weather Alerts
+        icon: mdi:alert
+      sensor.pws_relative_humidity:
+        friendly_name: Outside Humidity
+        icon: mdi:water-percent
+      sensor.pws_weather:
+        friendly_name: Weather
+      sensor.pws_wind_dir:
+        friendly_name: Wind Direction
+        icon: mdi:compass
+      sensor.pws_wind_mph:
+        friendly_name: Wind MPH
+        icon: mdi:weather-windy
+      sensor.market_price:
+        friendly_name: BTC to USD
+      climate.main_thermostat_39:
+        friendly_name: Thermostat Control
+        icon: mdi:settings
+      sensor.climate_main_fan_state:
+        icon: mdi:fan
+      sensor.climate_main_operating_state:
+        icon: mdi:settings-box
+      sensor.main_thermostat_temperature_31_1:
+        friendly_name: Inside Temp
+      sensor.main_thermostat_relative_humidity_31_5_3:
+        friendly_name: Inside Humidity
+        icon: mdi:water-percent
+      sensor.energy_monitor_current_7_20:
+        friendly_name: Home Current
+        icon: mdi:flash-red-eye
+      sensor.energy_monitor_energy_7_0:
+        friendly_name: Home KWH
+        icon: mdi:flash-red-eye
+      sensor.home_26:
+        friendly_name: Home Watts
+        icon: mdi:flash-red-eye
+        unit_of_measurement: "W"
+      sensor.server_rack_watts:
+        friendly_name: Server Rack
+        icon: mdi:flash-red-eye
+      sensor.energy_monitor_voltage_7_16:
+        friendly_name: Home Voltage
+        icon: mdi:flash-red-eye
+      sensor.climate_main_temperature:
+        icon: mdi:thermometer-lines
+      binary_sensor.leak_water_heater_21:
+        sensor_class: moisture
+        icon: mdi:water
+      binary_sensor.leak_sump_pump_43:
+        sensor_class: moisture
+        icon: mdi:water
+      binary_sensor.leak_wet_corner_44:
+        sensor_class: moisture
+        icon: mdi:water
+      light.dining_room_36:
+        friendly_name: Dining Room Light
+        scan_interval: 10
+        refresh_value: true
+      sensor.climate_main_battery:
+        icon: mdi:battery
+      sensor.leak_hot_water_heater_battery:
+        icon: mdi:battery
+      sensor.leak_sump_pump_battery:
+        icon: mdi:battery
+      sensor.leak_wet_corner_battery:
+        icon: mdi:battery
+      sensor.door_basement_battery:
+        icon: mdi:battery
+      sensor.door_garage_to_den_battery:
+        icon: mdi:battery
+      sensor.door_back_sliding_battery:
+        icon: mdi:battery
+      sensor.door_front_battery:
+        icon: mdi:battery
+      sensor.window_den_battery:
+        icon: mdi:battery
+      sensor.window_front_east_battery:
+        icon: mdi:battery
+      sensor.window_front_west_battery:
+        icon: mdi:battery
+      sensor.window_kitchen_battery:
+        icon: mdi:battery
+      sensor.window_craft_room_battery:
+        icon: mdi:battery
+      cover.garage_door_opener:
+        friendly_name: Garage Door
+      sensor.ac_10:
+        unit_of_measurement: "W"
+        icon: mdi:flash-red-eye
+      sensor.dryer_6:
+        unit_of_measurement: "W"
+        icon: mdi:flash-red-eye
+      sensor.furnace1_13:
+        unit_of_measurement: "W"
+        icon: mdi:flash-red-eye
+      sensor.furnace2_16:
+        icon: mdi:flash-red-eye
+        unit_of_measurement: "W"
+      sensor.hot_water_heater_watts:
+        icon: mdi:flash-red-eye
+      sensor.dan_home_to_work:
+        icon: mdi:car
+      sensor.dan_work_to_home:
+        icon: mdi:car
+      sensor.shelley_home_to_work:
+        icon: mdi:car
+      sensor.shelley_work_to_home:
+        icon: mdi:car
+      sensor.430_walnutview_dr:
+        friendly_name: USPS
+      sensor.speedtest_download:
+        icon: mdi:download
+      sensor.speedtest_ping:
+        icon: mdi:timer
+      sensor.speedtest_upload:
+        icon: mdi:upload
+
+# Enables the frontend
+frontend:
+
+# Enable config panel
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_password
+  ssl_certificate: /etc/ssl/localcerts/fullchain.pem
+  ssl_key: /etc/ssl/localcerts/privkey.pem
+  ip_ban_enabled: true
+  login_attempts_threshold: 10
+  trusted_networks:
+    - 192.168.9.0/24
+    - 10.242.2.0/24
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+#discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+#For the Amazon Echos
+emulated_hue:
+  host_ip: 192.168.9.200
+  type: alexa
+  exposed_domains:
+    - light
+    - switch
+#    - group
+#    - media_player
+
+recorder:
+    purge_days: 3
+    db_url: !secret recorder_db_url
+
+#zwave:
+#  usb_path: /dev/ttyACM0
+#  polling_interval: 10000
+#  device_config_domain:
+#    light:
+#      polling_intensity: 1
+#      refresh_value: 2
+#      delay: 3
+#  device_config:
+#    climate.main_thermostat_39:
+#      polling_intensity: 1
+#      refresh_value: 2
+#      delay: 3
+#    sensor.ac_energy_32_0:
+#      polling_intensity: 1
+#      refresh_value: 2
+#      delay: 3
+#    sensor.dryer_energy_33_0:
+#      polling_intensity: 1
+#      refresh_value: 2
+#      delay: 3
+#    sensor.furnace1_energy_34_0:
+#      polling_intensity: 1
+#      refresh_value: 2
+#      delay: 3
+#    sensor.furnace2_energy_35_0:
+#      polling_intensity: 1
+#      refresh_value: 2
+#      delay: 3
+
+light:
+  platform: hue
+  host: 192.168.9.204
+  scan_interval: 30
+  
+notify:
+  - name: danemail
+    platform: smtp
+    server: 192.168.9.1
+    recipient: !secret dan_email
+    sender: !secret email_from
+  - name: shelleyemail
+    platform: smtp
+    server: 192.168.9.1
+    recipient: !secret shelley_email
+    sender: !secret email_from
+  - name: dantext
+    platform: smtp
+    server: 192.168.9.1
+    recipient: !secret dan_text
+    sender: !secret email_from
+  - name: shelleytext
+    platform: smtp
+    server: 192.168.9.1
+    recipient: !secret shelley_text
+    sender: !secret email_from
+#  - name: push
+#    platform: html5
+#    gcm_api_key: !secret push_gcm_api_key
+#    gcm_sender_id: !secret push_gcm_sender_id
+
+#Google Calendar integration
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+
+#IFTTT Integration
+ifttt:
+  key: !secret ifttt_key
+
+ffmpeg:
+  ffmpeg_bin: /usr/bin/avconv
+
+shell_command:
+  #toggle_amp: curl "http://192.168.9.201:8081/msg?code=4B36D32C:NEC:32&pulse=2&pass=arduino"
+  toggle_tv: curl -g 'http://192.168.9.201:8081/json?pass=arduino&plain=[{%22type%22:%22raw%22,%22data%22:[2450,600,%201250,600,%20700,600,%201250,600,%20700,600,%201250,600,%20700,600,%20700,600,%201250,600,%20700,600,%20700,600,%20700,600,%20700],%22khz%22:50,%22pulse%22:10}]'
+  tplink_den_on: tplight on 192.168.9.199
+  tplink_den_off: tplight off 192.168.9.199
+
+#wink:
+#  email: !secret wink_email
+#  password: !secret wink_password
+#  client_id: !secret wink_client_id
+#  client_secret: !secret wink_client_secret
+
+vera:
+  vera_controller_url: http://192.168.9.205:3480/
+#  lights: [22]
+
+influxdb:
+  host: 192.168.9.52
+  database: hass
+  whitelist:
+    - sensor.ac_10
+    - sensor.dryer_6
+    - sensor.furnace1_13
+    - sensor.furnace2_16
+    - sensor.hot_water_heater_watts
+    - sensor.server_rack_watts
+    - sensor.home_26
+    - sensor.pws_relative_humidity
+    - sensor.pws_temp_f
+    - sensor.climate_main_temperature2
+    - sensor.main_thermostat_relative_humidity_31_5_3
+
+cover:
+  - platform: myq
+    username: !secret myq_username
+    password: !secret myq_password
+    type: chamberlain
+
+sensor:
+#  - platform: command_line
+#    name: Dryer Watts
+#    command: '/bin/bash -c "/scripts/veraSensorValue.sh 6 watts"'
+#    unit_of_measurement: "W"
+#  - platform: command_line
+#    name: Server Rack Watts
+#    command: '/bin/bash -c "/scripts/veraSensorValue.sh 68 watts"'
+#    unit_of_measurement: "W"
+#  - platform: command_line
+#    name: AC Watts
+#    command: '/bin/bash -c "/scripts/veraSensorValue.sh 10 watts"'
+#    unit_of_measurement: "W"
+#  - platform: command_line
+#    name: Furnace1 Watts
+#    command: '/bin/bash -c "/scripts/veraSensorValue.sh 13 watts"'
+#    unit_of_measurement: "W"
+#  - platform: command_line
+#    name: Furnace2 Watts
+#    command: '/bin/bash -c "/scripts/veraSensorValue.sh 16 watts"'
+#    unit_of_measurement: "W"
+#  - platform: command_line
+#    name: Hot Water Heater Watts
+#    command: '/bin/bash -c "/scripts/veraSensorValue.sh 19 watts"'
+#    unit_of_measurement: "W"
+#  - platform: command_line
+#    name: Home Watts
+#    command: '/bin/bash -c "/scripts/veraSensorValue.sh 26 watts"'
+#    unit_of_measurement: "W"
+  - platform: template
+    sensors:
+      server_rack_watts:
+        friendly_name: 'Server Rack'
+        unit_of_measurement: "W"
+        value_template: '{% if states.switch.server_rack_68.state %}{{ states.switch.server_rack_68.attributes.current_power_w|round }}{% endif %}'
+      hot_water_heater_watts:
+        friendly_name: 'Hot Water Heater'
+        unit_of_measurement: "W"
+        value_template: '{% if states.switch.hot_water_heater_19.state %}{{ states.switch.hot_water_heater_19.attributes.current_power_w|round }}{% endif %}'
+      climate_main_temperature:
+        friendly_name: 'Target Temperature'
+        unit_of_measurement: '°F'
+        value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.temperature }}{% endif %}'
+      climate_main_temperature2:
+        friendly_name: 'Inside Temperature'
+        unit_of_measurement: '°F'
+        value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.current_temperature }}{% endif %}'
+      climate_main_battery:
+        friendly_name: 'Thermostat'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.battery_level }}{% endif %}'
+      climate_main_operating_state:
+        friendly_name: 'Operating State'
+        value_template: >
+          {% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.operation_mode | replace("(","") | replace(")","") | replace(",","") | replace("'","") }}{% endif %}
+      climate_main_fan_state:
+        friendly_name: 'Fan Mode'
+        value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.fan_mode }}{% endif %}'
+      leak_hot_water_heater_battery:
+        friendly_name: 'Leak Hot Water'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.leak_water_heater_21.state %}{{ states.binary_sensor.leak_water_heater_21.attributes.battery_level }}{% endif %}'
+      leak_sump_pump_battery:
+        friendly_name: 'Leak Sump Pump'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.leak_sump_pump_43.state %}{{ states.binary_sensor.leak_sump_pump_43.attributes.battery_level }}{% endif %}'
+      leak_wet_corner_battery:
+        friendly_name: 'Leak Wet Corner'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.leak_wet_corner_44.state %}{{ states.binary_sensor.leak_wet_corner_44.attributes.battery_level }}{% endif %}'
+      door_basement_battery:
+        friendly_name: 'Door Basement'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.door_basement_52.state %}{{ states.binary_sensor.door_basement_52.attributes.battery_level }}{% endif %}'
+      door_garage_to_den_battery:
+        friendly_name: 'Door Garage to Den'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.door_garage_to_den_53.state %}{{ states.binary_sensor.door_garage_to_den_53.attributes.battery_level }}{% endif %}'
+      door_front_battery:
+        friendly_name: 'Door Front'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.door_front_97.state %}{{ states.binary_sensor.door_front_97.attributes.battery_level }}{% endif %}'
+      door_back_sliding_battery:
+        friendly_name: 'Door Back Sliding'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.door_back_sliding_99.state %}{{ states.binary_sensor.door_back_sliding_99.attributes.battery_level }}{% endif %}'
+      window_den_battery:
+        friendly_name: 'Window Den'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_den_96.state %}{{ states.binary_sensor.window_den_96.attributes.battery_level }}{% endif %}'
+      window_front_east_battery:
+        friendly_name: 'Window Front East'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_lr_east_104.state %}{{ states.binary_sensor.window_lr_east_104.attributes.battery_level }}{% endif %}'
+      window_front_west_battery:
+        friendly_name: 'Window Front West'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_lr_west_113.state %}{{ states.binary_sensor.window_lr_west_113.attributes.battery_level }}{% endif %}'
+      window_kitchen_battery:
+        friendly_name: 'Window Kitchen'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_kitchen_100.state %}{{ states.binary_sensor.window_kitchen_100.attributes.battery_level }}{% endif %}'
+      window_craft_room_battery:
+        friendly_name: 'Window Craft Room'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_craft_room_114.state %}{{ states.binary_sensor.window_craft_room_114.attributes.battery_level }}{% endif %}'
+      door_basement_state:
+        friendly_name: 'Door Basement'
+        value_template: >-
+            {%- if is_state("binary_sensor.door_basement_52", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.door_basement_52", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      door_garage_to_den_state:
+        friendly_name: 'Door Garage to Den'
+        value_template: >-
+            {%- if is_state("binary_sensor.door_garage_to_den_53", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.door_garage_to_den_53", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      door_front_state:
+        friendly_name: 'Door Front'
+        value_template: >-
+            {%- if is_state("binary_sensor.door_front_97", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.door_front_97", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      door_back_sliding_state:
+        friendly_name: 'Door Back Sliding'
+        value_template: >-
+            {%- if is_state("binary_sensor.door_back_sliding_99", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.door_back_sliding_99", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_craft_room_state:
+        friendly_name: 'Window Craft Room'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_craft_room_114", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_craft_room_114", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_den_state:
+        friendly_name: 'Window Den'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_den_96", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_den_96", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_kitchen_state:
+        friendly_name: 'Window Kitchen State'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_kitchen_100", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_kitchen_100", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_front_east_state:
+        friendly_name: 'Window Front East'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_lr_east_104", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_lr_east_104", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_front_west_state:
+        friendly_name: 'Window Front West'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_lr_west_113", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_lr_west_113", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+
+  - platform: time_date
+    display_options:
+      - time
+
+  - platform: wunderground
+    api_key: !secret wunderground_api_key
+    pws_id: KOHSUNBU11
+    monitored_conditions:
+    - weather
+    - temp_f
+    - station_id
+    - feelslike_f
+    - heat_index_f
+    - dewpoint_f
+    - wind_mph
+    - UV
+    - pressure_in
+    - wind_dir
+    - relative_humidity
+    - precip_today_in
+    - alerts
+
+  - platform: bitcoin
+    display_options:
+    - market_price_usd
+
+  - platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+
+  - platform: pi_hole
+    host: 192.168.54.2
+
+  - platform: usps
+    username: !secret usps_username
+    password: !secret usps_password
+
+  - platform: ups
+    username: !secret ups_username
+    password: !secret ups_password
+
+#  - platform: fedex
+#    username: !secret fedex_username
+#    password: !secret fedex_password
+
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: memory_use_percent
+      - type: processor_use
+      - type: network_in
+        arg: eth0
+      - type: network_out
+        arg: eth0
+      - type: since_last_boot
+
+  - platform: moon
+
+  - platform: google_travel_time
+    api_key: !secret google_travel_time_api_key
+    origin: !secret travel_home
+    destination: !secret travel_dan_work
+    name: Dan Home to Work
+
+  - platform: google_travel_time
+    api_key: !secret google_travel_time_api_key
+    origin: !secret travel_dan_work
+    destination: !secret travel_home
+    name: Dan Work to Home
+
+  - platform: google_travel_time
+    api_key: !secret google_travel_time_api_key
+    origin: !secret travel_home
+    destination: !secret travel_shelley_work
+    name: Shelley Home to Work
+
+  - platform: google_travel_time
+    api_key: !secret google_travel_time_api_key
+    origin: !secret travel_shelley_work
+    destination: !secret travel_home
+    name: Shelley Work to Home
+
+binary_sensor:
+  - platform: iss
+
+camera dw:
+  - platform: generic
+    still_image_url: http://192.168.53.110/snap.jpeg
+    name: Driveway
+
+camera gp:
+  - platform: generic
+    still_image_url: http://192.168.53.112/snap.jpeg
+    name: Back Gate/Patio
+
+camera fw:
+  - platform: generic
+    still_image_url: http://192.168.53.111/snap.jpeg
+    name: Front Walk
+
+camera bs:
+  - platform: generic
+    still_image_url: http://192.168.53.113/snap.jpeg
+    name: Backyard/Shed
+
+camera cr:
+  - platform: generic
+    still_image_url: http://192.168.53.116/snap.jpeg
+    name: Craft Room
+
+camera bm:
+  - platform: generic
+    still_image_url: http://192.168.53.114/snap.jpeg
+    name: Basement
+
+camera lr:
+  - platform: generic
+    still_image_url: http://192.168.53.115/snap.jpeg
+    name: Living Room
+
+camera ga:
+  - platform: generic
+    still_image_url: http://192.168.53.117/snap.jpeg
+    name: Garage
+
+camera pa:
+  - platform: generic
+    still_image_url: http://192.168.53.118/snap.jpeg
+    name: Patio
+
+camera radar:
+  - platform: generic
+    still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=ILN&brand=wui&num=1&delay=15&type=N0R&frame=0&scale=1.000&noclutter=1&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=1&lightning=0&smooth=1&rand=24788299&lat=0&lon=0&label=you
+    name: Ohio Radar
+
+device_tracker:
+  - platform: ping
+    hosts:
+      shelley: 192.168.9.68
+      dan: 192.168.9.69
+      nick: 192.168.51.102
+      shannon: 192.168.51.107
+
+switch:
+  - platform: wake_on_lan
+    mac_address: "00-15-17-c7-c4-c4"
+    name: VM1
+    host: 192.168.9.26
+  - platform: wake_on_lan
+    mac_address: "00-1b-21-84-c4-ba"
+    name: VM2
+    host: 192.168.9.27
+
+media_player:
+  - platform: kodi
+    host: 192.168.9.21
+    name: Brix PC
+    username: kodi
+    password: kodi
+    turn_off_action: quit
+  - platform: onkyo
+    host: 192.168.52.10
+    name: Onkyo Den
+
+group:
+   #default_view:
+   newdef:
+     name: New Default
+     view: yes
+     entities:
+       - group.outdoor_lights
+       - group.norbert
+       - group.living_area
+       - group.master
+       - group.wol
+       - group.leak
+       - group.traveltimes
+       - group.battery
+       - group.energy
+       - group.hvac_main
+       - group.home_electric
+       - group.weather
+       - group.speedtest
+       - group.doors
+       - group.windows
+       - group.armed
+       - camera.front_walk
+       - camera.patio
+       - sun.sun
+       - sensor.moon
+       - device_tracker.shannon
+       - device_tracker.nick
+       - device_tracker.dan
+       - device_tracker.shelley
+       - sensor.market_price
+       - sensor.pihole
+       - sensor.430_walnutview_dr
+       - sensor.cpu_use
+       - sensor.disk_use_
+       - sensor.ram_use
+       - sensor.since_last_boot
+       - sensor.time
+       - media_player.brix_pc
+       - media_player.onkyo_den
+       - binary_sensor.iss
+
+   security:
+     name: Security
+     view: yes
+     entities:
+       - group.cameras_group
+       - group.doors
+       - group.windows
+       - group.armed
+
+   cameras:
+     name: Cameras
+     view: yes
+     entities:
+       - camera.driveway
+       - camera.back_gatepatio
+       - camera.front_walk
+       - camera.backyardshed
+       - camera.patio
+       - camera.garage
+       - camera.basement
+       - camera.living_room
+       - camera.craft_room
+
+   cameras_group:
+     name: Camera Group
+     entities:
+       - camera.driveway
+       - camera.back_gatepatio
+       - camera.front_walk
+       - camera.backyardshed
+       - camera.patio
+       - camera.garage
+       - camera.basement
+       - camera.living_room
+       - camera.craft_room
+
+   outdoor_lights:
+     name: Outdoor Lights
+     entities:
+       - switch.front_walk_lights_31
+       - switch.patio_light_32
+       - switch.front_outside_lights_30
+
+   norbert:
+     name: Norbert
+     entities:
+       - switch.norbert_22
+
+   hvac_main:
+     name: 'Main Thermostat'
+     entities:
+       - sensor.climate_main_fan_state
+       - sensor.climate_main_operating_state
+       - sensor.climate_main_temperature
+       - sensor.climate_main_temperature2
+       - sensor.main_thermostat_relative_humidity_31_5_3
+       - climate.main_thermostat_39
+
+   living_area:
+     name: 'Dining/Living Area'
+     control: hidden
+     entities:
+      - light.dining_room_36
+      - switch.kids_tv_38
+      - switch.living_room_37
+
+   master:
+     name: 'Master Bedroom'
+     control: hidden
+     entities:
+      - light.master
+      - light.master_1
+      - light.master_2
+      - switch.master_night_stuff_42
+
+   wol:
+     name: 'Wake on LAN'
+     control: hidden
+     entities:
+      - switch.vm1
+      - switch.vm2
+
+   leak:
+     name: 'Leak Sensors'
+     entities:
+      - binary_sensor.leak_water_heater_21
+      - binary_sensor.leak_sump_pump_43
+      - binary_sensor.leak_wet_corner_44
+
+   battery:
+     name: 'Battery Levels'
+     entities: 
+     - sensor.climate_main_battery
+     - sensor.leak_hot_water_heater_battery
+     - sensor.leak_sump_pump_battery
+     - sensor.leak_wet_corner_battery
+     - sensor.door_basement_battery
+     - sensor.door_garage_to_den_battery
+     - sensor.door_back_sliding_battery
+     - sensor.door_front_battery
+     - sensor.window_craft_room_battery
+     - sensor.window_den_battery
+     - sensor.window_front_east_battery
+     - sensor.window_front_west_battery
+     - sensor.window_kitchen_battery
+
+   doors:
+     name: 'Door Status'
+     entities:
+      - sensor.door_garage_to_den_state
+      - sensor.door_basement_state
+      - sensor.door_front_state
+      - sensor.door_back_sliding_state
+      - cover.garage_door_opener
+
+   windows:
+     name: 'Window Status'
+     entities:
+      - sensor.window_craft_room_state
+      - sensor.window_den_state
+      - sensor.window_front_east_state
+      - sensor.window_front_west_state
+      - sensor.window_kitchen_state
+
+   armed:
+     name: 'Arm Devices!'
+     entities:
+      - switch.door_basement_52
+      - switch.door_front_97
+      - switch.door_garage_to_den_53
+      - switch.door_back_sliding_99
+      - switch.window_craft_room_114
+      - switch.window_den_96
+      - switch.window_kitchen_100
+      - switch.window_lr_east_104
+      - switch.window_lr_west_113
+
+   traveltimes:
+     name: "Travel Times"
+     entities:
+     - sensor.dan_home_to_work
+     - sensor.dan_work_to_home
+     - sensor.shelley_home_to_work
+     - sensor.shelley_work_to_home
+
+   energy:
+     name: "Power Usage"
+     entities:
+     - sensor.ac_10
+     - sensor.dryer_6
+     - sensor.furnace1_13
+     - sensor.furnace2_16
+     - sensor.hot_water_heater_watts
+     - sensor.server_rack_watts
+
+   home_electric:
+     name: "Home Electric Usage"
+     entities:
+     - sensor.home_26
+#     - sensor.energy_monitor_current_7_20
+#     - sensor.energy_monitor_energy_7_0
+#     - sensor.energy_monitor_voltage_7_16
+
+   weather:
+     name: Weather
+     entities:
+     - sensor.pws_temp_f
+     - sensor.pws_relative_humidity
+     - sensor.pws_alerts
+     - sensor.pws_weather
+     - sensor.pws_wind_dir
+     - sensor.pws_wind_mph
+     - camera.ohio_radar
+
+   speedtest:
+     name: Speedtest
+     entities:
+     - sensor.speedtest_download
+     - sensor.speedtest_ping
+     - sensor.speedtest_upload
+
+#input_select:
+#  hvac_operation_mode:
+#    name: 'Operating Mode'
+#    options:
+#      - 'Auto'
+#      - 'Cool'
+#      - 'Heat'
+#      - 'Aux Heat'
+#      - 'Off'
+#    initial: Cool
+#    icon: mdi:settings
+#  hvac_fan_mode:
+#    name: 'Fan Mode'
+#    options:
+#      - 'Auto'
+#      - 'On'
+#    initial: Auto
+#    icon: mdi:fan
+
+input_slider:
+  random_hour:
+    name: 'Random Hour'
+    min: 0
+    max: 23
+    step: 1
+    initial: 22
+  random_minute:
+    name: 'Random Minute'
+    min: 0
+    max: 59
+    step: 1
+    initial: 45
+  dr_off_delay:
+    name: 'DR Off Delay'
+    min: 0
+    max: 20
+    step: .5
+    initial: 1
+
+automation: 
+  - alias: Turn on lights when sun sets
+    trigger:
+      platform: sun
+      event: sunset
+      offset: "-00:10:00"
+    action:
+      service: switch.turn_on
+      entity_id: group.outdoor_lights
+
+  - alias: Turn off lights when sun rises
+    trigger:
+      platform: sun
+      event: sunrise
+      offset: "+00:10:00"
+    action:
+      service: switch.turn_off
+      entity_id: group.outdoor_lights
+
+  - alias: Turn Norbert on in AM
+    trigger:
+      platform: time
+      after: '07:30:00'
+    action:
+      service: switch.turn_on
+      entity_id: group.norbert
+
+  - alias: Turn Norbert off in PM
+    trigger:
+      platform: time
+      after: '20:30:00'
+    action:
+        - service: switch.turn_off
+          entity_id: group.norbert
+
+  - alias: 'Turn off dining room light when at <50 brightness for set duration'
+    trigger:
+      - platform: template
+        value_template: '{{ (as_timestamp (now()) -as_timestamp (states.light.dining_room_36.last_updated))|float >= 300 and  (states.light.dining_room_36.attributes.brightness | float <= 50) }}'
+    condition:
+      condition: template
+      value_template: '{{ states.light.dining_room_36.attributes.brightness | float <= 50 }}'
+    action:
+      service: switch.turn_off
+      entity_id: light.dining_room_36
+
+#####################################
+#  - alias: Turn on den light when sun sets
+#    trigger:
+#      platform: sun
+#      event: sunset
+#      offset: "-00:10:00"
+#    action:
+#      service: light.turn_on
+#      data_template:
+#        entity_id: light.den_1
+#        brightness: 255
+#        rgb_color: [ 255,220,69 ]
+
+#  - alias: Change den light color to red when Norbert goes off
+#    trigger:
+#      platform: time
+#      after: '20:35:00'
+#    action:
+#      service: light.turn_on
+#      data_template:
+#        entity_id: light.den_1
+#        brightness: 255
+#        rgb_color: [ 255, 0, 0 ]
+
+#  - alias: Turn den off and master on at a semi-random time
+#    trigger:
+#      - platform: template
+#        value_template: "{{ is_state('sensor.time', states('input_slider.random_hour')|int ~ ':' ~ states('input_slider.random_minute')|int) }}"
+#    action:
+#      - service: light.turn_off
+#        entity_id: light.den_1
+#      - service: light.turn_on
+#        entity_id: light.master_1
+#      - service: homeassistant.turn_on
+#        entity_id: script.timed_lamp
+
+#  - alias: Turn on lights for overnight
+#    trigger:
+#      platform: time
+#      after: '22:30:00'
+#    action:
+#      service: switch.turn_on
+#      entity_id: switch.front_outside_lights_30
+
+#  - alias: Turn off lights in the early morning
+#    trigger:
+#      platform: time
+#      after: '06:00:00'
+#    action:
+#      service: switch.turn_off
+#      entity_id: switch.front_outside_lights_30
+#####################################
+
+  - alias: 'Turn on humidifier and such school/work night'
+    trigger:
+      platform: time
+      after: '21:00:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - sun
+    action:
+      service: switch.turn_on
+      entity_id: switch.master_night_stuff_42
+
+  - alias: 'Turn on humidifier and such weekend night'
+    trigger:
+      platform: time
+      after: '22:00:00'
+    condition:
+      condition: time
+      weekday:
+        - fri
+        - sat
+    action:
+      service: switch.turn_on
+      entity_id: switch.master_night_stuff_42
+
+  - alias: 'Turn off kids TV school night'
+    trigger:
+      platform: time
+      after: '21:00:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - sun
+    action:
+      service: switch.turn_off
+      entity_id: switch.kids_tv_38
+
+  - alias: 'Turn off kids TV weekend night'
+    trigger:
+      platform: time
+      after: '22:00:00'
+    condition:
+      condition: time
+      weekday:
+        - fri
+        - sat
+    action:
+      service: switch.turn_off
+      entity_id: switch.kids_tv_38
+
+  - alias: 'Turn on kids TV school days'
+    trigger:
+      platform: time
+      after: '06:00:00'
+    condition:
+      condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    action:
+      service: switch.turn_on
+      entity_id: switch.kids_tv_38
+
+  - alias: 'Turn on kids TV weekend days'
+    trigger:
+      platform: time
+      after: '08:00:00'
+    condition:
+      condition: time
+      weekday:
+        - sat
+        - sun
+    action:
+      service: switch.turn_on
+      entity_id: switch.kids_tv_38
+
+  - alias: Turn on living room light when sun sets
+    trigger:
+      platform: sun
+      event: sunset
+      offset: "-00:60:00"
+    action:
+      service: switch.turn_on
+      entity_id: switch.living_room_37
+
+  - alias: Flood Water Heater
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.leak_water_heater_21
+        state: 'on'
+    action:
+      - service: notify.dantext
+        data:
+          message: 'WATER DETECTED BY WATER HEATER!'
+      - service: notify.danemail
+        data:
+          message: 'WATER DETECTED BY WATER HEATER!'
+      - service: notify.shelleytext
+        data:
+          message: 'WATER DETECTED BY WATER HEATER!'
+      - service: notify.shelleyemail
+        data:
+          message: 'WATER DETECTED BY WATER HEATER!'
+
+  - alias: Flood Wet Corner
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.leak_wet_corner_44
+        state: 'on'
+    action:
+      - service: notify.dantext
+        data:
+          message: 'WATER DETECTED IN WET CORNER!'
+      - service: notify.danemail
+        data:
+          message: 'WATER DETECTED IN WET CORNER!'
+      - service: notify.shelleytext
+        data:
+          message: 'WATER DETECTED IN WET CORNER!'
+      - service: notify.shelleyemail
+        data:
+          message: 'WATER DETECTED IN WET CORNER!'
+
+  - alias: Flood Sump Pump
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.leak_sump_pump_43
+        state: 'on'
+    action:
+      - service: notify.dantext
+        data:
+          message: 'WATER DETECTED BY SUMP PUMP!'
+      - service: notify.danemail
+        data:
+          message: 'WATER DETECTED BY SUMP PUMP!'
+      - service: notify.shelleytext
+        data:
+          message: 'WATER DETECTED BY SUMP PUMP!'
+      - service: notify.shelleyemail
+        data:
+          message: 'WATER DETECTED BY SUMP PUMP!'
+
+  - alias: set_random_time
+    trigger:
+      - platform: time
+        after: '21:00:00'
+    action:
+      - service: input_slider.select_value
+        data_template:
+          entity_id: input_slider.random_hour
+          # The endpoint is omitted, see: http://jinja.pocoo.org/docs/dev/templates/#range
+          value: '{{ (range(22, 24)|random) }}'
+      - service: input_slider.select_value
+        data_template:
+          entity_id: input_slider.random_minute
+          value: '{{ (range(15, 46)|random) }}'
+
+  - alias: Update notifications
+    trigger:
+      - platform: state
+        entity_id: updater.updater
+    action:
+      service: notify.danemail
+      data: 
+        title: 'New Home Assistant Release'
+        message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
+
+script:
+  timed_lamp:
+    alias: "Turn on lamp and set timer"
+    sequence:
+      # Cancel ev. old timers
+      - service: script.turn_off
+        data:
+           entity_id: script.timer_off
+      - service: light.turn_on
+        data:
+          entity_id: light.master_1
+          brightness: 255
+          rgb_color: [ 255,255,255 ]
+      - service: light.turn_on
+        data:
+          entity_id: light.master_2
+          brightness: 255
+          rgb_color: [ 255,255,255 ]
+      # Set new timer
+      - service: script.turn_on
+        data:
+          entity_id: script.timer_off
+
+  timer_off:
+    alias: "Turn off lamp after 10 minutes"
+    sequence:
+      - delay:
+          minutes: 10
+      - service: light.turn_off
+        data:
+          entity_id: light.master_1
+      - service: light.turn_off
+        data:
+          entity_id: light.master_2
+
+  night_time:
+    alias: "Set all needed objects for bed time"
+    sequence:
+      - service: light.turn_off
+        data:
+          entity_id: light.den_1
+      - service: light.turn_off
+        data:
+          entity_id: light.dining_room_36
+      - service: switch.turn_off
+        data:
+          entity_id: switch.living_room_37
+      - service: light.turn_on
+        data:
+          entity_id: light.master_1
+          brightness: 255
+          rgb_color: [ 255,255,255 ]
+      - service: light.turn_on
+        data:
+          entity_id: light.master_2
+          brightness: 255
+          rgb_color: [ 255,255,255 ]
+      - service: media_player.turn_off
+        data:
+          entity_id: media_player.brix_pc
+      - service: media_player.turn_off
+        data:
+          entity_id: media_player.onkyo_den
+      - delay: 00:00:02
+      - service: shell_command.toggle_tv
+      - delay: 00:00:15
+      - service: shell_command.tplink_den_off
+
+  morning_time:
+    alias: "Turn off night stuff and on day stuff"
+    sequence:
+      - service: switch.turn_off
+        data:
+          entity_id: switch.master_night_stuff_42
+      - service: light.turn_on
+        data:
+          entity_id: light.master_1
+          transition: 90
+          brightness: 255
+          rgb_color: [ 255,255,255 ]
+      - service: light.turn_on
+        data:
+          entity_id: light.master_2
+          transition: 90
+          brightness: 255
+          rgb_color: [ 255,255,255 ]
+
+  all_on:
+    alias: "Turn on all connected lights immediately"
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id: light.master_1
+          brightness: 255
+          rgb_color: [ 255,255,255 ]
+      - service: light.turn_on
+        data:
+          entity_id: light.master_2
+          brightness: 255
+          rgb_color: [ 255,255,255 ]
+      - service: light.turn_on
+        data:
+          entity_id: light.dining_room_36
+          brightness: 255
+      - service: switch.turn_on
+        data:
+          entity_id: switch.living_room_37
+      - service: switch.turn_on
+        data:
+          entity_id: group.outdoor_lights
+
+  testing_stuff:
+    alias: "Testing script from Alexa"
+    sequence:
+       - service: shell_command.toggle_amp
+
+  kodi_pause:
+    alias: "Pause Kodi"
+    sequence:
+      - service: media_player.media_pause
+        data:
+          entity_id: media_player.brix_pc
+
+  kodi_play:
+    alias: "Play Kodi"
+    sequence:
+      - service: media_player.media_play
+        data:
+          entity_id: media_player.brix_pc
+
+scene:
+  - name: Den Red
+    entities:
+        light.den_1:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255, 0, 0 ]
+  - name: Den Blue
+    entities:
+        light.den_1:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 0, 0, 255 ]
+  - name: Den Yellow
+    entities:
+        light.den_1:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255,220,69 ]
+  - name: Den Green
+    entities:
+        light.den_1:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255,253,93 ]
+  - name: Den Fire
+    entities:
+        light.den_1:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255,161,44 ]
+  - name: Den White
+    entities:
+        light.den_1:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255,255,255 ]
+  - name: Master Red
+    entities:
+        light.master:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255, 0, 0 ]
+  - name: Master Blue
+    entities:
+        light.master:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 0, 0, 255 ]
+  - name: Master Yellow
+    entities:
+        light.master:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255,220,69 ]
+  - name: Master Green
+    entities:
+        light.master:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255,253,93 ]
+  - name: Master Fire
+    entities:
+        light.master:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255,161,44 ]
+  - name: Master White
+    entities:
+        light.master:
+            state: on
+            transition: 2
+            brightness: 255
+            rgb_color: [ 255,255,255 ]
+  - name: Living On
+    entities:
+        switch.living_room_37:
+            state: on
+  - name: Living Off
+    entities:
+        switch.living_room_37:
+            state: off
+  - name: Dining On
+    entities:
+        light.dining_room_36:
+            state: on
+            transition: 2
+            brightness: 255
+  - name: Dining Off
+    entities:
+        light.dining_room_36:
+            state: off
+            transition: 2
+  - name: Dining to 25
+    entities:
+        light.dining_room_36:
+            state: on
+            transition: 2
+            brightness: 64
+  - name: Dining to 50
+    entities:
+        light.dining_room_36:
+            state: on
+            transition: 2
+            brightness: 128
+  - name: Dining to 75
+    entities:
+        light.dining_room_36:
+            state: on
+            transition: 2
+            brightness: 191
+  - name: Dining to 100
+    entities:
+        light.dining_room_36:
+            state: on
+            transition: 2
+            brightness: 255
+
+alexa:
+  intents:
+    ActivateSceneIntent:
+      action:
+        service: scene.turn_on
+        data_template:
+          entity_id: scene.{{ Scene | replace(" ", "_") }}
+      speech:
+        type: plaintext
+        text: !include alexa_confirm.yaml
+    RunScriptIntent:
+      action:
+        service: script.turn_on
+        data_template:
+          entity_id: script.{{ Script | replace(" ", "_") }}
+      speech:
+        type: plaintext
+        text: !include alexa_confirm.yaml
+
+
+zone:
+  name: Dan Work
+  latitude: 40.328386
+  longitude: -082.971756
+  radius: 200
