@@ -1,0 +1,252 @@
+  - platform: template
+    sensors:
+      server_rack_watts:
+        friendly_name: 'Server Rack'
+        unit_of_measurement: "W"
+        value_template: '{% if states.switch.server_rack_68.state %}{{ states.switch.server_rack_68.attributes.current_power_w|round }}{% endif %}'
+      hot_water_heater_watts:
+        friendly_name: 'Hot Water Heater'
+        unit_of_measurement: "W"
+        value_template: '{% if states.switch.hot_water_heater_19.state %}{{ states.switch.hot_water_heater_19.attributes.current_power_w|round }}{% endif %}'
+      climate_main_temperature:
+        friendly_name: 'Target Temperature'
+        unit_of_measurement: '°F'
+        value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.temperature }}{% endif %}'
+      climate_main_temperature2:
+        friendly_name: 'Inside Temperature'
+        unit_of_measurement: '°F'
+        value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.current_temperature }}{% endif %}'
+      climate_main_battery:
+        friendly_name: 'Thermostat'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.battery_level }}{% endif %}'
+      climate_main_operating_state:
+        friendly_name: 'Operating State'
+        value_template: >
+          {% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.operation_mode | replace("(","") | replace(")","") | replace(",","") | replace("'","") }}{% endif %}
+      climate_main_fan_state:
+        friendly_name: 'Fan Mode'
+        value_template: '{% if states.climate.main_thermostat_39.state %}{{ states.climate.main_thermostat_39.attributes.fan_mode }}{% endif %}'
+      leak_hot_water_heater_battery:
+        friendly_name: 'Leak Hot Water'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.leak_water_heater_21.state %}{{ states.binary_sensor.leak_water_heater_21.attributes.battery_level }}{% endif %}'
+      leak_sump_pump_battery:
+        friendly_name: 'Leak Sump Pump'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.leak_sump_pump_43.state %}{{ states.binary_sensor.leak_sump_pump_43.attributes.battery_level }}{% endif %}'
+      leak_wet_corner_battery:
+        friendly_name: 'Leak Wet Corner'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.leak_wet_corner_44.state %}{{ states.binary_sensor.leak_wet_corner_44.attributes.battery_level }}{% endif %}'
+      door_basement_battery:
+        friendly_name: 'Door Basement'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.door_basement_52.state %}{{ states.binary_sensor.door_basement_52.attributes.battery_level }}{% endif %}'
+      door_garage_to_den_battery:
+        friendly_name: 'Door Garage to Den'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.door_garage_to_den_53.state %}{{ states.binary_sensor.door_garage_to_den_53.attributes.battery_level }}{% endif %}'
+      door_front_battery:
+        friendly_name: 'Door Front'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.door_front_97.state %}{{ states.binary_sensor.door_front_97.attributes.battery_level }}{% endif %}'
+      door_back_sliding_battery:
+        friendly_name: 'Door Back Sliding'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.door_back_sliding_99.state %}{{ states.binary_sensor.door_back_sliding_99.attributes.battery_level }}{% endif %}'
+      window_den_battery:
+        friendly_name: 'Window Den'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_den_96.state %}{{ states.binary_sensor.window_den_96.attributes.battery_level }}{% endif %}'
+      window_front_east_battery:
+        friendly_name: 'Window Front East'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_lr_east_104.state %}{{ states.binary_sensor.window_lr_east_104.attributes.battery_level }}{% endif %}'
+      window_front_west_battery:
+        friendly_name: 'Window Front West'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_lr_west_113.state %}{{ states.binary_sensor.window_lr_west_113.attributes.battery_level }}{% endif %}'
+      window_kitchen_battery:
+        friendly_name: 'Window Kitchen'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_kitchen_100.state %}{{ states.binary_sensor.window_kitchen_100.attributes.battery_level }}{% endif %}'
+      window_craft_room_battery:
+        friendly_name: 'Window Craft Room'
+        #unit_of_measurement: '%'
+        value_template: '{% if states.binary_sensor.window_craft_room_114.state %}{{ states.binary_sensor.window_craft_room_114.attributes.battery_level }}{% endif %}'
+      door_basement_state:
+        friendly_name: 'Door Basement'
+        value_template: >-
+            {%- if is_state("binary_sensor.door_basement_52", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.door_basement_52", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      door_garage_to_den_state:
+        friendly_name: 'Door Garage to Den'
+        value_template: >-
+            {%- if is_state("binary_sensor.door_garage_to_den_53", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.door_garage_to_den_53", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      door_front_state:
+        friendly_name: 'Door Front'
+        value_template: >-
+            {%- if is_state("binary_sensor.door_front_97", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.door_front_97", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      door_back_sliding_state:
+        friendly_name: 'Door Back Sliding'
+        value_template: >-
+            {%- if is_state("binary_sensor.door_back_sliding_99", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.door_back_sliding_99", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_craft_room_state:
+        friendly_name: 'Window Craft Room'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_craft_room_114", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_craft_room_114", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_den_state:
+        friendly_name: 'Window Den'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_den_96", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_den_96", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_kitchen_state:
+        friendly_name: 'Window Kitchen State'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_kitchen_100", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_kitchen_100", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_front_east_state:
+        friendly_name: 'Window Front East'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_lr_east_104", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_lr_east_104", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+      window_front_west_state:
+        friendly_name: 'Window Front West'
+        value_template: >-
+            {%- if is_state("binary_sensor.window_lr_west_113", "off") -%}
+                Closed
+            {%- elif is_state("binary_sensor.window_lr_west_113", "on") -%}
+                Open
+            {%- else -%}
+                FAILED
+            {%- endif -%}
+
+  - platform: time_date
+    display_options:
+      - time
+
+  - platform: wunderground
+    api_key: !secret wunderground_api_key
+    pws_id: KOHSUNBU11
+    monitored_conditions:
+    - weather
+    - temp_f
+    - station_id
+    - feelslike_f
+    - heat_index_f
+    - dewpoint_f
+    - wind_mph
+    - UV
+    - pressure_in
+    - wind_dir
+    - relative_humidity
+    - precip_today_in
+    - alerts
+
+  - platform: bitcoin
+    display_options:
+    - market_price_usd
+
+  - platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+
+  - platform: pi_hole
+    host: 192.168.54.2
+
+  - platform: usps
+    username: !secret usps_username
+    password: !secret usps_password
+
+  - platform: ups
+    username: !secret ups_username
+    password: !secret ups_password
+
+#  - platform: fedex
+#    username: !secret fedex_username
+#    password: !secret fedex_password
+
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /
+      - type: memory_use_percent
+      - type: processor_use
+      - type: network_in
+        arg: eth0
+      - type: network_out
+        arg: eth0
+      - type: since_last_boot
+
+  - platform: moon
+
+  - platform: google_travel_time
+    api_key: !secret google_travel_time_api_key
+    origin: !secret travel_home
+    destination: !secret travel_dan_work
+    name: Dan Home to Work
+
+  - platform: google_travel_time
+    api_key: !secret google_travel_time_api_key
+    origin: !secret travel_dan_work
+    destination: !secret travel_home
+    name: Dan Work to Home
+
+  - platform: google_travel_time
+    api_key: !secret google_travel_time_api_key
+    origin: !secret travel_home
+    destination: !secret travel_shelley_work
+    name: Shelley Home to Work
+
+  - platform: google_travel_time
+    api_key: !secret google_travel_time_api_key
+    origin: !secret travel_shelley_work
+    destination: !secret travel_home
+    name: Shelley Work to Home
