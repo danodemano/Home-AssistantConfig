@@ -44,6 +44,8 @@
       entity_id: light.dining_room_36
 
 #####################################
+# THIS BLOCK IS USED WHEN OUT OF TOWN
+#####################################
 #  - alias: Turn on den light when sun sets
 #    trigger:
 #      platform: sun
