@@ -1357,6 +1357,6 @@ alexa:
 
 zone:
   name: Dan Work
-  latitude: 40.328386
-  longitude: -082.971756
+  latitude: !secret dan_work_lat
+  longitude: !secret dan_work_lon
   radius: 200
