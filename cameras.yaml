@@ -1,0 +1,30 @@
+  - platform: generic
+    still_image_url: http://192.168.53.110/snap.jpeg
+    name: Driveway
+  - platform: generic
+    still_image_url: http://192.168.53.112/snap.jpeg
+    name: Back Gate/Patio
+  - platform: generic
+    still_image_url: http://192.168.53.111/snap.jpeg
+    name: Front Walk
+  - platform: generic
+    still_image_url: http://192.168.53.113/snap.jpeg
+    name: Backyard/Shed
+  - platform: generic
+    still_image_url: http://192.168.53.116/snap.jpeg
+    name: Craft Room
+  - platform: generic
+    still_image_url: http://192.168.53.114/snap.jpeg
+    name: Basement
+  - platform: generic
+    still_image_url: http://192.168.53.115/snap.jpeg
+    name: Living Room
+  - platform: generic
+    still_image_url: http://192.168.53.117/snap.jpeg
+    name: Garage
+  - platform: generic
+    still_image_url: http://192.168.53.118/snap.jpeg
+    name: Patio
+  - platform: generic
+    still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=ILN&brand=wui&num=1&delay=15&type=N0R&frame=0&scale=1.000&noclutter=1&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=1&lightning=0&smooth=1&rand=24788299&lat=0&lon=0&label=you
+    name: Ohio Radar
