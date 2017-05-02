@@ -58,6 +58,8 @@ emulated_hue:
 #    - group
 #    - media_player
 
+#Required values are to be piped to InfluxDB
+#Only keep the minimum needed in MySQL for quick reference.
 recorder:
     purge_days: 3
     db_url: !secret recorder_db_url

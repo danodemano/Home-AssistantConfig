@@ -50,8 +50,12 @@
         icon: mdi:flash-red-eye
         unit_of_measurement: "W"
       sensor.server_rack_watts:
-        friendly_name: Server Rack
+        friendly_name: Server Rack Power
         icon: mdi:flash-red-eye
+      sensor.server_rack_temperature:
+        icon: mdi:thermometer
+      sensor.server_rack_humidity:
+        icon: mdi:water-percent
       sensor.energy_monitor_voltage_7_16:
         friendly_name: Home Voltage
         icon: mdi:flash-red-eye
@@ -128,3 +132,7 @@
         icon: mdi:timer
       sensor.speedtest_upload:
         icon: mdi:upload
+      sensor.gecko_humidity:
+        icon: mdi:water-percent
+      sensor.gecko_temperature:
+        icon: mdi:thermometer

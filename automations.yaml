@@ -22,7 +22,7 @@
       after: '07:30:00'
     action:
       service: switch.turn_on
-      entity_id: group.norbert
+      entity_id: switch.norbert_22
 
   - alias: Turn Norbert off in PM
     trigger:
@@ -30,7 +30,23 @@
       after: '20:30:00'
     action:
         - service: switch.turn_off
-          entity_id: group.norbert
+          entity_id: switch.norbert_22
+
+  - alias: Turn snakes off in AM
+    trigger:
+      platform: time
+      after: '08:00:00'
+    action:
+      service: switch.turn_off
+      entity_id: switch.snake_heaters_124
+
+  - alias: Turn snakes on in PM
+    trigger:
+      platform: time
+      after: '20:00:00'
+    action:
+        - service: switch.turn_on
+          entity_id: switch.snake_heaters_124
 
   - alias: 'Turn off dining room light when at <50 brightness for set duration'
     trigger:

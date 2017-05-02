@@ -4,7 +4,7 @@
      view: yes
      entities:
        - group.outdoor_lights
-       - group.norbert
+       - group.pets
        - group.living_area
        - group.master
        - group.wol
@@ -19,6 +19,7 @@
        - group.doors
        - group.windows
        - group.armed
+       - group.server_rack
        - camera.front_walk
        - camera.patio
        - sun.sun
@@ -82,10 +83,15 @@
        - switch.patio_light_32
        - switch.front_outside_lights_30
 
-   norbert:
-     name: Norbert
+   pets:
+     name: Pets
+     control: hidden
      entities:
        - switch.norbert_22
+       - switch.snake_heaters_124
+       - light.gecko_heater_67
+       - sensor.gecko_humidity
+       - sensor.gecko_temperature
 
    hvac_main:
      name: 'Main Thermostat'
@@ -192,7 +198,13 @@
      - sensor.furnace1_13
      - sensor.furnace2_16
      - sensor.hot_water_heater_watts
+
+   server_rack:
+     name: "Server Rack"
+     entities:
      - sensor.server_rack_watts
+     - sensor.server_rack_humidity
+     - sensor.server_rack_temperature
 
    home_electric:
      name: "Home Electric Usage"
