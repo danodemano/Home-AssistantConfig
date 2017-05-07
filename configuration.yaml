@@ -114,18 +114,19 @@ vera:
 influxdb:
   host: 192.168.9.52
   database: hass
-  whitelist:
-    - sensor.ac_10
-    - sensor.dryer_6
-    - sensor.furnace1_13
-    - sensor.furnace2_16
-    - sensor.hot_water_heater_watts
-    - sensor.server_rack_watts
-    - sensor.home_26
-    - sensor.pws_relative_humidity
-    - sensor.pws_temp_f
-    - sensor.climate_main_temperature2
-    - sensor.main_thermostat_relative_humidity_31_5_3
+  include:
+    entities:
+      - sensor.ac_10
+      - sensor.dryer_6
+      - sensor.furnace1_13
+      - sensor.furnace2_16
+      - sensor.hot_water_heater_watts
+      - sensor.server_rack_watts
+      - sensor.home_26
+      - sensor.pws_relative_humidity
+      - sensor.pws_temp_f
+      - sensor.climate_main_temperature2
+      - sensor.main_thermostat_relative_humidity_31_5_3
 
 #MyQ garage door integration
 cover:
