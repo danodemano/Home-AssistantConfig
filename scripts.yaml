@@ -47,12 +47,12 @@
       - service: light.turn_on
         data:
           entity_id: light.master_1
-          brightness: 255
+          brightness: 50
           rgb_color: [ 255,255,255 ]
       - service: light.turn_on
         data:
           entity_id: light.master_2
-          brightness: 255
+          brightness: 50
           rgb_color: [ 255,255,255 ]
       - service: media_player.turn_off
         data:
