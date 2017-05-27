@@ -6,6 +6,7 @@
        - group.outdoor_lights
        - group.pets
        - group.living_area
+       - group.den_area
        - group.master
        - group.wol
        - group.leak
@@ -111,6 +112,12 @@
       - switch.kids_tv_38
       - switch.living_room_37
 
+   den_area:
+     name: "Den Area"
+     control: hidden
+     entities:
+       - switch.den_av_128
+
    master:
      name: 'Master Bedroom'
      control: hidden
@@ -136,7 +143,7 @@
 
    battery:
      name: 'Battery Levels'
-     entities: 
+     entities:
      - sensor.climate_main_battery
      - sensor.leak_hot_water_heater_battery
      - sensor.leak_sump_pump_battery

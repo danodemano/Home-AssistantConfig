@@ -70,7 +70,7 @@
   alias: 'Turn on humidifier and such school/work night'
   trigger:
     platform: time
-    after: '21:00:00'
+    after: '22:00:00'
   condition:
     condition: time
     weekday:
@@ -101,7 +101,7 @@
   alias: 'Turn off kids TV school night'
   trigger:
     platform: time
-    after: '21:00:00'
+    after: '22:00:00'
   condition:
     condition: time
     weekday:
@@ -132,7 +132,7 @@
   alias: 'Turn on kids TV school days'
   trigger:
     platform: time
-    after: '06:00:00'
+    after: '08:00:00'
   condition:
     condition: time
     weekday:
@@ -236,6 +236,6 @@
       entity_id: updater.updater
   action:
     service: notify.danemail
-    data: 
+    data:
       title: 'New Home Assistant Release'
       message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
