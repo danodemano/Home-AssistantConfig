@@ -136,3 +136,41 @@ sensor.gecko_humidity:
   icon: mdi:water-percent
 sensor.gecko_temperature:
   icon: mdi:thermometer
+switch.geckos_59:
+  emulated_hue: false
+switch.door_back_sliding_99:
+  emulated_hue: false
+switch.door_basement_52:
+  emulated_hue: false
+switch.door_front_97:
+  emulated_hue: false
+switch.door_garage_to_den_53:
+  emulated_hue: false
+switch.leak_sump_pump_43:
+  emulated_hue: false
+switch.leak_water_heater_21:
+  emulated_hue: false
+switch.leak_wet_corner_44:
+  emulated_hue: false
+switch.safe_117:
+  emulated_hue: false
+switch.server_rack_status_63:
+  emulated_hue: false
+switch.vm1:
+  emulated_hue: false
+switch.vm2:
+  emulated_hue: false
+switch.window_craft_room_114:
+  emulated_hue: false
+switch.window_den_96:
+  emulated_hue: false
+switch.window_kitchen_100:
+  emulated_hue: false
+switch.window_lr_east_104:
+  emulated_hue: false
+switch.window_lr_west_113:
+  emulated_hue: false
+light.master_1:
+  emulated_hue: false
+light.master_2:
+  emulated_hue: false
