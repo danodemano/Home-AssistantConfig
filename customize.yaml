@@ -1,138 +1,138 @@
-      switch.front_walk_lights_31:
-        friendly_name: Front Walk Lights
-        emulated_hue_name: Front Walk Lights
-      switch.norbert_22:
-        friendly_name: Norbert Light
-      switch.patio_light_32:
-        friendly_name: Patio Light
-      switch.front_outside_lights_30:
-        friendly_name: Front Outside Lights
-      switch.master_night_stuff_42:
-        friendly_name: Master Night Stuff
-      sensor.pws_temp_f:
-        friendly_name: Outside Temp
-      sensor.pws_alerts:
-        friendly_name: Weather Alerts
-        icon: mdi:alert
-      sensor.pws_relative_humidity:
-        friendly_name: Outside Humidity
-        icon: mdi:water-percent
-      sensor.pws_weather:
-        friendly_name: Weather
-      sensor.pws_wind_dir:
-        friendly_name: Wind Direction
-        icon: mdi:compass
-      sensor.pws_wind_mph:
-        friendly_name: Wind MPH
-        icon: mdi:weather-windy
-      sensor.market_price:
-        friendly_name: BTC to USD
-      climate.main_thermostat_39:
-        friendly_name: Thermostat Control
-        icon: mdi:settings
-      sensor.climate_main_fan_state:
-        icon: mdi:fan
-      sensor.climate_main_operating_state:
-        icon: mdi:settings-box
-      sensor.main_thermostat_temperature_31_1:
-        friendly_name: Inside Temp
-      sensor.main_thermostat_relative_humidity_31_5_3:
-        friendly_name: Inside Humidity
-        icon: mdi:water-percent
-      sensor.energy_monitor_current_7_20:
-        friendly_name: Home Current
-        icon: mdi:flash-red-eye
-      sensor.energy_monitor_energy_7_0:
-        friendly_name: Home KWH
-        icon: mdi:flash-red-eye
-      sensor.home_26:
-        friendly_name: Home Watts
-        icon: mdi:flash-red-eye
-        unit_of_measurement: "W"
-      sensor.server_rack_watts:
-        friendly_name: Server Rack Power
-        icon: mdi:flash-red-eye
-      sensor.server_rack_temperature:
-        icon: mdi:thermometer
-      sensor.server_rack_humidity:
-        icon: mdi:water-percent
-      sensor.energy_monitor_voltage_7_16:
-        friendly_name: Home Voltage
-        icon: mdi:flash-red-eye
-      sensor.climate_main_temperature:
-        icon: mdi:thermometer-lines
-      binary_sensor.leak_water_heater_21:
-        sensor_class: moisture
-        icon: mdi:water
-      binary_sensor.leak_sump_pump_43:
-        sensor_class: moisture
-        icon: mdi:water
-      binary_sensor.leak_wet_corner_44:
-        sensor_class: moisture
-        icon: mdi:water
-      light.dining_room_36:
-        friendly_name: Dining Room Light
-        scan_interval: 10
-        refresh_value: true
-      sensor.climate_main_battery:
-        icon: mdi:battery
-      sensor.leak_hot_water_heater_battery:
-        icon: mdi:battery
-      sensor.leak_sump_pump_battery:
-        icon: mdi:battery
-      sensor.leak_wet_corner_battery:
-        icon: mdi:battery
-      sensor.door_basement_battery:
-        icon: mdi:battery
-      sensor.door_garage_to_den_battery:
-        icon: mdi:battery
-      sensor.door_back_sliding_battery:
-        icon: mdi:battery
-      sensor.door_front_battery:
-        icon: mdi:battery
-      sensor.window_den_battery:
-        icon: mdi:battery
-      sensor.window_front_east_battery:
-        icon: mdi:battery
-      sensor.window_front_west_battery:
-        icon: mdi:battery
-      sensor.window_kitchen_battery:
-        icon: mdi:battery
-      sensor.window_craft_room_battery:
-        icon: mdi:battery
-      cover.garage_door_opener:
-        friendly_name: Garage Door
-      sensor.ac_10:
-        unit_of_measurement: "W"
-        icon: mdi:flash-red-eye
-      sensor.dryer_6:
-        unit_of_measurement: "W"
-        icon: mdi:flash-red-eye
-      sensor.furnace1_13:
-        unit_of_measurement: "W"
-        icon: mdi:flash-red-eye
-      sensor.furnace2_16:
-        icon: mdi:flash-red-eye
-        unit_of_measurement: "W"
-      sensor.hot_water_heater_watts:
-        icon: mdi:flash-red-eye
-      sensor.dan_home_to_work:
-        icon: mdi:car
-      sensor.dan_work_to_home:
-        icon: mdi:car
-      sensor.shelley_home_to_work:
-        icon: mdi:car
-      sensor.shelley_work_to_home:
-        icon: mdi:car
-      sensor.430_walnutview_dr:
-        friendly_name: USPS
-      sensor.speedtest_download:
-        icon: mdi:download
-      sensor.speedtest_ping:
-        icon: mdi:timer
-      sensor.speedtest_upload:
-        icon: mdi:upload
-      sensor.gecko_humidity:
-        icon: mdi:water-percent
-      sensor.gecko_temperature:
-        icon: mdi:thermometer
+switch.front_walk_lights_31:
+  friendly_name: Front Walk Lights
+  emulated_hue_name: Front Walk Lights
+switch.norbert_22:
+  friendly_name: Norbert Light
+switch.patio_light_32:
+  friendly_name: Patio Light
+switch.front_outside_lights_30:
+  friendly_name: Front Outside Lights
+switch.master_night_stuff_42:
+  friendly_name: Master Night Stuff
+sensor.pws_temp_f:
+  friendly_name: Outside Temp
+sensor.pws_alerts:
+  friendly_name: Weather Alerts
+  icon: mdi:alert
+sensor.pws_relative_humidity:
+  friendly_name: Outside Humidity
+  icon: mdi:water-percent
+sensor.pws_weather:
+  friendly_name: Weather
+sensor.pws_wind_dir:
+  friendly_name: Wind Direction
+  icon: mdi:compass
+sensor.pws_wind_mph:
+  friendly_name: Wind MPH
+  icon: mdi:weather-windy
+sensor.market_price:
+  friendly_name: BTC to USD
+climate.main_thermostat_39:
+  friendly_name: Thermostat Control
+  icon: mdi:settings
+sensor.climate_main_fan_state:
+  icon: mdi:fan
+sensor.climate_main_operating_state:
+  icon: mdi:settings-box
+sensor.main_thermostat_temperature_31_1:
+  friendly_name: Inside Temp
+sensor.main_thermostat_relative_humidity_31_5_3:
+  friendly_name: Inside Humidity
+  icon: mdi:water-percent
+sensor.energy_monitor_current_7_20:
+  friendly_name: Home Current
+  icon: mdi:flash-red-eye
+sensor.energy_monitor_energy_7_0:
+  friendly_name: Home KWH
+  icon: mdi:flash-red-eye
+sensor.home_26:
+  friendly_name: Home Watts
+  icon: mdi:flash-red-eye
+  unit_of_measurement: "W"
+sensor.server_rack_watts:
+  friendly_name: Server Rack Power
+  icon: mdi:flash-red-eye
+sensor.server_rack_temperature:
+  icon: mdi:thermometer
+sensor.server_rack_humidity:
+  icon: mdi:water-percent
+sensor.energy_monitor_voltage_7_16:
+  friendly_name: Home Voltage
+  icon: mdi:flash-red-eye
+sensor.climate_main_temperature:
+  icon: mdi:thermometer-lines
+binary_sensor.leak_water_heater_21:
+  sensor_class: moisture
+  icon: mdi:water
+binary_sensor.leak_sump_pump_43:
+  sensor_class: moisture
+  icon: mdi:water
+binary_sensor.leak_wet_corner_44:
+  sensor_class: moisture
+  icon: mdi:water
+light.dining_room_36:
+  friendly_name: Dining Room Light
+  scan_interval: 10
+  refresh_value: true
+sensor.climate_main_battery:
+  icon: mdi:battery
+sensor.leak_hot_water_heater_battery:
+  icon: mdi:battery
+sensor.leak_sump_pump_battery:
+  icon: mdi:battery
+sensor.leak_wet_corner_battery:
+  icon: mdi:battery
+sensor.door_basement_battery:
+  icon: mdi:battery
+sensor.door_garage_to_den_battery:
+  icon: mdi:battery
+sensor.door_back_sliding_battery:
+  icon: mdi:battery
+sensor.door_front_battery:
+  icon: mdi:battery
+sensor.window_den_battery:
+  icon: mdi:battery
+sensor.window_front_east_battery:
+  icon: mdi:battery
+sensor.window_front_west_battery:
+  icon: mdi:battery
+sensor.window_kitchen_battery:
+  icon: mdi:battery
+sensor.window_craft_room_battery:
+  icon: mdi:battery
+cover.garage_door_opener:
+  friendly_name: Garage Door
+sensor.ac_10:
+  unit_of_measurement: "W"
+  icon: mdi:flash-red-eye
+sensor.dryer_6:
+  unit_of_measurement: "W"
+  icon: mdi:flash-red-eye
+sensor.furnace1_13:
+  unit_of_measurement: "W"
+  icon: mdi:flash-red-eye
+sensor.furnace2_16:
+  icon: mdi:flash-red-eye
+  unit_of_measurement: "W"
+sensor.hot_water_heater_watts:
+  icon: mdi:flash-red-eye
+sensor.dan_home_to_work:
+  icon: mdi:car
+sensor.dan_work_to_home:
+  icon: mdi:car
+sensor.shelley_home_to_work:
+  icon: mdi:car
+sensor.shelley_work_to_home:
+  icon: mdi:car
+sensor.430_walnutview_dr:
+  friendly_name: USPS
+sensor.speedtest_download:
+  icon: mdi:download
+sensor.speedtest_ping:
+  icon: mdi:timer
+sensor.speedtest_upload:
+  icon: mdi:upload
+sensor.gecko_humidity:
+  icon: mdi:water-percent
+sensor.gecko_temperature:
+  icon: mdi:thermometer
