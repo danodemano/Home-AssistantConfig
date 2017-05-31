@@ -2,7 +2,7 @@
         friendly_name: Front Walk Lights
         emulated_hue_name: Front Walk Lights
       switch.norbert_22:
-        friendly_name: Norbert
+        friendly_name: Norbert Light
       switch.patio_light_32:
         friendly_name: Patio Light
       switch.front_outside_lights_30:

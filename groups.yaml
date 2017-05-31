@@ -1,240 +1,248 @@
-   #default_view:
-   newdef:
-     name: New Default
-     view: yes
-     entities:
-       - group.outdoor_lights
-       - group.pets
-       - group.living_area
-       - group.den_area
-       - group.master
-       - group.wol
-       - group.leak
-       - group.traveltimes
-       - group.battery
-       - group.energy
-       - group.hvac_main
-       - group.home_electric
-       - group.weather
-       - group.speedtest
-       - group.doors
-       - group.windows
-       - group.armed
-       - group.server_rack
-       - camera.front_walk
-       - camera.patio
-       - sun.sun
-       - sensor.moon
-       - device_tracker.shannon
-       - device_tracker.nick
-       - device_tracker.dan
-       - device_tracker.shelley
-       - sensor.market_price
-       - sensor.pihole
-       - sensor.430_walnutview_dr
-       - sensor.cpu_use
-       - sensor.disk_use_
-       - sensor.ram_use
-       - sensor.since_last_boot
-       - sensor.time
-       - media_player.brix_pc
-       - media_player.onkyo_den
-       - binary_sensor.iss
+ #default_view:
+ newdef:
+   name: New Default
+   view: yes
+   entities:
+     - group.outdoor_lights
+     - group.pets
+     - group.living_area
+     - group.den_area
+     - group.kitchen
+     - group.master
+     - group.wol
+     - group.leak
+     - group.traveltimes
+     - group.battery
+     - group.energy
+     - group.hvac_main
+     - group.home_electric
+     - group.weather
+     - group.speedtest
+     - group.doors
+     - group.windows
+     - group.armed
+     - group.server_rack
+     - camera.front_walk
+     - camera.patio
+     - sun.sun
+     - sensor.moon
+     - device_tracker.shannon
+     - device_tracker.nick
+     - device_tracker.dan
+     - device_tracker.shelley
+     - sensor.market_price
+     - sensor.pihole
+     - sensor.430_walnutview_dr
+     - sensor.cpu_use
+     - sensor.disk_use_
+     - sensor.ram_use
+     - sensor.since_last_boot
+     - sensor.time
+     - media_player.brix_pc
+     - media_player.onkyo_den
+     - binary_sensor.iss
 
-   security:
-     name: Security
-     view: yes
-     entities:
-       - group.cameras_group
-       - group.doors
-       - group.windows
-       - group.armed
+ security:
+   name: Security
+   view: yes
+   entities:
+     - group.cameras_group
+     - group.doors
+     - group.windows
+     - group.armed
 
-   cameras:
-     name: Cameras
-     view: yes
-     entities:
-       - camera.driveway
-       - camera.back_gatepatio
-       - camera.front_walk
-       - camera.backyardshed
-       - camera.patio
-       - camera.garage
-       - camera.basement
-       - camera.living_room
-       - camera.craft_room
+ cameras:
+   name: Cameras
+   view: yes
+   entities:
+     - camera.driveway
+     - camera.back_gatepatio
+     - camera.front_walk
+     - camera.backyardshed
+     - camera.patio
+     - camera.garage
+     - camera.basement
+     - camera.living_room
+     - camera.craft_room
 
-   cameras_group:
-     name: Camera Group
-     entities:
-       - camera.driveway
-       - camera.back_gatepatio
-       - camera.front_walk
-       - camera.backyardshed
-       - camera.patio
-       - camera.garage
-       - camera.basement
-       - camera.living_room
-       - camera.craft_room
+ cameras_group:
+   name: Camera Group
+   entities:
+     - camera.driveway
+     - camera.back_gatepatio
+     - camera.front_walk
+     - camera.backyardshed
+     - camera.patio
+     - camera.garage
+     - camera.basement
+     - camera.living_room
+     - camera.craft_room
 
-   outdoor_lights:
-     name: Outdoor Lights
-     entities:
-       - switch.front_walk_lights_31
-       - switch.patio_light_32
-       - switch.front_outside_lights_30
+ outdoor_lights:
+   name: Outdoor Lights
+   entities:
+     - switch.front_walk_lights_31
+     - switch.patio_light_32
+     - switch.front_outside_lights_30
 
-   pets:
-     name: Pets
-     control: hidden
-     entities:
-       - switch.norbert_22
-       - switch.snake_heaters_124
-       - light.gecko_heater_67
-       - sensor.gecko_humidity
-       - sensor.gecko_temperature
+ pets:
+   name: Pets
+   control: hidden
+   entities:
+     - switch.norbert_22
+     - switch.norbert_heat_130
+     - switch.snake_heaters_124
+     - light.gecko_heater_67
+     - sensor.gecko_humidity
+     - sensor.gecko_temperature
 
-   hvac_main:
-     name: 'Main Thermostat'
-     entities:
-       - sensor.climate_main_fan_state
-       - sensor.climate_main_operating_state
-       - sensor.climate_main_temperature
-       - sensor.climate_main_temperature2
-       - sensor.main_thermostat_relative_humidity_31_5_3
-       - climate.main_thermostat_39
+ hvac_main:
+   name: 'Main Thermostat'
+   entities:
+     - sensor.climate_main_fan_state
+     - sensor.climate_main_operating_state
+     - sensor.climate_main_temperature
+     - sensor.climate_main_temperature2
+     - sensor.main_thermostat_relative_humidity_31_5_3
+     - climate.main_thermostat_39
 
-   living_area:
-     name: 'Dining/Living Area'
-     control: hidden
-     entities:
-      - light.dining_room_36
-      - switch.kids_tv_38
-      - switch.living_room_37
+ living_area:
+   name: 'Dining/Living Area'
+   control: hidden
+   entities:
+    - light.dining_room_36
+    - switch.kids_tv_38
+    - switch.living_room_37
 
-   den_area:
-     name: "Den Area"
-     control: hidden
-     entities:
-       - switch.den_av_128
+ den_area:
+   name: "Den Area"
+   control: hidden
+   entities:
+     - switch.den_av_128
 
-   master:
-     name: 'Master Bedroom'
-     control: hidden
-     entities:
-      - light.master
-      - light.master_1
-      - light.master_2
-      - switch.master_night_stuff_42
+ kitchen:
+   name: "Kitchen"
+   control: hidden
+   entities:
+     - switch.coffee_pot_129
 
-   wol:
-     name: 'Wake on LAN'
-     control: hidden
-     entities:
-      - switch.vm1
-      - switch.vm2
+ master:
+   name: 'Master Bedroom'
+   control: hidden
+   entities:
+    - light.master
+    - light.master_1
+    - light.master_2
+    - switch.master_night_stuff_42
 
-   leak:
-     name: 'Leak Sensors'
-     entities:
-      - binary_sensor.leak_water_heater_21
-      - binary_sensor.leak_sump_pump_43
-      - binary_sensor.leak_wet_corner_44
+ wol:
+   name: 'Wake on LAN'
+   control: hidden
+   entities:
+    - switch.vm1
+    - switch.vm2
 
-   battery:
-     name: 'Battery Levels'
-     entities:
-     - sensor.climate_main_battery
-     - sensor.leak_hot_water_heater_battery
-     - sensor.leak_sump_pump_battery
-     - sensor.leak_wet_corner_battery
-     - sensor.door_basement_battery
-     - sensor.door_garage_to_den_battery
-     - sensor.door_back_sliding_battery
-     - sensor.door_front_battery
-     - sensor.window_craft_room_battery
-     - sensor.window_den_battery
-     - sensor.window_front_east_battery
-     - sensor.window_front_west_battery
-     - sensor.window_kitchen_battery
+ leak:
+   name: 'Leak Sensors'
+   entities:
+    - binary_sensor.leak_water_heater_21
+    - binary_sensor.leak_sump_pump_43
+    - binary_sensor.leak_wet_corner_44
 
-   doors:
-     name: 'Door Status'
-     entities:
-      - sensor.door_garage_to_den_state
-      - sensor.door_basement_state
-      - sensor.door_front_state
-      - sensor.door_back_sliding_state
-      - cover.garage_door_opener
+ battery:
+   name: 'Battery Levels'
+   entities:
+   - sensor.climate_main_battery
+   - sensor.leak_hot_water_heater_battery
+   - sensor.leak_sump_pump_battery
+   - sensor.leak_wet_corner_battery
+   - sensor.door_basement_battery
+   - sensor.door_garage_to_den_battery
+   - sensor.door_back_sliding_battery
+   - sensor.door_front_battery
+   - sensor.window_craft_room_battery
+   - sensor.window_den_battery
+   - sensor.window_front_east_battery
+   - sensor.window_front_west_battery
+   - sensor.window_kitchen_battery
 
-   windows:
-     name: 'Window Status'
-     entities:
-      - sensor.window_craft_room_state
-      - sensor.window_den_state
-      - sensor.window_front_east_state
-      - sensor.window_front_west_state
-      - sensor.window_kitchen_state
+ doors:
+   name: 'Door Status'
+   entities:
+    - sensor.door_garage_to_den_state
+    - sensor.door_basement_state
+    - sensor.door_front_state
+    - sensor.door_back_sliding_state
+    - cover.garage_door_opener
 
-   armed:
-     name: 'Arm Devices!'
-     entities:
-      - switch.door_basement_52
-      - switch.door_front_97
-      - switch.door_garage_to_den_53
-      - switch.door_back_sliding_99
-      - switch.window_craft_room_114
-      - switch.window_den_96
-      - switch.window_kitchen_100
-      - switch.window_lr_east_104
-      - switch.window_lr_west_113
+ windows:
+   name: 'Window Status'
+   entities:
+    - sensor.window_craft_room_state
+    - sensor.window_den_state
+    - sensor.window_front_east_state
+    - sensor.window_front_west_state
+    - sensor.window_kitchen_state
 
-   traveltimes:
-     name: "Travel Times"
-     entities:
-     - sensor.dan_home_to_work
-     - sensor.dan_work_to_home
-     - sensor.shelley_home_to_work
-     - sensor.shelley_work_to_home
+ armed:
+   name: 'Arm Devices!'
+   entities:
+    - switch.door_basement_52
+    - switch.door_front_97
+    - switch.door_garage_to_den_53
+    - switch.door_back_sliding_99
+    - switch.window_craft_room_114
+    - switch.window_den_96
+    - switch.window_kitchen_100
+    - switch.window_lr_east_104
+    - switch.window_lr_west_113
 
-   energy:
-     name: "Power Usage"
-     entities:
-     - sensor.ac_10
-     - sensor.dryer_6
-     - sensor.furnace1_13
-     - sensor.furnace2_16
-     - sensor.hot_water_heater_watts
+ traveltimes:
+   name: "Travel Times"
+   entities:
+   - sensor.dan_home_to_work
+   - sensor.dan_work_to_home
+   - sensor.shelley_home_to_work
+   - sensor.shelley_work_to_home
 
-   server_rack:
-     name: "Server Rack"
-     entities:
-     - sensor.server_rack_watts
-     - sensor.server_rack_humidity
-     - sensor.server_rack_temperature
+ energy:
+   name: "Power Usage"
+   entities:
+   - sensor.ac_10
+   - sensor.dryer_6
+   - sensor.furnace1_13
+   - sensor.furnace2_16
+   - sensor.hot_water_heater_watts
 
-   home_electric:
-     name: "Home Electric Usage"
-     entities:
-     - sensor.home_26
+ server_rack:
+   name: "Server Rack"
+   entities:
+   - sensor.server_rack_watts
+   - sensor.server_rack_humidity
+   - sensor.server_rack_temperature
+
+ home_electric:
+   name: "Home Electric Usage"
+   entities:
+   - sensor.home_26
 #     - sensor.energy_monitor_current_7_20
 #     - sensor.energy_monitor_energy_7_0
 #     - sensor.energy_monitor_voltage_7_16
 
-   weather:
-     name: Weather
-     entities:
-     - sensor.pws_temp_f
-     - sensor.pws_relative_humidity
-     - sensor.pws_alerts
-     - sensor.pws_weather
-     - sensor.pws_wind_dir
-     - sensor.pws_wind_mph
-     - camera.ohio_radar
+ weather:
+   name: Weather
+   entities:
+   - sensor.pws_temp_f
+   - sensor.pws_relative_humidity
+   - sensor.pws_alerts
+   - sensor.pws_weather
+   - sensor.pws_wind_dir
+   - sensor.pws_wind_mph
+   - camera.ohio_radar
 
-   speedtest:
-     name: Speedtest
-     entities:
-     - sensor.speedtest_download
-     - sensor.speedtest_ping
-     - sensor.speedtest_upload
+ speedtest:
+   name: Speedtest
+   entities:
+   - sensor.speedtest_download
+   - sensor.speedtest_ping
+   - sensor.speedtest_upload
