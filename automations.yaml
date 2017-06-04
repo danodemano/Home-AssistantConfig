@@ -22,7 +22,7 @@
   alias: Turn Norbert on in AM
   trigger:
     platform: time
-    after: '07:30:00'
+    at: '07:30:00'
   action:
     service: switch.turn_on
     entity_id: switch.norbert_22
@@ -31,7 +31,7 @@
   alias: Turn Norbert off in PM
   trigger:
     platform: time
-    after: '20:30:00'
+    at: '20:30:00'
   action:
       - service: switch.turn_off
         entity_id: switch.norbert_22
@@ -40,7 +40,7 @@
   alias: Turn snakes off in AM
   trigger:
     platform: time
-    after: '08:00:00'
+    at: '08:00:00'
   action:
     service: switch.turn_off
     entity_id: switch.snake_heaters_124
@@ -49,7 +49,7 @@
   alias: Turn snakes on in PM
   trigger:
     platform: time
-    after: '20:00:00'
+    at: '20:00:00'
   action:
       - service: switch.turn_on
         entity_id: switch.snake_heaters_124
@@ -70,7 +70,7 @@
   alias: 'Turn on humidifier and such school/work night'
   trigger:
     platform: time
-    after: '22:00:00'
+    at: '22:00:00'
   condition:
     condition: time
     weekday:
@@ -87,7 +87,7 @@
   alias: 'Turn on humidifier and such weekend night'
   trigger:
     platform: time
-    after: '22:00:00'
+    at: '22:00:00'
   condition:
     condition: time
     weekday:
@@ -101,7 +101,7 @@
   alias: 'Turn off kids TV school night'
   trigger:
     platform: time
-    after: '22:00:00'
+    at: '22:00:00'
   condition:
     condition: time
     weekday:
@@ -118,7 +118,7 @@
   alias: 'Turn off kids TV weekend night'
   trigger:
     platform: time
-    after: '22:00:00'
+    at: '22:00:00'
   condition:
     condition: time
     weekday:
@@ -132,7 +132,7 @@
   alias: 'Turn on kids TV school days'
   trigger:
     platform: time
-    after: '08:00:00'
+    at: '08:00:00'
   condition:
     condition: time
     weekday:
@@ -149,7 +149,7 @@
   alias: 'Turn on kids TV weekend days'
   trigger:
     platform: time
-    after: '08:00:00'
+    at: '08:00:00'
   condition:
     condition: time
     weekday:
@@ -244,7 +244,7 @@
   alias: 'Turn on the coffee pot on Dan early day'
   trigger:
     platform: time
-    after: '06:00:00'
+    at: '06:00:00'
   condition:
     condition: time
     weekday:
@@ -257,7 +257,7 @@
   alias: 'Turn on the coffee pot on Dan normal days'
   trigger:
     platform: time
-    after: '07:00:00'
+    at: '07:00:00'
   condition:
     condition: time
     weekday:
@@ -273,7 +273,7 @@
   alias: 'Turn off the coffee pot by 0900'
   trigger:
     platform: time
-    after: '09:00:00'
+    at: '09:00:00'
   condition:
     condition: time
     weekday:
