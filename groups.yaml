@@ -96,6 +96,27 @@ pets:
    - sensor.gecko_humidity
    - sensor.gecko_temperature
 
+vacation_mode:
+  name: "Vacation Mode Toggle"
+  entities:
+    - input_boolean.vacation_mode
+
+vacation:
+  name: "Vacation"
+  view: yes
+  entities:
+    - group.vacation_mode
+    - group.cameras_group
+    - group.pets
+    - group.leak
+    - group.energy
+    - group.hvac_main
+    - group.home_electric
+    - group.doors
+    - group.windows
+    - group.armed
+    - group.server_rack
+
 hvac_main:
  name: 'Main Thermostat'
  entities:

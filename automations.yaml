@@ -72,13 +72,18 @@
     platform: time
     at: '22:00:00'
   condition:
-    condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - sun
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - sun
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
   action:
     service: switch.turn_on
     entity_id: switch.master_night_stuff_42
@@ -89,10 +94,15 @@
     platform: time
     at: '22:00:00'
   condition:
-    condition: time
-    weekday:
-      - fri
-      - sat
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - fri
+          - sat
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
   action:
     service: switch.turn_on
     entity_id: switch.master_night_stuff_42
@@ -134,13 +144,18 @@
     platform: time
     at: '08:00:00'
   condition:
-    condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
   action:
     service: switch.turn_on
     entity_id: switch.kids_tv_38
@@ -151,10 +166,15 @@
     platform: time
     at: '08:00:00'
   condition:
-    condition: time
-    weekday:
-      - sat
-      - sun
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - sat
+          - sun
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
   action:
     service: switch.turn_on
     entity_id: switch.kids_tv_38
@@ -246,9 +266,14 @@
     platform: time
     at: '06:00:00'
   condition:
-    condition: time
-    weekday:
-      - mon
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
   action:
     service: switch.turn_on
     entity_id: switch.coffee_pot_129
@@ -259,12 +284,17 @@
     platform: time
     at: '07:00:00'
   condition:
-    condition: time
-    weekday:
-      - tue
-      - wed
-      - thu
-      - fri
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
   action:
     service: switch.turn_on
     entity_id: switch.coffee_pot_129
@@ -285,3 +315,99 @@
   action:
     service: switch.turn_off
     entity_id: switch.coffee_pot_129
+
+#####################################
+# THIS BLOCK IS USED WHEN OUT OF TOWN
+#####################################
+- id: turn_on_den_when_sun_sets
+  alias: Turn on den light when sun sets
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:10:00"
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: light.den_1
+      brightness: 255
+      rgb_color: [ 255,220,69 ]
+
+- id: change_den_color_to_red_when_norbert_off
+  alias: Change den light color to red when Norbert goes off
+  trigger:
+    platform: time
+    after: '20:35:00'
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: light.den_1
+      brightness: 255
+      rgb_color: [ 255, 0, 0 ]
+
+- id: turn_off_den_and_at_random_time
+  alias: Turn den off and master on at a semi-random time
+  trigger:
+    - platform: template
+      value_template: "{{ is_state('sensor.time', states('input_slider.random_hour')|int ~ ':' ~ states('input_slider.random_minute')|int) }}"
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+  action:
+    - service: light.turn_off
+      entity_id: light.den_1
+    - service: light.turn_on
+      entity_id: light.master_1
+    - service: homeassistant.turn_on
+      entity_id: script.timed_lamp
+
+- id: turn_on_light_for_overnight
+  alias: Turn on lights for overnight
+  trigger:
+    platform: time
+    after: '22:30:00'
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: switch.front_outside_lights_30
+
+- id: turn_off_lights_in_the_early_morning
+  alias: Turn off lights in the early morning
+  trigger:
+    platform: time
+    after: '06:00:00'
+  condition:
+    condition: state
+    entity_id: input_boolean.vacation_mode
+    state: 'on'
+  action:
+    service: switch.turn_off
+    entity_id: switch.front_outside_lights_30
+
+- id: set_random_time
+  alias: set_random_time
+  trigger:
+    - platform: time
+      after: '21:00:00'
+  action:
+    - service: input_slider.select_value
+      data_template:
+        entity_id: input_slider.random_hour
+        # The endpoint is omitted, see: http://jinja.pocoo.org/docs/dev/templates/#range
+        value: '{{ (range(22, 24)|random) }}'
+    - service: input_slider.select_value
+      data_template:
+        entity_id: input_slider.random_minute
+        value: '{{ (range(15, 46)|random) }}'
+#####################################

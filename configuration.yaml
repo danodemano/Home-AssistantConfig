@@ -179,6 +179,11 @@ media_player:
 
 group: !include groups.yaml
 
+#Master toggle for vacation mode
+input_boolean:
+  vacation_mode:
+    initial: off
+
 input_slider:
   random_hour:
     name: 'Random Hour'

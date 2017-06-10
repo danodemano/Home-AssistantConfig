@@ -136,6 +136,8 @@ sensor.gecko_humidity:
   icon: mdi:water-percent
 sensor.gecko_temperature:
   icon: mdi:thermometer
+input_boolean.vacation_mode:
+  icon: mdi:beach
 switch.geckos_59:
   emulated_hue: false
 switch.door_back_sliding_99:
