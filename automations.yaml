@@ -324,17 +324,13 @@
   trigger:
     platform: sun
     event: sunset
-    offset: "-00:10:00"
+    offset: "-00:60:00"
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
     state: 'on'
   action:
-    service: light.turn_on
-    data_template:
-      entity_id: light.den_1
-      brightness: 255
-      rgb_color: [ 255,220,69 ]
+    - service: shell_command.tplink_den_white
 
 - id: change_den_color_to_red_when_norbert_off
   alias: Change den light color to red when Norbert goes off
@@ -346,11 +342,7 @@
     entity_id: input_boolean.vacation_mode
     state: 'on'
   action:
-    service: light.turn_on
-    data_template:
-      entity_id: light.den_1
-      brightness: 255
-      rgb_color: [ 255, 0, 0 ]
+    - service: shell_command.tplink_den_red
 
 - id: turn_off_den_and_at_random_time
   alias: Turn den off and master on at a semi-random time
@@ -362,10 +354,17 @@
     entity_id: input_boolean.vacation_mode
     state: 'on'
   action:
-    - service: light.turn_off
-      entity_id: light.den_1
+    - service: shell_command.tplink_den_off
     - service: light.turn_on
-      entity_id: light.master_1
+      data:
+        entity_id: light.master_1
+        brightness: 50
+        rgb_color: [ 255,255,255 ]
+    - service: light.turn_on
+      data:
+        entity_id: light.master_2
+        brightness: 50
+        rgb_color: [ 255,255,255 ]
     - service: homeassistant.turn_on
       entity_id: script.timed_lamp
 

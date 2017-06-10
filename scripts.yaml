@@ -8,12 +8,12 @@ timed_lamp:
     - service: light.turn_on
       data:
         entity_id: light.master_1
-        brightness: 255
+        brightness: 50
         rgb_color: [ 255,255,255 ]
     - service: light.turn_on
       data:
         entity_id: light.master_2
-        brightness: 255
+        brightness: 50
         rgb_color: [ 255,255,255 ]
     # Set new timer
     - service: script.turn_on
@@ -133,3 +133,23 @@ kodi_play:
     - service: media_player.media_play
       data:
         entity_id: media_player.brix_pc
+
+den_red:
+  alias: "Den Red"
+  sequence:
+    - service: shell_command.tplink_den_red
+
+den_white:
+  alias: "Den White"
+  sequence:
+    - service: shell_command.tplink_den_white
+
+den_on:
+  alias: "Den On"
+  sequence:
+    - service: shell_command.tplink_den_on
+
+den_off:
+  alias: "Den Off"
+  sequence:
+    - service: shell_command.tplink_den_off

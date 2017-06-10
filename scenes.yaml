@@ -1,127 +1,85 @@
-  - name: Den Red
-    entities:
-        light.den_1:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255, 0, 0 ]
-  - name: Den Blue
-    entities:
-        light.den_1:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 0, 0, 255 ]
-  - name: Den Yellow
-    entities:
-        light.den_1:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255,220,69 ]
-  - name: Den Green
-    entities:
-        light.den_1:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255,253,93 ]
-  - name: Den Fire
-    entities:
-        light.den_1:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255,161,44 ]
-  - name: Den White
-    entities:
-        light.den_1:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255,255,255 ]
-  - name: Master Red
-    entities:
-        light.master:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255, 0, 0 ]
-  - name: Master Blue
-    entities:
-        light.master:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 0, 0, 255 ]
-  - name: Master Yellow
-    entities:
-        light.master:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255,220,69 ]
-  - name: Master Green
-    entities:
-        light.master:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255,253,93 ]
-  - name: Master Fire
-    entities:
-        light.master:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255,161,44 ]
-  - name: Master White
-    entities:
-        light.master:
-            state: on
-            transition: 2
-            brightness: 255
-            rgb_color: [ 255,255,255 ]
-  - name: Living On
-    entities:
-        switch.living_room_37:
-            state: on
-  - name: Living Off
-    entities:
-        switch.living_room_37:
-            state: off
-  - name: Dining On
-    entities:
-        light.dining_room_36:
-            state: on
-            transition: 2
-            brightness: 255
-  - name: Dining Off
-    entities:
-        light.dining_room_36:
-            state: off
-            transition: 2
-  - name: Dining to 25
-    entities:
-        light.dining_room_36:
-            state: on
-            transition: 2
-            brightness: 64
-  - name: Dining to 50
-    entities:
-        light.dining_room_36:
-            state: on
-            transition: 2
-            brightness: 128
-  - name: Dining to 75
-    entities:
-        light.dining_room_36:
-            state: on
-            transition: 2
-            brightness: 191
-  - name: Dining to 100
-    entities:
-        light.dining_room_36:
-            state: on
-            transition: 2
-            brightness: 255
+- name: Master Red
+  entities:
+      light.master:
+          state: on
+          transition: 2
+          brightness: 255
+          rgb_color: [ 255, 0, 0 ]
+- name: Master Blue
+  entities:
+      light.master:
+          state: on
+          transition: 2
+          brightness: 255
+          rgb_color: [ 0, 0, 255 ]
+- name: Master Yellow
+  entities:
+      light.master:
+          state: on
+          transition: 2
+          brightness: 255
+          rgb_color: [ 255,220,69 ]
+- name: Master Green
+  entities:
+      light.master:
+          state: on
+          transition: 2
+          brightness: 255
+          rgb_color: [ 255,253,93 ]
+- name: Master Fire
+  entities:
+      light.master:
+          state: on
+          transition: 2
+          brightness: 255
+          rgb_color: [ 255,161,44 ]
+- name: Master White
+  entities:
+      light.master:
+          state: on
+          transition: 2
+          brightness: 255
+          rgb_color: [ 255,255,255 ]
+- name: Living On
+  entities:
+      switch.living_room_37:
+          state: on
+- name: Living Off
+  entities:
+      switch.living_room_37:
+          state: off
+- name: Dining On
+  entities:
+      light.dining_room_36:
+          state: on
+          transition: 2
+          brightness: 255
+- name: Dining Off
+  entities:
+      light.dining_room_36:
+          state: off
+          transition: 2
+- name: Dining to 25
+  entities:
+      light.dining_room_36:
+          state: on
+          transition: 2
+          brightness: 64
+- name: Dining to 50
+  entities:
+      light.dining_room_36:
+          state: on
+          transition: 2
+          brightness: 128
+- name: Dining to 75
+  entities:
+      light.dining_room_36:
+          state: on
+          transition: 2
+          brightness: 191
+- name: Dining to 100
+  entities:
+      light.dining_room_36:
+          state: on
+          transition: 2
+          brightness: 255

@@ -140,6 +140,8 @@ shell_command:
   toggle_tv: curl -g 'http://192.168.9.201:8081/json?pass=arduino&plain=[{%22type%22:%22raw%22,%22data%22:[2450,600,%201250,600,%20700,600,%201250,600,%20700,600,%201250,600,%20700,600,%20700,600,%201250,600,%20700,600,%20700,600,%20700,600,%20700],%22khz%22:50,%22pulse%22:10}]'
   tplink_den_on: tplight on 192.168.9.199
   tplink_den_off: tplight off 192.168.9.199
+  tplink_den_red: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":0,"hue":0,"saturation":100}}}'
+  tplink_den_white: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":2500,"hue":0,"saturation":0}}}'
 
 sensor: !include sensors.yaml
 
