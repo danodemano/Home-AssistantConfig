@@ -186,6 +186,42 @@
   display_options:
     - time
 
+- platform: darksky
+  api_key: !secret darksky_api_key
+  forecast:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+  monitored_conditions:
+    - summary
+    - precip_type
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - apparent_temperature
+    - dew_point
+    - wind_speed
+    - wind_bearing
+    - cloud_cover
+    - humidity
+    - pressure
+    - visibility
+    - ozone
+    - minutely_summary
+    - hourly_summary
+    - daily_summary
+    - temperature_max
+    - temperature_min
+    - apparent_temperature_max
+    - apparent_temperature_min
+    - precip_intensity_max
+    - icon
+    - nearest_storm_distance
+
 - platform: wunderground
   api_key: !secret wunderground_api_key
   pws_id: KOHSUNBU11
