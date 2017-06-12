@@ -194,7 +194,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.leak_water_heater_21
-      state: 'on'
+      to: 'on'
   action:
     - service: notify.dantext
       data:
@@ -214,7 +214,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.leak_wet_corner_44
-      state: 'on'
+      to: 'on'
   action:
     - service: notify.dantext
       data:
@@ -234,7 +234,7 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.leak_sump_pump_43
-      state: 'on'
+      to: 'on'
   action:
     - service: notify.dantext
       data:
@@ -299,7 +299,7 @@
     service: switch.turn_on
     entity_id: switch.coffee_pot_129
 
-- id: turn_off_coffee_pot
+- id: turn_off_coffee_pot_weekday
   alias: 'Turn off the coffee pot by 0900'
   trigger:
     platform: time
@@ -312,6 +312,20 @@
       - wed
       - thu
       - fri
+  action:
+    service: switch.turn_off
+    entity_id: switch.coffee_pot_129
+
+- id: turn_off_coffee_pot_weekend
+  alias: 'Turn off the coffee pot by 1300'
+  trigger:
+    platform: time
+    at: '13:00:00'
+  condition:
+    condition: time
+    weekday:
+      - sat
+      - sun
   action:
     service: switch.turn_off
     entity_id: switch.coffee_pot_129
@@ -336,7 +350,7 @@
   alias: Change den light color to red when Norbert goes off
   trigger:
     platform: time
-    after: '20:35:00'
+    at: '20:35:00'
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
@@ -372,7 +386,7 @@
   alias: Turn on lights for overnight
   trigger:
     platform: time
-    after: '22:30:00'
+    at: '22:30:00'
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
@@ -385,7 +399,7 @@
   alias: Turn off lights in the early morning
   trigger:
     platform: time
-    after: '06:00:00'
+    at: '06:00:00'
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
@@ -398,7 +412,7 @@
   alias: set_random_time
   trigger:
     - platform: time
-      after: '21:00:00'
+      at: '21:00:00'
   action:
     - service: input_slider.select_value
       data_template:
