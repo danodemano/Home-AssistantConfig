@@ -189,6 +189,20 @@
     service: switch.turn_on
     entity_id: switch.living_room_37
 
+- id: turn_on_living_room_when_cloud_cover_above_40
+  alias: Turn on living room light when cloud cover about 40
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-02:00:00"
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.dark_sky_cloud_coverage
+      above: 40
+  action:
+    service: switch.turn_on
+    entity_id: switch.living_room_37
+
 - id: flood_water_heater
   alias: Flood Water Heater
   trigger:
