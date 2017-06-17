@@ -186,6 +186,10 @@ battery:
  - sensor.window_front_east_battery
  - sensor.window_front_west_battery
  - sensor.window_kitchen_battery
+ - sensor.gecko_battery
+ - sensor.server_rack_battery
+ - sensor.door_craft_to_drive
+ - sensor.door_craft_to_patio
 
 doors:
  name: 'Door Status'
@@ -194,6 +198,8 @@ doors:
   - sensor.door_basement_state
   - sensor.door_front_state
   - sensor.door_back_sliding_state
+  - sensor.door_craft_to_drive_state
+  - sensor.door_craft_to_patio_state
   - cover.garage_door_opener
 
 windows:
@@ -212,6 +218,8 @@ armed:
   - switch.door_front_97
   - switch.door_garage_to_den_53
   - switch.door_back_sliding_99
+  - switch.door_craft_to_drive_134
+  - switch.door_craft_to_patio_133
   - switch.window_craft_room_114
   - switch.window_den_96
   - switch.window_kitchen_100

@@ -100,6 +100,14 @@ sensor.window_kitchen_battery:
   icon: mdi:battery
 sensor.window_craft_room_battery:
   icon: mdi:battery
+sensor.gecko_battery:
+  icon: mdi:battery
+sensor.server_rack_battery:
+  icon: mdi:battery
+sensor.door_craft_to_drive:
+  icon: mdi:battery
+sensor.door_craft_to_patio:
+  icon: mdi:battery
 cover.garage_door_opener:
   friendly_name: Garage Door
 sensor.ac_10:
