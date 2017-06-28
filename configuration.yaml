@@ -152,6 +152,7 @@ camera: !include cameras.yaml
 
 device_tracker:
   - platform: ping
+    consider_home: 600
     hosts:
       shelley: 192.168.9.68
       dan: 192.168.9.69

@@ -93,6 +93,7 @@ pets:
    - switch.norbert_heat_130
    - switch.snake_heaters_124
    - light.gecko_heater_67
+   - switch.gecko_ceramic_heater_132
    - sensor.gecko_humidity
    - sensor.gecko_temperature
 
