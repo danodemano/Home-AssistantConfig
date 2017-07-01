@@ -289,44 +289,44 @@
       title: 'New Home Assistant Release'
       message: "Home Assistant  {{ states.updater.updater.state }}  is now available."
 
-- id: turn_on_coffee_pot_early_day
-  alias: 'Turn on the coffee pot on Dan early day'
-  trigger:
-    platform: time
-    at: '06:00:00'
-  condition:
-    condition: and
-    conditions:
-      - condition: time
-        weekday:
-          - mon
-      - condition: state
-        entity_id: input_boolean.vacation_mode
-        state: 'off'
-  action:
-    service: switch.turn_on
-    entity_id: switch.coffee_pot_129
+#- id: turn_on_coffee_pot_early_day
+#  alias: 'Turn on the coffee pot on Dan early day'
+#  trigger:
+#    platform: time
+#    at: '06:00:00'
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: time
+#        weekday:
+#          - mon
+#      - condition: state
+#        entity_id: input_boolean.vacation_mode
+#        state: 'off'
+#  action:
+#    service: switch.turn_on
+#    entity_id: switch.coffee_pot_129
 
-- id: turn_on_coffee_pot_normal_day
-  alias: 'Turn on the coffee pot on Dan normal days'
-  trigger:
-    platform: time
-    at: '07:00:00'
-  condition:
-    condition: and
-    conditions:
-      - condition: time
-        weekday:
-          - tue
-          - wed
-          - thu
-          - fri
-      - condition: state
-        entity_id: input_boolean.vacation_mode
-        state: 'off'
-  action:
-    service: switch.turn_on
-    entity_id: switch.coffee_pot_129
+#- id: turn_on_coffee_pot_normal_day
+#  alias: 'Turn on the coffee pot on Dan normal days'
+#  trigger:
+#    platform: time
+#    at: '07:00:00'
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: time
+#        weekday:
+#          - tue
+#          - wed
+#          - thu
+#          - fri
+#      - condition: state
+#        entity_id: input_boolean.vacation_mode
+#        state: 'off'
+#  action:
+#    service: switch.turn_on
+#    entity_id: switch.coffee_pot_129
 
 - id: turn_off_coffee_pot_weekday
   alias: 'Turn off the coffee pot by 0900'

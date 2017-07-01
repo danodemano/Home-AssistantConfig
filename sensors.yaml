@@ -14,6 +14,10 @@
   name: "Gecko Humidity"
   command: '/bin/bash -c "/scripts/veraSensorValue.sh 127 humidity"'
   unit_of_measurement: "%"
+- platform: command_line
+  name: "XRP to USD"
+  command: 'python3 /scripts/kraken_ripple.py'
+  unit_of_measurement: "USD"
 - platform: template
   sensors:
     server_rack_watts:

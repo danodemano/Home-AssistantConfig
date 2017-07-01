@@ -31,6 +31,7 @@ newdef:
    - device_tracker.dan
    - device_tracker.shelley
    - sensor.market_price
+   - sensor.xrp_to_usd
    - sensor.pihole
    - sensor.430_walnutview_dr
    - sensor.cpu_use
