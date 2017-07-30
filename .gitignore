@@ -14,7 +14,10 @@ tts
 secrets.yaml
 known_devices.yaml
 google_calendars.yaml
+*.pickle
 usps_cookies.pickle
+fedexdeliverymanager_cookies.pickle
+upsmychoice_cookies.pickle
 *.conf
 plex.conf
 phue.conf
