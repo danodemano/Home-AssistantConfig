@@ -15,6 +15,9 @@ homeassistant:
 
 # Enables the frontend
 frontend:
+  themes:
+    green:
+      primary-color: green
 
 # Enable config panel
 config:
@@ -66,9 +69,12 @@ recorder:
 
 #Connect to the Hue hub
 light:
-  platform: hue
-  host: 192.168.9.204
-  scan_interval: 30
+  - platform: hue
+    host: 192.168.9.204
+    scan_interval: 30
+  - platform: tplink
+    host: 192.168.9.199
+    name: Den
 
 #All notifications piped through Sophos UTM gateway
 notify:
@@ -214,24 +220,25 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 
 alexa:
-  intents:
-    ActivateSceneIntent:
-      action:
-        service: scene.turn_on
-        data_template:
-          entity_id: scene.{{ Scene | replace(" ", "_") }}
-      speech:
-        type: plaintext
-        text: !include alexa_confirm.yaml
-    RunScriptIntent:
-      action:
-        service: script.turn_on
-        data_template:
-          entity_id: script.{{ Script | replace(" ", "_") }}
-      speech:
-        type: plaintext
-        text: !include alexa_confirm.yaml
+  # intents:
+  #   ActivateSceneIntent:
+  #     action:
+  #       service: scene.turn_on
+  #       data_template:
+  #         entity_id: scene.{{ Scene | replace(" ", "_") }}
+  #     speech:
+  #       type: plaintext
+  #       text: !include alexa_confirm.yaml
+  #   RunScriptIntent:
+  #     action:
+  #       service: script.turn_on
+  #       data_template:
+  #         entity_id: script.{{ Script | replace(" ", "_") }}
+  #     speech:
+  #       type: plaintext
+  #       text: !include alexa_confirm.yaml
 
+intent_script: !include intent_script.yaml
 
 zone:
   name: Dan Work

@@ -46,6 +46,11 @@ night_time:
         entity_id: switch.living_room_37
     - service: light.turn_on
       data:
+        entity_id: light.master
+        brightness: 50
+        rgb_color: [ 255,255,255 ]
+    - service: light.turn_on
+      data:
         entity_id: light.master_1
         brightness: 50
         rgb_color: [ 255,255,255 ]
@@ -75,6 +80,12 @@ morning_time:
     - service: switch.turn_off
       data:
         entity_id: switch.master_night_stuff_42
+    - service: light.turn_on
+      data:
+        entity_id: light.master
+        transition: 90
+        brightness: 255
+        rgb_color: [ 255,255,255 ]
     - service: light.turn_on
       data:
         entity_id: light.master_1

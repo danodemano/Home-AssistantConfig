@@ -22,6 +22,7 @@ newdef:
    - group.windows
    - group.armed
    - group.server_rack
+   - group.packages
    - camera.front_walk
    - camera.patio
    - sun.sun
@@ -142,6 +143,7 @@ den_area:
  control: hidden
  entities:
    - switch.den_av_128
+   - light.den
 
 kitchen:
  name: "Kitchen"
@@ -251,6 +253,13 @@ server_rack:
  - sensor.server_rack_watts
  - sensor.server_rack_humidity
  - sensor.server_rack_temperature
+
+packages:
+  name: "Packages"
+  entities:
+  - sensor.usps_home_packages
+  - sensor.ups_home
+  - sensor.fedex_home
 
 home_electric:
  name: "Home Electric Usage"
