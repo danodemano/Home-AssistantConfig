@@ -29,4 +29,4 @@ html5_push_registrations.conf
 ip_bans.yaml
 /icloud/*
 gitupdate.sh
-
+appdaemon.yaml

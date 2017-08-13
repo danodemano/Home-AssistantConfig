@@ -51,6 +51,11 @@ logbook:
 # Track the sun
 sun:
 
+#logger:
+#  logs:
+#    pyHS100: debug
+#    homeassistant.components.light.tplink: debug
+
 #For the Amazon Echos
 emulated_hue:
   host_ip: 192.168.9.200
@@ -133,6 +138,13 @@ influxdb:
       - sensor.pws_temp_f
       - sensor.climate_main_temperature2
       - sensor.main_thermostat_relative_humidity_31_5_3
+      - sensor.gecko_humidity
+      - sensor.gecko_temperature
+      - sensor.server_rack_humidity
+      - sensor.server_rack_temperature
+      - sensor.speedtest_download
+      - sensor.speedtest_ping
+      - sensor.speedtest_upload
 
 #MyQ garage door integration
 cover:
