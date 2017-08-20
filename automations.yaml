@@ -422,7 +422,7 @@
     state: 'on'
   action:
     service: switch.turn_on
-    entity_id: switch.front_outside_lights_30
+    entity_id: switch.front_outside_lights_140
 
 - id: turn_off_lights_in_the_early_morning
   alias: Turn off lights in the early morning
@@ -435,7 +435,7 @@
     state: 'on'
   action:
     service: switch.turn_off
-    entity_id: switch.front_outside_lights_30
+    entity_id: switch.front_outside_lights_140
 
 - id: set_random_time
   alias: set_random_time

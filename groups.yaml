@@ -85,7 +85,7 @@ outdoor_lights:
  entities:
    - switch.front_walk_lights_31
    - switch.patio_light_32
-   - switch.front_outside_lights_30
+   - switch.front_outside_lights_140
 
 pets:
  name: Pets
