@@ -101,6 +101,9 @@ morning_time:
     - service: switch.turn_on
       data:
         entity_id: switch.den_av_128
+    - service: switch.turn_on
+      data:
+        entity_id: switch.living_room_37
 
 all_on:
   alias: "Turn on all connected lights immediately"

@@ -81,6 +81,10 @@ light:
     host: 192.168.9.199
     name: Den
 
+usps:
+    username: !secret usps_username
+    password: !secret usps_password
+
 #All notifications piped through Sophos UTM gateway
 notify:
   - name: danemail

@@ -184,3 +184,13 @@ light.master_1:
   emulated_hue: false
 light.master_2:
   emulated_hue: false
+switch.couch_plug_138:
+  emulated_hue: false
+switch.chime_den_135:
+  emulated_hue: false
+switch.door_craft_to_patio_133:
+  emulated_hue: false
+switch.door_craft_to_drive_134:
+  emulated_hue: false
+switch.server_rack_68:
+  emulated_hue: false

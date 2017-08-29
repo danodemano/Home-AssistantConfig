@@ -43,6 +43,7 @@ newdef:
    - media_player.brix_pc
    - media_player.onkyo_den
    - binary_sensor.iss
+   - camera.usps_mail
 
 security:
  name: Security
@@ -255,9 +256,10 @@ server_rack:
  - sensor.server_rack_temperature
 
 packages:
-  name: "Packages"
+  name: "Mail"
   entities:
-  - sensor.usps_home_packages
+  - sensor.usps_mail
+  - sensor.usps_packages
   - sensor.ups_home
   - sensor.fedex_home
 
@@ -286,3 +288,14 @@ speedtest:
  - sensor.speedtest_download
  - sensor.speedtest_ping
  - sensor.speedtest_upload
+
+all_lights:
+  name: All lights
+  entities:
+    - light.den
+    - light.dining_room_36
+    - light.master
+    - switch.front_outside_lights_140
+    - switch.front_walk_lights_31
+    - switch.living_room_37
+    - switch.patio_light_32

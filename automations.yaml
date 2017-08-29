@@ -111,7 +111,7 @@
   alias: 'Turn off kids TV school night'
   trigger:
     platform: time
-    at: '22:00:00'
+    at: '21:00:00'
   condition:
     condition: time
     weekday:
@@ -142,7 +142,7 @@
   alias: 'Turn on kids TV school days'
   trigger:
     platform: time
-    at: '08:00:00'
+    at: '06:00:00'
   condition:
     condition: and
     conditions:
