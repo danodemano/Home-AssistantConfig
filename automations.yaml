@@ -278,6 +278,23 @@
       data:
         message: 'Basement door opened!'
 
+- id: chest_freezer_left_open
+  alias: Chest Freezer Left Open
+  trigger:
+    platform: state
+    entity_id: sensor.chest_freezer_state
+    from: 'Closed'
+    to: 'Open'
+    for:
+       minutes: 3
+  action:
+    - service: notify.dantext
+      data:
+        message: 'CHEST FREEZER LEFT OPEN!'
+    - service: notify.danemail
+      data:
+        message: 'CHEST FREEZER LEFT OPEN!'
+
 - id: update_notifications
   alias: Update notifications
   trigger:
