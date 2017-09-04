@@ -108,6 +108,8 @@ sensor.door_craft_to_drive:
   icon: mdi:battery
 sensor.door_craft_to_patio:
   icon: mdi:battery
+sensor.chest_freezer_battery:
+  icon: mdi:battery
 cover.garage_door_opener:
   friendly_name: Garage Door
 sensor.ac_10:
@@ -193,4 +195,6 @@ switch.door_craft_to_patio_133:
 switch.door_craft_to_drive_134:
   emulated_hue: false
 switch.server_rack_68:
+  emulated_hue: false
+switch.chest_freezer_145:
   emulated_hue: false

@@ -195,6 +195,7 @@ battery:
  - sensor.server_rack_battery
  - sensor.door_craft_to_drive
  - sensor.door_craft_to_patio
+ - sensor.chest_freezer_battery
 
 doors:
  name: 'Door Status'
