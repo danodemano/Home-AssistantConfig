@@ -272,6 +272,15 @@ holidays:
     - switch.holiday_lights_148
     - input_boolean.holiday_mode
 
+holiday_lights:
+  name: "Light that turn on for Holiday"
+  control: hidden
+  entities:
+    - switch.holiday_lights_148
+    - switch.patio_light_32
+    - switch.front_outside_lights_140
+
+
 home_electric:
  name: "Home Electric Usage"
  entities:

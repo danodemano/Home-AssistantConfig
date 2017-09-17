@@ -7,6 +7,45 @@
   action:
     service: switch.turn_on
     entity_id: group.outdoor_lights
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.holiday_mode
+        state: 'off'
+
+- id: turn_on_lights_when_sun_sets_holiday
+  alias: Turn on lights when sun sets for holiday
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:10:00"
+  action:
+    service: switch.turn_on
+    entity_id: group.holiday_lights
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.holiday_mode
+        state: 'on'
+
+- id: turn_off_holiday_and_on_outside_lights
+  alias: Turn off holiday lights and on normal lights
+  trigger:
+    platform: time
+    at: '22:00:00'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.holiday_lights_148
+    - service: switch.turn_on
+      entity_id: switch.front_walk_lights_31
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.holiday_mode
+        state: 'on'
 
 - id: turn_off_lights_when_sun_rises
   alias: Turn off lights when sun rises

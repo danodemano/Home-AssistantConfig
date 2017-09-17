@@ -207,7 +207,7 @@ group: !include groups.yaml
 #Master toggle for vacation mode
 input_boolean:
   vacation_mode:
-    initial: off
+    name: Toggle for Vacation Mode
 
 #Master toggle for holiday mode
 input_boolean:
