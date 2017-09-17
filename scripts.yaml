@@ -37,9 +37,6 @@ night_time:
   sequence:
     - service: light.turn_off
       data:
-        entity_id: light.den_1
-    - service: light.turn_off
-      data:
         entity_id: light.dining_room_36
     - service: switch.turn_off
       data:
@@ -72,7 +69,9 @@ night_time:
       data:
         entity_id: switch.den_av_128
     - delay: 00:00:15
-    - service: shell_command.tplink_den_off
+    - service: light.turn_off
+      data:
+        entity_id: light.den_2
 
 morning_time:
   alias: "Turn off night stuff and on day stuff"

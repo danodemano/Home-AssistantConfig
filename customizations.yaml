@@ -198,3 +198,5 @@ switch.server_rack_68:
   emulated_hue: false
 switch.chest_freezer_145:
   emulated_hue: false
+light.den:
+  emulated_hue: false

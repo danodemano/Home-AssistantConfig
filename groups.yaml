@@ -23,6 +23,7 @@ newdef:
    - group.armed
    - group.server_rack
    - group.packages
+   - group.holidays
    - camera.front_walk
    - camera.patio
    - sun.sun
@@ -263,6 +264,13 @@ packages:
   - sensor.usps_packages
   - sensor.ups_home
   - sensor.fedex_home
+
+holidays:
+  name: "Holiday Stuff"
+  control: hidden
+  entities:
+    - switch.holiday_lights_148
+    - input_boolean.holiday_mode
 
 home_electric:
  name: "Home Electric Usage"

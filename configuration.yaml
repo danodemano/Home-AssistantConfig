@@ -209,6 +209,11 @@ input_boolean:
   vacation_mode:
     initial: off
 
+#Master toggle for holiday mode
+input_boolean:
+  holiday_mode:
+    name: Toggle for Holiday Mode
+
 input_slider:
   random_hour:
     name: 'Random Hour'
