@@ -200,3 +200,32 @@ switch.chest_freezer_145:
   emulated_hue: false
 light.den:
   emulated_hue: false
+input_boolean.holiday_mode:
+  icon: mdi:pine-tree
+binarysensor.blue_iris_backyard:
+  friendly_name: Motion Backyard
+  icon: mdi:camera
+binarysensor.blue_iris_basement:
+  friendly_name: Motion Basement
+  icon: mdi:camera
+binarysensor.blue_iris_craftroom:
+  friendly_name: Motion Craft Room
+  icon: mdi:camera
+binarysensor.blue_iris_driveway:
+  friendly_name: Motion Driveway
+  icon: mdi:camera
+binarysensor.blue_iris_frontwalk:
+  friendly_name: Motion Front Walk
+  icon: mdi:camera
+binarysensor.blue_iris_garage:
+  friendly_name: Motion Garage
+  icon: mdi:camera
+binarysensor.blue_iris_gatepatio:
+  friendly_name: Motion Gate/Patio
+  icon: mdi:camera
+binarysensor.blue_iris_livingroom:
+  friendly_name: Motion Living Room
+  icon: mdi:camera
+binarysensor.blue_iris_patio:
+  friendly_name: Motion Patio
+  icon: mdi:camera

@@ -34,12 +34,14 @@
   alias: Turn off holiday lights and on normal lights
   trigger:
     platform: time
-    at: '22:00:00'
+    at: '23:00:00'
   action:
     - service: switch.turn_off
       entity_id: switch.holiday_lights_148
     - service: switch.turn_on
-      entity_id: switch.front_walk_lights_31
+      entity_id: switch.front_outside_lights_140
+#    - service: switch.turn_on
+#      entity_id: switch.front_walk_lights_31
   condition:
     condition: and
     conditions:

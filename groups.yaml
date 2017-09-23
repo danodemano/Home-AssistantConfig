@@ -24,6 +24,7 @@ newdef:
    - group.server_rack
    - group.packages
    - group.holidays
+   - group.camera_motion
    - camera.front_walk
    - camera.patio
    - sun.sun
@@ -54,6 +55,7 @@ security:
    - group.doors
    - group.windows
    - group.armed
+   - group.camera_motion
 
 cameras:
  name: Cameras
@@ -278,7 +280,8 @@ holiday_lights:
   entities:
     - switch.holiday_lights_148
     - switch.patio_light_32
-    - switch.front_outside_lights_140
+    - switch.front_walk_lights_31
+#    - switch.front_outside_lights_140
 
 
 home_electric:
@@ -317,3 +320,16 @@ all_lights:
     - switch.front_walk_lights_31
     - switch.living_room_37
     - switch.patio_light_32
+
+camera_motion:
+  name: Camera Motion Detection
+  entities:
+    - binarysensor.blue_iris_backyard
+    - binarysensor.blue_iris_basement
+    - binarysensor.blue_iris_craftroom
+    - binarysensor.blue_iris_driveway
+    - binarysensor.blue_iris_frontwalk
+    - binarysensor.blue_iris_garage
+    - binarysensor.blue_iris_gatepatio
+    - binarysensor.blue_iris_livingroom
+    - binarysensor.blue_iris_patio
