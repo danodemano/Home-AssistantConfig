@@ -131,13 +131,13 @@ influxdb:
   database: hass
   include:
     entities:
-      - sensor.ac_10
-      - sensor.dryer_6
-      - sensor.furnace1_13
-      - sensor.furnace2_16
+      - sensor.ac_watts
+      - sensor.dryer_watts
+      - sensor.furnace1_watts
+      - sensor.furnace2_watts
       - sensor.hot_water_heater_watts
       - sensor.server_rack_watts
-      - sensor.home_26
+      - sensor.home_watts
       - sensor.pws_relative_humidity
       - sensor.pws_temp_f
       - sensor.climate_main_temperature2
@@ -178,7 +178,7 @@ device_tracker:
     hosts:
       shelley: 192.168.9.68
       dan: 192.168.9.69
-      nick: 192.168.51.102
+      nick: 192.168.51.101
       shannon: 192.168.51.107
 
 switch:
