@@ -24,6 +24,26 @@
       friendly_name: 'Server Rack'
       unit_of_measurement: "W"
       value_template: '{% if states.switch.server_rack_68.state %}{{ states.switch.server_rack_68.attributes.current_power_w|round }}{% endif %}'
+    home_watts:
+      friendly_name: 'Home Power'
+      unit_of_measurement: "W"
+      value_template: '{{ states.sensor.home_26.attributes.current_power_w|round }}'
+    ac_watts:
+      friendly_name: 'AC Power'
+      unit_of_measurement: "W"
+      value_template: '{{ states.sensor.ac_10.attributes.current_power_w|round }}'
+    furnace1_watts:
+      friendly_name: 'Furnace1 Power'
+      unit_of_measurement: "W"
+      value_template: '{{ states.sensor.furnace1_13.attributes.current_power_w|round }}'
+    furnace2_watts:
+      friendly_name: 'Furnace2 Power'
+      unit_of_measurement: "W"
+      value_template: '{{ states.sensor.furnace2_16.attributes.current_power_w|round }}'
+    dryer_watts:
+      friendly_name: 'Dryer Power'
+      unit_of_measurement: "W"
+      value_template: '{{ states.sensor.dryer_6.attributes.current_power_w|round }}'
     hot_water_heater_watts:
       friendly_name: 'Hot Water Heater'
       unit_of_measurement: "W"

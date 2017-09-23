@@ -77,9 +77,9 @@ light:
   - platform: hue
     host: 192.168.9.204
     scan_interval: 30
-  - platform: tplink
-    host: 192.168.9.199
-    name: Den
+#  - platform: tplink
+#    host: 192.168.9.199
+#    name: Den
 
 usps:
     username: !secret usps_username

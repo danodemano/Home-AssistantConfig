@@ -246,10 +246,10 @@ traveltimes:
 energy:
  name: "Power Usage"
  entities:
- - sensor.ac_10
- - sensor.dryer_6
- - sensor.furnace1_13
- - sensor.furnace2_16
+ - sensor.ac_watts
+ - sensor.dryer_watts
+ - sensor.furnace1_watts
+ - sensor.furnace2_watts
  - sensor.hot_water_heater_watts
 
 server_rack:
@@ -287,7 +287,7 @@ holiday_lights:
 home_electric:
  name: "Home Electric Usage"
  entities:
- - sensor.home_26
+ - sensor.home_watts
 #     - sensor.energy_monitor_current_7_20
 #     - sensor.energy_monitor_energy_7_0
 #     - sensor.energy_monitor_voltage_7_16
