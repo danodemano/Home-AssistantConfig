@@ -18,6 +18,18 @@
   name: "XRP to USD"
   command: 'python3 /scripts/kraken_ripple.py'
   unit_of_measurement: "USD"
+- platform: command_line
+  name: "Speedtest Download"
+  command: '/scripts/parse_speedtest.sh download'
+  unit_of_measurement: "Mbit/s"
+- platform: command_line
+  name: "Speedtest Upload"
+  command: '/scripts/parse_speedtest.sh upload'
+  unit_of_measurement: "Mbit/s"
+- platform: command_line
+  name: "Speedtest Ping"
+  command: '/scripts/parse_speedtest.sh latency'
+  unit_of_measurement: "ms"
 - platform: template
   sensors:
     server_rack_watts:
@@ -318,11 +330,11 @@
   display_options:
   - market_price_usd
 
-- platform: speedtest
-  monitored_conditions:
-    - ping
-    - download
-    - upload
+#- platform: speedtest
+#  monitored_conditions:
+#    - ping
+#    - download
+#    - upload
 
 - platform: pi_hole
   host: 192.168.54.2
