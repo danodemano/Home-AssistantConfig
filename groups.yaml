@@ -1,6 +1,6 @@
-#default_view:
-newdef:
- name: New Default
+default_view:
+#newdef:
+ name: Bunyard
  view: yes
  entities:
    - group.outdoor_lights

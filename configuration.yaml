@@ -168,6 +168,8 @@ shell_command:
   bi_home: curl http://192.168.53.55:81/admin?profile=3
   bi_away: curl http://192.168.53.55:81/admin?profile=4
   bi_night: curl http://192.168.53.55:81/admin?profile=5
+  ct_kids_disable: /scripts/ct/disable_kids.sh
+  ct_kids_enable: /scripts/ct/enable_kids.sh
 
 sensor: !include sensors.yaml
 
@@ -204,7 +206,7 @@ media_player:
     turn_off_action:
       service: media_player.kodi_call_method
       data:
-        entity_id: media_player.kodi
+        entity_id: media_player.brix_pc
         method: Application.Quit
   - platform: onkyo
     host: 192.168.52.10
