@@ -341,19 +341,27 @@ kids:
   entities:
     - group.kids_wifi_toggle
     - group.kids_wifi_timing
+    - group.kids_device_status
 
 kids_wifi_toggle:
-  name: "Kids wifi buttons"
+  name: "Kids Wifi Buttons"
   control: hidden
   entities: 
     - script.kids_wifi_on
     - script.kids_wifi_off
 
 kids_wifi_timing:
-  name: "Kids wifi on/off timing"
+  name: "Kids Wifi on/off Timing"
   control: hidden
   entities:
     - input_slider.kids_wifi_off_school
     - input_slider.kids_wifi_off_weekend
     - input_slider.kids_wifi_on_school
     - input_slider.kids_wifi_on_weekend
+
+kids_device_status:
+  name: "Kids Device Wifi Status"
+  control: hidden
+  entities:
+    - sensor.nick_phone_wifi_state
+    - sensor.shannon_phone_wifi_state

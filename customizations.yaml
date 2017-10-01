@@ -229,3 +229,11 @@ binarysensor.blue_iris_livingroom:
 binarysensor.blue_iris_patio:
   friendly_name: Motion Patio
   icon: mdi:camera
+sensor.nick_phone_wifi_state:
+  icon: mdi:cellphone-android
+sensor.shannon_phone_wifi_state:
+  icon: mdi:cellphone-android
+script.kids_wifi_on:
+  icon: mdi:wifi
+script.kids_wifi_off:
+  icon: mdi:wifi-off
