@@ -166,3 +166,13 @@ den_off:
   alias: "Den Off"
   sequence:
     - service: shell_command.tplink_den_off
+
+kids_wifi_on:
+  alias: "Kids Wifi On"
+  sequence:
+    - service: shell_command.ct_kids_enable
+
+kids_wifi_off:
+  alias: "Kids Wifi Off"
+  sequence:
+    - service: shell_command.ct_kids_disable

@@ -46,6 +46,7 @@ default_view:
    - media_player.onkyo_den
    - binary_sensor.iss
    - camera.usps_mail
+   - sensor.dark_sky_cloud_coverage
 
 security:
  name: Security
@@ -333,3 +334,26 @@ camera_motion:
     - binarysensor.blue_iris_gatepatio
     - binarysensor.blue_iris_livingroom
     - binarysensor.blue_iris_patio
+
+kids:
+  name: "Kids"
+  view: yes
+  entities:
+    - group.kids_wifi_toggle
+    - group.kids_wifi_timing
+
+kids_wifi_toggle:
+  name: "Kids wifi buttons"
+  control: hidden
+  entities: 
+    - script.kids_wifi_on
+    - script.kids_wifi_off
+
+kids_wifi_timing:
+  name: "Kids wifi on/off timing"
+  control: hidden
+  entities:
+    - input_slider.kids_wifi_off_school
+    - input_slider.kids_wifi_off_weekend
+    - input_slider.kids_wifi_on_school
+    - input_slider.kids_wifi_on_weekend
