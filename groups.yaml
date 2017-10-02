@@ -343,6 +343,7 @@ kids:
     - group.kids_wifi_toggle
     - group.kids_wifi_timing
     - group.kids_device_status
+    - group.kids_device_control
 
 kids_wifi_toggle:
   name: "Kids Wifi Buttons"
@@ -366,3 +367,12 @@ kids_device_status:
   entities:
     - sensor.nick_phone_wifi_state
     - sensor.shannon_phone_wifi_state
+
+kids_device_control:
+  name: "Kids Individual Control"
+  control: hidden
+  entities:
+    - script.nick_wifi_on
+    - script.nick_wifi_off
+    - script.shannon_wifi_on
+    - script.shannon_wifi_off

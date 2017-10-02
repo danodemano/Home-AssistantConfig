@@ -176,3 +176,23 @@ kids_wifi_off:
   alias: "Kids Wifi Off"
   sequence:
     - service: shell_command.ct_kids_disable
+
+nick_wifi_on:
+  alias: "Nick Wifi On"
+  sequence:
+    - service: shell_command.ct_nick_enable
+
+nick_wifi_off:
+  alias: "Nick Wifi Off"
+  sequence:
+    - service: shell_command.ct_nick_disable
+
+shannon_wifi_on:
+  alias: "Shannon Wifi On"
+  sequence:
+    - service: shell_command.ct_shannon_enable
+
+shannon_wifi_off:
+  alias: "Shannon Wifi Off"
+  sequence:
+    - service: shell_command.ct_shannon_disable
