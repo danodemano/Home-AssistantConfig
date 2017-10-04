@@ -110,6 +110,8 @@ sensor.door_craft_to_patio:
   icon: mdi:battery
 sensor.chest_freezer_battery:
   icon: mdi:battery
+sensor.den_climate_battery:
+  icon: mdi:battery
 cover.garage_door_opener:
   friendly_name: Garage Door
 sensor.ac_10:
@@ -145,6 +147,10 @@ sensor.speedtest_upload:
 sensor.gecko_humidity:
   icon: mdi:water-percent
 sensor.gecko_temperature:
+  icon: mdi:thermometer
+sensor.den_humidity:
+  icon: mdi:water-percent
+sensor.den_temperature:
   icon: mdi:thermometer
 input_boolean.vacation_mode:
   icon: mdi:beach
@@ -197,6 +203,8 @@ switch.door_craft_to_drive_134:
 switch.server_rack_68:
   emulated_hue: false
 switch.chest_freezer_145:
+  emulated_hue: false
+switch.den_sensor_158:
   emulated_hue: false
 light.den:
   emulated_hue: false

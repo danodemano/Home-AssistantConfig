@@ -149,6 +149,8 @@ influxdb:
       - sensor.speedtest_download
       - sensor.speedtest_ping
       - sensor.speedtest_upload
+      - sensor.den_temperature
+      - sensor.den_humidity
 
 #MyQ garage door integration
 cover:
@@ -168,8 +170,8 @@ shell_command:
   bi_home: curl http://192.168.53.55:81/admin?profile=3
   bi_away: curl http://192.168.53.55:81/admin?profile=4
   bi_night: curl http://192.168.53.55:81/admin?profile=5
-  ct_kids_disable: /scripts/ct/disable_kids.sh
-  ct_kids_enable: /scripts/ct/enable_kids.sh
+  ct_kids_disable: /scripts/ct/toggle_network.sh 57241c170d0593001ad4af75 disable
+  ct_kids_enable: /scripts/ct/toggle_network.sh 57241c170d0593001ad4af75 enable
   ct_nick_enable: /scripts/ct/gp_modify.sh 6c-76-60-d1-e2-8f 1097 enable
   ct_nick_disable: /scripts/ct/gp_modify.sh 6c-76-60-d1-e2-8f 1097 disable
   ct_shannon_enable: /scripts/ct/gp_modify.sh 5c-af-06-97-59-8d 1097 enable

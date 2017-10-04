@@ -150,6 +150,8 @@ den_area:
  entities:
    - switch.den_av_128
    - light.den
+   - sensor.den_humidity
+   - sensor.den_temperature
 
 kitchen:
  name: "Kitchen"
@@ -201,6 +203,7 @@ battery:
  - sensor.door_craft_to_drive
  - sensor.door_craft_to_patio
  - sensor.chest_freezer_battery
+ - sensor.den_climate_battery
 
 doors:
  name: 'Door Status'
