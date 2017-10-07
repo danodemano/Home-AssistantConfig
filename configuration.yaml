@@ -69,7 +69,8 @@ emulated_hue:
 #Required values are to be piped to InfluxDB
 #Only keep the minimum needed in MySQL for quick reference.
 recorder:
-    purge_days: 3
+    purge_interval: 1
+    purge_keep_days: 7
     db_url: !secret recorder_db_url
 
 #Connect to the Hue hub
@@ -226,7 +227,7 @@ input_boolean:
   holiday_mode:
     name: Toggle for Holiday Mode
 
-input_slider:
+input_number:
   random_hour:
     name: 'Random Hour'
     min: 0

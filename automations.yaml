@@ -49,6 +49,15 @@
         entity_id: input_boolean.holiday_mode
         state: 'on'
 
+- id: turn_off_front_walk_lights
+  alias: Turn off front walks lights a 2300
+  trigger:
+    platform: time
+    at: '23:00:00'
+  action:
+      - service: switch.turn_off
+        entity_id: switch.front_walk_lights_31
+
 - id: turn_off_lights_when_sun_rises
   alias: Turn off lights when sun rises
   trigger:
@@ -507,7 +516,7 @@
   alias: Turn den off and master on at a semi-random time
   trigger:
     - platform: template
-      value_template: "{{ is_state('sensor.time', states('input_slider.random_hour')|int ~ ':' ~ states('input_slider.random_minute')|int) }}"
+      value_template: "{{ is_state('sensor.time', states('input_number.random_hour')|int ~ ':' ~ states('input_number.random_minute')|int) }}"
   condition:
     condition: state
     entity_id: input_boolean.vacation_mode
@@ -559,13 +568,13 @@
     - platform: time
       at: '21:00:00'
   action:
-    - service: input_slider.select_value
+    - service: input_number.select_value
       data_template:
-        entity_id: input_slider.random_hour
+        entity_id: input_number.random_hour
         # The endpoint is omitted, see: http://jinja.pocoo.org/docs/dev/templates/#range
         value: '{{ (range(22, 24)|random) }}'
-    - service: input_slider.select_value
+    - service: input_number.select_value
       data_template:
-        entity_id: input_slider.random_minute
+        entity_id: input_number.random_minute
         value: '{{ (range(15, 46)|random) }}'
 #####################################

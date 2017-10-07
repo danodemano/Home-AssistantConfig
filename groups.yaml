@@ -359,10 +359,10 @@ kids_wifi_timing:
   name: "Kids Wifi on/off Timing"
   control: hidden
   entities:
-    - input_slider.kids_wifi_off_school
-    - input_slider.kids_wifi_off_weekend
-    - input_slider.kids_wifi_on_school
-    - input_slider.kids_wifi_on_weekend
+    - input_number.kids_wifi_off_school
+    - input_number.kids_wifi_off_weekend
+    - input_number.kids_wifi_on_school
+    - input_number.kids_wifi_on_weekend
 
 kids_device_status:
   name: "Kids Device Wifi Status"
