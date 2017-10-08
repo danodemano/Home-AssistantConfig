@@ -1,0 +1,13 @@
+- platform: kodi
+  host: 192.168.9.21
+  name: Brix PC
+  username: kodi
+  password: kodi
+  turn_off_action:
+    service: media_player.kodi_call_method
+    data:
+      entity_id: media_player.brix_pc
+      method: Application.Quit
+- platform: onkyo
+  host: 192.168.52.10
+  name: Onkyo Den

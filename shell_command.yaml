@@ -1,0 +1,15 @@
+toggle_tv: curl -g 'http://192.168.9.201:8081/json?pass=arduino&plain=[{%22type%22:%22raw%22,%22data%22:[2450,600,%201250,600,%20700,600,%201250,600,%20700,600,%201250,600,%20700,600,%20700,600,%201250,600,%20700,600,%20700,600,%20700,600,%20700],%22khz%22:50,%22pulse%22:10}]'
+tplink_den_on: tplight on 192.168.9.199
+tplink_den_off: tplight off 192.168.9.199
+tplink_den_red: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":0,"hue":0,"saturation":100}}}'
+tplink_den_white: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":2500,"hue":0,"saturation":0}}}'
+bi_active: curl http://192.168.53.55:81/admin?profile=1
+bi_home: curl http://192.168.53.55:81/admin?profile=3
+bi_away: curl http://192.168.53.55:81/admin?profile=4
+bi_night: curl http://192.168.53.55:81/admin?profile=5
+ct_kids_disable: /scripts/ct/toggle_network.sh 57241c170d0593001ad4af75 disable
+ct_kids_enable: /scripts/ct/toggle_network.sh 57241c170d0593001ad4af75 enable
+ct_nick_enable: /scripts/ct/gp_modify.sh 6c-76-60-d1-e2-8f 1097 enable
+ct_nick_disable: /scripts/ct/gp_modify.sh 6c-76-60-d1-e2-8f 1097 disable
+ct_shannon_enable: /scripts/ct/gp_modify.sh 5c-af-06-97-59-8d 1097 enable
+ct_shannon_disable: /scripts/ct/gp_modify.sh 5c-af-06-97-59-8d 1097 disable

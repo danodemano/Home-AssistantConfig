@@ -1,0 +1,24 @@
+host: 192.168.9.52
+database: hass
+include:
+  entities:
+    - sensor.ac_watts
+    - sensor.dryer_watts
+    - sensor.furnace1_watts
+    - sensor.furnace2_watts
+    - sensor.hot_water_heater_watts
+    - sensor.server_rack_watts
+    - sensor.home_watts
+    - sensor.pws_relative_humidity
+    - sensor.pws_temp_f
+    - sensor.climate_main_temperature2
+    - sensor.main_thermostat_relative_humidity_31_5_3
+    - sensor.gecko_humidity
+    - sensor.gecko_temperature
+    - sensor.server_rack_humidity
+    - sensor.server_rack_temperature
+    - sensor.speedtest_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload
+    - sensor.den_temperature
+    - sensor.den_humidity

@@ -1,0 +1,8 @@
+- platform: wake_on_lan
+  mac_address: "00-15-17-c7-c4-c4"
+  name: VM1
+  host: 192.168.9.26
+- platform: wake_on_lan
+  mac_address: "00-1b-21-84-c4-ba"
+  name: VM2
+  host: 192.168.9.27

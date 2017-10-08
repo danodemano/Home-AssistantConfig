@@ -1,0 +1,7 @@
+- platform: ping
+  consider_home: 600
+  hosts:
+    shelley: 192.168.9.68
+    dan: 192.168.9.69
+    nick: 192.168.51.101
+    shannon: 192.168.51.107

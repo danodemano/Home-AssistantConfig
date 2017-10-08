@@ -1,0 +1,16 @@
+temps:
+  name: "Temperatures"
+  entities:
+    - sensor.den_temperature
+    - sensor.climate_main_temperature2
+    - sensor.pws_temp_f
+  hours_to_show: 24
+  refresh: 300
+humidity:
+  name: "Humidity"
+  entities:
+    - sensor.den_humidity
+    - sensor.inside_humidity
+    - sensor.pws_relative_humidity
+  hours_to_show: 24
+  refresh: 300

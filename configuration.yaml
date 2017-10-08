@@ -86,33 +86,6 @@ usps:
     username: !secret usps_username
     password: !secret usps_password
 
-#All notifications piped through Sophos UTM gateway
-notify:
-  - name: danemail
-    platform: smtp
-    server: 192.168.9.1
-    recipient: !secret dan_email
-    sender: !secret email_from
-  - name: shelleyemail
-    platform: smtp
-    server: 192.168.9.1
-    recipient: !secret shelley_email
-    sender: !secret email_from
-  - name: dantext
-    platform: smtp
-    server: 192.168.9.1
-    recipient: !secret dan_text
-    sender: !secret email_from
-  - name: shelleytext
-    platform: smtp
-    server: 192.168.9.1
-    recipient: !secret shelley_text
-    sender: !secret email_from
-#  - name: push
-#    platform: html5
-#    gcm_api_key: !secret push_gcm_api_key
-#    gcm_sender_id: !secret push_gcm_sender_id
-
 #Google Calendar integration
 google:
   client_id: !secret google_client_id
@@ -126,168 +99,34 @@ ifttt:
 vera:
   vera_controller_url: http://192.168.9.205:3480/
 
-#InfluxDB/Grafa integration
-influxdb:
-  host: 192.168.9.52
-  database: hass
-  include:
-    entities:
-      - sensor.ac_watts
-      - sensor.dryer_watts
-      - sensor.furnace1_watts
-      - sensor.furnace2_watts
-      - sensor.hot_water_heater_watts
-      - sensor.server_rack_watts
-      - sensor.home_watts
-      - sensor.pws_relative_humidity
-      - sensor.pws_temp_f
-      - sensor.climate_main_temperature2
-      - sensor.main_thermostat_relative_humidity_31_5_3
-      - sensor.gecko_humidity
-      - sensor.gecko_temperature
-      - sensor.server_rack_humidity
-      - sensor.server_rack_temperature
-      - sensor.speedtest_download
-      - sensor.speedtest_ping
-      - sensor.speedtest_upload
-      - sensor.den_temperature
-      - sensor.den_humidity
-
-#MyQ garage door integration
-cover:
-  - platform: myq
-    username: !secret myq_username
-    password: !secret myq_password
-    type: chamberlain
-
-#Shell commands
-shell_command:
-  toggle_tv: curl -g 'http://192.168.9.201:8081/json?pass=arduino&plain=[{%22type%22:%22raw%22,%22data%22:[2450,600,%201250,600,%20700,600,%201250,600,%20700,600,%201250,600,%20700,600,%20700,600,%201250,600,%20700,600,%20700,600,%20700,600,%20700],%22khz%22:50,%22pulse%22:10}]'
-  tplink_den_on: tplight on 192.168.9.199
-  tplink_den_off: tplight off 192.168.9.199
-  tplink_den_red: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":0,"hue":0,"saturation":100}}}'
-  tplink_den_white: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":2500,"hue":0,"saturation":0}}}'
-  bi_active: curl http://192.168.53.55:81/admin?profile=1
-  bi_home: curl http://192.168.53.55:81/admin?profile=3
-  bi_away: curl http://192.168.53.55:81/admin?profile=4
-  bi_night: curl http://192.168.53.55:81/admin?profile=5
-  ct_kids_disable: /scripts/ct/toggle_network.sh 57241c170d0593001ad4af75 disable
-  ct_kids_enable: /scripts/ct/toggle_network.sh 57241c170d0593001ad4af75 enable
-  ct_nick_enable: /scripts/ct/gp_modify.sh 6c-76-60-d1-e2-8f 1097 enable
-  ct_nick_disable: /scripts/ct/gp_modify.sh 6c-76-60-d1-e2-8f 1097 disable
-  ct_shannon_enable: /scripts/ct/gp_modify.sh 5c-af-06-97-59-8d 1097 enable
-  ct_shannon_disable: /scripts/ct/gp_modify.sh 5c-af-06-97-59-8d 1097 disable
-
-sensor: !include sensors.yaml
-
 binary_sensor:
   - platform: iss
 
+notify: !include notify.yaml
+
+influxdb: !include influxdb.yaml
+
+cover: !include cover.yaml
+
+shell_command: !include shell_command.yaml
+
+sensor: !include sensors.yaml
+
 camera: !include cameras.yaml
 
-device_tracker:
-  - platform: ping
-    consider_home: 600
-    hosts:
-      shelley: 192.168.9.68
-      dan: 192.168.9.69
-      nick: 192.168.51.101
-      shannon: 192.168.51.107
+device_tracker: !include device_tracker.yaml
 
-switch:
-  - platform: wake_on_lan
-    mac_address: "00-15-17-c7-c4-c4"
-    name: VM1
-    host: 192.168.9.26
-  - platform: wake_on_lan
-    mac_address: "00-1b-21-84-c4-ba"
-    name: VM2
-    host: 192.168.9.27
+switch: !include switch.yaml
 
-media_player:
-  - platform: kodi
-    host: 192.168.9.21
-    name: Brix PC
-    username: kodi
-    password: kodi
-    turn_off_action:
-      service: media_player.kodi_call_method
-      data:
-        entity_id: media_player.brix_pc
-        method: Application.Quit
-  - platform: onkyo
-    host: 192.168.52.10
-    name: Onkyo Den
+media_player: !include media_player.yaml
 
 group: !include groups.yaml
 
-input_boolean:
-  vacation_mode:
-    name: Toggle for Vacation Mode
-  holiday_mode:
-    name: Toggle for Holiday Mode
+input_boolean: !include input_boolean.yaml
 
-input_number:
-  random_hour:
-    name: 'Random Hour'
-    min: 0
-    max: 23
-    step: 1
-    initial: 22
-  random_minute:
-    name: 'Random Minute'
-    min: 0
-    max: 59
-    step: 1
-    initial: 45
-  dr_off_delay:
-    name: 'DR Off Delay'
-    min: 0
-    max: 20
-    step: .5
-    initial: 1
-  kids_wifi_off_school:
-    name: 'Kids Wifi Off School Night'
-    min: 0
-    max: 23
-    step: 1
-    initial: 20
-  kids_wifi_off_weekend:
-    name: 'Kids Wifi Off Weekend Night'
-    min: 0
-    max: 23
-    step: 1
-    initial: 21
-  kids_wifi_on_school:
-    name: 'Kids Wifi On School Day'
-    min: 0
-    max: 23
-    step: 1
-    initial: 6
-  kids_wifi_on_weekend:
-    name: 'Kids Wifi On Weekend Day'
-    min: 0
-    max: 23
-    step: 1
-    initial: 8
+input_number: !include input_number.yaml
 
-history_graph:
-  temps:
-    name: "Temperatures"
-    entities:
-      - sensor.den_temperature
-      - sensor.climate_main_temperature2
-      - sensor.pws_temp_f
-    hours_to_show: 24
-    refresh: 300
-  humidity:
-    name: "Humidity"
-    entities:
-      - sensor.den_humidity
-      - sensor.inside_humidity
-      - sensor.pws_relative_humidity
-    hours_to_show: 24
-    refresh: 300
+history_graph: !include history_graph.yaml
 
 automation:  !include automations.yaml
 
@@ -296,28 +135,8 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 
 alexa:
-  # intents:
-  #   ActivateSceneIntent:
-  #     action:
-  #       service: scene.turn_on
-  #       data_template:
-  #         entity_id: scene.{{ Scene | replace(" ", "_") }}
-  #     speech:
-  #       type: plaintext
-  #       text: !include alexa_confirm.yaml
-  #   RunScriptIntent:
-  #     action:
-  #       service: script.turn_on
-  #       data_template:
-  #         entity_id: script.{{ Script | replace(" ", "_") }}
-  #     speech:
-  #       type: plaintext
-  #       text: !include alexa_confirm.yaml
 
 intent_script: !include intent_script.yaml
 
-zone:
-  name: Dan Work
-  latitude: !secret dan_work_lat
-  longitude: !secret dan_work_lon
-  radius: 200
+zone: !include zone.yaml
+

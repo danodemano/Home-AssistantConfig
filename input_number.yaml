@@ -1,0 +1,42 @@
+random_hour:
+  name: 'Random Hour'
+  min: 0
+  max: 23
+  step: 1
+  initial: 22
+random_minute:
+  name: 'Random Minute'
+  min: 0
+  max: 59
+  step: 1
+  initial: 45
+dr_off_delay:
+  name: 'DR Off Delay'
+  min: 0
+  max: 20
+  step: .5
+  initial: 1
+kids_wifi_off_school:
+  name: 'Kids Wifi Off School Night'
+  min: 0
+  max: 23
+  step: 1
+  initial: 20
+kids_wifi_off_weekend:
+  name: 'Kids Wifi Off Weekend Night'
+  min: 0
+  max: 23
+  step: 1
+  initial: 21
+kids_wifi_on_school:
+  name: 'Kids Wifi On School Day'
+  min: 0
+  max: 23
+  step: 1
+  initial: 6
+kids_wifi_on_weekend:
+  name: 'Kids Wifi On Weekend Day'
+  min: 0
+  max: 23
+  step: 1
+  initial: 8

@@ -1,0 +1,24 @@
+- name: danemail
+  platform: smtp
+  server: 192.168.9.1
+  recipient: !secret dan_email
+  sender: !secret email_from
+- name: shelleyemail
+  platform: smtp
+  server: 192.168.9.1
+  recipient: !secret shelley_email
+  sender: !secret email_from
+- name: dantext
+  platform: smtp
+  server: 192.168.9.1
+  recipient: !secret dan_text
+  sender: !secret email_from
+- name: shelleytext
+  platform: smtp
+  server: 192.168.9.1
+  recipient: !secret shelley_text
+  sender: !secret email_from
+#  - name: push
+#    platform: html5
+#    gcm_api_key: !secret push_gcm_api_key
+#    gcm_sender_id: !secret push_gcm_sender_id
