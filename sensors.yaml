@@ -23,6 +23,10 @@
   command: '/bin/bash -c "/scripts/veraSensorValue.sh 161 humidity"'
   unit_of_measurement: "%"
 - platform: command_line
+  name: "Inside Humidity"
+  command: '/bin/bash -c "/scripts/veraSensorValue.sh 41 humidity"'
+  unit_of_measurement: "%"
+- platform: command_line
   name: "XRP to USD"
   command: 'python3 /scripts/kraken_ripple.py'
   unit_of_measurement: "USD"

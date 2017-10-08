@@ -17,6 +17,7 @@ google_calendars.yaml
 *.pickle
 usps_cookies.pickle
 usps_cache.sqlite
+*.sqlite
 fedexdeliverymanager_cookies.pickle
 upsmychoice_cookies.pickle
 *.conf

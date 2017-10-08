@@ -25,6 +25,7 @@ default_view:
    - group.packages
    - group.holidays
    - group.camera_motion
+   - group.misc_stuff
    - camera.front_walk
    - camera.patio
    - sun.sun
@@ -133,7 +134,7 @@ hvac_main:
    - sensor.climate_main_operating_state
    - sensor.climate_main_temperature
    - sensor.climate_main_temperature2
-   - sensor.main_thermostat_relative_humidity_31_5_3
+   - sensor.inside_humidity
    - climate.main_thermostat_39
 
 living_area:
@@ -379,3 +380,10 @@ kids_device_control:
     - script.nick_wifi_off
     - script.shannon_wifi_on
     - script.shannon_wifi_off
+
+misc_stuff:
+  name: "Misc Stuff"
+  control: hidden
+  entities:
+    - history_graph.temperatures
+    - history_graph.humidity

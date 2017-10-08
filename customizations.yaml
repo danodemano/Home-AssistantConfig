@@ -36,7 +36,7 @@ sensor.climate_main_operating_state:
   icon: mdi:settings-box
 sensor.main_thermostat_temperature_31_1:
   friendly_name: Inside Temp
-sensor.main_thermostat_relative_humidity_31_5_3:
+sensor.inside_humidity:
   friendly_name: Inside Humidity
   icon: mdi:water-percent
 sensor.energy_monitor_current_7_20:
