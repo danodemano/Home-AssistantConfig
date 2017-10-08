@@ -484,6 +484,17 @@
   action:
     service: shell_command.ct_kids_enable
 
+- id: set_theme_on_startup
+  alias: 'Set theme at startup'
+  initial_state: 'on'
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    service: frontend.set_theme
+    data:
+      name: darkred
+
 #####################################
 # THIS BLOCK IS USED WHEN OUT OF TOWN
 #####################################

@@ -20,7 +20,6 @@ default_view:
    - group.speedtest
    - group.doors
    - group.windows
-   - group.armed
    - group.server_rack
    - group.packages
    - group.holidays
