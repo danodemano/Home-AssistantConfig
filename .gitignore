@@ -32,3 +32,4 @@ ip_bans.yaml
 /icloud/*
 gitupdate.sh
 appdaemon.yaml
+emulated_hue_ids.json

@@ -59,7 +59,7 @@ sun:
 #For the Amazon Echos
 emulated_hue:
   host_ip: 192.168.9.200
-  type: alexa
+#  type: alexa
   exposed_domains:
     - light
     - switch

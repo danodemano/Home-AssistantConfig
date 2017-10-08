@@ -194,7 +194,7 @@ light.master_2:
   emulated_hue: false
 switch.couch_plug_138:
   emulated_hue: false
-switch.chime_den_135:
+switch.chime_master_135:
   emulated_hue: false
 switch.door_craft_to_patio_133:
   emulated_hue: false
@@ -207,6 +207,8 @@ switch.chest_freezer_145:
 switch.den_sensor_158:
   emulated_hue: false
 light.den:
+  emulated_hue: false
+switch.hot_water_heater_19:
   emulated_hue: false
 input_boolean.holiday_mode:
   icon: mdi:pine-tree
