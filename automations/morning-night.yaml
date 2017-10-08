@@ -1,0 +1,112 @@
+- id: turn_on_night_stuff_work_night
+  alias: 'Turn on humidifier and such school/work night'
+  trigger:
+    platform: time
+    at: '22:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - sun
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
+  action:
+    service: switch.turn_on
+    entity_id: switch.master_night_stuff_42
+
+- id: turn_on_night_stuff_weekend_night
+  alias: 'Turn on humidifier and such weekend night'
+  trigger:
+    platform: time
+    at: '22:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - fri
+          - sat
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
+  action:
+    service: switch.turn_on
+    entity_id: switch.master_night_stuff_42
+
+- id: turn_off_kids_tv_school_night
+  alias: 'Turn off kids TV school night'
+  trigger:
+    platform: time
+    at: '21:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - sun
+  action:
+    service: switch.turn_off
+    entity_id: switch.kids_tv_38
+
+- id: turn_off_kids_tv_weekend_night
+  alias: 'Turn off kids TV weekend night'
+  trigger:
+    platform: time
+    at: '22:00:00'
+  condition:
+    condition: time
+    weekday:
+      - fri
+      - sat
+  action:
+    service: switch.turn_off
+    entity_id: switch.kids_tv_38
+
+- id: turn_on_kids_tv_school_day
+  alias: 'Turn on kids TV school days'
+  trigger:
+    platform: time
+    at: '06:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
+  action:
+    service: switch.turn_on
+    entity_id: switch.kids_tv_38
+
+- id: turn_on_kids_tv_weekend_day
+  alias: 'Turn on kids TV weekend days'
+  trigger:
+    platform: time
+    at: '08:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - sat
+          - sun
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: 'off'
+  action:
+    service: switch.turn_on
+    entity_id: switch.kids_tv_38

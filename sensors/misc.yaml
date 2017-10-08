@@ -1,0 +1,86 @@
+- platform: time_date
+  display_options:
+    - time
+
+- platform: darksky
+  api_key: !secret darksky_api_key
+  forecast:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+  monitored_conditions:
+    - summary
+    - precip_type
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - apparent_temperature
+    - dew_point
+    - wind_speed
+    - wind_bearing
+    - cloud_cover
+    - humidity
+    - pressure
+    - visibility
+    - ozone
+    - minutely_summary
+    - hourly_summary
+    - daily_summary
+    - temperature_max
+    - temperature_min
+    - apparent_temperature_max
+    - apparent_temperature_min
+    - precip_intensity_max
+    - icon
+    - nearest_storm_distance
+
+- platform: wunderground
+  api_key: !secret wunderground_api_key
+  pws_id: KOHSUNBU11
+  monitored_conditions:
+  - weather
+  - temp_f
+  - station_id
+  - feelslike_f
+  - heat_index_f
+  - dewpoint_f
+  - wind_mph
+  - UV
+  - pressure_in
+  - wind_dir
+  - relative_humidity
+  - precip_today_in
+  - alerts
+
+- platform: bitcoin
+  display_options:
+  - market_price_usd
+
+#- platform: speedtest
+#  monitored_conditions:
+#    - ping
+#    - download
+#    - upload
+
+- platform: pi_hole
+  host: 192.168.54.2
+
+
+
+- platform: systemmonitor
+  resources:
+    - type: disk_use_percent
+      arg: /
+    - type: memory_use_percent
+    - type: processor_use
+    - type: network_in
+      arg: eth0
+    - type: network_out
+      arg: eth0
+    - type: since_last_boot
+
+- platform: moon

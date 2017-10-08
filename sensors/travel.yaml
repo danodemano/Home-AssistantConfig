@@ -1,0 +1,23 @@
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  origin: !secret travel_home
+  destination: !secret travel_dan_work
+  name: Dan Home to Work
+
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  origin: !secret travel_dan_work
+  destination: !secret travel_home
+  name: Dan Work to Home
+
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  origin: !secret travel_home
+  destination: !secret travel_shelley_work
+  name: Shelley Home to Work
+
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  origin: !secret travel_shelley_work
+  destination: !secret travel_home
+  name: Shelley Work to Home

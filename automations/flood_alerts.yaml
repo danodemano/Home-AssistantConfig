@@ -1,0 +1,74 @@
+- id: flood_water_heater
+  alias: Flood Water Heater
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.leak_water_heater_21
+      to: 'on'
+  action:
+    - service: notify.dantext
+      data:
+        message: 'WATER DETECTED BY WATER HEATER!'
+    - service: notify.danemail
+      data:
+        message: 'WATER DETECTED BY WATER HEATER!'
+    - service: notify.shelleytext
+      data:
+        message: 'WATER DETECTED BY WATER HEATER!'
+    - service: notify.shelleyemail
+      data:
+        message: 'WATER DETECTED BY WATER HEATER!'
+
+- id: flood_wet_corner
+  alias: Flood Wet Corner
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.leak_wet_corner_44
+      to: 'on'
+  action:
+    - service: notify.dantext
+      data:
+        message: 'WATER DETECTED IN WET CORNER!'
+    - service: notify.danemail
+      data:
+        message: 'WATER DETECTED IN WET CORNER!'
+    - service: notify.shelleytext
+      data:
+        message: 'WATER DETECTED IN WET CORNER!'
+    - service: notify.shelleyemail
+      data:
+        message: 'WATER DETECTED IN WET CORNER!'
+
+- id: flood_sump_pump
+  alias: Flood Sump Pump
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.leak_sump_pump_43
+      to: 'on'
+  action:
+    - service: notify.dantext
+      data:
+        message: 'WATER DETECTED BY SUMP PUMP!'
+    - service: notify.danemail
+      data:
+        message: 'WATER DETECTED BY SUMP PUMP!'
+    - service: notify.shelleytext
+      data:
+        message: 'WATER DETECTED BY SUMP PUMP!'
+    - service: notify.shelleyemail
+      data:
+        message: 'WATER DETECTED BY SUMP PUMP!'
+
+- id: basement_door_opened
+  alias: Basement Door Opened
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.door_basement_52
+      to: 'on'
+  condition:
+    condition: state
+    entity_id: switch.door_basement_52
+    state: 'on'
+  action:
+    - service: notify.dantext
+      data:
+        message: 'Basement door opened!'

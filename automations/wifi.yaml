@@ -1,0 +1,57 @@
+- id: turn_off_kids_wifi_school_night
+  alias: 'Turn off the kids wifi school at 2000'
+  trigger:
+    platform: time
+    at: '20:00:00'
+  condition:
+    condition: time
+    weekday:
+      - sun
+      - mon
+      - tue
+      - wed
+      - thu
+  action:
+    service: shell_command.ct_kids_disable
+
+- id: turn_off_kids_wifi_weekend_night
+  alias: 'Turn off the kids wifi weekend at 2100'
+  trigger:
+    platform: time
+    at: '21:00:00'
+  condition:
+    condition: time
+    weekday:
+      - fri
+      - sat
+  action:
+    service: shell_command.ct_kids_disable
+
+- id: turn_on_kids_wifi_school_day
+  alias: 'Turn on the kids wifi school at 0600'
+  trigger:
+    platform: time
+    at: '06:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: shell_command.ct_kids_enable
+
+- id: turn_on_kids_wifi_weekend_day
+  alias: 'Turn on the kids wifi weekend at 0800'
+  trigger:
+    platform: time
+    at: '08:00:00'
+  condition:
+    condition: time
+    weekday:
+      - sat
+      - sun
+  action:
+    service: shell_command.ct_kids_enable

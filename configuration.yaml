@@ -110,7 +110,8 @@ cover: !include cover.yaml
 
 shell_command: !include shell_command.yaml
 
-sensor: !include sensors.yaml
+#sensor: !include sensors.yaml
+sensor: !include_dir_merge_list sensors
 
 camera: !include cameras.yaml
 
@@ -128,7 +129,8 @@ input_number: !include input_number.yaml
 
 history_graph: !include history_graph.yaml
 
-automation:  !include automations.yaml
+#automation: !include automations.yaml
+automation: !include_dir_merge_list automations
 
 script: !include scripts.yaml
 
