@@ -58,6 +58,15 @@
       - service: switch.turn_off
         entity_id: switch.front_walk_lights_31
 
+- id: turn_on_front_walk_lights_weekdays
+  alias: Turn on front walk lights on weekdays
+  trigger:
+    platform: time
+    at: '06:45:00'
+  action:
+      - service: switch.turn_on
+        entity_id: switch.front_walk_lights_31
+
 - id: turn_off_lights_when_sun_rises
   alias: Turn off lights when sun rises
   trigger:
