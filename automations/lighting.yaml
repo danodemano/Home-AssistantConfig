@@ -66,6 +66,19 @@
   action:
       - service: switch.turn_on
         entity_id: switch.front_walk_lights_31
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: switch.front_outside_lights_140
+        state: 'on'
 
 - id: turn_off_lights_when_sun_rises
   alias: Turn off lights when sun rises

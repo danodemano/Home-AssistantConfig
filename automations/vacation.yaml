@@ -9,7 +9,11 @@
     entity_id: input_boolean.vacation_mode
     state: 'on'
   action:
-    - service: shell_command.tplink_den_white
+    - service: light.turn_on
+      data:
+        entity_id: light.den_2
+        brightness: 75
+        rgb_color: [ 255,207,120 ]
 
 - id: change_den_color_to_red_when_norbert_off
   alias: Change den light color to red when Norbert goes off
@@ -21,7 +25,11 @@
     entity_id: input_boolean.vacation_mode
     state: 'on'
   action:
-    - service: shell_command.tplink_den_red
+    - service: light.turn_on
+      data:
+        entity_id: light.den_2
+        brightness: 100
+        rgb_color: [ 255,0,0 ]
 
 - id: turn_off_den_and_at_random_time
   alias: Turn den off and master on at a semi-random time
@@ -33,7 +41,9 @@
     entity_id: input_boolean.vacation_mode
     state: 'on'
   action:
-    - service: shell_command.tplink_den_off
+    - service: light.turn_off
+      data:
+        entity_id: light.den_2
     - service: light.turn_on
       data:
         entity_id: light.master_1
