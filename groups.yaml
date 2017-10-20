@@ -47,6 +47,7 @@ default_view:
    - binary_sensor.iss
    - camera.usps_mail
    - sensor.dark_sky_cloud_coverage
+   - sensor.dark_sky_wind_speed
 
 security:
  name: Security
