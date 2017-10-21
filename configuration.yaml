@@ -51,6 +51,9 @@ logbook:
 # Track the sun
 sun:
 
+#Start the embeded broker
+mqtt:
+
 #logger:
 #  logs:
 #    pyHS100: debug

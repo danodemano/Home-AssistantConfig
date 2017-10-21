@@ -2,3 +2,5 @@ vacation_mode:
   name: Toggle for Vacation Mode
 holiday_mode:
   name: Toggle for Holiday Mode
+halloween_show:
+  name: Halloween Flickering Lights

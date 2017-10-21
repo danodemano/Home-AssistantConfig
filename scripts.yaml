@@ -196,3 +196,26 @@ shannon_wifi_off:
   alias: "Shannon Wifi Off"
   sequence:
     - service: shell_command.ct_shannon_disable
+
+#Haloween Mode Flickering Lights
+flash_front:
+  alias: Flash Front Lights
+  sequence:
+    - alias: Light On
+      service: switch.turn_on
+      data:
+        entity_id: switch.front_outside_lights_140
+    - delay:
+        # time for flash light on
+        seconds: 1
+    - alias: Light Off
+      service: switch.turn_off
+      data:
+        entity_id: switch.front_outside_lights_140
+    - delay:
+        # time for flash light off
+        seconds: 1
+    - alias: loop_front
+      service: script.turn_on
+      data:
+        entity_id: script.flash_front

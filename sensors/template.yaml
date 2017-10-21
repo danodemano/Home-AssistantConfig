@@ -243,20 +243,16 @@
     nick_phone_wifi_state:
       friendly_name: 'Nick Phone Wifi'
       value_template: >-
-          {%- if is_state("device_tracker.nick", "not_home") -%}
-              Not Connected
-          {%- elif is_state("device_tracker.nick", "home") -%}
+          {%- if is_state("device_tracker.nick_phone", "home") -%}
               Connected
           {%- else -%}
-              UNKNOWN
+              Not Connected
           {%- endif -%}
     shannon_phone_wifi_state:
       friendly_name: 'Shannon Phone Wifi'
       value_template: >-
-          {%- if is_state("device_tracker.shannon", "not_home") -%}
-              Not Connected
-          {%- elif is_state("device_tracker.shannon", "home") -%}
+          {%- if is_state("device_tracker.shannon_phone", "home") -%}
               Connected
           {%- else -%}
-              UNKNOWN
+              Not Connected
           {%- endif -%}

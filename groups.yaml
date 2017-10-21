@@ -29,10 +29,10 @@ default_view:
    - camera.patio
    - sun.sun
    - sensor.moon
-   - device_tracker.shannon
-   - device_tracker.nick
-   - device_tracker.dan
-   - device_tracker.shelley
+   - device_tracker.shannon_phone
+   - device_tracker.nick_phone
+   - device_tracker.dan_dans7
+   - device_tracker.shelley_op3
    - sensor.market_price
    - sensor.xrp_to_usd
    - sensor.pihole
@@ -279,6 +279,7 @@ holidays:
   entities:
     - switch.holiday_lights_148
     - input_boolean.holiday_mode
+    - input_boolean.halloween_show
 
 holiday_lights:
   name: "Light that turn on for Holiday"

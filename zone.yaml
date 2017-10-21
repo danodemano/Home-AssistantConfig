@@ -6,3 +6,11 @@
   latitude: !secret shelley_work_lat
   longitude: !secret shelley_work_lon
   radius: 200
+- name: Kids School
+  latitude: !secret kids_school_lat
+  longitude: !secret kids_school_lon
+  radius: 250
+- name: Folks
+  latitude: !secret folks_lat
+  longitude: !secret folks_lon
+  radius: 200

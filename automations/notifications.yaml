@@ -1,0 +1,160 @@
+- id: driveway_motion_alert
+  alias: Driveway Motion Alert
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_driveway
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Motion Alert Driveway'
+        data:
+          file:
+            url: http://192.168.53.110/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Motion Alert Driveway"
+- id: backyard_motion_alert
+  alias: Backyard Motion Alert
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_backyard
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Motion Alert Backyard'
+        data:
+          file:
+            url: http://192.168.53.113/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Motion Alert Backyard"
+- id: basement_motion_alert
+  alias: Basement Motion Alert
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_basement
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Motion Alert Basement'
+        data:
+          file:
+            url: http://192.168.53.114/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Motion Alert Basement"
+- id: craftroom_motion_alert
+  alias: Craft Room Motion Alert
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_craftroom
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Motion Alert Craft Room'
+        data:
+          file:
+            url: http://192.168.53.116/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Motion Alert Craft Room"
+- id: frontwalk_motion_alert
+  alias: Front Walk Motion Alert
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_frontwalk
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Motion Alert Front Walk'
+        data:
+          file:
+            url: http://192.168.53.111/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Motion Alert Front Walk"
+- id: garage_motion_alert
+  alias: Garage Motion Alert
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_garage
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Motion Alert Garage'
+        data:
+          file:
+            url: http://192.168.53.117/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Motion Alert Garage"
+- id: gatepatio_motion_alert
+  alias: Gate/Patio Motion Alert
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_gatepatio
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Motion Alert Gate/Patio'
+        data:
+          file:
+            url: http://192.168.53.110/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Motion Alert Gate/Patio"
+- id: livingroom_motion_alert
+  alias: Living Room Motion Alert
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_livingroom
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Motion Alert Living Room'
+        data:
+          file:
+            url: http://192.168.53.115/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Motion Alert Living Room"
+- id: patio_motion_alert
+  alias: Patio Motion Alert
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_patio
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Motion Alert Patio'
+        data:
+          file:
+            url: http://192.168.53.118/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Motion Alert Patio"
+- id: front_door_opened
+  alias: Front Door Alert
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.door_front_97
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Front Door Opened'
+        data:
+          file:
+            url: http://192.168.53.115/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Front Door Opened"
