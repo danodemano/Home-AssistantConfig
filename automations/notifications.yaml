@@ -106,7 +106,7 @@
         message: 'Motion Alert Gate/Patio'
         data:
           file:
-            url: http://192.168.53.110/snap.jpeg
+            url: http://192.168.53.112/snap.jpeg
     - service: notify.push
       data:
         message: "Motion Alert Gate/Patio"

@@ -51,6 +51,9 @@ logbook:
 # Track the sun
 sun:
 
+#Enable the map
+map:
+
 #Start the embeded broker
 mqtt:
 
