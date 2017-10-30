@@ -26,3 +26,7 @@
   latitude: !secret kroger_sunbury_lat
   longitude: !secret kroger_sunbury_lon
   radius: 200
+- name: Shelley Folks
+  latitude: !secret shelley_folks_lat
+  longitude: !secret shelley_folks_lon
+  radius: 100
