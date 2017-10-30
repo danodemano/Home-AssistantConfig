@@ -1,0 +1,87 @@
+switch.front_walk_lights_31:
+  friendly_name: Front Walk Lights
+  emulated_hue_name: Front Walk Lights
+  icon: mdi:lightbulb
+switch.norbert_22:
+  friendly_name: Norbert Light
+  icon: mdi:lightbulb
+switch.norbert_heat_130:
+  icon: mdi:lightbulb-outline
+switch.patio_light_32:
+  friendly_name: Patio Light
+  icon: mdi:lightbulb
+switch.front_outside_lights_140:
+  friendly_name: Front Outside Lights
+  icon: mdi:lightbulb
+switch.holiday_lights_148:
+  icon: mdi:lightbulb
+switch.living_room_37:
+  icon: mdi:lightbulb
+switch.kids_tv_38:
+  icon: mdi:television
+switch.den_av_128:
+  icon: mdi:television
+switch.master_night_stuff_42:
+  friendly_name: Master Night Stuff
+  icon: mdi:lamp
+switch.geckos_59:
+  icon: mdi:lightbulb-outline
+  emulated_hue_hidden: true
+switch.snake_heaters_124:
+  icon: mdi:crop-square
+  emulated_hue_hidden: true
+switch.gecko_ceramic_heater_132:
+  icon: mdi:lightbulb-outline
+  emulated_hue_hidden: true
+switch.door_back_sliding_99:
+  emulated_hue_hidden: true
+switch.door_basement_52:
+  emulated_hue_hidden: true
+switch.door_front_97:
+  emulated_hue_hidden: true
+switch.door_garage_to_den_53:
+  emulated_hue_hidden: true
+switch.leak_sump_pump_43:
+  emulated_hue_hidden: true
+switch.leak_water_heater_21:
+  emulated_hue_hidden: true
+switch.leak_wet_corner_44:
+  emulated_hue_hidden: true
+switch.safe_117:
+  emulated_hue_hidden: true
+switch.server_rack_status_63:
+  emulated_hue_hidden: true
+switch.vm1:
+  icon: mdi:server
+  emulated_hue_hidden: true
+switch.vm2:
+  icon: mdi:server
+  emulated_hue_hidden: true
+switch.window_craft_room_114:
+  emulated_hue_hidden: true
+switch.window_den_96:
+  emulated_hue_hidden: true
+switch.window_kitchen_100:
+  emulated_hue_hidden: true
+switch.window_lr_east_104:
+  emulated_hue_hidden: true
+switch.window_lr_west_113:
+  emulated_hue_hidden: true
+switch.couch_plug_138:
+  emulated_hue_hidden: true
+switch.chime_master_135:
+  emulated_hue_hidden: true
+switch.door_craft_to_patio_133:
+  emulated_hue_hidden: true
+switch.door_craft_to_drive_134:
+  emulated_hue_hidden: true
+switch.server_rack_68:
+  emulated_hue_hidden: true
+switch.chest_freezer_145:
+  emulated_hue_hidden: true
+switch.den_sensor_158:
+  emulated_hue_hidden: true
+switch.coffee_pot_129:
+  icon: mdi:coffee
+switch.hot_water_heater_19:
+  emulated_hue_hidden: true

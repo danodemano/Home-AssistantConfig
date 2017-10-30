@@ -1,0 +1,36 @@
+binary_sensor.leak_water_heater_21:
+  sensor_class: moisture
+  icon: mdi:water
+binary_sensor.leak_sump_pump_43:
+  sensor_class: moisture
+  icon: mdi:water
+binary_sensor.leak_wet_corner_44:
+  sensor_class: moisture
+  icon: mdi:water
+binarysensor.blue_iris_backyard:
+  friendly_name: Motion Backyard
+  icon: mdi:camera
+binarysensor.blue_iris_basement:
+  friendly_name: Motion Basement
+  icon: mdi:camera
+binarysensor.blue_iris_craftroom:
+  friendly_name: Motion Craft Room
+  icon: mdi:camera
+binarysensor.blue_iris_driveway:
+  friendly_name: Motion Driveway
+  icon: mdi:camera
+binarysensor.blue_iris_frontwalk:
+  friendly_name: Motion Front Walk
+  icon: mdi:camera
+binarysensor.blue_iris_garage:
+  friendly_name: Motion Garage
+  icon: mdi:camera
+binarysensor.blue_iris_gatepatio:
+  friendly_name: Motion Gate/Patio
+  icon: mdi:camera
+binarysensor.blue_iris_livingroom:
+  friendly_name: Motion Living Room
+  icon: mdi:camera
+binarysensor.blue_iris_patio:
+  friendly_name: Motion Patio
+  icon: mdi:camera

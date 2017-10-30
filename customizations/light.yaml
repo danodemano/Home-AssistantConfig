@@ -1,0 +1,13 @@
+light.dining_room_36:
+  friendly_name: Dining Room Light
+  scan_interval: 10
+  refresh_value: true
+light.gecko_heater_67:
+  icon: mdi:crop-square
+  emulated_hue_hidden: true
+light.master_1:
+  emulated_hue_hidden: true
+light.master_2:
+  emulated_hue_hidden: true
+light.den:
+  emulated_hue_hidden: true

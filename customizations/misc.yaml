@@ -1,0 +1,3 @@
+climate.main_thermostat_39:
+  friendly_name: Thermostat Control
+  icon: mdi:settings

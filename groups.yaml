@@ -281,7 +281,6 @@ holidays:
   entities:
     - switch.holiday_lights_148
     - input_boolean.holiday_mode
-    - input_boolean.halloween_show
 
 holiday_lights:
   name: "Light that turn on for Holiday"

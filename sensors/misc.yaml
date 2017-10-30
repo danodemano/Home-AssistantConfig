@@ -84,3 +84,8 @@
     - type: since_last_boot
 
 - platform: moon
+
+- platform: haveibeenpwned
+  email: 
+    - !secret dan_email
+    - !secret shelley_email

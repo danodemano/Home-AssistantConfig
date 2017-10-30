@@ -1,0 +1,127 @@
+sensor.pws_temp_f:
+  friendly_name: Outside Temp
+sensor.pws_alerts:
+  friendly_name: Weather Alerts
+  icon: mdi:alert
+sensor.pws_relative_humidity:
+  friendly_name: Outside Humidity
+  icon: mdi:water-percent
+sensor.pws_weather:
+  friendly_name: Weather
+sensor.pws_wind_dir:
+  friendly_name: Wind Direction
+  icon: mdi:compass
+sensor.pws_wind_mph:
+  friendly_name: Wind MPH
+  icon: mdi:weather-windy
+sensor.market_price:
+  friendly_name: BTC to USD
+sensor.climate_main_fan_state:
+  icon: mdi:fan
+sensor.climate_main_operating_state:
+  icon: mdi:settings-box
+sensor.main_thermostat_temperature_31_1:
+  friendly_name: Inside Temp
+sensor.inside_humidity:
+  friendly_name: Inside Humidity
+  icon: mdi:water-percent
+sensor.energy_monitor_current_7_20:
+  friendly_name: Home Current
+  icon: mdi:flash-red-eye
+sensor.energy_monitor_energy_7_0:
+  friendly_name: Home KWH
+  icon: mdi:flash-red-eye
+sensor.home_26:
+  friendly_name: Home Watts
+  icon: mdi:flash-red-eye
+  unit_of_measurement: "W"
+sensor.server_rack_watts:
+  friendly_name: Server Rack Power
+  icon: mdi:flash-red-eye
+sensor.server_rack_temperature:
+  icon: mdi:thermometer
+sensor.server_rack_humidity:
+  icon: mdi:water-percent
+sensor.energy_monitor_voltage_7_16:
+  friendly_name: Home Voltage
+  icon: mdi:flash-red-eye
+sensor.climate_main_temperature:
+  icon: mdi:thermometer-lines
+sensor.leak_hot_water_heater_battery:
+  icon: mdi:battery
+sensor.leak_sump_pump_battery:
+  icon: mdi:battery
+sensor.leak_wet_corner_battery:
+  icon: mdi:battery
+sensor.door_basement_battery:
+  icon: mdi:battery
+sensor.door_garage_to_den_battery:
+  icon: mdi:battery
+sensor.door_back_sliding_battery:
+  icon: mdi:battery
+sensor.door_front_battery:
+  icon: mdi:battery
+sensor.window_den_battery:
+  icon: mdi:battery
+sensor.window_front_east_battery:
+  icon: mdi:battery
+sensor.window_front_west_battery:
+  icon: mdi:battery
+sensor.window_kitchen_battery:
+  icon: mdi:battery
+sensor.window_craft_room_battery:
+  icon: mdi:battery
+sensor.gecko_battery:
+  icon: mdi:battery
+sensor.server_rack_battery:
+  icon: mdi:battery
+sensor.door_craft_to_drive:
+  icon: mdi:battery
+sensor.door_craft_to_patio:
+  icon: mdi:battery
+sensor.chest_freezer_battery:
+  icon: mdi:battery
+sensor.den_climate_battery:
+  icon: mdi:battery
+cover.garage_door_opener:
+  friendly_name: Garage Door
+sensor.ac_watts:
+  icon: mdi:flash-red-eye
+sensor.dryer_watts:
+  icon: mdi:flash-red-eye
+sensor.furnace1_watts:
+  icon: mdi:flash-red-eye
+sensor.furnace2_watts:
+  icon: mdi:flash-red-eye
+sensor.hot_water_heater_watts:
+  icon: mdi:flash-red-eye
+sensor.dan_home_to_work:
+  icon: mdi:car
+sensor.dan_work_to_home:
+  icon: mdi:car
+sensor.shelley_home_to_work:
+  icon: mdi:car
+sensor.shelley_work_to_home:
+  icon: mdi:car
+sensor.430_walnutview_dr:
+  friendly_name: USPS
+sensor.speedtest_download:
+  icon: mdi:download
+sensor.speedtest_ping:
+  icon: mdi:timer
+sensor.speedtest_upload:
+  icon: mdi:upload
+sensor.gecko_humidity:
+  icon: mdi:water-percent
+sensor.gecko_temperature:
+  icon: mdi:thermometer
+sensor.den_humidity:
+  icon: mdi:water-percent
+sensor.den_temperature:
+  icon: mdi:thermometer
+sensor.climate_main_battery:
+  icon: mdi:battery
+sensor.nick_phone_wifi_state:
+  icon: mdi:cellphone-android
+sensor.shannon_phone_wifi_state:
+  icon: mdi:cellphone-android
