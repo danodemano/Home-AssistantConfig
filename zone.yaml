@@ -14,3 +14,15 @@
   latitude: !secret folks_lat
   longitude: !secret folks_lon
   radius: 200
+- name: Meijer Westerville
+  latitude: !secret meijer_westerville_lat
+  longitude: !secret meijer_westerville_lon
+  radius: 200
+- name: Meijer Delaware
+  latitude: !secret meijer_delaware_lat
+  longitude: !secret meijer_delaware_lon
+  radius: 200
+- name: Kroger Sunbury
+  latitude: !secret kroger_sunbury_lat
+  longitude: !secret kroger_sunbury_lon
+  radius: 200

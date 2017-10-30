@@ -35,6 +35,8 @@ sensor.home_26:
   friendly_name: Home Watts
   icon: mdi:flash-red-eye
   unit_of_measurement: "W"
+sensor.home_watts:
+  icon: mdi:flash-red-eye
 sensor.server_rack_watts:
   friendly_name: Server Rack Power
   icon: mdi:flash-red-eye
@@ -125,3 +127,5 @@ sensor.nick_phone_wifi_state:
   icon: mdi:cellphone-android
 sensor.shannon_phone_wifi_state:
   icon: mdi:cellphone-android
+sensor.pihole_ads_percentage_blocked_today:
+  friendly_name: 'Pi-Hole Ads % Blocked Today'

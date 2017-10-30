@@ -9,23 +9,15 @@ default_view:
    - group.den_area
    - group.kitchen
    - group.master
-   - group.wol
-   - group.leak
-   - group.traveltimes
-   - group.battery
+#   - group.leak
+#   - group.traveltimes
    - group.energy
    - group.hvac_main
    - group.home_electric
    - group.weather
-   - group.speedtest
-   - group.doors
-   - group.windows
-   - group.server_rack
    - group.packages
    - group.holidays
-   - group.camera_motion
    - group.misc_stuff
-   - group.pihole_stats
    - group.couch_plug_stuff
    - camera.front_walk
    - camera.patio
@@ -34,14 +26,10 @@ default_view:
    - device_tracker.shannon_phone
    - device_tracker.nick_phone
    - device_tracker.dan_dans7
-   - device_tracker.shelley_op3
+   - device_tracker.shelley_op5
    - sensor.market_price
    - sensor.xrp_to_usd
    - sensor.430_walnutview_dr
-   - sensor.cpu_used
-   - sensor.disk_used_
-   - sensor.ram_used
-   - sensor.since_last_boot
    - sensor.time
    - media_player.brix_pc
    - media_player.onkyo_den
@@ -60,19 +48,27 @@ security:
    - group.armed
    - group.camera_motion
 
-cameras:
- name: Cameras
- view: yes
- entities:
-   - camera.driveway
-   - camera.back_gatepatio
-   - camera.front_walk
-   - camera.backyardshed
-   - camera.patio
-   - camera.garage
-   - camera.basement
-   - camera.living_room
-   - camera.craft_room
+servers:
+  name: Servers
+  view: yes
+  entities:
+   - group.server_rack
+   - group.wol
+   - group.pihole_stats
+   - group.speedtest
+   - group.qnap_12tb
+   - group.qnap_vm
+
+system_health:
+  name: System Health
+  view: yes
+  entities:
+   - group.battery
+   - sensor.cpu_used
+   - sensor.disk_used_
+   - sensor.ram_used
+   - sensor.since_last_boot
+   - zwave.aeotec_zw090_zstick_gen5_us
 
 cameras_group:
  name: Camera Group
@@ -407,3 +403,55 @@ couch_plug_stuff:
     - sensor.couch_plug_previous_reading
     - sensor.couch_plug_voltage
     - switch.couch_plug_switch
+
+qnap_12tb:
+  name: QNAP Storage NAS
+  entities:
+  - sensor.12tbnas_cpu_temperature
+  - sensor.12tbnas_cpu_usage
+  - sensor.12tbnas_free_space_datavol1
+  - sensor.12tbnas_memory_available
+  - sensor.12tbnas_memory_usage
+  - sensor.12tbnas_memory_used
+  - sensor.12tbnas_network_down_eth0
+  - sensor.12tbnas_network_down_eth1
+  - sensor.12tbnas_network_link_eth0
+  - sensor.12tbnas_network_link_eth1
+  - sensor.12tbnas_network_up_eth0
+  - sensor.12tbnas_network_up_eth1
+  - sensor.12tbnas_smart_status_drive_01
+  - sensor.12tbnas_smart_status_drive_02
+  - sensor.12tbnas_smart_status_drive_03
+  - sensor.12tbnas_smart_status_drive_04
+  - sensor.12tbnas_status
+  - sensor.12tbnas_system_temperature
+  - sensor.12tbnas_temperature_drive_01
+  - sensor.12tbnas_temperature_drive_02
+  - sensor.12tbnas_temperature_drive_03
+  - sensor.12tbnas_temperature_drive_04
+  - sensor.12tbnas_used_space_datavol1
+  - sensor.12tbnas_volume_used_datavol1
+
+qnap_vm:
+  name: QNAP VM NAS
+  entities:
+  - sensor.vmnas1_cpu_temperature
+  - sensor.vmnas1_cpu_usage
+  - sensor.vmnas1_free_space_datavol1
+  - sensor.vmnas1_memory_available
+  - sensor.vmnas1_memory_usage
+  - sensor.vmnas1_memory_used
+  - sensor.vmnas1_network_down_eth0
+  - sensor.vmnas1_network_down_eth1
+  - sensor.vmnas1_network_link_eth0
+  - sensor.vmnas1_network_link_eth1
+  - sensor.vmnas1_network_up_eth0
+  - sensor.vmnas1_network_up_eth1
+  - sensor.vmnas1_smart_status_drive_01
+  - sensor.vmnas1_smart_status_drive_02
+  - sensor.vmnas1_status
+  - sensor.vmnas1_system_temperature
+  - sensor.vmnas1_temperature_drive_01
+  - sensor.vmnas1_temperature_drive_02
+  - sensor.vmnas1_used_space_datavol1
+  - sensor.vmnas1_volume_used_datavol1
