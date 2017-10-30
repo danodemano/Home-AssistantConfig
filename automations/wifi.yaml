@@ -12,7 +12,7 @@
       - wed
       - thu
   action:
-    service: shell_command.ct_kids_disable
+    service: shell_command.wifi_kids_disable
 
 - id: turn_off_kids_wifi_weekend_night
   alias: 'Turn off the kids wifi weekend at 2100'
@@ -25,7 +25,7 @@
       - fri
       - sat
   action:
-    service: shell_command.ct_kids_disable
+    service: shell_command.wifi_kids_disable
 
 - id: turn_on_kids_wifi_school_day
   alias: 'Turn on the kids wifi school at 0600'
@@ -41,7 +41,7 @@
       - thu
       - fri
   action:
-    service: shell_command.ct_kids_enable
+    service: shell_command.wifi_kids_enable
 
 - id: turn_on_kids_wifi_weekend_day
   alias: 'Turn on the kids wifi weekend at 0800'
@@ -54,4 +54,4 @@
       - sat
       - sun
   action:
-    service: shell_command.ct_kids_enable
+    service: shell_command.wifi_kids_enable

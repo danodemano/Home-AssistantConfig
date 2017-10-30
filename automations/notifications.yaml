@@ -11,9 +11,6 @@
         data:
           file:
             url: http://192.168.53.110/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Motion Alert Driveway"
 - id: backyard_motion_alert
   alias: Backyard Motion Alert
   trigger:
@@ -27,9 +24,6 @@
         data:
           file:
             url: http://192.168.53.113/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Motion Alert Backyard"
 - id: basement_motion_alert
   alias: Basement Motion Alert
   trigger:
@@ -43,9 +37,6 @@
         data:
           file:
             url: http://192.168.53.114/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Motion Alert Basement"
 - id: craftroom_motion_alert
   alias: Craft Room Motion Alert
   trigger:
@@ -59,9 +50,6 @@
         data:
           file:
             url: http://192.168.53.116/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Motion Alert Craft Room"
 - id: frontwalk_motion_alert
   alias: Front Walk Motion Alert
   trigger:
@@ -75,9 +63,6 @@
         data:
           file:
             url: http://192.168.53.111/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Motion Alert Front Walk"
 - id: garage_motion_alert
   alias: Garage Motion Alert
   trigger:
@@ -91,9 +76,6 @@
         data:
           file:
             url: http://192.168.53.117/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Motion Alert Garage"
 - id: gatepatio_motion_alert
   alias: Gate/Patio Motion Alert
   trigger:
@@ -107,9 +89,6 @@
         data:
           file:
             url: http://192.168.53.112/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Motion Alert Gate/Patio"
 - id: livingroom_motion_alert
   alias: Living Room Motion Alert
   trigger:
@@ -123,9 +102,6 @@
         data:
           file:
             url: http://192.168.53.115/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Motion Alert Living Room"
 - id: patio_motion_alert
   alias: Patio Motion Alert
   trigger:
@@ -139,9 +115,6 @@
         data:
           file:
             url: http://192.168.53.118/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Motion Alert Patio"
 - id: front_door_opened
   alias: Front Door Alert
   trigger:
@@ -155,6 +128,94 @@
         data:
           file:
             url: http://192.168.53.115/snap.jpeg
+    - service: notify.slacknotify
+      data:
+        message: 'Front Door Opened'
+        data:
+          file:
+            url: http://192.168.53.111/snap.jpeg
     - service: notify.push
       data:
         message: "Front Door Opened"
+- id: sliding_door_opened
+  alias: Sliding Door Alert
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.door_back_sliding_99
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Sliding Door Opened'
+        data:
+          file:
+            url: http://192.168.53.112/snap.jpeg
+    - service: notify.slacknotify
+      data:
+        message: 'Sliding Door Opened'
+        data:
+          file:
+            url: http://192.168.53.118/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Front Door Opened"
+- id: craft_to_drive_door_opened
+  alias: Craft to Drive Door Alert
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.door_craft_to_drive_134
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Craft to Drive Door Opened'
+        data:
+          file:
+            url: http://192.168.53.116/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Craft to Drive Door Opened"
+- id: craft_to_patio_opened
+  alias: Craft to Patio Door Alert
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.door_craft_to_patio_133
+      to: 'on'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Craft to Patio Door Opened'
+        data:
+          file:
+            url: http://192.168.53.112/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Craft to Patio Door Opened"
+- id: garage_door_opened
+  alias: Garage Door Alert
+  trigger:
+    - platform: state
+      entity_id: cover.garage_door_opener
+      to: 'open'
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Garage Door Opened'
+        data:
+          file:
+            url: http://192.168.53.117/snap.jpeg
+    - service: notify.slacknotify
+      data:
+        message: 'Garage Door Opened'
+        data:
+          file:
+            url: http://192.168.53.110/snap.jpeg
+    - service: notify.slacknotify
+      data:
+        message: 'Garage Door Opened'
+        data:
+          file:
+            url: http://192.168.53.111/snap.jpeg
+    - service: notify.push
+      data:
+        message: "Garage Door Opened"

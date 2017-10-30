@@ -9,12 +9,12 @@ timed_lamp:
       data:
         entity_id: light.master_1
         brightness: 50
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     - service: light.turn_on
       data:
         entity_id: light.master_2
         brightness: 50
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     # Set new timer
     - service: script.turn_on
       data:
@@ -45,17 +45,17 @@ night_time:
       data:
         entity_id: light.master
         brightness: 50
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     - service: light.turn_on
       data:
         entity_id: light.master_1
         brightness: 50
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     - service: light.turn_on
       data:
         entity_id: light.master_2
         brightness: 50
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     - service: media_player.turn_off
       data:
         entity_id: media_player.brix_pc
@@ -84,19 +84,19 @@ morning_time:
         entity_id: light.master
         transition: 90
         brightness: 255
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     - service: light.turn_on
       data:
         entity_id: light.master_1
         transition: 90
         brightness: 255
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     - service: light.turn_on
       data:
         entity_id: light.master_2
         transition: 90
         brightness: 255
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     - service: switch.turn_on
       data:
         entity_id: switch.den_av_128
@@ -111,12 +111,12 @@ all_on:
       data:
         entity_id: light.master_1
         brightness: 255
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     - service: light.turn_on
       data:
         entity_id: light.master_2
         brightness: 255
-        rgb_color: [ 255,255,255 ]
+        #rgb_color: [ 255,255,255 ]
     - service: light.turn_on
       data:
         entity_id: light.dining_room_36
@@ -170,52 +170,29 @@ den_off:
 kids_wifi_on:
   alias: "Kids Wifi On"
   sequence:
-    - service: shell_command.ct_kids_enable
+    - service: shell_command.wifi_kids_enable
 
 kids_wifi_off:
   alias: "Kids Wifi Off"
   sequence:
-    - service: shell_command.ct_kids_disable
+    - service: shell_command.wifi_kids_disable
 
 nick_wifi_on:
   alias: "Nick Wifi On"
   sequence:
-    - service: shell_command.ct_nick_enable
+    - service: shell_command.wifi_nick_enable
 
 nick_wifi_off:
   alias: "Nick Wifi Off"
   sequence:
-    - service: shell_command.ct_nick_disable
+    - service: shell_command.wifi_nick_disable
 
 shannon_wifi_on:
   alias: "Shannon Wifi On"
   sequence:
-    - service: shell_command.ct_shannon_enable
+    - service: shell_command.wifi_shannon_enable
 
 shannon_wifi_off:
   alias: "Shannon Wifi Off"
   sequence:
-    - service: shell_command.ct_shannon_disable
-
-#Haloween Mode Flickering Lights
-flash_front:
-  alias: Flash Front Lights
-  sequence:
-    - alias: Light On
-      service: switch.turn_on
-      data:
-        entity_id: switch.front_outside_lights_140
-    - delay:
-        # time for flash light on
-        seconds: 1
-    - alias: Light Off
-      service: switch.turn_off
-      data:
-        entity_id: switch.front_outside_lights_140
-    - delay:
-        # time for flash light off
-        seconds: 1
-    - alias: loop_front
-      service: script.turn_on
-      data:
-        entity_id: script.flash_front
+    - service: shell_command.wifi_shannon_disable

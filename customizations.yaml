@@ -114,18 +114,14 @@ sensor.den_climate_battery:
   icon: mdi:battery
 cover.garage_door_opener:
   friendly_name: Garage Door
-sensor.ac_10:
-  unit_of_measurement: "W"
+sensor.ac_watts:
   icon: mdi:flash-red-eye
-sensor.dryer_6:
-  unit_of_measurement: "W"
+sensor.dryer_watts:
   icon: mdi:flash-red-eye
-sensor.furnace1_13:
-  unit_of_measurement: "W"
+sensor.furnace1_watts:
   icon: mdi:flash-red-eye
-sensor.furnace2_16:
+sensor.furnace2_watts:
   icon: mdi:flash-red-eye
-  unit_of_measurement: "W"
 sensor.hot_water_heater_watts:
   icon: mdi:flash-red-eye
 sensor.dan_home_to_work:
@@ -206,6 +202,8 @@ switch.chest_freezer_145:
   emulated_hue_hidden: true
 switch.den_sensor_158:
   emulated_hue_hidden: true
+switch.coffee_pot_129:
+  icon: mdi:coffee
 light.den:
   emulated_hue_hidden: true
 switch.hot_water_heater_19:

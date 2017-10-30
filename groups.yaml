@@ -26,6 +26,7 @@ default_view:
    - group.camera_motion
    - group.misc_stuff
    - group.pihole_stats
+   - group.couch_plug_stuff
    - camera.front_walk
    - camera.patio
    - sun.sun
@@ -91,8 +92,9 @@ outdoor_lights:
  entities:
    - switch.front_walk_lights_31
    - switch.patio_light_32
-   - switch.front_outside_lights_140
+   #- switch.front_outside_lights_140
    - switch.holiday_lights_148
+   - light.outside
 
 pets:
  name: Pets
@@ -396,3 +398,13 @@ pihole_stats:
     - sensor.pihole_ads_percentage_blocked_today
     - sensor.pihole_dns_queries_today
     - sensor.pihole_domains_blocked
+
+couch_plug_stuff:
+  name: Couch Plug Stuff
+  entities:
+    - sensor.couch_plug_current
+    - sensor.couch_plug_energy
+    - sensor.couch_plug_power
+    - sensor.couch_plug_previous_reading
+    - sensor.couch_plug_voltage
+    - switch.couch_plug_switch

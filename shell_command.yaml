@@ -7,9 +7,10 @@ bi_active: curl http://192.168.53.55:81/admin?profile=1
 bi_home: curl http://192.168.53.55:81/admin?profile=3
 bi_away: curl http://192.168.53.55:81/admin?profile=4
 bi_night: curl http://192.168.53.55:81/admin?profile=5
-ct_kids_disable: php /scripts/ubnt/toggle_network.php Dev_Kids false false
-ct_kids_enable: php /scripts/ubnt/toggle_network.php Dev_Kids true false
-ct_nick_enable: php /scripts/ubnt/toggle_station.php 6c:76:60:d1:e2:8f true
-ct_nick_disable: php /scripts/ubnt/toggle_station.php 6c:76:60:d1:e2:8f false
-ct_shannon_enable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d true
-ct_shannon_disable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d false
+bi_windy: curl http://192.168.53.55:81/admin?profile=6
+wifi_kids_disable: php /scripts/ubnt/toggle_network.php Dev_Kids false false
+wifi_kids_enable: php /scripts/ubnt/toggle_network.php Dev_Kids true false
+wifi_nick_enable: php /scripts/ubnt/toggle_station.php 6c:76:60:d1:e2:8f true
+wifi_nick_disable: php /scripts/ubnt/toggle_station.php 6c:76:60:d1:e2:8f false
+wifi_shannon_enable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d true
+wifi_shannon_disable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d false

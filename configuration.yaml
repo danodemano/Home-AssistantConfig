@@ -55,12 +55,22 @@ sun:
 map:
 
 #Start the embeded broker
-mqtt:
+#mqtt:
+
+#Enable the statestream for data flow between devices
+#mqtt_statestream:
+#  base_topic: homeassistant
+#  publish_attributes: true
+#  publish_timestamps: true
 
 #logger:
 #  logs:
 #    pyHS100: debug
 #    homeassistant.components.light.tplink: debug
+
+#Zwave Config
+zwave:
+  usb_path: /dev/ttyACM0
 
 #For the Amazon Echos
 emulated_hue:
