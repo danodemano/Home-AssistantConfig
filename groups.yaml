@@ -59,6 +59,7 @@ servers:
    - group.qnap_12tb
    - group.qnap_vm
    - group.certs
+   - group.server_grafana
 
 system_health:
   name: System Health
@@ -463,3 +464,16 @@ certs:
   - sensor.danodemanocom
   - sensor.madhookercom
   - sensor.campohioadventurecom
+
+server_grafana:
+  name: Server Grafana
+  entities:
+  - sensor.grafana_15min_load
+  - sensor.grafana_5min_load
+  - sensor.grafana_1min_load
+  - sensor.grafana_free_ram
+  - sensor.grafana_total_ram
+  - sensor.grafana_uptime
+  - sensor.grafana_used_disk_space
+  - sensor.grafana_used_inodes
+  - sensor.grafana_used_ram
