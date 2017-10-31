@@ -1,0 +1,54 @@
+- platform: snmp
+  host: 192.168.9.52
+  baseoid: 1.3.6.1.4.1.2021.10.1.3.1
+  community: public
+  version: 2c
+  name: 'Grafana 1min Load'
+- platform: snmp
+  host: 192.168.9.52
+  baseoid: 1.3.6.1.4.1.2021.10.1.3.2
+  community: public
+  version: 2c
+  name: 'Grafana 5min Load'
+- platform: snmp
+  host: 192.168.9.52
+  baseoid: 1.3.6.1.4.1.2021.10.1.3.3
+  community: public
+  version: 2c
+  name: 'Grafana 15min Load'
+- platform: snmp
+  host: 192.168.9.52
+  baseoid: .1.3.6.1.4.1.2021.4.5.0
+  community: public
+  version: 2c
+  name: 'Grafana Total RAM'
+- platform: snmp
+  host: 192.168.9.52
+  baseoid: .1.3.6.1.4.1.2021.4.6.0
+  community: public
+  version: 2c
+  name: 'Grafana Used RAM'
+- platform: snmp
+  host: 192.168.9.52
+  baseoid: .1.3.6.1.4.1.2021.4.11.0
+  community: public
+  version: 2c
+  name: 'Grafana Free RAM'
+- platform: snmp
+  host: 192.168.9.52
+  baseoid: .1.3.6.1.2.1.1.3.0
+  community: public
+  version: 2c
+  name: 'Grafana Uptime'
+- platform: snmp
+  host: 192.168.9.52
+  baseoid: .1.3.6.1.4.1.2021.9.1.9.1
+  community: public
+  version: 2c
+  name: 'Grafana Used Disk Space'
+- platform: snmp
+  host: 192.168.9.52
+  baseoid: .1.3.6.1.4.1.2021.9.1.10.1
+  community: public
+  version: 2c
+  name: 'Grafana Used Inodes'
