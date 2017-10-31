@@ -58,6 +58,7 @@ servers:
    - group.speedtest
    - group.qnap_12tb
    - group.qnap_vm
+   - group.certs
 
 system_health:
   name: System Health
@@ -455,3 +456,10 @@ qnap_vm:
   - sensor.vmnas1_temperature_drive_02
   - sensor.vmnas1_used_space_datavol1
   - sensor.vmnas1_volume_used_datavol1
+
+certs:
+  name: Certificate Expirations
+  entities:
+  - sensor.danodemanocom
+  - sensor.madhookercom
+  - sensor.campohioadventurecom

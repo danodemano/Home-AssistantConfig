@@ -1,0 +1,9 @@
+- platform: cert_expiry
+  host: www.danodemano.com
+  name: danodemano.com
+- platform: cert_expiry
+  host: www.madhooker.com
+  name: madhooker.com
+- platform: cert_expiry
+  name: campohioadventure.com
+  host: www.campohioadventure.com
