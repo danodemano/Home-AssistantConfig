@@ -225,6 +225,7 @@ windows:
   - sensor.window_front_east_state
   - sensor.window_front_west_state
   - sensor.window_kitchen_state
+  - sensor.window_den_status
 
 armed:
  name: 'Arm Devices!'

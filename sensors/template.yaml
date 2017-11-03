@@ -189,6 +189,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('sensor.binary_sensor.window_craft_room_114', 'off') %}
+             mdi:window-closed
+          {% elif is_state('binary_sensor.window_craft_room_114', 'on') %}
+             mdi:window-open
+          {% else %}
+             mid:help
+          {% endif %}
     window_den_state:
       friendly_name: 'Window Den'
       value_template: >-
@@ -199,6 +207,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('sensor.binary_sensor.window_den_96', 'off') %}
+             mdi:window-closed
+          {% elif is_state('binary_sensor.window_den_96', 'on') %}
+             mdi:window-open
+          {% else %}
+             mid:help
+          {% endif %}
     window_kitchen_state:
       friendly_name: 'Window Kitchen State'
       value_template: >-
@@ -209,6 +225,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('sensor.binary_sensor.window_kitchen_100', 'off') %}
+             mdi:window-closed
+          {% elif is_state('binary_sensor.window_kitchen_100', 'on') %}
+             mdi:window-open
+          {% else %}
+             mid:help
+          {% endif %}
     window_front_east_state:
       friendly_name: 'Window Front East'
       value_template: >-
@@ -219,6 +243,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('sensor.binary_sensor.window_lr_east_104', 'off') %}
+             mdi:window-closed
+          {% elif is_state('binary_sensor.window_lr_east_104', 'on') %}
+             mdi:window-open
+          {% else %}
+             mid:help
+          {% endif %}
     window_front_west_state:
       friendly_name: 'Window Front West'
       value_template: >-
@@ -229,6 +261,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('sensor.binary_sensor.window_lr_west_113', 'off') %}
+             mdi:window-closed
+          {% elif is_state('binary_sensor.window_lr_west_113', 'on') %}
+             mdi:window-open
+          {% else %}
+             mid:help
+          {% endif %}
     chest_freezer_state:
       friendly_name: 'Chest Freezer'
       value_template: >-
@@ -239,7 +279,6 @@
           {%- else -%}
               FAILED
           {%- endif -%}
-
     nick_phone_wifi_state:
       friendly_name: 'Nick Phone Wifi'
       value_template: >-
@@ -248,6 +287,12 @@
           {%- else -%}
               Not Connected
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('device_tracker.nick_phone', 'home') %}
+             mdi:cellphone-wireless
+          {% else %}
+             mid:cellphone
+          {% endif %}
     shannon_phone_wifi_state:
       friendly_name: 'Shannon Phone Wifi'
       value_template: >-
@@ -256,3 +301,9 @@
           {%- else -%}
               Not Connected
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('device_tracker.shannon_phone', 'home') %}
+             mdi:cellphone-wireless
+          {% else %}
+             mid:cellphone
+          {% endif %}

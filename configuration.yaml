@@ -28,6 +28,7 @@ http:
   api_password: !secret http_password
   ssl_certificate: /etc/ssl/localcerts/fullchain.pem
   ssl_key: /etc/ssl/localcerts/privkey.pem
+  use_x_forwarded_for: True
   ip_ban_enabled: true
   login_attempts_threshold: 10
   trusted_networks:
@@ -72,6 +73,7 @@ map:
 #Zwave Config
 zwave:
   usb_path: /dev/ttyACM0
+  network_key: !secret zwave_network_key
 
 #For the Amazon Echos
 emulated_hue:

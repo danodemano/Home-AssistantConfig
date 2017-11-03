@@ -123,9 +123,31 @@ sensor.den_temperature:
   icon: mdi:thermometer
 sensor.climate_main_battery:
   icon: mdi:battery
-sensor.nick_phone_wifi_state:
-  icon: mdi:cellphone-android
-sensor.shannon_phone_wifi_state:
-  icon: mdi:cellphone-android
+#sensor.nick_phone_wifi_state:
+#  icon: mdi:cellphone-android
+#sensor.shannon_phone_wifi_state:
+#  icon: mdi:cellphone-android
 sensor.pihole_ads_percentage_blocked_today:
   friendly_name: 'Pi-Hole Ads % Blocked Today'
+#sensor.door_garage_to_den_state:
+#  icon: mdi:door-closed
+#sensor.door_basement_state:
+#  icon: mdi:door-closed
+#sensor.door_front_state:
+#  icon: mdi:door-closed
+#sensor.door_back_sliding_state:
+#  icon: mdi:door-closed
+#sensor.door_craft_to_drive_state:
+#  icon: mdi:door-closed
+#sensor.door_craft_to_patio_state:
+#  icon: mdi:door-closed
+#sensor.window_craft_room_state:
+#  icon: mdi:window-closed
+#sensor.window_den_state:
+#  icon: mdi:window-closed
+#sensor.window_front_east_state:
+#  icon: mdi:window-closed
+#sensor.window_front_west_state:
+#  icon: mdi:window-closed
+#sensor.window_kitchen_state:
+#  icon: mdi:window-closed
