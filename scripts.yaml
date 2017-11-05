@@ -41,6 +41,9 @@ night_time:
     - service: switch.turn_off
       data:
         entity_id: switch.living_room_37
+    - service: switch.turn_on
+      data:
+        entity_id: switch.master_night_stuff_42
     - service: light.turn_on
       data:
         entity_id: light.master

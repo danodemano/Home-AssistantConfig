@@ -291,7 +291,7 @@
           {% if is_state('device_tracker.nick_phone', 'home') %}
              mdi:cellphone-wireless
           {% else %}
-             mid:cellphone
+             mdi:cellphone
           {% endif %}
     shannon_phone_wifi_state:
       friendly_name: 'Shannon Phone Wifi'
@@ -305,5 +305,5 @@
           {% if is_state('device_tracker.shannon_phone', 'home') %}
              mdi:cellphone-wireless
           {% else %}
-             mid:cellphone
+             mdi:cellphone
           {% endif %}

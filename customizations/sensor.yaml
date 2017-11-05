@@ -40,9 +40,11 @@ sensor.home_watts:
 sensor.server_rack_watts:
   friendly_name: Server Rack Power
   icon: mdi:flash-red-eye
-sensor.server_rack_temperature:
+sensor.server_rack_environment_temperature:
+  friendly_name: Server Rack Temperature
   icon: mdi:thermometer
-sensor.server_rack_humidity:
+sensor.server_rack_environment_relative_humidity:
+  friendly_name: Server Rack Humidity
   icon: mdi:water-percent
 sensor.energy_monitor_voltage_7_16:
   friendly_name: Home Voltage

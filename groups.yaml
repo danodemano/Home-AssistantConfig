@@ -11,7 +11,7 @@ default_view:
    - group.master
 #   - group.leak
 #   - group.traveltimes
-   - group.energy
+#   - group.energy
    - group.hvac_main
    - group.home_electric
    - group.weather
@@ -91,7 +91,6 @@ outdoor_lights:
    - switch.front_walk_lights_31
    - switch.patio_light_32
    #- switch.front_outside_lights_140
-   - switch.holiday_lights_148
    - light.outside
 
 pets:
@@ -165,8 +164,8 @@ master:
  control: hidden
  entities:
   - light.master
-  - light.master_1
-  - light.master_2
+#  - light.master_1
+#  - light.master_2
   - switch.master_night_stuff_42
 
 wol:
@@ -262,9 +261,10 @@ energy:
 server_rack:
  name: "Server Rack"
  entities:
- - sensor.server_rack_watts
- - sensor.server_rack_humidity
- - sensor.server_rack_temperature
+ - sensor.server_rack_power
+ - sensor.server_rack_voltage
+ - sensor.server_rack_environment_relative_humidity
+ - sensor.server_rack_environment_temperature
 
 packages:
   name: "Mail"

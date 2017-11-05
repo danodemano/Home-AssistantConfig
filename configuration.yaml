@@ -118,8 +118,14 @@ ifttt:
 vera:
   vera_controller_url: http://192.168.9.205:3480/
 
+linode:
+  access_token: !secret linode_api_key
+
 binary_sensor:
   - platform: iss
+  - platform: linode
+    nodes:
+      - 'linode2008320'
 
 notify: !include notify.yaml
 
