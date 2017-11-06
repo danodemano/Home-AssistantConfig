@@ -190,7 +190,7 @@
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('sensor.binary_sensor.window_craft_room_114', 'off') %}
+          {% if is_state('binary_sensor.window_craft_room_114', 'off') %}
              mdi:window-closed
           {% elif is_state('binary_sensor.window_craft_room_114', 'on') %}
              mdi:window-open
@@ -208,7 +208,7 @@
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('sensor.binary_sensor.window_den_96', 'off') %}
+          {% if is_state('binary_sensor.window_den_96', 'off') %}
              mdi:window-closed
           {% elif is_state('binary_sensor.window_den_96', 'on') %}
              mdi:window-open
@@ -226,7 +226,7 @@
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('sensor.binary_sensor.window_kitchen_100', 'off') %}
+          {% if is_state('binary_sensor.window_kitchen_100', 'off') %}
              mdi:window-closed
           {% elif is_state('binary_sensor.window_kitchen_100', 'on') %}
              mdi:window-open
@@ -244,7 +244,7 @@
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('sensor.binary_sensor.window_lr_east_104', 'off') %}
+          {% if is_state('binary_sensor.window_lr_east_104', 'off') %}
              mdi:window-closed
           {% elif is_state('binary_sensor.window_lr_east_104', 'on') %}
              mdi:window-open
@@ -262,7 +262,7 @@
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('sensor.binary_sensor.window_lr_west_113', 'off') %}
+          {% if is_state('binary_sensor.window_lr_west_113', 'off') %}
              mdi:window-closed
           {% elif is_state('binary_sensor.window_lr_west_113', 'on') %}
              mdi:window-open
