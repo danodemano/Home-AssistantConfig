@@ -26,7 +26,8 @@
   still_image_url: http://192.168.53.118/snap.jpeg
   name: Patio
 - platform: generic
-  still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=ILN&brand=wui&num=1&delay=15&type=N0R&frame=0&scale=1.000&noclutter=1&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=1&lightning=0&smooth=1&rand=24788299&lat=0&lon=0&label=you
+  still_image_url: https://radblast.wunderground.com/cgi-bin/radar/WUNIDS_map?station=ILN&brand=wui&num=1&delay=15&type=N0R&frame=0&scale=1.000&noclutter=1&showstorms=0&mapx=400&mapy=240&centerx=400&centery=240&transx=0&transy=0&showlabels=1&severe=0&rainsnow=1&lightning=0&smooth=1&rand=24788299&lat=0&lon=0&label=you#
+  #still_image_url: https://radar.weather.gov/Legend/N0R/ILN_N0R_Legend_0.gif
   name: Ohio Radar
 - platform: usps
   scan_interval: 5

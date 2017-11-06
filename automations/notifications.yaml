@@ -219,3 +219,17 @@
     - service: notify.push
       data:
         message: "Garage Door Opened"
+#- id: basement_door_opened
+#  alias: Basement Door Alert
+#  trigger:
+#    - platform: state
+#      entity_id: binary_sensor.door_basement_52
+#      to: 'on'
+#  action:
+#    - service: notify.kodinotify
+#      data:
+#        title: "Home Assistant"
+#        message: "Basement Door Opened!"
+#        data:
+#          displaytime: 20000
+#          icon: "warning"

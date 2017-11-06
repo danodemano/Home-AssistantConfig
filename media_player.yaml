@@ -1,8 +1,8 @@
 - platform: kodi
   host: 192.168.9.21
   name: Brix PC
-  username: kodi
-  password: kodi
+  username: !secret kodi_user
+  password: !secret kodi_pass
   turn_off_action:
     service: media_player.kodi_call_method
     data:

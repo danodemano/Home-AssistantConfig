@@ -7,7 +7,6 @@ include:
     - sensor.furnace1_watts
     - sensor.furnace2_watts
     - sensor.hot_water_heater_watts
-    - sensor.server_rack_watts
     - sensor.home_watts
     - sensor.pws_relative_humidity
     - sensor.pws_temp_f
@@ -17,6 +16,8 @@ include:
     - sensor.gecko_temperature
     - sensor.server_rack_humidity
     - sensor.server_rack_temperature
+    - sensor.server_rack_power
+    - sensor.server_rack_voltage
     - sensor.speedtest_download
     - sensor.speedtest_ping
     - sensor.speedtest_upload
