@@ -42,3 +42,7 @@
   name: "Speedtest Ping"
   command: '/scripts/parse_speedtest.sh latency'
   unit_of_measurement: "ms"
+- platform: command_line
+  name: "Database Size"
+  command: '/bin/bash -c /scripts/get_db_size.sh'
+  unit_of_measurement: "GB"

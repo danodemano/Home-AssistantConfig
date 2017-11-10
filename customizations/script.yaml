@@ -10,3 +10,5 @@ script.shannon_wifi_on:
   icon: mdi:wifi
 script.shannon_wifi_off:
   icon: mdi:wifi-off
+script.clean_recorder_db:
+  icon: mdi:delete

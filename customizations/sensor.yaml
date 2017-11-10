@@ -153,3 +153,5 @@ sensor.pihole_ads_percentage_blocked_today:
 #  icon: mdi:window-closed
 #sensor.window_kitchen_state:
 #  icon: mdi:window-closed
+sensor.database_size:
+  icon: mdi:database

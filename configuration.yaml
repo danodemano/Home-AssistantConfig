@@ -89,7 +89,7 @@ emulated_hue:
 #Only keep the minimum needed in MySQL for quick reference.
 recorder:
     purge_interval: 1
-    purge_keep_days: 7
+    purge_keep_days: 3
     db_url: !secret recorder_db_url
 
 #Connect to the Hue hub

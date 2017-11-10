@@ -66,6 +66,7 @@ system_health:
   view: yes
   entities:
    - group.battery
+   - group.database
    - sensor.cpu_used
    - sensor.disk_used_
    - sensor.ram_used
@@ -294,7 +295,9 @@ holiday_lights:
 home_electric:
  name: "Home Electric Usage"
  entities:
- - sensor.home_watts
+ - sensor.home_energy_meter_power
+ - sensor.home_energy_meter_voltage
+ - sensor.home_energy_meter_current
 #     - sensor.energy_monitor_current_7_20
 #     - sensor.energy_monitor_energy_7_0
 #     - sensor.energy_monitor_voltage_7_16
@@ -478,3 +481,9 @@ server_grafana:
   - sensor.grafana_used_disk_space
   - sensor.grafana_used_inodes
   - sensor.grafana_used_ram
+
+database:
+  name: Database
+  entities:
+  - sensor.database_size
+  - script.clean_recorder_db

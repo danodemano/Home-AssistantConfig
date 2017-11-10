@@ -199,3 +199,10 @@ shannon_wifi_off:
   alias: "Shannon Wifi Off"
   sequence:
     - service: shell_command.wifi_shannon_disable
+
+clean_recorder_db:
+  alias: "Clean the recorder DB"
+  sequence:
+    - service: recorder.purge
+      data:
+        keep_days: 3
