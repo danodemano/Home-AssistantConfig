@@ -121,11 +121,7 @@ vera:
 linode:
   access_token: !secret linode_api_key
 
-binary_sensor:
-  - platform: iss
-  - platform: linode
-    nodes:
-      - 'linode2008320'
+binary_sensor: !include binary_sensor.yaml
 
 notify: !include notify.yaml
 

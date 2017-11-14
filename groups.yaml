@@ -19,14 +19,15 @@ default_view:
    - group.holidays
    - group.misc_stuff
    - group.couch_plug_stuff
+   - group.bayesian
    - camera.front_walk
    - camera.patio
    - sun.sun
    - sensor.moon
    - device_tracker.shannon_phone
    - device_tracker.nick_phone
-   - device_tracker.dan_dans7
-   - device_tracker.shelley_op5
+   - device_tracker.dan_owntracks
+   - device_tracker.shelley_owntracks
    - sensor.market_price
    - sensor.xrp_to_usd
    - sensor.430_walnutview_dr
@@ -468,6 +469,13 @@ certs:
   - sensor.danodemanocom
   - sensor.madhookercom
   - sensor.campohioadventurecom
+  - sensor.danbunyardcom
+  - sensor.hadanodemanocom
+  - sensor.blueirisdanodemanocom
+  - sensor.nextclouddanodemanocom
+  - sensor.grafanadanodemanocom
+  - sensor.qnapdanodemanocom
+  - sensor.gatewaydanodemanocom
 
 server_grafana:
   name: Server Grafana
@@ -487,3 +495,9 @@ database:
   entities:
   - sensor.database_size
   - script.clean_recorder_db
+
+bayesian:
+  name: Bayesian Home
+  entities:
+  - binary_sensor.bayesian_presence_dan
+  - binary_sensor.bayesian_presence_shelley
