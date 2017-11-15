@@ -1,7 +1,7 @@
-- platform: usps
-  name: "USPS Home"
-  username: !secret usps_username
-  password: !secret usps_password
+#- platform: usps
+#  name: "USPS Home"
+#  username: !secret usps_username
+#  password: !secret usps_password
 
 - platform: ups
   name: "UPS Home"

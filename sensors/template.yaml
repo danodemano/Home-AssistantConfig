@@ -129,6 +129,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('binary_sensor.door_craft_to_patio_133', 'off') %}
+             mdi:door-closed
+          {% elif is_state('binary_sensor.door_craft_to_patio_133', 'on') %}
+             mdi:door-open
+          {% else %}
+             mid:help
+          {% endif %}
     door_craft_to_drive_state:
       friendly_name: 'Door Craft to Drive'
       value_template: >-
@@ -139,6 +147,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('binary_sensor.door_craft_to_drive_134', 'off') %}
+             mdi:door-closed
+          {% elif is_state('binary_sensor.door_craft_to_drive_134', 'on') %}
+             mdi:door-open
+          {% else %}
+             mid:help
+          {% endif %}
     door_basement_state:
       friendly_name: 'Door Basement'
       value_template: >-
@@ -149,6 +165,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('binary_sensor.door_basement_52', 'off') %}
+             mdi:door-closed
+          {% elif is_state('binary_sensor.door_basement_52', 'on') %}
+             mdi:door-open
+          {% else %}
+             mid:help
+          {% endif %}
     door_garage_to_den_state:
       friendly_name: 'Door Garage to Den'
       value_template: >-
@@ -159,6 +183,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('binary_sensor.door_garage_to_den_53', 'off') %}
+             mdi:door-closed
+          {% elif is_state('binary_sensor.door_garage_to_den_53', 'on') %}
+             mdi:door-open
+          {% else %}
+             mid:help
+          {% endif %}
     door_front_state:
       friendly_name: 'Door Front'
       value_template: >-
@@ -169,6 +201,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('binary_sensor.door_front_97', 'off') %}
+             mdi:door-closed
+          {% elif is_state('binary_sensor.door_front_97', 'on') %}
+             mdi:door-open
+          {% else %}
+             mid:help
+          {% endif %}
     door_back_sliding_state:
       friendly_name: 'Door Back Sliding'
       value_template: >-
@@ -179,6 +219,14 @@
           {%- else -%}
               FAILED
           {%- endif -%}
+      icon_template: >-
+          {% if is_state('binary_sensor.door_back_sliding_99', 'off') %}
+             mdi:door-closed
+          {% elif is_state('binary_sensor.door_back_sliding_99', 'on') %}
+             mdi:door-open
+          {% else %}
+             mid:help
+          {% endif %}
     window_craft_room_state:
       friendly_name: 'Window Craft Room'
       value_template: >-
