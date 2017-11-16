@@ -56,15 +56,6 @@ sun:
 #Enable the map
 map:
 
-#Start the embeded broker
-#mqtt:
-
-#Enable the statestream for data flow between devices
-#mqtt_statestream:
-#  base_topic: homeassistant
-#  publish_attributes: true
-#  publish_timestamps: true
-
 #logger:
 #  logs:
 #    pyHS100: debug
@@ -118,6 +109,12 @@ ifttt:
 vera:
   vera_controller_url: http://192.168.9.205:3480/
 
+#Alarm panel
+alarm_control_panel:
+  - platform: manual
+    name: Home Alarm
+    code: !secret alarm_code
+
 linode:
   access_token: !secret linode_api_key
 
@@ -131,7 +128,6 @@ cover: !include cover.yaml
 
 shell_command: !include shell_command.yaml
 
-#sensor: !include sensors.yaml
 sensor: !include_dir_merge_list sensors
 
 camera: !include cameras.yaml
@@ -150,7 +146,6 @@ input_number: !include input_number.yaml
 
 history_graph: !include history_graph.yaml
 
-#automation: !include automations.yaml
 automation: !include_dir_merge_list automations
 
 script: !include scripts.yaml

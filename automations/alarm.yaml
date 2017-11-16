@@ -1,0 +1,57 @@
+- alias: 'Trigger alarm while armed away'
+  trigger:
+    - platform: state
+      entity_id: sensor.door_back_sliding_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.door_basement_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.door_craft_to_drive_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.door_craft_to_patio_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.door_front_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.door_garage_to_den_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.window_craft_room_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.window_den_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.window_front_east_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.window_front_west_state
+      to: 'Open'
+    - platform: state
+      entity_id: sensor.window_kitchen_state
+      to: 'Open'
+    - platform: state
+      entity_id: cover.garage_door_opener
+      to: 'open'
+  condition:
+    - condition: state
+      entity_id: alarm_control_panel.home_alarm
+      state: armed_away
+  action:
+    service: alarm_control_panel.alarm_trigger
+    entity_id: alarm_control_panel.home_alarm
+- alias: 'Send notification when alarm triggered'
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.home_alarm
+      to: 'triggered'
+  action:
+    - service: notify.dantext
+      data:
+        message: 'HOME ALARM TRIGGERED!'
+    - service: notify.shelleytext
+      data:
+        message: 'HOME ALARM TRIGGERED!'

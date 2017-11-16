@@ -46,7 +46,7 @@ security:
    - group.cameras_group
    - group.doors
    - group.windows
-   - group.armed
+   - alarm_control_panel.home_alarm
    - group.camera_motion
 
 servers:
