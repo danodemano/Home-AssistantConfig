@@ -1,6 +1,7 @@
 default_view:
 #newdef:
  name: Bunyard
+ icon: mdi:home-variant
  view: yes
  entities:
    - group.outdoor_lights
@@ -41,6 +42,7 @@ default_view:
 
 security:
  name: Security
+ icon: mdi:lock
  view: yes
  entities:
    - group.cameras_group
@@ -51,6 +53,7 @@ security:
 
 servers:
   name: Servers
+  icon: mdi:server
   view: yes
   entities:
    - group.server_rack
@@ -64,6 +67,7 @@ servers:
 
 system_health:
   name: System Health
+  icon: mdi:heart
   view: yes
   entities:
    - group.battery
@@ -114,6 +118,7 @@ vacation_mode:
 
 vacation:
   name: "Vacation"
+  icon: mdi:beach
   view: yes
   entities:
     - group.vacation_mode
@@ -347,6 +352,7 @@ camera_motion:
 
 kids:
   name: "Kids"
+  icon: mdi:account
   view: yes
   entities:
     - group.kids_wifi_toggle
