@@ -17,6 +17,7 @@ homeassistant:
 # Enables the frontend
 frontend:
   themes: !include_dir_merge_named themes/
+  javascript_version: latest
 #    green:
 #      primary-color: green
 
@@ -24,7 +25,6 @@ frontend:
 config:
 
 http:
-  # Uncomment this to add a password (recommended!)
   api_password: !secret http_password
   ssl_certificate: /etc/ssl/localcerts/fullchain.pem
   ssl_key: /etc/ssl/localcerts/privkey.pem
@@ -80,7 +80,7 @@ emulated_hue:
 #Only keep the minimum needed in MySQL for quick reference.
 recorder:
     purge_interval: 1
-    purge_keep_days: 2
+    purge_keep_days: 3
     db_url: !secret recorder_db_url
 
 #Connect to the Hue hub

@@ -26,3 +26,6 @@ include:
     - sensor.den_temperature
     - sensor.den_humidity
     - sensor.couch_plug_voltage
+    - sensor.cpu_used
+    - sensor.disk_used_
+    - sensor.ram_used

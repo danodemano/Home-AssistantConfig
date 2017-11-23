@@ -2,7 +2,7 @@
   alias: 'Turn off the kids wifi school at 2000'
   trigger:
     platform: time
-    at: '20:00:00'
+    at: '21:00:00'
   condition:
     condition: time
     weekday:
@@ -31,7 +31,7 @@
   alias: 'Turn on the kids wifi school at 0600'
   trigger:
     platform: time
-    at: '06:00:00'
+    at: '08:00:00'
   condition:
     condition: time
     weekday:

@@ -1,11 +1,11 @@
-- platform: command_line
-  name: "Server Rack Temperature"
-  command: '/bin/bash -c "/scripts/veraSensorValue.sh 78 temperature"'
-  unit_of_measurement: "°F"
-- platform: command_line
-  name: "Server Rack Humidity"
-  command: '/bin/bash -c "/scripts/veraSensorValue.sh 80 humidity"'
-  unit_of_measurement: "%"
+#- platform: command_line
+#  name: "Server Rack Temperature"
+#  command: '/bin/bash -c "/scripts/veraSensorValue.sh 78 temperature"'
+#  unit_of_measurement: "°F"
+#- platform: command_line
+#  name: "Server Rack Humidity"
+#  command: '/bin/bash -c "/scripts/veraSensorValue.sh 80 humidity"'
+#  unit_of_measurement: "%"
 - platform: command_line
   name: "Gecko Temperature"
   command: '/bin/bash -c "/scripts/veraSensorValue.sh 155 temperature"'
