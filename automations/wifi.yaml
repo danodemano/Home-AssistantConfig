@@ -2,15 +2,20 @@
   alias: 'Turn off the kids wifi school at 2000'
   trigger:
     platform: time
-    at: '21:00:00'
+    at: '20:00:00'
   condition:
-    condition: time
-    weekday:
-      - sun
-      - mon
-      - tue
-      - wed
-      - thu
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - sun
+      - condition: state
+        entity_id: input_boolean.kids_override
+        state: 'off'
   action:
     service: shell_command.wifi_kids_disable
 
@@ -20,10 +25,15 @@
     platform: time
     at: '21:00:00'
   condition:
-    condition: time
-    weekday:
-      - fri
-      - sat
+    condition: or
+    conditions:
+      - condition: time
+        weekday:
+          - fri
+          - sat
+      - condition: state
+        entity_id: input_boolean.kids_override
+        state: 'on'
   action:
     service: shell_command.wifi_kids_disable
 
@@ -31,15 +41,20 @@
   alias: 'Turn on the kids wifi school at 0600'
   trigger:
     platform: time
-    at: '08:00:00'
+    at: '06:00:00'
   condition:
-    condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: input_boolean.kids_override
+        state: 'off'
   action:
     service: shell_command.wifi_kids_enable
 
@@ -49,9 +64,14 @@
     platform: time
     at: '08:00:00'
   condition:
-    condition: time
-    weekday:
-      - sat
-      - sun
+    condition: or
+    conditions:
+      - condition: time
+        weekday:
+          - sat
+          - sun
+      - condition: state
+        entity_id: input_boolean.kids_override
+        state: 'on'
   action:
     service: shell_command.wifi_kids_enable

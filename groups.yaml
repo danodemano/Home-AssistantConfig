@@ -276,8 +276,8 @@ server_rack:
 packages:
   name: "Mail"
   entities:
-  - sensor.usps_mail
-  - sensor.usps_packages
+#  - sensor.usps_mail
+#  - sensor.usps_packages
   - sensor.ups_home
   - sensor.fedex_home
 
@@ -359,6 +359,7 @@ kids:
     - group.kids_wifi_timing
     - group.kids_device_status
     - group.kids_device_control
+    - group.kids_misc
 
 kids_wifi_toggle:
   name: "Kids Wifi Buttons"
@@ -391,6 +392,12 @@ kids_device_control:
     - script.nick_wifi_off
     - script.shannon_wifi_on
     - script.shannon_wifi_off
+
+kids_misc:
+  name: "Kids Misc"
+  control: hidden
+  entities:
+    - input_boolean.kids_override
 
 misc_stuff:
   name: "Misc Stuff"

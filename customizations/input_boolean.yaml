@@ -2,3 +2,5 @@ input_boolean.vacation_mode:
   icon: mdi:beach
 input_boolean.holiday_mode:
   icon: mdi:pine-tree
+input_boolean.kids_override:
+  icon: mdi:debug-step-over
