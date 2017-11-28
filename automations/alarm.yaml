@@ -1,18 +1,18 @@
-- alias: 'Alarm away when we both leave home'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.bayesian_presence_dan
-      from: 'on'
-      to: 'off'
-    - platform: state
-      entity_id: binary_sensor.bayesian_presence_shelley
-      from: 'on'
-      to: 'off'
-  action:
-    service: alarm_control_panel.alarm_arm_away
-    entity_id: alarm_control_panel.home_alarm
-    data: 
-      code: !secret alarm_code
+#- alias: 'Alarm away when we both leave home'
+#  trigger:
+#    - platform: state
+#      entity_id: binary_sensor.bayesian_presence_dan
+#      from: 'on'
+#      to: 'off'
+#    - platform: state
+#      entity_id: binary_sensor.bayesian_presence_shelley
+#      from: 'on'
+#      to: 'off'
+#  action:
+#    service: alarm_control_panel.alarm_arm_away
+#    entity_id: alarm_control_panel.home_alarm
+#    data: 
+#      code: !secret alarm_code
 
 - alias: 'Alarm away when Dan leave'
   trigger:

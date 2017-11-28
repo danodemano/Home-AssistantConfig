@@ -128,4 +128,7 @@ sensor.climate_main_battery:
 sensor.pihole_ads_percentage_blocked_today:
   friendly_name: 'Pi-Hole Ads % Blocked Today'
 sensor.database_size:
+  friendly_name: 'Local DB Size'
+  icon: mdi:database
+sensor.influxdb_size:
   icon: mdi:database

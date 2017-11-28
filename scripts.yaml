@@ -201,7 +201,7 @@ shannon_wifi_off:
     - service: shell_command.wifi_shannon_disable
 
 clean_recorder_db:
-  alias: "Clean the recorder DB"
+  alias: "Clean the local DB"
   sequence:
     - service: recorder.purge
       data:

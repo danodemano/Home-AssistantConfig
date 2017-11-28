@@ -507,6 +507,7 @@ database:
   name: Database
   entities:
   - sensor.database_size
+  - sensor.influxdb_size
   - script.clean_recorder_db
 
 bayesian:

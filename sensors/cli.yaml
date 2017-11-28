@@ -46,3 +46,11 @@
   name: "Database Size"
   command: '/bin/bash -c /scripts/get_db_size.sh'
   unit_of_measurement: "GB"
+- platform: command_line
+  name: "InfluxDB Size"
+  command: '/bin/bash -c /scripts/get_influxdb_size.sh'
+  unit_of_measurement: "MB"
+- platform: command_line
+  name: "BTC to USD"
+  command: 'python3 /scripts/coinbase_btc.py'
+  unit_of_measurement: "USD"
