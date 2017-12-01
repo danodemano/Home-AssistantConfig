@@ -26,8 +26,8 @@ config:
 
 http:
   api_password: !secret http_password
-  ssl_certificate: /etc/ssl/localcerts/fullchain.pem
-  ssl_key: /etc/ssl/localcerts/privkey.pem
+#  ssl_certificate: /etc/ssl/localcerts/fullchain.pem
+#  ssl_key: /etc/ssl/localcerts/privkey.pem
   use_x_forwarded_for: True
   ip_ban_enabled: true
   login_attempts_threshold: 10
@@ -76,12 +76,7 @@ emulated_hue:
 #    - group
 #    - media_player
 
-#Required values are to be piped to InfluxDB
-#Only keep the minimum needed in MySQL for quick reference.
-recorder:
-    purge_interval: 1
-    purge_keep_days: 3
-    db_url: !secret recorder_db_url
+recorder: !include recorder.yaml
 
 #Connect to the Hue hub
 light:
@@ -114,6 +109,12 @@ alarm_control_panel:
   - platform: manual
     name: Home Alarm
     code: !secret alarm_code
+
+#panel_iframe:
+# nodered:
+#   title: 'Node-Red'
+#   icon: 'mdi:shuffle-variant'
+#   url: 'http://192.168.9.200:1880/'
 
 linode:
   access_token: !secret linode_api_key

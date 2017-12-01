@@ -294,7 +294,7 @@ holiday_lights:
   entities:
     - switch.holiday_lights_148
     - switch.patio_light_32
-    - switch.front_walk_lights_31
+#    - switch.front_walk_lights_31
 #    - switch.front_outside_lights_140
 
 
