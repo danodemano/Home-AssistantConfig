@@ -54,3 +54,6 @@
   name: "BTC to USD"
   command: 'python3 /scripts/coinbase_btc.py'
   unit_of_measurement: "USD"
+- platform: command_line
+  name: "Kids WiFi Status"
+  command: 'php /scripts/ubnt/check_network.php Dev_Kids false'

@@ -59,7 +59,7 @@ servers:
    - group.server_rack
    - group.wol
    - group.pihole_stats
-   - group.speedtest
+   - group.internet
    - group.qnap_12tb
    - group.qnap_vm
    - group.certs
@@ -319,12 +319,14 @@ weather:
  - sensor.pws_wind_mph
  - camera.ohio_radar
 
-speedtest:
- name: Speedtest
+internet:
+ name: Internet Health
  entities:
  - sensor.speedtest_download
  - sensor.speedtest_ping
  - sensor.speedtest_upload
+ - sensor.wan_traffic_in_mean
+ - sensor.wan_traffic_out_mean
 
 all_lights:
   name: All lights
@@ -360,6 +362,7 @@ kids:
     - group.kids_device_status
     - group.kids_device_control
     - group.kids_misc
+    - sensor.kids_wifi_status
 
 kids_wifi_toggle:
   name: "Kids Wifi Buttons"

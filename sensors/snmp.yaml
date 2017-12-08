@@ -52,3 +52,15 @@
   community: public
   version: 2c
   name: 'Grafana Used Inodes'
+- platform: snmp
+  name: snmp_wan_in
+  host: 192.168.9.1
+  baseoid: 1.3.6.1.2.1.2.2.1.10.3
+  community: public
+  version: 2c
+- platform: snmp
+  name: snmp_wan_out
+  host: 192.168.9.1
+  baseoid: 1.3.6.1.2.1.2.2.1.16.3
+  community: public
+  version: 2c
