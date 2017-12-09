@@ -11,5 +11,7 @@ light.master_2:
   emulated_hue_hidden: true
 light.den:
   emulated_hue_hidden: true
+light.den_2:
+  emulated_hue_hidden: true
 light.master:
   friendly_name: Master Lights
