@@ -24,6 +24,7 @@ switch.den_av_128:
 switch.master_night_stuff_42:
   friendly_name: Master Night Stuff
   icon: mdi:lamp
+  emulated_hue_hidden: true
 switch.geckos_59:
   icon: mdi:lightbulb-outline
   emulated_hue_hidden: true

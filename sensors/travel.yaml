@@ -21,3 +21,9 @@
   origin: !secret travel_shelley_work
   destination: !secret travel_home
   name: Shelley Work to Home
+
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  origin: device_tracker.dan_owntracks
+  destination: !secret travel_home
+  name: Dan location to Home

@@ -12,8 +12,9 @@
     - service: light.turn_on
       data:
         entity_id: light.den_2
-        brightness: 75
+        brightness_pct: 100
         rgb_color: [ 255,207,120 ]
+        transition: 90
 
 - id: change_den_color_to_red_when_norbert_off
   alias: Change den light color to red when Norbert goes off
@@ -28,8 +29,9 @@
     - service: light.turn_on
       data:
         entity_id: light.den_2
-        brightness: 100
+        brightness_pct: 100
         rgb_color: [ 255,0,0 ]
+        transition: 90
 
 - id: turn_off_den_and_at_random_time
   alias: Turn den off and master on at a semi-random time
@@ -46,42 +48,36 @@
         entity_id: light.den_2
     - service: light.turn_on
       data:
-        entity_id: light.master_1
+        entity_id: light.master
         brightness: 50
-        rgb_color: [ 255,255,255 ]
-    - service: light.turn_on
-      data:
-        entity_id: light.master_2
-        brightness: 50
-        rgb_color: [ 255,255,255 ]
     - service: homeassistant.turn_on
       entity_id: script.timed_lamp
 
-- id: turn_on_light_for_overnight
-  alias: Turn on lights for overnight
-  trigger:
-    platform: time
-    at: '22:30:00'
-  condition:
-    condition: state
-    entity_id: input_boolean.vacation_mode
-    state: 'on'
-  action:
-    service: switch.turn_on
-    entity_id: switch.front_outside_lights_140
+#- id: turn_on_light_for_overnight
+#  alias: Turn on lights for overnight
+#  trigger:
+#    platform: time
+#    at: '22:30:00'
+#  condition:
+#    condition: state
+#    entity_id: input_boolean.vacation_mode
+#    state: 'on'
+#  action:
+#    service: switch.turn_on
+#    entity_id: switch.front_outside_lights_140
 
-- id: turn_off_lights_in_the_early_morning
-  alias: Turn off lights in the early morning
-  trigger:
-    platform: time
-    at: '06:00:00'
-  condition:
-    condition: state
-    entity_id: input_boolean.vacation_mode
-    state: 'on'
-  action:
-    service: switch.turn_off
-    entity_id: switch.front_outside_lights_140
+#- id: turn_off_lights_in_the_early_morning
+#  alias: Turn off lights in the early morning
+#  trigger:
+#    platform: time
+#    at: '06:00:00'
+#  condition:
+#    condition: state
+#    entity_id: input_boolean.vacation_mode
+#    state: 'on'
+#  action:
+#    service: switch.turn_off
+#    entity_id: switch.front_outside_lights_140
 
 - id: set_random_time
   alias: set_random_time

@@ -15,3 +15,4 @@ light.den_2:
   emulated_hue_hidden: true
 light.master:
   friendly_name: Master Lights
+  emulated_hue_hidden: true
