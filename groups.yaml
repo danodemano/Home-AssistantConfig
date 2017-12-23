@@ -132,7 +132,6 @@ vacation:
     - group.home_electric
     - group.doors
     - group.windows
-    - group.armed
     - group.server_rack
 
 hvac_main:
