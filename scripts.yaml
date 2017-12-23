@@ -27,6 +27,9 @@ timer_off:
         minutes: 10
     - service: light.turn_off
       data:
+        entity_id: light.master
+    - service: light.turn_off
+      data:
         entity_id: light.master_1
     - service: light.turn_off
       data:

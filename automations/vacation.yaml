@@ -43,9 +43,6 @@
     entity_id: input_boolean.vacation_mode
     state: 'on'
   action:
-    - service: light.turn_off
-      data:
-        entity_id: light.den
     - service: switch.turn_off
       data:
         entity_id: switch.living_room_37
@@ -55,6 +52,10 @@
         brightness: 50
     - service: homeassistant.turn_on
       entity_id: script.timed_lamp
+    - delay: 00:00:30
+    - service: light.turn_off
+      data:
+        entity_id: light.den
 
 #- id: turn_on_light_for_overnight
 #  alias: Turn on lights for overnight
