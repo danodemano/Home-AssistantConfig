@@ -4,12 +4,14 @@ random_hour:
   max: 23
   step: 1
   initial: 22
+  mode: box
 random_minute:
   name: 'Random Minute'
   min: 0
   max: 59
   step: 1
   initial: 45
+  mode: box
 dr_off_delay:
   name: 'DR Off Delay'
   min: 0

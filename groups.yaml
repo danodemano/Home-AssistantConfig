@@ -133,6 +133,14 @@ vacation:
     - group.doors
     - group.windows
     - group.server_rack
+    - group.random_sliders
+
+random_sliders:
+  name: "Random Time Sliders"
+  control: hidden
+  entities:
+    - input_number.random_hour
+    - input_number.random_minute
 
 hvac_main:
  name: 'Main Thermostat'

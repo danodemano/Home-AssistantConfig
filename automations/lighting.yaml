@@ -1,124 +1,127 @@
-- id: turn_on_lights_when_sun_sets
-  alias: Turn on lights when sun sets
-  trigger:
-    platform: sun
-    event: sunset
-    offset: "-00:10:00"
-  action:
-    - service: switch.turn_on
-      entity_id: group.outdoor_lights
-    - service: light.turn_on
-      entity_id: light.outside
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: input_boolean.holiday_mode
-        state: 'off'
+#- id: turn_on_lights_when_sun_sets
+#  alias: Turn on lights when sun sets
+#  trigger:
+#    platform: sun
+#    event: sunset
+#    offset: "-00:10:00"
+#  action:
+#    - service: switch.turn_on
+#      entity_id: group.outdoor_lights
+#    - service: light.turn_on
+#      entity_id: light.outside
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: state
+#        entity_id: input_boolean.holiday_mode
+#        state: 'off'
 
-- id: turn_on_lights_when_sun_sets_holiday
-  alias: Turn on lights when sun sets for holiday
-  trigger:
-    platform: sun
-    event: sunset
-    offset: "-00:10:00"
-  action:
-    - service: switch.turn_on
-      entity_id: group.holiday_lights
-    - service: light.turn_on
-      entity_id: light.outside
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: input_boolean.holiday_mode
-        state: 'on'
+#- id: turn_on_lights_when_sun_sets_holiday
+#  alias: Turn on lights when sun sets for holiday
+#  trigger:
+#    platform: sun
+#    event: sunset
+#    offset: "-00:10:00"
+#  action:
+#    - service: switch.turn_on
+#      entity_id: group.holiday_lights
+#    - service: light.turn_on
+#      entity_id: light.outside
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: state
+#        entity_id: input_boolean.holiday_mode
+#        state: 'on'
 
-- id: turn_off_holiday_and_on_outside_lights
-  alias: Turn off holiday lights and on normal lights
-  trigger:
-    platform: time
-    at: '23:00:00'
-  action:
-    - service: switch.turn_off
-      entity_id: switch.holiday_lights_148
-    - service: light.turn_on
-      entity_id: light.outside
+#- id: turn_off_holiday_and_on_outside_lights
+#  alias: Turn off holiday lights and on normal lights
+#  trigger:
+#    platform: time
+#    at: '23:00:00'
+#  action:
+#    - service: switch.turn_off
+#      entity_id: switch.holiday_lights_148
+#    - service: light.turn_on
+#      entity_id: light.outside
 #    - service: switch.turn_on
 #      entity_id: switch.front_walk_lights_31
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: input_boolean.holiday_mode
-        state: 'on'
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: state
+#        entity_id: input_boolean.holiday_mode
+#        state: 'on'
 
-- id: turn_off_front_walk_lights
-  alias: Turn off front walks lights a 2300
-  trigger:
-    platform: time
-    at: '23:00:00'
-  action:
-      - service: switch.turn_off
-        entity_id: switch.front_walk_lights_31
+#- id: turn_off_front_walk_lights
+#  alias: Turn off front walks lights a 2300
+#  trigger:
+#    platform: time
+#    at: '23:00:00'
+#  action:
+#      - service: switch.turn_off
+#        entity_id: switch.front_walk_lights_31
 
-- id: turn_on_front_walk_lights_weekdays
-  alias: Turn on front walk lights on weekdays
-  trigger:
-    platform: time
-    at: '06:45:00'
-  action:
-      - service: switch.turn_on
-        entity_id: switch.front_walk_lights_31
-  condition:
-    condition: and
-    conditions:
-      - condition: time
-        weekday:
-          - mon
-          - tue
-          - wed
-          - thu
-          - fri
-      - condition: state
-        entity_id: light.outside
-        state: 'on'
+#- id: turn_on_front_walk_lights_weekdays
+#  alias: Turn on front walk lights on weekdays
+#  trigger:
+#    platform: time
+#    at: '06:45:00'
+#  action:
+#      - service: switch.turn_on
+#        entity_id: switch.front_walk_lights_31
+#  condition:
+#    condition: and
+#    conditions:
+#      - condition: time
+#        weekday:
+#          - mon
+#          - tue
+#          - wed
+#          - thu
+#          - fri
+#      - condition: state
+#        entity_id: light.outside
+#        state: 'on'
+#      - condition: state
+#        entity_id: input_boolean.kids_override
+#        state: 'off'
 
-- id: turn_off_lights_when_sun_rises
-  alias: Turn off lights when sun rises
-  trigger:
-    platform: sun
-    event: sunrise
-    offset: "+00:10:00"
-  action:
-    - service: switch.turn_off
-      entity_id: group.outdoor_lights
-    - service: light.turn_off
-      entity_id: light.outside
+#- id: turn_off_lights_when_sun_rises
+#  alias: Turn off lights when sun rises
+#  trigger:
+#    platform: sun
+#    event: sunrise
+#    offset: "+00:10:00"
+#  action:
+#    - service: switch.turn_off
+#      entity_id: group.outdoor_lights
+#    - service: light.turn_off
+#      entity_id: light.outside
 
-- id: turn_on_living_room_when_sun_sets
-  alias: Turn on living room light when sun sets
-  trigger:
-    platform: sun
-    event: sunset
-    offset: "-00:60:00"
-  action:
-    service: switch.turn_on
-    entity_id: switch.living_room_37
+#- id: turn_on_living_room_when_sun_sets
+#  alias: Turn on living room light when sun sets
+#  trigger:
+#    platform: sun
+#    event: sunset
+#    offset: "-00:60:00"
+#  action:
+#    service: switch.turn_on
+#    entity_id: switch.living_room_37
 
-- id: turn_on_living_room_when_cloud_cover_above_40
-  alias: Turn on living room light when cloud cover about 40
-  trigger:
-    platform: sun
-    event: sunset
-    offset: "-02:00:00"
-  condition:
-    - condition: numeric_state
-      entity_id: sensor.dark_sky_cloud_coverage
-      above: 40
-  action:
-    service: switch.turn_on
-    entity_id: switch.living_room_37
+#- id: turn_on_living_room_when_cloud_cover_above_40
+#  alias: Turn on living room light when cloud cover about 40
+#  trigger:
+#    platform: sun
+#    event: sunset
+#    offset: "-02:00:00"
+#  condition:
+#    - condition: numeric_state
+#      entity_id: sensor.dark_sky_cloud_coverage
+#      above: 40
+#  action:
+#    service: switch.turn_on
+#    entity_id: switch.living_room_37
 
 - id: turn_off_dining_room
   alias: 'Turn off dining room light when at <50 brightness for set duration'
