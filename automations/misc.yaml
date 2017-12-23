@@ -56,3 +56,25 @@
       data_template:
         entity_id: input_slider.internet_traffic_delta_out
         value: '{{ ((trigger.to_state.state | int - trigger.from_state.state | int) * 8 ) / ( as_timestamp(trigger.to_state.last_updated) - as_timestamp(trigger.from_state.last_updated) ) }}'
+
+- alias: Notify When Leaving Work
+  trigger:
+    platform: zone
+    entity_id: device_tracker.dan_owntracks
+    zone: zone.dan_work
+    event: leave
+  condition:
+    condition: time
+    after: '16:00:00'
+    before: '18:00:00'
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: notify.dantext
+    data_template:
+      message: >
+        Dan is {{ states.sensor.dan_location_to_home.state_with_unit }} from home!
