@@ -97,4 +97,4 @@
     - service: input_number.select_value
       data_template:
         entity_id: input_number.random_minute
-        value: '{{ (range(15, 46)|random) }}'
+        value: '{{ (range(12, 47)|random) }}'

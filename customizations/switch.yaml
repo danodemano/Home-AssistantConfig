@@ -98,3 +98,4 @@ switch.coffee_pot_129:
   icon: mdi:coffee
 switch.hot_water_heater_19:
   emulated_hue_hidden: true
+  icon: mdi:fire

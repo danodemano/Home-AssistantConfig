@@ -112,8 +112,10 @@ pets:
    - sensor.gecko_temperature
 
 vacation_mode:
-  name: "Vacation Mode Toggle"
+  name: "Vacation Switches"
+  control: hidden
   entities:
+    - switch.hot_water_heater_19
     - input_boolean.vacation_mode
 
 vacation:
