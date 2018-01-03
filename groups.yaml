@@ -145,12 +145,13 @@ random_sliders:
 hvac_main:
  name: 'Main Thermostat'
  entities:
-   - sensor.climate_main_fan_state
-   - sensor.climate_main_operating_state
-   - sensor.climate_main_temperature
-   - sensor.climate_main_temperature2
-   - sensor.inside_humidity
-   - climate.main_thermostat_39
+#   - sensor.climate_main_fan_state
+#   - sensor.climate_main_operating_state
+#   - sensor.climate_main_temperature
+#   - sensor.climate_main_temperature2
+#   - sensor.inside_humidity
+#   - climate.main_thermostat_39
+    - climate.main_thermostat_heating_1
 
 living_area:
  name: 'Dining/Living Area'

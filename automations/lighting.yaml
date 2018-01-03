@@ -123,14 +123,14 @@
 #    service: switch.turn_on
 #    entity_id: switch.living_room_37
 
-- id: turn_off_dining_room
-  alias: 'Turn off dining room light when at <50 brightness for set duration'
-  trigger:
-    - platform: template
-      value_template: '{{ (as_timestamp (now()) -as_timestamp (states.light.dining_room_36.last_updated))|float >= 300 and  (states.light.dining_room_36.attributes.brightness | float <= 50) }}'
-  condition:
-    condition: template
-    value_template: '{{ states.light.dining_room_36.attributes.brightness | float <= 50 }}'
-  action:
-    service: switch.turn_off
-    entity_id: light.dining_room_36
+#- id: turn_off_dining_room
+#  alias: 'Turn off dining room light when at <50 brightness for set duration'
+#  trigger:
+#    - platform: template
+#      value_template: '{{ (as_timestamp (now()) -as_timestamp (states.light.dining_room_36.last_updated))|float >= 300 and  (states.light.dining_room_36.attributes.brightness | float <= 50) }}'
+#  condition:
+#    condition: template
+#    value_template: '{{ states.light.dining_room_36.attributes.brightness | float <= 50 }}'
+#  action:
+#    service: switch.turn_off
+#    entity_id: light.dining_room_36

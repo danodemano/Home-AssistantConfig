@@ -57,3 +57,6 @@
 - platform: command_line
   name: "Kids WiFi Status"
   command: 'php /scripts/ubnt/check_network.php Dev_Kids false'
+- platform: command_line
+  name: "/r/homeautomation Subsribers"
+  command: 'php /scripts/hasub_sub.php'
