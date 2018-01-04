@@ -355,3 +355,11 @@
           {% else %}
              mdi:cellphone
           {% endif %}
+    outside_humidity:
+      friendly_name: "Outside Humidity"
+      value_template: >-
+          {%- if states.sensor.pws_relative_humidity.state|float >= 0 and states.sensor.pws_relative_humidity.state|float <= 100 -%}
+             {{(states.sensor.pws_relative_humidity.state)}}
+          {%- else -%}
+             nan
+          {%- endif -%}    

@@ -138,3 +138,6 @@ sensor.wan_traffic_in_mean:
 sensor.wan_traffic_out_mean:
   friendly_name: 'WAN Upload Average'
   icon: mdi:upload
+sensor.outside_humidity:
+  icon: mdi:water-percent
+  unit_of_measurement: "%"
