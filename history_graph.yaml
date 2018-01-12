@@ -14,3 +14,10 @@ humidity:
     - sensor.outside_humidity
   hours_to_show: 24
   refresh: 300
+temp_compare:
+  name: "Temperature Comparison"
+  entities:
+    - sensor.pws_temp_f
+    - sensor.pws_temp_f_2
+  hours_to_show: 24
+  refresh: 300

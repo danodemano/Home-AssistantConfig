@@ -27,3 +27,9 @@
   origin: device_tracker.dan_owntracks
   destination: !secret travel_home
   name: Dan location to Home
+
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  origin: device_tracker.shelley_owntracks
+  destination: !secret travel_home
+  name: Shelley location to Home

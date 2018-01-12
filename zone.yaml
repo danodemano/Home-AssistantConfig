@@ -5,7 +5,7 @@
 - name: Shelley Work
   latitude: !secret shelley_work_lat
   longitude: !secret shelley_work_lon
-  radius: 200
+  radius: 300
 - name: Kids School
   latitude: !secret kids_school_lat
   longitude: !secret kids_school_lon

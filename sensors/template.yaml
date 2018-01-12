@@ -28,6 +28,10 @@
       friendly_name: 'Hot Water Heater'
       unit_of_measurement: "W"
       value_template: '{% if states.switch.hot_water_heater_19.state %}{{ states.switch.hot_water_heater_19.attributes.current_power_w|round }}{% endif %}'
+    climate_main_heat_set_point:
+      friendly_name: 'Heat Set Point'
+      unit_of_measurement: '°F'
+      value_template: '{{ states.climate.main_thermostat_heating_1.attributes.temperature }}'
     climate_main_temperature:
       friendly_name: 'Target Temperature'
       unit_of_measurement: '°F'
@@ -362,4 +366,12 @@
              {{(states.sensor.pws_relative_humidity.state)}}
           {%- else -%}
              nan
-          {%- endif -%}    
+          {%- endif -%}   
+    brian_humidity:
+      friendly_name: "Brian Humidity"
+      value_template: >-
+          {%- if states.sensor.pws_relative_humidity_2.state|float >= 0 and states.sensor.pws_relative_humidity_2.state|float <= 100 -%}
+             {{(states.sensor.pws_relative_humidity_2.state)}}
+          {%- else -%}
+             nan
+          {%- endif -%}     

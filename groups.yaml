@@ -419,6 +419,7 @@ misc_stuff:
   entities:
     - history_graph.temperatures
     - history_graph.humidity
+    - history_graph.temperature_comparison
 
 pihole_stats:
   name: Pi-Hole Stats
