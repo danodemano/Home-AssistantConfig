@@ -209,3 +209,20 @@ clean_recorder_db:
     - service: recorder.purge
       data:
         keep_days: 2
+
+red_alert:
+  alias: "Red Alert!"
+  sequence:
+    - service: light.toggle
+      data:
+        entity_id: light.den
+
+dummy:
+  alias: "Dummy"
+  sequence:
+    - event: LOGBOOK_ENTRY
+      event_data:
+        name: AlexaInsideTemp
+        message: User Called Script
+        entity_id: script.dummy
+        domain: script

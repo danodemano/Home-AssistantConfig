@@ -3,6 +3,7 @@
   hosts:
     shelley_ping: 192.168.9.68
     dan_ping: 192.168.9.69
+    dan2_ping: 192.68.9.70
 #    nick: 192.168.51.101
 #    shannon: 192.168.51.107
 - platform: owntracks_http

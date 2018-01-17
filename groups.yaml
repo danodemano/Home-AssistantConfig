@@ -27,7 +27,7 @@ default_view:
    - sensor.moon
    - device_tracker.shannon_phone
    - device_tracker.nick_phone
-   - device_tracker.dan_owntracks
+   - device_tracker.dan2_owntracks
    - device_tracker.shelley_owntracks
    - sensor.market_price
    - sensor.xrp_to_usd

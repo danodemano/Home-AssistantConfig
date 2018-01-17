@@ -14,3 +14,25 @@ RunScriptIntent:
   speech:
     type: plain
     text: !include alexa_confirm.yaml
+amzn1.ask.skill.a578b303-2cde-4776-84f1-6cfa79e7d751:
+  action:
+    service: script.turn_on
+    entity_id: script.red_alert
+  speech:
+    type: plain
+    #text: We're all going to die!!!
+    text: Inside temperature is {{ states.sensor.main_thermostat_temperature.state_with_unit }}!
+amzn1.ask.skill.dbaaab97-11d4-45d7-9875-d6eadc748410:
+  action:
+    service: script.turn_on
+    entity_id: script.dummy
+  speech:
+    type: plain
+    text: Current living room temperature is {{ states.sensor.main_thermostat_temperature.state_with_unit }}!
+amzn1.ask.skill.abf3a7f8-ce07-40db-8ef8-866e8c2a7409:
+  action:
+    service: script.turn_on
+    entity_id: script.dummy
+  speech:
+    type: plain
+    text: Current outside temperature is {{ states.sensor.pws_temp_f.state_with_unit }}!
