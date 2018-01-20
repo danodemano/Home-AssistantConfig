@@ -116,7 +116,7 @@ vacation_mode:
   control: hidden
   entities:
     - switch.hot_water_heater_19
-    - input_boolean.vacation_mode
+    - switch.vacation_mode
 
 vacation:
   name: "Vacation"
@@ -296,7 +296,7 @@ holidays:
   control: hidden
   entities:
     - switch.holiday_lights_148
-    - input_boolean.holiday_mode
+    - switch.holiday_mode
 
 holiday_lights:
   name: "Light that turn on for Holiday"
@@ -411,7 +411,7 @@ kids_misc:
   name: "Kids Misc"
   control: hidden
   entities:
-    - input_boolean.kids_override
+    - switch.kids_override
 
 misc_stuff:
   name: "Misc Stuff"

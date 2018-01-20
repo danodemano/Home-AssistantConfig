@@ -6,3 +6,26 @@
   mac_address: "00-1b-21-84-c4-ba"
   name: VM2
   host: 192.168.9.27
+- platform: template
+  switches:
+    holiday_mode:
+      value_template: '{{ states.input_boolean.holiday_mode.state }}'
+      friendly_name: 'Holiday Mode'
+      turn_on:
+        service: script.holiday_mode_on
+      turn_off:
+        service: script.holiday_mode_off
+    vacation_mode:
+      value_template: '{{ states.input_boolean.vacation_mode.state }}'
+      friendly_name: 'Vacation Mode'
+      turn_on:
+        service: script.vacation_mode_on
+      turn_off:
+        service: script.vacation_mode_off
+    kids_override:
+      value_template: '{{ states.input_boolean.kids_override.state }}'
+      friendly_name: 'Kids Override'
+      turn_on:
+        service: script.kids_override_on
+      turn_off:
+        service: script.kids_override_off

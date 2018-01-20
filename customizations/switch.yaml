@@ -99,3 +99,12 @@ switch.coffee_pot_129:
 switch.hot_water_heater_19:
   emulated_hue_hidden: true
   icon: mdi:fire
+switch.holiday_mode:
+  icon: mdi:pine-tree
+  emulated_hue_hidden: true
+switch.vacation_mode:
+  icon: mdi:beach
+  emulated_hue_hidden: true
+switch.kids_override:
+  icon: mdi:debug-step-over
+  emulated_hue_hidden: true

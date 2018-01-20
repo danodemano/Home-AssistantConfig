@@ -226,3 +226,28 @@ dummy:
         message: User Called Script
         entity_id: script.dummy
         domain: script
+
+holiday_mode_on:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.holiday_mode
+holiday_mode_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.holiday_mode
+vacation_mode_on:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.vacation_mode
+vacation_mode_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.vacation_mode
+kids_override_on:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.kids_override
+kids_override_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.kids_override

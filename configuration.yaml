@@ -113,6 +113,7 @@ alarm_control_panel:
   - platform: manual
     name: Home Alarm
     code: !secret alarm_code
+    delay_time: 30
 
 #panel_iframe:
 # nodered:
