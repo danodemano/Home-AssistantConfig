@@ -26,6 +26,7 @@ config:
 
 http:
   api_password: !secret http_password
+  base_url: !secret http_base_url
 #  ssl_certificate: /etc/ssl/localcerts/fullchain.pem
 #  ssl_key: /etc/ssl/localcerts/privkey.pem
   use_x_forwarded_for: True
@@ -91,6 +92,11 @@ hue:
   bridges:
     - host: 192.168.9.204
 
+remote:
+  - platform: harmony
+    name: Den
+    host: 192.168.9.208
+
 #usps:
 #    username: !secret usps_username
 #    password: !secret usps_password
@@ -114,6 +120,9 @@ alarm_control_panel:
     name: Home Alarm
     code: !secret alarm_code
     delay_time: 30
+
+customizer:
+  custom_ui: local
 
 #panel_iframe:
 # nodered:
@@ -164,3 +173,6 @@ intent_script: !include intent_script.yaml
 
 zone: !include zone.yaml
 
+climate: !include climate.yaml
+
+image_processing: !include image_processing.yaml

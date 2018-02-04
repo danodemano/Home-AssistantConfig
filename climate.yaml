@@ -1,0 +1,3 @@
+- platform: econet
+  username: !secret econet_email
+  password: !secret econet_pass

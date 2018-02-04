@@ -251,3 +251,8 @@ kids_override_off:
   sequence:
     - service: homeassistant.turn_off
       entity_id: input_boolean.kids_override
+
+reset_kwh:
+  sequence:
+    - service: automation.trigger
+      entity_id: automation.reset_home_energy_meter_kWh

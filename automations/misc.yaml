@@ -94,3 +94,15 @@
     data_template:
       message: >
         Shelley is {{ states.sensor.shelley_location_to_home.state_with_unit }} from home!
+
+- alias: Reset Home Energy Meter kWh
+  action:
+  - data:
+      node_id: 42
+    service: zwave.reset_node_meters
+  condition: []
+  id: '1513310745263'
+  trigger:
+  - event_data: {}
+    event_type: ''
+    platform: event

@@ -1,0 +1,4 @@
+- platform: openalpr_local
+  region: us
+  source:
+  - entity_id: camera.driveway

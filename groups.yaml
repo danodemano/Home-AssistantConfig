@@ -19,7 +19,6 @@ default_view:
    - group.packages
    - group.holidays
    - group.misc_stuff
-   - group.couch_plug_stuff
    - group.bayesian
    - camera.front_walk
    - camera.patio
@@ -133,7 +132,7 @@ vacation:
     - group.doors
     - group.windows
     - group.server_rack
-    - group.random_sliders
+    - climate.water_heater
 
 random_sliders:
   name: "Random Time Sliders"
@@ -314,6 +313,7 @@ home_electric:
  - sensor.home_energy_meter_power
  - sensor.home_energy_meter_voltage
  - sensor.home_energy_meter_current
+ - sensor.home_energy_meter_energy
 #     - sensor.energy_monitor_current_7_20
 #     - sensor.energy_monitor_energy_7_0
 #     - sensor.energy_monitor_voltage_7_16
@@ -530,3 +530,28 @@ bayesian:
   entities:
   - binary_sensor.bayesian_presence_dan
   - binary_sensor.bayesian_presence_shelley
+
+random:
+  name: Random
+  icon: mdi:developer-board
+  view: yes
+  entities:
+  - light.hank_unknown_type0101_id0004_level
+  - group.couch_plug_stuff
+  - group.test_plug
+  - light.master_1
+  - light.master_2
+
+test_plug:
+  name: Test Plug
+  control: hidden
+  entities:
+  - switch.vision_unknown_type201a_id1aa4_switch
+  - sensor.vision_unknown_type201a_id1aa4_current
+  - sensor.vision_unknown_type201a_id1aa4_energy
+  - sensor.vision_unknown_type201a_id1aa4_energy_2
+  - sensor.vision_unknown_type201a_id1aa4_power
+  - sensor.vision_unknown_type201a_id1aa4_power_factor
+  - sensor.vision_unknown_type201a_id1aa4_previous_reading
+  - sensor.vision_unknown_type201a_id1aa4_previous_reading_2
+  - sensor.vision_unknown_type201a_id1aa4_voltage

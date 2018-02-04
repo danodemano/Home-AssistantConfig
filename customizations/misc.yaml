@@ -3,3 +3,5 @@ climate.main_thermostat_39:
   icon: mdi:settings
 cover.garage_door_opener:
   icon: mdi:garage
+climate.water_heater:
+  friendly_name: Water Heater
