@@ -33,9 +33,9 @@ include:
     - sensor.den_temperature
     - sensor.den_humidity
     - sensor.couch_plug_voltage
-    - sensor.cpu_used
-    - sensor.disk_used_
-    - sensor.ram_used
+    - sensor.processor_use
+    - sensor.disk_use_percent_
+    - sensor.memory_use_percent
     - sensor.xrp_to_usd
     - sensor.market_price
     - sensor.btc_to_usd
@@ -65,4 +65,6 @@ include:
     - sensor.pihole_dns_queries_today
     - sensor.pihole_domains_blocked
     - sensor.rhomeautomation_subsribers
+    - sensor.database_size
+    - sensor.influxdb_size
     - sun.sun

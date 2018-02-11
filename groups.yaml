@@ -71,9 +71,9 @@ system_health:
   entities:
    - group.battery
    - group.database
-   - sensor.cpu_used
-   - sensor.disk_used_
-   - sensor.ram_used
+   - sensor.processor_use
+   - sensor.disk_use_percent_
+   - sensor.memory_use_percent
    - sensor.since_last_boot
    - zwave.aeotec_zw090_zstick_gen5_us
 
