@@ -10,18 +10,13 @@ default_view:
    - group.den_area
    - group.kitchen
    - group.master
-#   - group.leak
-#   - group.traveltimes
-#   - group.energy
    - group.hvac_main
    - group.home_electric
    - group.weather
    - group.packages
    - group.holidays
-   - group.misc_stuff
-   - group.bayesian
-   - camera.front_walk
-   - camera.patio
+   - group.school_closings
+   - group.snow_emergencies
    - sun.sun
    - sensor.moon
    - device_tracker.shannon_phone
@@ -31,9 +26,6 @@ default_view:
    - sensor.market_price
    - sensor.xrp_to_usd
    - sensor.430_walnutview_dr
-   - sensor.time
-   - media_player.brix_pc
-   - media_player.onkyo_den
    - binary_sensor.iss
    - camera.usps_mail
    - sensor.dark_sky_cloud_coverage
@@ -49,6 +41,43 @@ security:
    - group.windows
    - alarm_control_panel.home_alarm
    - group.camera_motion
+
+kids:
+  name: "Kids"
+  icon: mdi:account
+  view: yes
+  entities:
+    - group.kids_wifi_toggle
+    - group.kids_wifi_timing
+    - group.kids_device_status
+    - group.kids_device_control
+    - group.kids_misc
+    - sensor.kids_wifi_status
+
+vacation:
+  name: "Vacation"
+  icon: mdi:beach
+  view: yes
+  entities:
+    - group.vacation_mode
+    - group.cameras_group
+    - group.pets
+    - group.leak
+    - group.energy
+    - group.hvac_main
+    - group.home_electric
+    - group.doors
+    - group.windows
+    - group.server_rack
+    - climate.water_heater
+
+media:
+  name: Media
+  icon: mdi:video
+  view: yes
+  entities:
+  - media_player.brix_pc
+  - media_player.onkyo_den
 
 servers:
   name: Servers
@@ -116,23 +145,6 @@ vacation_mode:
   entities:
     - switch.hot_water_heater_19
     - switch.vacation_mode
-
-vacation:
-  name: "Vacation"
-  icon: mdi:beach
-  view: yes
-  entities:
-    - group.vacation_mode
-    - group.cameras_group
-    - group.pets
-    - group.leak
-    - group.energy
-    - group.hvac_main
-    - group.home_electric
-    - group.doors
-    - group.windows
-    - group.server_rack
-    - climate.water_heater
 
 random_sliders:
   name: "Random Time Sliders"
@@ -306,7 +318,6 @@ holiday_lights:
 #    - switch.front_walk_lights_31
 #    - switch.front_outside_lights_140
 
-
 home_electric:
  name: "Home Electric Usage"
  entities:
@@ -362,18 +373,6 @@ camera_motion:
     - binarysensor.blue_iris_gatepatio
     - binarysensor.blue_iris_livingroom
     - binarysensor.blue_iris_patio
-
-kids:
-  name: "Kids"
-  icon: mdi:account
-  view: yes
-  entities:
-    - group.kids_wifi_toggle
-    - group.kids_wifi_timing
-    - group.kids_device_status
-    - group.kids_device_control
-    - group.kids_misc
-    - sensor.kids_wifi_status
 
 kids_wifi_toggle:
   name: "Kids Wifi Buttons"
@@ -539,6 +538,8 @@ random:
   - light.hank_unknown_type0101_id0004_level
   - group.couch_plug_stuff
   - group.test_plug
+  - group.bayesian
+  - group.misc_stuff
   - light.master_1
   - light.master_2
 
@@ -555,3 +556,17 @@ test_plug:
   - sensor.vision_unknown_type201a_id1aa4_previous_reading
   - sensor.vision_unknown_type201a_id1aa4_previous_reading_2
   - sensor.vision_unknown_type201a_id1aa4_voltage
+
+snow_emergencies:
+  name: Snow Emergencies
+  control: hidden
+  entities:
+  - sensor.delaware
+  - sensor.franklin
+  - sensor.morrow
+
+school_closings:
+  name: School Closings
+  control: hidden
+  entities:
+  - sensor.big_walnut_lsd_status

@@ -1,0 +1,15 @@
+- platform: sql
+  db_url: !secret alerts_db_url
+  queries:
+    - name: Delaware
+      query: 'SELECT `status` FROM `snow` WHERE `county` = "Delaware";'
+      column: 'status'
+    - name: Morrow
+      query: 'SELECT `status` FROM `snow` WHERE `county` = "Morrow";'
+      column: 'status'
+    - name: Franklin
+      query: 'SELECT `status` FROM `snow` WHERE `county` = "Franklin";'
+      column: 'status'
+    - name: Big Walnut LSD Status
+      query: 'SELECT `status` FROM `school` WHERE `school` = "Big Walnut LSD";'
+      column: 'status'
