@@ -48,7 +48,6 @@ kids:
   view: yes
   entities:
     - group.kids_wifi_toggle
-    - group.kids_wifi_timing
     - group.kids_device_status
     - group.kids_device_control
     - group.kids_misc
@@ -131,7 +130,7 @@ pets:
  name: Pets
  control: hidden
  entities:
-   - switch.norbert_22
+   - switch.norbert_light_switch
    - switch.norbert_heat_130
    - switch.snake_heaters_124
    - light.gecko_heater_67
@@ -185,7 +184,7 @@ kitchen:
  name: "Kitchen"
  control: hidden
  entities:
-   - switch.coffee_pot_129
+   - switch.coffee_pot
 
 master:
  name: 'Master Bedroom'

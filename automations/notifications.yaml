@@ -233,3 +233,18 @@
 #        data:
 #          displaytime: 20000
 #          icon: "warning"
+- id: alert_when_shelley_home
+  alias: Alert when Shelley home
+  trigger:
+    platform: event
+    event_type: image_processing.found_plate
+    event_data:
+      entity_id: openalpr.driveway
+      plate: ESY8722
+  action:
+    - service: notify.slacknotify
+      data:
+        message: 'Shelley Home!'
+        data:
+          file:
+            url: http://192.168.53.116/snap.jpeg

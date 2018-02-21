@@ -19,25 +19,25 @@ light.old_2:
 light.front_porch:
   platform: hue
   unique_id: 00:17:88:01:02:cb:09:a1-0b
-switch.couch_plug_switch:
+switch.norbert_light_switch:
   platform: zwave
   unique_id: 39-72057594697039872
-sensor.couch_plug_energy:
+sensor.norbert_light_energy:
   platform: zwave
   unique_id: 39-72057594697252866
-sensor.couch_plug_previous_reading:
+sensor.norbert_light_previous_reading:
   platform: zwave
   unique_id: 39-72057594697252882
-sensor.couch_plug_power:
+sensor.norbert_light_power:
   platform: zwave
   unique_id: 39-72057594697252994
-sensor.couch_plug_previous_reading_2:
+sensor.norbert_light_previous_reading_2:
   platform: zwave
   unique_id: 39-72057594697253010
-sensor.couch_plug_voltage:
+sensor.norbert_light_voltage:
   platform: zwave
   unique_id: 39-72057594697253122
-sensor.couch_plug_current:
+sensor.norbert_light_current:
   platform: zwave
   unique_id: 39-72057594697253186
 switch.server_rack_switch:
@@ -628,3 +628,21 @@ sensor.vision_unknown_type201a_id1aa4_previous_reading_5:
 sensor.vision_unknown_type201a_id1aa4_previous_reading_6:
   platform: zwave
   unique_id: 48-72057594848248082
+sensor.alarm_type:
+  platform: zwave
+  unique_id: 49-72057594866057217
+sensor.alarm_level:
+  platform: zwave
+  unique_id: 49-72057594866057233
+binary_sensor.safe:
+  platform: zwave
+  unique_id: 49-72057594864992256
+sensor.safesourcenodeid:
+  platform: zwave
+  unique_id: 49-72057594866057249
+sensor.safeaccess_control:
+  platform: zwave
+  unique_id: 49-72057594866057361
+switch.coffee_pot:
+  platform: zwave
+  unique_id: 50-72057594881589248

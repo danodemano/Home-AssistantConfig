@@ -2,7 +2,7 @@ switch.front_walk_lights_31:
   friendly_name: Front Walk Lights
   emulated_hue_name: Front Walk Lights
   icon: mdi:lightbulb
-switch.norbert_22:
+switch.norbert_light_switch:
   friendly_name: Norbert Light
   icon: mdi:lightbulb
 switch.norbert_heat_130:
@@ -94,7 +94,7 @@ switch.chest_freezer_145:
   emulated_hue_hidden: true
 switch.den_sensor_158:
   emulated_hue_hidden: true
-switch.coffee_pot_129:
+switch.coffee_pot:
   icon: mdi:coffee
 switch.hot_water_heater_19:
   emulated_hue_hidden: true
