@@ -187,11 +187,25 @@ nick_wifi_on:
   alias: "Nick Wifi On"
   sequence:
     - service: shell_command.wifi_nick_enable
+    - service: shell_command.wifi_nick_enable_tablet
 
 nick_wifi_off:
   alias: "Nick Wifi Off"
   sequence:
     - service: shell_command.wifi_nick_disable
+    - service: shell_command.wifi_nick_disable_tablet
+
+nick_wifi_throttle:
+  alias: "Nick Wifi Throttle"
+  sequence:
+    - service: shell_command.wifi_nick_throttle
+    - service: shell_command.wifi_nick_throttle_tablet
+
+nick_wifi_unthrottle:
+  alias: "Nick Wifi Unthrottle"
+  sequence:
+    - service: shell_command.wifi_nick_unthrottle
+    - service: shell_command.wifi_nick_unthrottle_tablet
 
 shannon_wifi_on:
   alias: "Shannon Wifi On"

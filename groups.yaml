@@ -27,7 +27,7 @@ default_view:
    - sensor.xrp_to_usd
    - sensor.430_walnutview_dr
    - binary_sensor.iss
-   - camera.usps_mail
+   - camera.usps_home_mail
    - sensor.dark_sky_cloud_coverage
    - sensor.dark_sky_wind_speed
 
@@ -51,6 +51,7 @@ kids:
     - group.kids_device_status
     - group.kids_device_control
     - group.kids_misc
+    - group.kids_throttle
     - sensor.kids_wifi_status
 
 vacation:
@@ -296,8 +297,8 @@ server_rack:
 packages:
   name: "Mail"
   entities:
-#  - sensor.usps_mail
-#  - sensor.usps_packages
+  - sensor.usps_home_mail
+  - sensor.usps_home_packages
   - sensor.ups_home
   - sensor.fedex_home
 
@@ -410,6 +411,13 @@ kids_misc:
   control: hidden
   entities:
     - switch.kids_override
+
+kids_throttle:
+  name: "Kids Throttle"
+  control: hidden
+  entities:
+    - script.nick_wifi_throttle
+    - script.nick_wifi_unthrottle
 
 misc_stuff:
   name: "Misc Stuff"
@@ -539,8 +547,10 @@ random:
   - group.test_plug
   - group.bayesian
   - group.misc_stuff
+  - group.oomi_test
   - light.master_1
   - light.master_2
+  - remote.den
 
 test_plug:
   name: Test Plug
@@ -555,6 +565,20 @@ test_plug:
   - sensor.vision_unknown_type201a_id1aa4_previous_reading
   - sensor.vision_unknown_type201a_id1aa4_previous_reading_2
   - sensor.vision_unknown_type201a_id1aa4_voltage
+
+oomi_test:
+  name: Oomi Test
+  control: hidden
+  entities:
+  - sensor.oomi_ft100_multisensor_6_burglar
+  - sensor.oomi_ft100_multisensor_6_luminance
+  - sensor.oomi_ft100_multisensor_6_relative_humidity
+  - sensor.oomi_ft100_multisensor_6_sourcenodeid
+  - sensor.oomi_ft100_multisensor_6_temperature
+  - sensor.oomi_ft100_multisensor_6_ultraviolet
+  - binary_sensor.sensor
+  - sensor.alarm_level_2
+  - sensor.alarm_type_2
 
 snow_emergencies:
   name: Snow Emergencies

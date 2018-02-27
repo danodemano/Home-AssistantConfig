@@ -646,3 +646,30 @@ sensor.safeaccess_control:
 switch.coffee_pot:
   platform: zwave
   unique_id: 50-72057594881589248
+sensor.alarm_type_2:
+  platform: zwave
+  unique_id: 51-72057594899611649
+sensor.alarm_level_2:
+  platform: zwave
+  unique_id: 51-72057594899611665
+binary_sensor.sensor:
+  platform: zwave
+  unique_id: 51-72057594898546688
+sensor.oomi_ft100_multisensor_6_temperature:
+  platform: zwave
+  unique_id: 51-72057594898563090
+sensor.oomi_ft100_multisensor_6_luminance:
+  platform: zwave
+  unique_id: 51-72057594898563122
+sensor.oomi_ft100_multisensor_6_relative_humidity:
+  platform: zwave
+  unique_id: 51-72057594898563154
+sensor.oomi_ft100_multisensor_6_ultraviolet:
+  platform: zwave
+  unique_id: 51-72057594898563506
+sensor.oomi_ft100_multisensor_6_sourcenodeid:
+  platform: zwave
+  unique_id: 51-72057594899611681
+sensor.oomi_ft100_multisensor_6_burglar:
+  platform: zwave
+  unique_id: 51-72057594899611809

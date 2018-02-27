@@ -11,6 +11,12 @@ bi_windy: curl http://192.168.53.55:81/admin?profile=6
 wifi_kids_disable: php /scripts/ubnt/toggle_network.php Dev_Kids false false
 wifi_kids_enable: php /scripts/ubnt/toggle_network.php Dev_Kids true false
 wifi_nick_enable: php /scripts/ubnt/toggle_station.php 6c:76:60:d1:e2:8f true
+wifi_nick_enable_tablet: php /scripts/ubnt/toggle_station.php f0:27:2d:05:bf:b7 true
 wifi_nick_disable: php /scripts/ubnt/toggle_station.php 6c:76:60:d1:e2:8f false
+wifi_nick_disable_tablet: php /scripts/ubnt/toggle_station.php 6f0:27:2d:05:bf:b7 false
+wifi_nick_throttle: php /scripts/ubnt/change_user_group.php 59ddec4ed5de1d39674a449b 5a7f7237d5dea28996ca7d2f
+wifi_nick_throttle_tablet: php /scripts/ubnt/change_user_group.php 59e919a3d5de1d39674a6893 5a7f7237d5dea28996ca7d2f
+wifi_nick_unthrottle: php /scripts/ubnt/change_user_group.php 59ddec4ed5de1d39674a449b default
+wifi_nick_unthrottle_tablet: php /scripts/ubnt/change_user_group.php 59e919a3d5de1d39674a6893 default
 wifi_shannon_enable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d true
 wifi_shannon_disable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d false

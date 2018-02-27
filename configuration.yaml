@@ -96,6 +96,13 @@ remote:
   - platform: harmony
     name: Den
     host: 192.168.9.208
+    activity: Watch TV
+
+usps:
+  name: "USPS Home"
+  username: !secret usps_username
+  password: !secret usps_password
+  driver: chrome
 
 #usps:
 #    username: !secret usps_username

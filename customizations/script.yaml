@@ -6,6 +6,10 @@ script.nick_wifi_on:
   icon: mdi:wifi
 script.nick_wifi_off:
   icon: mdi:wifi-off
+script.nick_wifi_throttle:
+  icon: mdi:speedometer
+script.nick_wifi_unthrottle:
+  icon: mdi:speedometer
 script.shannon_wifi_on:
   icon: mdi:wifi
 script.shannon_wifi_off:
