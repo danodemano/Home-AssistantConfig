@@ -673,3 +673,21 @@ sensor.oomi_ft100_multisensor_6_sourcenodeid:
 sensor.oomi_ft100_multisensor_6_burglar:
   platform: zwave
   unique_id: 51-72057594899611809
+sensor.allergy_index_yesterday:
+  platform: pollen
+  unique_id: 43074_allergy_index_yesterday
+sensor.allergy_index_today:
+  platform: pollen
+  unique_id: 43074_allergy_index_today
+sensor.allergy_index_tomorrow:
+  platform: pollen
+  unique_id: 43074_allergy_index_tomorrow
+sensor.allergy_index_historical_average:
+  platform: pollen
+  unique_id: 43074_allergy_index_historical_average
+sensor.cold__flu_forecasted_average:
+  platform: pollen
+  unique_id: 43074_cold__flu_forecasted_average
+sensor.allergy_index_forecasted_average:
+  platform: pollen
+  unique_id: 43074_allergy_index_forecasted_average

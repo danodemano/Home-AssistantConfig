@@ -40,7 +40,7 @@
 
 - platform: wunderground
   api_key: !secret wunderground_api_key
-  pws_id: KOHSUNBU11
+  pws_id: !secret home_weather_station
   monitored_conditions:
   - weather
   - temp_f
@@ -58,7 +58,7 @@
 
 - platform: wunderground
   api_key: !secret wunderground_api_key
-  pws_id: KOHJOHNS13
+  pws_id: !secret brian_weather_station
   monitored_conditions:
   - weather
   - temp_f
@@ -89,8 +89,6 @@
 - platform: pi_hole
   host: 192.168.54.2
 
-
-
 - platform: systemmonitor
   resources:
     - type: disk_use_percent
@@ -109,3 +107,13 @@
   email: 
     - !secret dan_email
     - !secret shelley_email
+
+- platform: pollen
+  zip_code: !secret home_zip
+  monitored_conditions:
+    - allergy_average_forecasted
+    - allergy_average_historical
+    - allergy_index_today
+    - allergy_index_tomorrow
+    - allergy_index_yesterday
+    - disease_average_forecasted

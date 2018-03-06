@@ -23,7 +23,7 @@ switch.den_av_128:
   icon: mdi:television
 switch.master_night_stuff_42:
   friendly_name: Master Night Stuff
-  icon: mdi:lamp
+  icon: mdi:weather-night
   emulated_hue_hidden: true
 switch.geckos_59:
   icon: mdi:lightbulb-outline
