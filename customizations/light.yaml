@@ -1,7 +1,5 @@
-light.dining_room_36:
+light.dining_room:
   friendly_name: Dining Room Light
-  scan_interval: 10
-  refresh_value: true
 light.gecko_heater_67:
   icon: mdi:crop-square
   emulated_hue_hidden: true

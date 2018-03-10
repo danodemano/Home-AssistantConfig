@@ -1,693 +1,988 @@
 light.old_1:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:3b:b5:2d-0b
 light.master_1:
+  name:
   platform: hue
   unique_id: 00:0b:57:ff:fe:a0:0f:f2-01
 light.den:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:f6:e0:b1-0b
 light.master_2:
+  name:
   platform: hue
   unique_id: 00:0b:57:ff:fe:b9:15:92-01
 light.garage:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:c9:56:be-0b
 light.old_2:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:3b:b3:83-0b
 light.front_porch:
+  name:
   platform: hue
   unique_id: 00:17:88:01:02:cb:09:a1-0b
 switch.norbert_light_switch:
+  name:
   platform: zwave
   unique_id: 39-72057594697039872
 sensor.norbert_light_energy:
+  name:
   platform: zwave
   unique_id: 39-72057594697252866
 sensor.norbert_light_previous_reading:
+  name:
   platform: zwave
   unique_id: 39-72057594697252882
 sensor.norbert_light_power:
+  name:
   platform: zwave
   unique_id: 39-72057594697252994
 sensor.norbert_light_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 39-72057594697253010
 sensor.norbert_light_voltage:
+  name:
   platform: zwave
   unique_id: 39-72057594697253122
 sensor.norbert_light_current:
+  name:
   platform: zwave
   unique_id: 39-72057594697253186
 switch.server_rack_switch:
+  name:
   platform: zwave
   unique_id: 40-72057594713817088
 sensor.server_rack_energy:
+  name:
   platform: zwave
   unique_id: 40-72057594714030082
 sensor.server_rack_previous_reading:
+  name:
   platform: zwave
   unique_id: 40-72057594714030098
 sensor.server_rack_power:
+  name:
   platform: zwave
   unique_id: 40-72057594714030210
 sensor.server_rack_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 40-72057594714030226
 sensor.server_rack_voltage:
+  name:
   platform: zwave
   unique_id: 40-72057594714030338
 sensor.server_rack_current:
+  name:
   platform: zwave
   unique_id: 40-72057594714030402
 sensor.server_rack_previous_reading_3:
+  name:
   platform: zwave
   unique_id: 40-72057594714030418
 binary_sensor.server_rack_environment_sensor:
+  name:
   platform: zwave
   unique_id: 41-72057594730774528
 sensor.server_rack_environment_temperature:
+  name:
   platform: zwave
   unique_id: 41-72057594730790930
 sensor.server_rack_environment_luminance:
+  name:
   platform: zwave
   unique_id: 41-72057594730790962
 sensor.server_rack_environment_relative_humidity:
+  name:
   platform: zwave
   unique_id: 41-72057594730790994
 sensor.server_rack_environment_alarm_type:
+  name:
   platform: zwave
   unique_id: 41-72057594731839489
 sensor.server_rack_environment_alarm_level:
+  name:
   platform: zwave
   unique_id: 41-72057594731839505
 sensor.server_rack_environment_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 41-72057594731839521
 sensor.server_rack_environment_burglar:
+  name:
   platform: zwave
   unique_id: 41-72057594731839649
 sensor.server_rack_environment_emergency:
+  name:
   platform: zwave
   unique_id: 41-72057594731839697
 sensor.server_rack_environment_homehealth:
+  name:
   platform: zwave
   unique_id: 41-72057594731839745
 sensor.home_energy_meter_energy:
+  name:
   platform: zwave
   unique_id: 42-72057594747584514
 sensor.home_energy_meter_energy_2:
+  name:
   platform: zwave
   unique_id: 42-144115188785512450
 sensor.home_energy_meter_energy_3:
+  name:
   platform: zwave
   unique_id: 42-216172782823440386
 sensor.home_energy_meter_unknown:
+  name:
   platform: zwave
   unique_id: 42-288230376861368322
 sensor.home_energy_meter_unknown_2:
+  name:
   platform: zwave
   unique_id: 42-360287970899296258
 sensor.home_energy_meter_unknown_3:
+  name:
   platform: zwave
   unique_id: 42-432345564937224194
 sensor.home_energy_meter_unknown_4:
+  name:
   platform: zwave
   unique_id: 42-504403158975152130
 sensor.home_energy_meter_unknown_5:
+  name:
   platform: zwave
   unique_id: 42-576460753013080066
 sensor.home_energy_meter_unknown_6:
+  name:
   platform: zwave
   unique_id: 42-648518347051008002
 sensor.home_energy_meter_unknown_7:
+  name:
   platform: zwave
   unique_id: 42-720575941088935938
 sensor.home_energy_meter_unknown_8:
+  name:
   platform: zwave
   unique_id: 42-792633535126863874
 sensor.home_energy_meter_unknown_9:
+  name:
   platform: zwave
   unique_id: 42-864691129164791810
 sensor.home_energy_meter_unknown_10:
+  name:
   platform: zwave
   unique_id: 42-936748723202719746
 sensor.home_energy_meter_unknown_11:
+  name:
   platform: zwave
   unique_id: 42-1008806317240647682
 sensor.home_energy_meter_unknown_12:
+  name:
   platform: zwave
   unique_id: 42-1080863911278575618
 sensor.home_energy_meter_unknown_13:
+  name:
   platform: zwave
   unique_id: 42-1152921505316503554
 sensor.home_energy_meter_unknown_14:
+  name:
   platform: zwave
   unique_id: 42-1224979099354431490
 sensor.home_energy_meter_unknown_15:
+  name:
   platform: zwave
   unique_id: 42-1297036693392359426
 sensor.home_energy_meter_unknown_16:
+  name:
   platform: zwave
   unique_id: 42-1369094287430287362
 sensor.home_energy_meter_unknown_17:
+  name:
   platform: zwave
   unique_id: 42-1441151881468215298
 sensor.home_energy_meter_unknown_18:
+  name:
   platform: zwave
   unique_id: 42-1513209475506143234
 sensor.home_energy_meter_unknown_19:
+  name:
   platform: zwave
   unique_id: 42-1585267069544071170
 sensor.home_energy_meter_unknown_20:
+  name:
   platform: zwave
   unique_id: 42-1657324663581999106
 sensor.home_energy_meter_unknown_21:
+  name:
   platform: zwave
   unique_id: 42-1729382257619927042
 sensor.home_energy_meter_unknown_22:
+  name:
   platform: zwave
   unique_id: 42-1801439851657854978
 sensor.home_energy_meter_unknown_23:
+  name:
   platform: zwave
   unique_id: 42-1873497445695782914
 sensor.home_energy_meter_unknown_24:
+  name:
   platform: zwave
   unique_id: 42-1945555039733710850
 sensor.home_energy_meter_unknown_25:
+  name:
   platform: zwave
   unique_id: 42-2017612633771638786
 sensor.home_energy_meter_unknown_26:
+  name:
   platform: zwave
   unique_id: 42-2089670227809566722
 sensor.home_energy_meter_unknown_27:
+  name:
   platform: zwave
   unique_id: 42-2161727821847494658
 sensor.home_energy_meter_unknown_28:
+  name:
   platform: zwave
   unique_id: 42-2233785415885422594
 sensor.home_energy_meter_unknown_29:
+  name:
   platform: zwave
   unique_id: 42-2305843009923350530
 sensor.home_energy_meter_unknown_30:
+  name:
   platform: zwave
   unique_id: 42-2377900603961278466
 sensor.home_energy_meter_unknown_31:
+  name:
   platform: zwave
   unique_id: 42-2449958197999206402
 sensor.home_energy_meter_unknown_32:
+  name:
   platform: zwave
   unique_id: 42-2522015792037134338
 sensor.home_energy_meter_unknown_33:
+  name:
   platform: zwave
   unique_id: 42-2594073386075062274
 sensor.home_energy_meter_unknown_34:
+  name:
   platform: zwave
   unique_id: 42-2666130980112990210
 sensor.home_energy_meter_unknown_35:
+  name:
   platform: zwave
   unique_id: 42-2738188574150918146
 sensor.home_energy_meter_unknown_36:
+  name:
   platform: zwave
   unique_id: 42-2810246168188846082
 sensor.home_energy_meter_unknown_37:
+  name:
   platform: zwave
   unique_id: 42-2882303762226774018
 sensor.home_energy_meter_unknown_38:
+  name:
   platform: zwave
   unique_id: 42-2954361356264701954
 sensor.home_energy_meter_unknown_39:
+  name:
   platform: zwave
   unique_id: 42-3026418950302629890
 sensor.home_energy_meter_unknown_40:
+  name:
   platform: zwave
   unique_id: 42-3098476544340557826
 sensor.home_energy_meter_unknown_41:
+  name:
   platform: zwave
   unique_id: 42-3170534138378485762
 sensor.home_energy_meter_unknown_42:
+  name:
   platform: zwave
   unique_id: 42-3242591732416413698
 sensor.home_energy_meter_unknown_43:
+  name:
   platform: zwave
   unique_id: 42-3314649326454341634
 sensor.home_energy_meter_unknown_44:
+  name:
   platform: zwave
   unique_id: 42-3386706920492269570
 sensor.home_energy_meter_unknown_45:
+  name:
   platform: zwave
   unique_id: 42-3458764514530197506
 sensor.home_energy_meter_unknown_46:
+  name:
   platform: zwave
   unique_id: 42-3530822108568125442
 sensor.home_energy_meter_unknown_47:
+  name:
   platform: zwave
   unique_id: 42-3602879702606053378
 sensor.home_energy_meter_unknown_48:
+  name:
   platform: zwave
   unique_id: 42-3674937296643981314
 sensor.home_energy_meter_unknown_49:
+  name:
   platform: zwave
   unique_id: 42-3746994890681909250
 sensor.home_energy_meter_unknown_50:
+  name:
   platform: zwave
   unique_id: 42-3819052484719837186
 sensor.home_energy_meter_unknown_51:
+  name:
   platform: zwave
   unique_id: 42-3891110078757765122
 sensor.home_energy_meter_unknown_52:
+  name:
   platform: zwave
   unique_id: 42-3963167672795693058
 sensor.home_energy_meter_unknown_53:
+  name:
   platform: zwave
   unique_id: 42-4035225266833620994
 sensor.home_energy_meter_unknown_54:
+  name:
   platform: zwave
   unique_id: 42-4107282860871548930
 sensor.home_energy_meter_unknown_55:
+  name:
   platform: zwave
   unique_id: 42-4179340454909476866
 sensor.home_energy_meter_unknown_56:
+  name:
   platform: zwave
   unique_id: 42-4251398048947404802
 sensor.home_energy_meter_unknown_57:
+  name:
   platform: zwave
   unique_id: 42-4323455642985332738
 sensor.home_energy_meter_unknown_58:
+  name:
   platform: zwave
   unique_id: 42-4395513237023260674
 sensor.home_energy_meter_unknown_59:
+  name:
   platform: zwave
   unique_id: 42-4467570831061188610
 sensor.home_energy_meter_unknown_60:
+  name:
   platform: zwave
   unique_id: 42-4539628425099116546
 sensor.home_energy_meter_unknown_61:
+  name:
   platform: zwave
   unique_id: 42-4611686019137044482
 sensor.home_energy_meter_unknown_62:
+  name:
   platform: zwave
   unique_id: 42-4683743613174972418
 sensor.home_energy_meter_unknown_63:
+  name:
   platform: zwave
   unique_id: 42-4755801207212900354
 sensor.home_energy_meter_unknown_64:
+  name:
   platform: zwave
   unique_id: 42-4827858801250828290
 sensor.home_energy_meter_unknown_65:
+  name:
   platform: zwave
   unique_id: 42-4899916395288756226
 sensor.home_energy_meter_unknown_66:
+  name:
   platform: zwave
   unique_id: 42-4971973989326684162
 sensor.home_energy_meter_unknown_67:
+  name:
   platform: zwave
   unique_id: 42-5044031583364612098
 sensor.home_energy_meter_unknown_68:
+  name:
   platform: zwave
   unique_id: 42-5116089177402540034
 sensor.home_energy_meter_unknown_69:
+  name:
   platform: zwave
   unique_id: 42-5188146771440467970
 sensor.home_energy_meter_unknown_70:
+  name:
   platform: zwave
   unique_id: 42-5260204365478395906
 sensor.home_energy_meter_unknown_71:
+  name:
   platform: zwave
   unique_id: 42-5332261959516323842
 sensor.home_energy_meter_unknown_72:
+  name:
   platform: zwave
   unique_id: 42-5404319553554251778
 sensor.home_energy_meter_unknown_73:
+  name:
   platform: zwave
   unique_id: 42-5476377147592179714
 sensor.home_energy_meter_unknown_74:
+  name:
   platform: zwave
   unique_id: 42-5548434741630107650
 sensor.home_energy_meter_unknown_75:
+  name:
   platform: zwave
   unique_id: 42-5620492335668035586
 sensor.home_energy_meter_unknown_76:
+  name:
   platform: zwave
   unique_id: 42-5692549929705963522
 sensor.home_energy_meter_unknown_77:
+  name:
   platform: zwave
   unique_id: 42-5764607523743891458
 sensor.home_energy_meter_unknown_78:
+  name:
   platform: zwave
   unique_id: 42-5836665117781819394
 sensor.home_energy_meter_unknown_79:
+  name:
   platform: zwave
   unique_id: 42-5908722711819747330
 sensor.home_energy_meter_unknown_80:
+  name:
   platform: zwave
   unique_id: 42-5980780305857675266
 sensor.home_energy_meter_unknown_81:
+  name:
   platform: zwave
   unique_id: 42-6052837899895603202
 sensor.home_energy_meter_unknown_82:
+  name:
   platform: zwave
   unique_id: 42-6124895493933531138
 sensor.home_energy_meter_unknown_83:
+  name:
   platform: zwave
   unique_id: 42-6196953087971459074
 sensor.home_energy_meter_unknown_84:
+  name:
   platform: zwave
   unique_id: 42-6269010682009387010
 sensor.home_energy_meter_unknown_85:
+  name:
   platform: zwave
   unique_id: 42-6341068276047314946
 sensor.home_energy_meter_unknown_86:
+  name:
   platform: zwave
   unique_id: 42-6413125870085242882
 sensor.home_energy_meter_unknown_87:
+  name:
   platform: zwave
   unique_id: 42-6485183464123170818
 sensor.home_energy_meter_unknown_88:
+  name:
   platform: zwave
   unique_id: 42-6557241058161098754
 sensor.home_energy_meter_unknown_89:
+  name:
   platform: zwave
   unique_id: 42-6629298652199026690
 sensor.home_energy_meter_unknown_90:
+  name:
   platform: zwave
   unique_id: 42-6701356246236954626
 sensor.home_energy_meter_unknown_91:
+  name:
   platform: zwave
   unique_id: 42-6773413840274882562
 sensor.home_energy_meter_unknown_92:
+  name:
   platform: zwave
   unique_id: 42-6845471434312810498
 sensor.home_energy_meter_unknown_93:
+  name:
   platform: zwave
   unique_id: 42-6917529028350738434
 sensor.home_energy_meter_unknown_94:
+  name:
   platform: zwave
   unique_id: 42-6989586622388666370
 sensor.home_energy_meter_unknown_95:
+  name:
   platform: zwave
   unique_id: 42-7061644216426594306
 sensor.home_energy_meter_unknown_96:
+  name:
   platform: zwave
   unique_id: 42-7133701810464522242
 sensor.home_energy_meter_unknown_97:
+  name:
   platform: zwave
   unique_id: 42-7205759404502450178
 sensor.home_energy_meter_unknown_98:
+  name:
   platform: zwave
   unique_id: 42-7277816998540378114
 sensor.home_energy_meter_unknown_99:
+  name:
   platform: zwave
   unique_id: 42-7349874592578306050
 sensor.home_energy_meter_unknown_100:
+  name:
   platform: zwave
   unique_id: 42-7421932186616233986
 sensor.home_energy_meter_unknown_101:
+  name:
   platform: zwave
   unique_id: 42-7493989780654161922
 sensor.home_energy_meter_unknown_102:
+  name:
   platform: zwave
   unique_id: 42-7566047374692089858
 sensor.home_energy_meter_unknown_103:
+  name:
   platform: zwave
   unique_id: 42-7638104968730017794
 sensor.home_energy_meter_unknown_104:
+  name:
   platform: zwave
   unique_id: 42-7710162562767945730
 sensor.home_energy_meter_unknown_105:
+  name:
   platform: zwave
   unique_id: 42-7782220156805873666
 sensor.home_energy_meter_unknown_106:
+  name:
   platform: zwave
   unique_id: 42-7854277750843801602
 sensor.home_energy_meter_unknown_107:
+  name:
   platform: zwave
   unique_id: 42-7926335344881729538
 sensor.home_energy_meter_unknown_108:
+  name:
   platform: zwave
   unique_id: 42-7998392938919657474
 sensor.home_energy_meter_unknown_109:
+  name:
   platform: zwave
   unique_id: 42-8070450532957585410
 sensor.home_energy_meter_unknown_110:
+  name:
   platform: zwave
   unique_id: 42-8142508126995513346
 sensor.home_energy_meter_unknown_111:
+  name:
   platform: zwave
   unique_id: 42-8214565721033441282
 sensor.home_energy_meter_unknown_112:
+  name:
   platform: zwave
   unique_id: 42-8286623315071369218
 sensor.home_energy_meter_unknown_113:
+  name:
   platform: zwave
   unique_id: 42-8358680909109297154
 sensor.home_energy_meter_unknown_114:
+  name:
   platform: zwave
   unique_id: 42-8430738503147225090
 sensor.home_energy_meter_unknown_115:
+  name:
   platform: zwave
   unique_id: 42-8502796097185153026
 sensor.home_energy_meter_unknown_116:
+  name:
   platform: zwave
   unique_id: 42-8574853691223080962
 sensor.home_energy_meter_unknown_117:
+  name:
   platform: zwave
   unique_id: 42-8646911285261008898
 sensor.home_energy_meter_unknown_118:
+  name:
   platform: zwave
   unique_id: 42-8718968879298936834
 sensor.home_energy_meter_unknown_119:
+  name:
   platform: zwave
   unique_id: 42-8791026473336864770
 sensor.home_energy_meter_unknown_120:
+  name:
   platform: zwave
   unique_id: 42-8863084067374792706
 sensor.home_energy_meter_unknown_121:
+  name:
   platform: zwave
   unique_id: 42-8935141661412720642
 sensor.home_energy_meter_unknown_122:
+  name:
   platform: zwave
   unique_id: 42-9007199255450648578
 sensor.home_energy_meter_unknown_123:
+  name:
   platform: zwave
   unique_id: 42-9079256849488576514
 sensor.home_energy_meter_unknown_124:
+  name:
   platform: zwave
   unique_id: 42-9151314443526504450
 sensor.home_energy_meter_unknown_125:
+  name:
   platform: zwave
   unique_id: 42-9223372037564432386
 sensor.home_energy_meter_previous_reading:
+  name:
   platform: zwave
   unique_id: 42-72057594747584530
 sensor.home_energy_meter_power:
+  name:
   platform: zwave
   unique_id: 42-72057594747584642
 sensor.home_energy_meter_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 42-72057594747584658
 sensor.home_energy_meter_voltage:
+  name:
   platform: zwave
   unique_id: 42-72057594747584770
 sensor.home_energy_meter_previous_reading_3:
+  name:
   platform: zwave
   unique_id: 42-72057594747584786
 sensor.home_energy_meter_current:
+  name:
   platform: zwave
   unique_id: 42-72057594747584834
 sensor.home_energy_meter_previous_reading_4:
+  name:
   platform: zwave
   unique_id: 42-72057594747584850
 sensor.home_energy_meter_previous_reading_5:
+  name:
   platform: zwave
   unique_id: 42-144115188785512466
 sensor.home_energy_meter_power_2:
+  name:
   platform: zwave
   unique_id: 42-144115188785512578
 sensor.home_energy_meter_previous_reading_6:
+  name:
   platform: zwave
   unique_id: 42-144115188785512594
 sensor.home_energy_meter_voltage_2:
+  name:
   platform: zwave
   unique_id: 42-144115188785512706
 sensor.home_energy_meter_previous_reading_7:
+  name:
   platform: zwave
   unique_id: 42-144115188785512722
 sensor.home_energy_meter_current_2:
+  name:
   platform: zwave
   unique_id: 42-144115188785512770
 sensor.home_energy_meter_previous_reading_8:
+  name:
   platform: zwave
   unique_id: 42-144115188785512786
 sensor.home_energy_meter_previous_reading_9:
+  name:
   platform: zwave
   unique_id: 42-216172782823440402
 sensor.home_energy_meter_power_3:
+  name:
   platform: zwave
   unique_id: 42-216172782823440514
 sensor.home_energy_meter_previous_reading_10:
+  name:
   platform: zwave
   unique_id: 42-216172782823440530
 sensor.home_energy_meter_voltage_3:
+  name:
   platform: zwave
   unique_id: 42-216172782823440642
 sensor.home_energy_meter_previous_reading_11:
+  name:
   platform: zwave
   unique_id: 42-216172782823440658
 sensor.home_energy_meter_current_3:
+  name:
   platform: zwave
   unique_id: 42-216172782823440706
 sensor.home_energy_meter_previous_reading_12:
+  name:
   platform: zwave
   unique_id: 42-216172782823440722
 binary_sensor.leak_den_1_sensor:
+  name:
   platform: zwave
   unique_id: 43-72057594764328960
 sensor.leak_den_1_alarm_type:
+  name:
   platform: zwave
   unique_id: 43-72057594765393921
 sensor.leak_den_1_alarm_level:
+  name:
   platform: zwave
   unique_id: 43-72057594765393937
 sensor.leak_den_1_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 43-72057594765393953
 sensor.leak_den_1_flood:
+  name:
   platform: zwave
   unique_id: 43-72057594765394049
 binary_sensor.leak_den_2_sensor:
+  name:
   platform: zwave
   unique_id: 45-72057594797883392
 sensor.leak_den_2_alarm_type:
+  name:
   platform: zwave
   unique_id: 45-72057594798948353
 sensor.leak_den_2_alarm_level:
+  name:
   platform: zwave
   unique_id: 45-72057594798948369
 sensor.leak_den_2_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 45-72057594798948385
 sensor.leak_den_2_flood:
+  name:
   platform: zwave
   unique_id: 45-72057594798948481
 sensor.main_thermostat_temperature:
+  name:
   platform: zwave
   unique_id: 46-72057594814677010
 sensor.main_thermostat_temperature_2:
+  name:
   platform: zwave
   unique_id: 46-144115188852604946
 sensor.main_thermostat_relative_humidity:
+  name:
   platform: zwave
   unique_id: 46-216172782890532946
 climate.main_thermostat_heating_1:
+  name:
   platform: zwave
   unique_id: 46-72057594814971922
 climate.main_thermostat_cooling_1:
+  name:
   platform: zwave
   unique_id: 46-72057594814971938
 light.hank_unknown_type0101_id0004_level:
+  name:
   platform: zwave
   unique_id: 47-72057594831273985
 switch.vision_unknown_type201a_id1aa4_switch:
+  name:
   platform: zwave
   unique_id: 48-72057594848034816
 sensor.vision_unknown_type201a_id1aa4_energy:
+  name:
   platform: zwave
   unique_id: 48-72057594848247810
 sensor.vision_unknown_type201a_id1aa4_previous_reading:
+  name:
   platform: zwave
   unique_id: 48-72057594848247826
 sensor.vision_unknown_type201a_id1aa4_energy_2:
+  name:
   platform: zwave
   unique_id: 48-72057594848247874
 sensor.vision_unknown_type201a_id1aa4_previous_reading_2:
+  name:
   platform: zwave
   unique_id: 48-72057594848247890
 sensor.vision_unknown_type201a_id1aa4_power:
+  name:
   platform: zwave
   unique_id: 48-72057594848247938
 sensor.vision_unknown_type201a_id1aa4_previous_reading_3:
+  name:
   platform: zwave
   unique_id: 48-72057594848247954
 sensor.vision_unknown_type201a_id1aa4_voltage:
+  name:
   platform: zwave
   unique_id: 48-72057594848248066
 sensor.vision_unknown_type201a_id1aa4_current:
+  name:
   platform: zwave
   unique_id: 48-72057594848248130
 sensor.vision_unknown_type201a_id1aa4_previous_reading_4:
+  name:
   platform: zwave
   unique_id: 48-72057594848248146
 sensor.vision_unknown_type201a_id1aa4_power_factor:
+  name:
   platform: zwave
   unique_id: 48-72057594848248194
 sensor.vision_unknown_type201a_id1aa4_previous_reading_5:
+  name:
   platform: zwave
   unique_id: 48-72057594848248210
 sensor.vision_unknown_type201a_id1aa4_previous_reading_6:
+  name:
   platform: zwave
   unique_id: 48-72057594848248082
 sensor.alarm_type:
+  name:
   platform: zwave
   unique_id: 49-72057594866057217
 sensor.alarm_level:
+  name:
   platform: zwave
   unique_id: 49-72057594866057233
 binary_sensor.safe:
+  name:
   platform: zwave
   unique_id: 49-72057594864992256
 sensor.safesourcenodeid:
+  name:
   platform: zwave
   unique_id: 49-72057594866057249
 sensor.safeaccess_control:
+  name:
   platform: zwave
   unique_id: 49-72057594866057361
 switch.coffee_pot:
+  name:
   platform: zwave
   unique_id: 50-72057594881589248
 sensor.alarm_type_2:
+  name:
   platform: zwave
   unique_id: 51-72057594899611649
 sensor.alarm_level_2:
+  name:
   platform: zwave
   unique_id: 51-72057594899611665
 binary_sensor.sensor:
+  name:
   platform: zwave
   unique_id: 51-72057594898546688
 sensor.oomi_ft100_multisensor_6_temperature:
+  name:
   platform: zwave
   unique_id: 51-72057594898563090
 sensor.oomi_ft100_multisensor_6_luminance:
+  name:
   platform: zwave
   unique_id: 51-72057594898563122
 sensor.oomi_ft100_multisensor_6_relative_humidity:
+  name:
   platform: zwave
   unique_id: 51-72057594898563154
 sensor.oomi_ft100_multisensor_6_ultraviolet:
+  name:
   platform: zwave
   unique_id: 51-72057594898563506
 sensor.oomi_ft100_multisensor_6_sourcenodeid:
+  name:
   platform: zwave
   unique_id: 51-72057594899611681
 sensor.oomi_ft100_multisensor_6_burglar:
+  name:
   platform: zwave
   unique_id: 51-72057594899611809
 sensor.allergy_index_yesterday:
+  name:
   platform: pollen
   unique_id: 43074_allergy_index_yesterday
 sensor.allergy_index_today:
+  name:
   platform: pollen
   unique_id: 43074_allergy_index_today
 sensor.allergy_index_tomorrow:
+  name:
   platform: pollen
   unique_id: 43074_allergy_index_tomorrow
 sensor.allergy_index_historical_average:
+  name:
   platform: pollen
   unique_id: 43074_allergy_index_historical_average
 sensor.cold__flu_forecasted_average:
+  name:
   platform: pollen
   unique_id: 43074_cold__flu_forecasted_average
 sensor.allergy_index_forecasted_average:
+  name:
   platform: pollen
   unique_id: 43074_allergy_index_forecasted_average
+light.dining_room:
+  name:
+  platform: zwave
+  unique_id: 52-72057594915160065
+switch.living_room:
+  name:
+  platform: zwave
+  unique_id: 53-72057594931920896
+switch.patio:
+  name:
+  platform: zwave
+  unique_id: 54-72057594948698112
+sensor.alarm_type_3:
+  name:
+  platform: zwave
+  unique_id: 55-72057594966720513
+sensor.alarm_level_3:
+  name:
+  platform: zwave
+  unique_id: 55-72057594966720529
+binary_sensor.vision_zd2102_eu_doorwindow_sensor_sensor:
+  name:
+  platform: zwave
+  unique_id: 55-72057594965655552
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 55-72057594966720545
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control:
+  name:
+  platform: zwave
+  unique_id: 55-72057594966720657
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar:
+  name:
+  platform: zwave
+  unique_id: 55-72057594966720673
+sensor.vision_zd2102_eu_doorwindow_sensor_system:
+  name:
+  platform: zwave
+  unique_id: 55-72057594966720705
+sensor.vision_zd2102_eu_doorwindow_sensor_clock:
+  name:
+  platform: zwave
+  unique_id: 55-72057594966720737
+sensor.vision_zd2102_eu_doorwindow_sensor_appliance:
+  name:
+  platform: zwave
+  unique_id: 55-72057594966720753
+sensor.vision_zd2102_eu_doorwindow_sensor_homehealth:
+  name:
+  platform: zwave
+  unique_id: 55-72057594966720769
+sensor.us_main_pollutant:
+  name:
+  platform: airvisual
+  unique_id: 40.249495,-82.846733_main_pollutant
+sensor.us_air_pollution_level:
+  name:
+  platform: airvisual
+  unique_id: 40.249495,-82.846733_pollution_level
+sensor.us_air_quality_index:
+  name:
+  platform: airvisual
+  unique_id: 40.249495,-82.846733_aqi

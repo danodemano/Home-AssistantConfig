@@ -58,7 +58,7 @@ sun:
 map:
 
 logger:
-  default: info
+  default: warn
 #  logs:
 #    pyHS100: debug
 #    homeassistant.components.light.tplink: debug

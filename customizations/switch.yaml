@@ -7,7 +7,7 @@ switch.norbert_light_switch:
   icon: mdi:lightbulb
 switch.norbert_heat_130:
   icon: mdi:lightbulb-outline
-switch.patio_light_32:
+switch.patio:
   friendly_name: Patio Light
   icon: mdi:lightbulb
 switch.front_outside_lights_140:
@@ -15,7 +15,8 @@ switch.front_outside_lights_140:
   icon: mdi:lightbulb
 switch.holiday_lights_148:
   icon: mdi:lightbulb
-switch.living_room_37:
+switch.living_room:
+  friendly_name: Living Room
   icon: mdi:lightbulb
 switch.kids_tv_38:
   icon: mdi:television

@@ -67,4 +67,7 @@ include:
     - sensor.rhomeautomation_subsribers
     - sensor.database_size
     - sensor.influxdb_size
+    - sensor.zestimate
+    - sensor.us_air_quality_index
+    - sensor.allergy_index_today
     - sun.sun

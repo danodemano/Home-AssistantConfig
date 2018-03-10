@@ -117,3 +117,13 @@
     - allergy_index_tomorrow
     - allergy_index_yesterday
     - disease_average_forecasted
+
+- platform: zestimate
+  api_key: !secret zillow_api_key
+  zpid:
+    - !secret home_zpid
+
+- platform: airvisual
+  api_key: !secret airvisual_api_key
+  monitored_conditions:
+    - us

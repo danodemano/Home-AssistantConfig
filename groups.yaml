@@ -19,6 +19,9 @@ default_view:
    - group.snow_emergencies
    - sun.sun
    - sensor.moon
+   - sensor.zestimate
+   - sensor.allergy_index_today
+   - sensor.us_air_quality_index
    - device_tracker.shannon_phone
    - device_tracker.nick_phone
    - device_tracker.dan2_owntracks
@@ -123,7 +126,7 @@ outdoor_lights:
  name: Outdoor Lights
  entities:
    - switch.front_walk_lights_31
-   - switch.patio_light_32
+   - switch.patio
    #- switch.front_outside_lights_140
    - light.outside
 
@@ -168,9 +171,9 @@ living_area:
  name: 'Dining/Living Area'
  control: hidden
  entities:
-  - light.dining_room_36
+  - light.dining_room
   - switch.kids_tv_38
-  - switch.living_room_37
+  - switch.living_room
 
 den_area:
  name: "Den Area"
