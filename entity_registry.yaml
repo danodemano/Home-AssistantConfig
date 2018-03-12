@@ -986,3 +986,51 @@ sensor.us_air_quality_index:
   name:
   platform: airvisual
   unique_id: 40.249495,-82.846733_aqi
+sensor.alarm_type_4:
+  name:
+  platform: zwave
+  unique_id: 56-72057594983497729
+sensor.alarm_level_4:
+  name:
+  platform: zwave
+  unique_id: 56-72057594983497745
+binary_sensor.sensor_2:
+  name:
+  platform: zwave
+  unique_id: 56-72057594982432768
+sensor.dome_motion_detector_luminance:
+  name:
+  platform: zwave
+  unique_id: 56-72057594982449202
+sensor.dome_motion_detector_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 56-72057594983497761
+sensor.dome_motion_detector_burglar:
+  name:
+  platform: zwave
+  unique_id: 56-72057594983497889
+sensor.alarm_type_5:
+  name:
+  platform: zwave
+  unique_id: 57-72057595000274945
+sensor.alarm_level_5:
+  name:
+  platform: zwave
+  unique_id: 57-72057595000274961
+binary_sensor.sensor_3:
+  name:
+  platform: zwave
+  unique_id: 57-72057594999209984
+sensor.dome_motion_detector_luminance_2:
+  name:
+  platform: zwave
+  unique_id: 57-72057594999226418
+sensor.dome_motion_detector_sourcenodeid_2:
+  name:
+  platform: zwave
+  unique_id: 57-72057595000274977
+sensor.dome_motion_detector_burglar_2:
+  name:
+  platform: zwave
+  unique_id: 57-72057595000275105

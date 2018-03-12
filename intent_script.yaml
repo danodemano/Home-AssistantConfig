@@ -36,3 +36,10 @@ amzn1.ask.skill.abf3a7f8-ce07-40db-8ef8-866e8c2a7409:
   speech:
     type: plain
     text: Current outside temperature is {{ states.sensor.pws_temp_f.state_with_unit }}!
+amzn1.ask.skill.92deb925-7ca4-4192-94c2-60539585e01a:
+  action:
+    service: script.turn_on
+    entity_id: script.front_walk_camera_pop
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml

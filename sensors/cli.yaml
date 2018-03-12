@@ -31,6 +31,10 @@
   command: 'python3 /scripts/kraken_ripple.py'
   unit_of_measurement: "USD"
 - platform: command_line
+  name: "ETH to USD"
+  command: 'python3 /scripts/kraken_eth.py'
+  unit_of_measurement: "USD"
+- platform: command_line
   name: "Speedtest Download"
   command: '/scripts/parse_speedtest.sh download'
   unit_of_measurement: "Mbit/s"

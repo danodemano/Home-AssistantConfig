@@ -39,6 +39,7 @@ include:
     - sensor.xrp_to_usd
     - sensor.market_price
     - sensor.btc_to_usd
+    - sensor.eth_to_usd
     - sensor.dark_sky_cloud_coverage
     - sensor.dark_sky_wind_speed
     - sensor.climate_main_battery

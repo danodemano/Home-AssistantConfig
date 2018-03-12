@@ -26,8 +26,9 @@ default_view:
    - device_tracker.nick_phone
    - device_tracker.dan2_owntracks
    - device_tracker.shelley_owntracks
-   - sensor.market_price
+   - sensor.btc_to_usd
    - sensor.xrp_to_usd
+   - sensor.eth_to_usd
    - sensor.430_walnutview_dr
    - binary_sensor.iss
    - camera.usps_home_mail
@@ -551,6 +552,7 @@ random:
   - group.bayesian
   - group.misc_stuff
   - group.oomi_test
+  - group.dome_test
   - light.master_1
   - light.master_2
   - remote.den
@@ -582,6 +584,14 @@ oomi_test:
   - binary_sensor.sensor
   - sensor.alarm_level_2
   - sensor.alarm_type_2
+
+dome_test:
+  name: Dome Test
+  control: hidden
+  entities:
+  - sensor.dome_motion_detector_burglar_2
+  - sensor.dome_motion_detector_luminance_2
+  - sensor.dome_motion_detector_sourcenodeid_2
 
 snow_emergencies:
   name: Snow Emergencies

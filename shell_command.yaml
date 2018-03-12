@@ -20,3 +20,4 @@ wifi_nick_unthrottle: php /scripts/ubnt/change_user_group.php 59ddec4ed5de1d3967
 wifi_nick_unthrottle_tablet: php /scripts/ubnt/change_user_group.php 59e919a3d5de1d39674a6893 default
 wifi_shannon_enable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d true
 wifi_shannon_disable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d false
+front_walk_camera: /scripts/show_camera.sh 1
