@@ -265,6 +265,14 @@ kids_override_off:
   sequence:
     - service: homeassistant.turn_off
       entity_id: input_boolean.kids_override
+video_pop_on:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.enable_video_pop
+video_pop_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.enable_video_pop
 
 reset_kwh:
   sequence:
@@ -275,3 +283,15 @@ front_walk_camera_pop:
   alias: "Front Walk Camera Pop"
   sequence:
     - service: shell_command.front_walk_camera
+driveway_camera_pop:
+  alias: "Driveway Camera Pop"
+  sequence:
+    - service: shell_command.driveway_camera
+patio_camera_pop:
+  alias: "Patio Camera Pop"
+  sequence:
+    - service: shell_command.patio_camera
+backyard_camera_pop:
+  alias: "Backyard Camera Pop"
+  sequence:
+    - service: shell_command.backyard_camera

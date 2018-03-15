@@ -1034,3 +1034,27 @@ sensor.dome_motion_detector_burglar_2:
   name:
   platform: zwave
   unique_id: 57-72057595000275105
+sensor.alarm_type_6:
+  name:
+  platform: zwave
+  unique_id: 58-72057595017052161
+sensor.alarm_level_6:
+  name:
+  platform: zwave
+  unique_id: 58-72057595017052177
+binary_sensor.sensor_4:
+  name:
+  platform: zwave
+  unique_id: 58-72057595015987200
+sensor.mailbox_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 58-72057595017052193
+sensor.mailbox_access_control:
+  name:
+  platform: zwave
+  unique_id: 58-72057595017052305
+switch.switch:
+  name:
+  platform: zwave
+  unique_id: 59-72057595032584192

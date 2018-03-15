@@ -43,3 +43,24 @@ amzn1.ask.skill.92deb925-7ca4-4192-94c2-60539585e01a:
   speech:
     type: plain
     text: !include alexa_confirm.yaml
+amzn1.ask.skill.445c2bb0-4046-4968-ae85-4f59bfd00d2a:
+  action:
+    service: script.turn_on
+    entity_id: script.driveway_camera_pop
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml
+amzn1.ask.skill.46b6ee31-111d-46f6-8005-af2303e07bc6:
+  action:
+    service: script.turn_on
+    entity_id: script.patio_camera_pop
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml
+amzn1.ask.skill.75a9b99e-3da1-49b8-8ab1-2206d2386e96:
+  action:
+    service: script.turn_on
+    entity_id: script.backyard_camera_pop
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml

@@ -29,3 +29,10 @@
         service: script.kids_override_on
       turn_off:
         service: script.kids_override_off
+    video_pop:
+      value_template: '{{ states.input_boolean.enable_video_pop.state }}'
+      friendly_name: 'Enable Video Pop'
+      turn_on:
+        service: script.video_pop_on
+      turn_off:
+        service: script.video_pop_off

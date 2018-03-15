@@ -3,7 +3,7 @@ temps:
   entities:
     - sensor.den_temperature
     - sensor.main_thermostat_temperature
-    - sensor.pws_temp_f
+    - sensor.outside_temp
   hours_to_show: 24
   refresh: 300
 humidity:
@@ -17,7 +17,7 @@ humidity:
 temp_compare:
   name: "Temperature Comparison"
   entities:
-    - sensor.pws_temp_f
-    - sensor.pws_temp_f_2
+    - sensor.outside_temp
+    - sensor.brian_temp
   hours_to_show: 24
   refresh: 300

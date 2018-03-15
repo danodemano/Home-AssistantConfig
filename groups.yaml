@@ -43,8 +43,15 @@ security:
    - group.cameras_group
    - group.doors
    - group.windows
+   - group.security_misc
    - alarm_control_panel.home_alarm
    - group.camera_motion
+
+security_misc:
+  name: Security Misc
+  control: hidden
+  entities:
+    - switch.video_pop
 
 kids:
   name: "Kids"
@@ -77,7 +84,7 @@ vacation:
 
 media:
   name: Media
-  icon: mdi:video
+  icon: mdi:video-input-component
   view: yes
   entities:
   - media_player.brix_pc
@@ -336,8 +343,9 @@ home_electric:
 weather:
  name: Weather
  entities:
- - sensor.pws_temp_f
+ #- sensor.pws_temp_f
  #- sensor.pws_relative_humidity
+ - sensor.outside_temp
  - sensor.outside_humidity
  - sensor.pws_alerts
  - sensor.pws_weather

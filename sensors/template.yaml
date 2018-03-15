@@ -374,4 +374,20 @@
              {{(states.sensor.pws_relative_humidity_2.state)}}
           {%- else -%}
              nan
-          {%- endif -%}     
+          {%- endif -%}
+    outside_temp:
+      friendly_name: "Outside Temperature"
+      value_template: >-
+          {%- if states.sensor.pws_temp_f.state|float >= -50 and states.sensor.pws_temp_f.state|float <= 150 -%}
+             {{(states.sensor.pws_temp_f.state)}}
+          {%- else -%}
+             nan
+          {%- endif -%}   
+    brian_temp:
+      friendly_name: "Brian Temperature"
+      value_template: >-
+          {%- if states.sensor.pws_temp_f.state_2|float >= -50 and states.sensor.pws_temp_f_2.state|float <= 150 -%}
+             {{(states.sensor.pws_temp_f_2.state)}}
+          {%- else -%}
+             nan
+          {%- endif -%}

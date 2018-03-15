@@ -1,0 +1,60 @@
+- alias: 'Pop front walk cam on motion'
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_frontwalk
+      from: 'off'
+      to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_video_pop
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.front_walk_camera_pop
+- alias: 'Pop driveway cam on motion'
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_driveway
+      from: 'off'
+      to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_video_pop
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.driveway_camera_pop
+- alias: 'Pop backyard cam on motion'
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_backyard
+      from: 'off'
+      to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_video_pop
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.backyard_camera_pop
+- alias: 'Pop patio cam on motion'
+  trigger:
+    - platform: state
+      entity_id: binarysensor.blue_iris_patio
+      from: 'off'
+      to: 'on'
+  condition:
+    condition: state
+    entity_id: input_boolean.enable_video_pop
+    state: 'on'
+  action:
+    service: script.turn_on
+    entity_id: script.patio_camera_pop
+#- alias: 'Pop from walk cam test'
+#  trigger:
+#    - platform: numeric_state
+#      entity_id: sensor.dome_motion_detector_burglar_2
+#      above: 7
+#  action:
+#    service: script.turn_on
+#    entity_id: script.front_walk_camera_pop

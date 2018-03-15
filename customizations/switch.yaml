@@ -109,3 +109,6 @@ switch.vacation_mode:
 switch.kids_override:
   icon: mdi:debug-step-over
   emulated_hue_hidden: true
+switch.video_pop:
+  icon: mdi:video
+  emulated_hue_hidden: true
