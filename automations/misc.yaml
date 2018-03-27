@@ -106,3 +106,19 @@
   - event_data: {}
     event_type: ''
     platform: event
+
+- id: '15033356445646'
+  alias: wallmote test
+  trigger:
+  - event_data:
+      entity_id: zwave.wallmote
+      scene_id: 1
+      scene_data: 0
+    event_type: zwave.scene_activated
+    platform: event
+  condition: []
+  action:
+    service: notify.dantext
+    data_template:
+      message: >
+        Testing!

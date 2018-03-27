@@ -1058,3 +1058,83 @@ switch.switch:
   name:
   platform: zwave
   unique_id: 59-72057595032584192
+binary_sensor.sensor_5:
+  name:
+  platform: zwave
+  unique_id: 60-72057595049541632
+sensor.alarm_type_7:
+  name:
+  platform: zwave
+  unique_id: 60-72057595050606593
+sensor.alarm_level_7:
+  name:
+  platform: zwave
+  unique_id: 60-72057595050606609
+sensor.vision_zg8101_garage_door_detector_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 60-72057595050606625
+sensor.vision_zg8101_garage_door_detector_burglar:
+  name:
+  platform: zwave
+  unique_id: 60-72057595050606753
+sensor.alarm_type_8:
+  name:
+  platform: zwave
+  unique_id: 61-72057595067383809
+sensor.alarm_level_8:
+  name:
+  platform: zwave
+  unique_id: 61-72057595067383825
+switch.switch_2:
+  name:
+  platform: zwave
+  unique_id: 61-72057595066138624
+sensor.aeotec_zw130_wallmote_quad_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 61-72057595067383841
+sensor.aeotec_zw130_wallmote_quad_power_management:
+  name:
+  platform: zwave
+  unique_id: 61-72057595067383985
+sensor.alarm_type_9:
+  name:
+  platform: zwave
+  unique_id: 62-72057595084161025
+sensor.alarm_level_9:
+  name:
+  platform: zwave
+  unique_id: 62-72057595084161041
+binary_sensor.vision_zd2102_eu_doorwindow_sensor_sensor_2:
+  name:
+  platform: zwave
+  unique_id: 62-72057595083096064
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_2:
+  name:
+  platform: zwave
+  unique_id: 62-72057595084161057
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control_2:
+  name:
+  platform: zwave
+  unique_id: 62-72057595084161169
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar_2:
+  name:
+  platform: zwave
+  unique_id: 62-72057595084161185
+sensor.vision_zd2102_eu_doorwindow_sensor_power_management:
+  name:
+  platform: zwave
+  unique_id: 62-72057595084161201
+sensor.vision_zd2102_eu_doorwindow_sensor_system_2:
+  name:
+  platform: zwave
+  unique_id: 62-72057595084161217
+sensor.vision_zd2102_eu_doorwindow_sensor_appliance_2:
+  name:
+  platform: zwave
+  unique_id: 62-72057595084161265
+sensor.vision_zd2102_eu_doorwindow_sensor_homehealth_2:
+  name:
+  platform: zwave
+  unique_id: 62-72057595084161281

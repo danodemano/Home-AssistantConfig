@@ -239,7 +239,7 @@
     platform: event
     event_type: image_processing.found_plate
     event_data:
-      entity_id: openalpr.driveway
+      entity_id: image_processing.openalpr_driveway
       plate: ESY8722
   action:
     - service: notify.slacknotify
@@ -247,4 +247,4 @@
         message: 'Shelley Home!'
         data:
           file:
-            url: http://192.168.53.116/snap.jpeg
+            url: http://192.168.53.110/snap.jpeg
