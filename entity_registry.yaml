@@ -1222,7 +1222,7 @@ switch.front_outside_lights:
   name:
   platform: zwave
   unique_id: 67-72057595166801920
-switch.switch_3:
+switch.front_walk_lights:
   name:
   platform: zwave
   unique_id: 68-72057595183579136

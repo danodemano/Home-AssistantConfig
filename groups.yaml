@@ -133,9 +133,8 @@ cameras_group:
 outdoor_lights:
  name: Outdoor Lights
  entities:
-   - switch.front_walk_lights_31
+   - switch.front_walk_lights
    - switch.patio
-   #- switch.front_outside_lights_140
    - light.outside
 
 pets:
@@ -180,8 +179,9 @@ living_area:
  control: hidden
  entities:
   - light.dining_room
-  - switch.kids_tv_38
+  - switch.kids_tv
   - switch.living_room
+  - switch.lr_dry_sink
 
 den_area:
  name: "Den Area"
