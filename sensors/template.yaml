@@ -28,6 +28,18 @@
       friendly_name: 'Hot Water Heater'
       unit_of_measurement: "W"
       value_template: '{% if states.switch.hot_water_heater_19.state %}{{ states.switch.hot_water_heater_19.attributes.current_power_w|round }}{% endif %}'
+    home_watts_total:
+      friendly_name: 'Home Power Total'
+      unit_of_measurement: "W"
+      value_template: "{{ states('sensor.home_energy_meter_power')|round + states('sensor.home_energy_meter_power_2')|round }}"
+    home_current_total:
+      friendly_name: 'Home Current Total'
+      unit_of_measurement: "A"
+      value_template: "{{ states('sensor.home_energy_meter_current')|round + states('sensor.home_energy_meter_current_2')|round }}"
+    home_energy_total:
+      friendly_name: 'Home Energy Total'
+      unit_of_measurement: "kWh"
+      value_template: "{{ states('sensor.home_energy_meter_energy')|round + states('sensor.home_energy_meter_energy_2')|round }}"
     climate_main_heat_set_point:
       friendly_name: 'Heat Set Point'
       unit_of_measurement: '°F'

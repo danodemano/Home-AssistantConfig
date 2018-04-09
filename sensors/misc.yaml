@@ -56,41 +56,41 @@
   - precip_today_in
   - alerts
 
-- platform: wunderground
-  api_key: !secret wunderground_api_key
-  pws_id: !secret brian_weather_station
-  monitored_conditions:
-  - weather
-  - temp_f
-  - station_id
-  - feelslike_f
-  - heat_index_f
-  - dewpoint_f
-  - wind_mph
-  - UV
-  - pressure_in
-  - wind_dir
-  - relative_humidity
-  - precip_today_in
-  - alerts
+#- platform: wunderground
+#  api_key: !secret wunderground_api_key
+#  pws_id: !secret brian_weather_station
+#  monitored_conditions:
+#  - weather
+#  - temp_f
+#  - station_id
+#  - feelslike_f
+#  - heat_index_f
+#  - dewpoint_f
+#  - wind_mph
+#  - UV
+#  - pressure_in
+#  - wind_dir
+#  - relative_humidity
+#  - precip_today_in
+#  - alerts
 
-- platform: wunderground
-  api_key: !secret wunderground_api_key
-  pws_id: !secret guy_weather_station
-  monitored_conditions:
-  - weather
-  - temp_f
-  - station_id
-  - feelslike_f
-  - heat_index_f
-  - dewpoint_f
-  - wind_mph
-  - UV
-  - pressure_in
-  - wind_dir
-  - relative_humidity
-  - precip_today_in
-  - alerts
+#- platform: wunderground
+#  api_key: !secret wunderground_api_key
+#  pws_id: !secret guy_weather_station
+#  monitored_conditions:
+#  - weather
+#  - temp_f
+#  - station_id
+#  - feelslike_f
+#  - heat_index_f
+#  - dewpoint_f
+#  - wind_mph
+#  - UV
+#  - pressure_in
+#  - wind_dir
+#  - relative_humidity
+#  - precip_today_in
+#  - alerts
 
 - platform: bitcoin
   display_options:

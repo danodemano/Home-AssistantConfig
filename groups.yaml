@@ -332,10 +332,13 @@ holiday_lights:
 home_electric:
  name: "Home Electric Usage"
  entities:
- - sensor.home_energy_meter_power
+# - sensor.home_energy_meter_power
+ - sensor.home_watts_total
  - sensor.home_energy_meter_voltage
- - sensor.home_energy_meter_current
- - sensor.home_energy_meter_energy
+ - sensor.home_current_total
+ - sensor.home_energy_total
+# - sensor.home_energy_meter_current
+# - sensor.home_energy_meter_energy
 #     - sensor.energy_monitor_current_7_20
 #     - sensor.energy_monitor_energy_7_0
 #     - sensor.energy_monitor_voltage_7_16

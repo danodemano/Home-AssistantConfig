@@ -1138,3 +1138,91 @@ sensor.vision_zd2102_eu_doorwindow_sensor_homehealth_2:
   name:
   platform: zwave
   unique_id: 62-72057595084161281
+sensor.alarm_type_10:
+  name:
+  platform: zwave
+  unique_id: 63-72057595100938241
+sensor.alarm_level_10:
+  name:
+  platform: zwave
+  unique_id: 63-72057595100938257
+binary_sensor.vision_zd2102_eu_doorwindow_sensor_sensor_3:
+  name:
+  platform: zwave
+  unique_id: 63-72057595099873280
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_3:
+  name:
+  platform: zwave
+  unique_id: 63-72057595100938273
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control_3:
+  name:
+  platform: zwave
+  unique_id: 63-72057595100938385
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar_3:
+  name:
+  platform: zwave
+  unique_id: 63-72057595100938401
+sensor.vision_zd2102_eu_doorwindow_sensor_system_3:
+  name:
+  platform: zwave
+  unique_id: 63-72057595100938433
+sensor.vision_zd2102_eu_doorwindow_sensor_appliance_3:
+  name:
+  platform: zwave
+  unique_id: 63-72057595100938481
+sensor.vision_zd2102_eu_doorwindow_sensor_homehealth_3:
+  name:
+  platform: zwave
+  unique_id: 63-72057595100938497
+sensor.alarm_type_11:
+  name:
+  platform: zwave
+  unique_id: 64-72057595117715457
+sensor.alarm_level_11:
+  name:
+  platform: zwave
+  unique_id: 64-72057595117715473
+binary_sensor.vision_zd2102_eu_doorwindow_sensor_sensor_4:
+  name:
+  platform: zwave
+  unique_id: 64-72057595116650496
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_4:
+  name:
+  platform: zwave
+  unique_id: 64-72057595117715489
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control_4:
+  name:
+  platform: zwave
+  unique_id: 64-72057595117715601
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar_4:
+  name:
+  platform: zwave
+  unique_id: 64-72057595117715617
+sensor.vision_zd2102_eu_doorwindow_sensor_power_management_2:
+  name:
+  platform: zwave
+  unique_id: 64-72057595117715633
+sensor.vision_zd2102_eu_doorwindow_sensor_emergency:
+  name:
+  platform: zwave
+  unique_id: 64-72057595117715665
+sensor.vision_zd2102_eu_doorwindow_sensor_clock_2:
+  name:
+  platform: zwave
+  unique_id: 64-72057595117715681
+switch.kids_tv:
+  name:
+  platform: zwave
+  unique_id: 65-72057595133247488
+switch.lr_dry_sink:
+  name:
+  platform: zwave
+  unique_id: 66-72057595150024704
+switch.front_outside_lights:
+  name:
+  platform: zwave
+  unique_id: 67-72057595166801920
+switch.switch_3:
+  name:
+  platform: zwave
+  unique_id: 68-72057595183579136

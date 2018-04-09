@@ -7,10 +7,13 @@ include:
     - sensor.furnace1_watts
     - sensor.furnace2_watts
     - sensor.hot_water_heater_watts
-    - sensor.home_energy_meter_power
-    - sensor.home_energy_meter_energy
+    #- sensor.home_energy_meter_power
+    #- sensor.home_energy_meter_energy
     - sensor.home_energy_meter_voltage
-    - sensor.home_energy_meter_current
+    #- sensor.home_energy_meter_current
+    - sensor.home_watts_total
+    - sensor.home_current_total
+    - sensor.home_energy_total
     - sensor.outside_humidity
     - sensor.pws_temp_f
     - sensor.pws_wind_dir
