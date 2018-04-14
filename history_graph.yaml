@@ -19,5 +19,14 @@ temp_compare:
   entities:
     - sensor.outside_temp
     - sensor.brian_temp
+    - sensor.guy_temp
+  hours_to_show: 24
+  refresh: 300
+humidity_compare:
+  name: "Humidity Comparison"
+  entities:
+    - sensor.outside_humidity
+    - sensor.brian_humidity
+    - sensor.guy_humidity
   hours_to_show: 24
   refresh: 300

@@ -6,4 +6,4 @@ kids_override:
   name: Kids School Automation Override
 enable_video_pop:
   name: Enable Video Pop on Kodi
-  initial: on
+  initial: off
