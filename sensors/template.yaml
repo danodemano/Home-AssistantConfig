@@ -406,7 +406,7 @@
     brian_temp:
       friendly_name: "Brian Temperature"
       value_template: >-
-          {%- if states.sensor.pws_temp_f.state_2|float >= -50 and states.sensor.pws_temp_f_2.state|float <= 150 -%}
+          {%- if states.sensor.pws_temp_f_2.state|float >= -50 and states.sensor.pws_temp_f_2.state|float <= 150 -%}
              {{(states.sensor.pws_temp_f_2.state)}}
           {%- else -%}
              nan
@@ -414,7 +414,7 @@
     guy_temp:
       friendly_name: "Guy Temperature"
       value_template: >-
-          {%- if states.sensor.pws_temp_f.state_3|float >= -50 and states.sensor.pws_temp_f_3.state|float <= 150 -%}
+          {%- if states.sensor.pws_temp_f_3.state|float >= -50 and states.sensor.pws_temp_f_3.state|float <= 150 -%}
              {{(states.sensor.pws_temp_f_3.state)}}
           {%- else -%}
              nan

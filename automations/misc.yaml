@@ -122,3 +122,21 @@
     data_template:
       message: >
         Testing!
+
+- alias: Wallmote - Test
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.aeotec_zw130_wallmote_quad
+      scene_id: 1
+      scene_data: 0
+  action:
+    service: light.toggle
+    entity_id: light.den_2
+#    service: notify.dantext
+#    data_template:
+#      message: >
+#        This is a test!

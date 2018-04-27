@@ -57,7 +57,7 @@
   - alerts
 
 - platform: wunderground
-  api_key: !secret wunderground_api_key
+  api_key: !secret wunderground_api_key_2
   pws_id: !secret brian_weather_station
   monitored_conditions:
   - weather
@@ -75,7 +75,7 @@
   - alerts
 
 - platform: wunderground
-  api_key: !secret wunderground_api_key
+  api_key: !secret wunderground_api_key_3
   pws_id: !secret guy_weather_station
   monitored_conditions:
   - weather

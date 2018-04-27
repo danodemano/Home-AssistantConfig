@@ -1226,3 +1226,15 @@ switch.front_walk_lights:
   name:
   platform: zwave
   unique_id: 68-72057595183579136
+sensor.server_rack_previous_reading_4:
+  name:
+  platform: zwave
+  unique_id: 40-72057594714030354
+sensor.alarm_type_12:
+  name:
+  platform: zwave
+  unique_id: 71-72057595235155969
+sensor.alarm_level_12:
+  name:
+  platform: zwave
+  unique_id: 71-72057595235155985
