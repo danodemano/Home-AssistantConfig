@@ -1,0 +1,70 @@
+Activities
+  -1 - PowerOff
+  33376914 - Movie
+  33376900 - Game
+  33376926 - TV
+
+Device Commands
+  54343264 - LG Den
+    PowerOff
+    PowerOn
+    PowerToggle
+    .
+    -
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    Mute
+    VolumeDown
+    VolumeUp
+    ChannelPrev
+    ChannelDown
+    ChannelUp
+    DirectionDown
+    DirectionLeft
+    DirectionRight
+    DirectionUp
+    OK
+    Stop
+    Play
+    Rewind
+    Pause
+    FastForward
+    Subtitle
+    Back
+    Favorite
+    Sleep
+    Green
+    Red
+    Blue
+    Yellow
+    Guide
+    Info
+    PageDown
+    PageUp
+    Exit
+    Netflix
+    Settings
+    Amazon
+    Home
+    Input
+    InputAv1
+    InputComponent1
+    InputHdmi1
+    InputHdmi2
+    InputHdmi3
+    InputTv
+    In-Start
+    In-Stop
+    QuickAccess
+    SAP
+    ServiceMenu
+    TvVideo
+    UserGuide

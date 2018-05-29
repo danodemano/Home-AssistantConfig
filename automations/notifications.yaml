@@ -4,6 +4,11 @@
     - platform: state
       entity_id: binarysensor.blue_iris_driveway
       to: 'on'
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
   action:
     - service: notify.slacknotify
       data:
@@ -17,6 +22,11 @@
     - platform: state
       entity_id: binarysensor.blue_iris_backyard
       to: 'on'
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
   action:
     - service: notify.slacknotify
       data:
@@ -56,6 +66,11 @@
     - platform: state
       entity_id: binarysensor.blue_iris_frontwalk
       to: 'on'
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
   action:
     - service: notify.slacknotify
       data:
@@ -69,6 +84,11 @@
     - platform: state
       entity_id: binarysensor.blue_iris_garage
       to: 'on'
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
   action:
     - service: notify.slacknotify
       data:
@@ -82,6 +102,11 @@
     - platform: state
       entity_id: binarysensor.blue_iris_gatepatio
       to: 'on'
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
   action:
     - service: notify.slacknotify
       data:
@@ -108,6 +133,11 @@
     - platform: state
       entity_id: binarysensor.blue_iris_patio
       to: 'on'
+  condition:
+    condition: or
+    conditions:
+      - condition: template
+        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
   action:
     - service: notify.slacknotify
       data:

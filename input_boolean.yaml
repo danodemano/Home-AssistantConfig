@@ -4,6 +4,8 @@ holiday_mode:
   name: Toggle for Holiday Mode
 kids_override:
   name: Kids School Automation Override
+kids_mega_override:
+  name: Kids Full Automation Override
 enable_video_pop:
   name: Enable Video Pop on Kodi
   initial: off

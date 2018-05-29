@@ -265,6 +265,14 @@ kids_override_off:
   sequence:
     - service: homeassistant.turn_off
       entity_id: input_boolean.kids_override
+kids_mega_override_on:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.kids_mega_override
+kids_mega_override_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.kids_mega_override
 video_pop_on:
   sequence:
     - service: homeassistant.turn_on

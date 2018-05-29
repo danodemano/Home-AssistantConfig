@@ -29,6 +29,13 @@
         service: script.kids_override_on
       turn_off:
         service: script.kids_override_off
+    kids_mega_override:
+      value_template: '{{ states.input_boolean.kids_mega_override.state }}'
+      friendly_name: 'Kids Mega Override'
+      turn_on:
+        service: script.kids_mega_override_on
+      turn_off:
+        service: script.kids_mega_override_off
     video_pop:
       value_template: '{{ states.input_boolean.enable_video_pop.state }}'
       friendly_name: 'Enable Video Pop'

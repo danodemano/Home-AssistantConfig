@@ -166,3 +166,9 @@ sensor.morrow:
   icon: mdi:snowflake
 sensor.big_walnut_lsd_status:
   icon: mdi:school
+sensor.sensative_unknown_type0003_id000a_luminance:
+  icon: mdi:lightbulb-outline
+  friendly_name: Master Luminance
+sensor.sensative_unknown_type0003_id000a_temperature:
+  icon: mdi:thermometer
+  friendly_name: Master Temperature

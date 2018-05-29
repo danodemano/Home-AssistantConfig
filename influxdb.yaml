@@ -79,6 +79,8 @@ include:
     - sensor.database_size
     - sensor.influxdb_size
     - sensor.zestimate
-    - sensor.us_air_quality_index
+    - sensor.us_air_quality_index_4
     - sensor.allergy_index_today
     - sun.sun
+    - sensor.sensative_unknown_type0003_id000a_luminance
+    - sensor.sensative_unknown_type0003_id000a_temperature

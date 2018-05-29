@@ -21,7 +21,7 @@ default_view:
    - sensor.moon
    - sensor.zestimate
    - sensor.allergy_index_today
-   - sensor.us_air_quality_index
+   - sensor.us_air_quality_index_4
    - device_tracker.shannon_phone
    - device_tracker.nick_phone
    - device_tracker.dan2_owntracks
@@ -206,6 +206,8 @@ master:
 #  - light.master_1
 #  - light.master_2
   - switch.master_night_stuff_42
+  - sensor.sensative_unknown_type0003_id000a_luminance
+  - sensor.sensative_unknown_type0003_id000a_temperature
 
 wol:
  name: 'Wake on LAN'
@@ -426,6 +428,7 @@ kids_misc:
   control: hidden
   entities:
     - switch.kids_override
+    - switch.kids_mega_override
 
 kids_throttle:
   name: "Kids Throttle"

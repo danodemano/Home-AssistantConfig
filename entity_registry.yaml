@@ -1238,3 +1238,351 @@ sensor.alarm_level_12:
   name:
   platform: zwave
   unique_id: 71-72057595235155985
+sensor.us_air_pollution_level_2:
+  name:
+  platform: airvisual
+  unique_id: columbus,ohio,us_pollution_level
+sensor.us_main_pollutant_2:
+  name:
+  platform: airvisual
+  unique_id: columbus,ohio,us_main_pollutant
+sensor.us_air_quality_index_2:
+  name:
+  platform: airvisual
+  unique_id: columbus,ohio,us_aqi
+sensor.us_main_pollutant_3:
+  name:
+  platform: airvisual
+  unique_id: columbus,ohio,usa_main_pollutant
+sensor.us_air_pollution_level_3:
+  name:
+  platform: airvisual
+  unique_id: columbus,ohio,usa_pollution_level
+sensor.us_air_quality_index_3:
+  name:
+  platform: airvisual
+  unique_id: columbus,ohio,usa_aqi
+sensor.us_main_pollutant_4:
+  name:
+  platform: airvisual
+  unique_id: delaware,ohio,usa_main_pollutant
+sensor.us_air_pollution_level_4:
+  name:
+  platform: airvisual
+  unique_id: delaware,ohio,usa_pollution_level
+sensor.us_air_quality_index_4:
+  name:
+  platform: airvisual
+  unique_id: delaware,ohio,usa_aqi
+sensor.pws_alerts:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,alerts
+sensor.pws_wind_mph:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,wind_mph
+sensor.pws_weather:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,weather
+sensor.pws_dewpoint_f:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,dewpoint_f
+sensor.pws_temp_f:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,temp_f
+sensor.pws_relative_humidity:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,relative_humidity
+sensor.pws_precip_today_in:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,precip_today_in
+sensor.pws_uv:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,UV
+sensor.pws_station_id:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,station_id
+sensor.pws_feelslike_f:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,feelslike_f
+sensor.pws_pressure_in:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,pressure_in
+sensor.pws_heat_index_f:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,heat_index_f
+sensor.pws_wind_dir:
+  name:
+  platform: wunderground
+  unique_id: KOHSUNBU11,wind_dir
+sensor.pws_station_id_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,station_id
+sensor.pws_heat_index_f_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,heat_index_f
+sensor.pws_uv_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,UV
+sensor.pws_precip_today_in_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,precip_today_in
+sensor.pws_wind_mph_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,wind_mph
+sensor.pws_dewpoint_f_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,dewpoint_f
+sensor.pws_pressure_in_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,pressure_in
+sensor.pws_temp_f_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,temp_f
+sensor.pws_alerts_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,alerts
+sensor.pws_wind_dir_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,wind_dir
+sensor.pws_weather_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,weather
+sensor.pws_relative_humidity_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,relative_humidity
+sensor.pws_feelslike_f_2:
+  name:
+  platform: wunderground
+  unique_id: KOHJOHNS13,feelslike_f
+sensor.pws_relative_humidity_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,relative_humidity
+sensor.pws_feelslike_f_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,feelslike_f
+sensor.pws_heat_index_f_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,heat_index_f
+sensor.pws_dewpoint_f_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,dewpoint_f
+sensor.pws_precip_today_in_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,precip_today_in
+sensor.pws_station_id_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,station_id
+sensor.pws_pressure_in_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,pressure_in
+sensor.pws_wind_mph_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,wind_mph
+sensor.pws_alerts_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,alerts
+sensor.pws_weather_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,weather
+sensor.pws_wind_dir_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,wind_dir
+sensor.pws_uv_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,UV
+sensor.pws_temp_f_3:
+  name:
+  platform: wunderground
+  unique_id: KOHDELAW51,temp_f
+zwave.aeotec_zw090_zstick_gen5_us:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.norbert_light:
+  name:
+  platform: zwave
+  unique_id: node-39
+zwave.server_rack:
+  name:
+  platform: zwave
+  unique_id: node-40
+zwave.server_rack_environment:
+  name:
+  platform: zwave
+  unique_id: node-41
+zwave.home_energy_meter:
+  name:
+  platform: zwave
+  unique_id: node-42
+zwave.leak_den_1:
+  name:
+  platform: zwave
+  unique_id: node-43
+zwave.leak_den_2:
+  name:
+  platform: zwave
+  unique_id: node-45
+zwave.main_thermostat:
+  name:
+  platform: zwave
+  unique_id: node-46
+zwave.hank_unknown_type0101_id0004:
+  name:
+  platform: zwave
+  unique_id: node-47
+zwave.vision_unknown_type201a_id1aa4:
+  name:
+  platform: zwave
+  unique_id: node-48
+zwave.safe:
+  name:
+  platform: zwave
+  unique_id: node-49
+zwave.coffee_pot:
+  name:
+  platform: zwave
+  unique_id: node-50
+zwave.oomi_ft100_multisensor_6:
+  name:
+  platform: zwave
+  unique_id: node-51
+zwave.dining_room:
+  name:
+  platform: zwave
+  unique_id: node-52
+zwave.living_room:
+  name:
+  platform: zwave
+  unique_id: node-53
+zwave.patio:
+  name:
+  platform: zwave
+  unique_id: node-54
+zwave.door_back_sliding:
+  name:
+  platform: zwave
+  unique_id: node-55
+zwave.dome_motion_detector:
+  name:
+  platform: zwave
+  unique_id: node-57
+zwave.mailbox:
+  name:
+  platform: zwave
+  unique_id: node-58
+zwave.holiday_lights:
+  name:
+  platform: zwave
+  unique_id: node-59
+zwave.vision_zg8101_garage_door_detector:
+  name:
+  platform: zwave
+  unique_id: node-60
+zwave.aeotec_zw130_wallmote_quad:
+  name:
+  platform: zwave
+  unique_id: node-61
+zwave.vision_zd2102_eu_doorwindow_sensor:
+  name:
+  platform: zwave
+  unique_id: node-64
+zwave.kids_tv:
+  name:
+  platform: zwave
+  unique_id: node-65
+zwave.lr_dry_sink:
+  name:
+  platform: zwave
+  unique_id: node-66
+zwave.front_outside_lights:
+  name:
+  platform: zwave
+  unique_id: node-67
+zwave.front_walk_lights:
+  name:
+  platform: zwave
+  unique_id: node-68
+zwave.first_alert_zcombo_smoke_and_carbon_monoxide_detector:
+  name:
+  platform: zwave
+  unique_id: node-71
+sensor.alarm_type_13:
+  name:
+  platform: zwave
+  unique_id: 72-72057595251933185
+sensor.alarm_level_13:
+  name:
+  platform: zwave
+  unique_id: 72-72057595251933201
+zwave.sensative_unknown_type0003_id000a:
+  name:
+  platform: zwave
+  unique_id: node-72
+binary_sensor.sensative_unknown_type0003_id000a_sensor:
+  name:
+  platform: zwave
+  unique_id: 72-72057595250868224
+sensor.sensative_unknown_type0003_id000a_temperature:
+  name:
+  platform: zwave
+  unique_id: 72-72057595250884626
+sensor.sensative_unknown_type0003_id000a_luminance:
+  name:
+  platform: zwave
+  unique_id: 72-72057595250884658
+sensor.sensative_unknown_type0003_id000a_moisture:
+  name:
+  platform: zwave
+  unique_id: 72-72057595250885106
+sensor.sensative_unknown_type0003_id000a_sourcenodeid:
+  name:
+  platform: zwave
+  unique_id: 72-72057595251933217
+sensor.sensative_unknown_type0003_id000a_heat:
+  name:
+  platform: zwave
+  unique_id: 72-72057595251933297
+sensor.sensative_unknown_type0003_id000a_flood:
+  name:
+  platform: zwave
+  unique_id: 72-72057595251933313
+sensor.sensative_unknown_type0003_id000a_burglar:
+  name:
+  platform: zwave
+  unique_id: 72-72057595251933345

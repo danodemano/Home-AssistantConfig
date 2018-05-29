@@ -145,6 +145,10 @@
   api_key: !secret airvisual_api_key
   monitored_conditions:
     - us
+  city: delaware
+  state: ohio
+  country: usa
+  show_on_map: false
 
 - platform: sense
   email: !secret sense_email

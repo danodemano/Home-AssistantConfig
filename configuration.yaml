@@ -40,7 +40,7 @@ http:
 updater:
 
 # Discover some devices automatically
-#discovery:
+discovery:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
@@ -137,6 +137,14 @@ customizer:
 #   title: 'Node-Red'
 #   icon: 'mdi:shuffle-variant'
 #   url: 'http://192.168.9.200:1880/'
+
+#MQTT discovery broker
+#mqtt:
+#  discovery: true
+#  discovery_prefix: homeassistant
+
+mqtt:
+  broker: 192.168.9.56
 
 linode:
   access_token: !secret linode_api_key
