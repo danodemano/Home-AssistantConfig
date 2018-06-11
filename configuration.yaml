@@ -89,6 +89,12 @@ recorder: !include recorder.yaml
 #    host: 192.168.9.199
 #    name: Den
 
+light:
+  - platform: flux_led
+    devices:
+      192.168.9.216:
+        name: den_tv_leds
+
 hue:
   bridges:
     - host: 192.168.9.204
@@ -129,8 +135,8 @@ alarm_control_panel:
     code: !secret alarm_code
     delay_time: 30
 
-customizer:
-  custom_ui: local
+#customizer:
+#  custom_ui: local
 
 #panel_iframe:
 # nodered:

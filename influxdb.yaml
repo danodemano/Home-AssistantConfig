@@ -31,6 +31,8 @@ include:
     - sensor.pws_wind_mph_3
     - sensor.climate_main_temperature2
     - sensor.main_thermostat_relative_humidity_31_5_3
+    - sensor.main_thermostat_temperature
+    - sensor.main_thermostat_relative_humidity
     - sensor.gecko_humidity
     - sensor.gecko_temperature
     - sensor.server_rack_environment_relative_humidity
@@ -84,3 +86,7 @@ include:
     - sun.sun
     - sensor.sensative_unknown_type0003_id000a_luminance
     - sensor.sensative_unknown_type0003_id000a_temperature
+    - sensor.usps_home_mail
+    - sensor.usps_home_packages
+    - sensor.ups_home
+    - sensor.fedex_home

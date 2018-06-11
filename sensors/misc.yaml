@@ -159,3 +159,6 @@
     - weekly_usage
     - monthly_usage
     - yearly_usage
+
+- platform: season
+  type: astronomical
