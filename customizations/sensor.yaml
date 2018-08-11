@@ -172,3 +172,15 @@ sensor.sensative_unknown_type0003_id000a_luminance:
 sensor.sensative_unknown_type0003_id000a_temperature:
   icon: mdi:thermometer
   friendly_name: Master Temperature
+sensor.shelley_duration_to_home:
+  friendly_name: Shelley From Home
+  icon: mdi:car
+sensor.shelley_current_location:
+  friendly_name: Shelley Location
+  icon: mdi:map-marker
+sensor.dan_duration_to_home:
+  friendly_name: Dan From home
+  icon: mdi:car
+sensor.dan_current_location:
+  friendly_name: Dan Location
+  icon: mdi:map-marker

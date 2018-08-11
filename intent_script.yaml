@@ -36,13 +36,13 @@ amzn1.ask.skill.abf3a7f8-ce07-40db-8ef8-866e8c2a7409:
   speech:
     type: plain
     text: Current outside temperature is {{ states.sensor.pws_temp_f.state_with_unit }}!
-amzn1.ask.skill.92deb925-7ca4-4192-94c2-60539585e01a:
-  action:
-    service: script.turn_on
-    entity_id: script.front_walk_camera_pop
-  speech:
-    type: plain
-    text: !include alexa_confirm.yaml
+#amzn1.ask.skill.92deb925-7ca4-4192-94c2-60539585e01a:
+#  action:
+#    service: script.turn_on
+#    entity_id: script.front_walk_camera_pop
+#  speech:
+#    type: plain
+#    text: !include alexa_confirm.yaml
 amzn1.ask.skill.445c2bb0-4046-4968-ae85-4f59bfd00d2a:
   action:
     service: script.turn_on
@@ -64,3 +64,10 @@ amzn1.ask.skill.75a9b99e-3da1-49b8-8ab1-2206d2386e96:
   speech:
     type: plain
     text: !include alexa_confirm.yaml
+amzn1.ask.skill.9572c7de-5092-4e57-9054-030fe8728dc9:
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.200k_celebration
+  speech:
+    type: plain
+    text: "Congratulations r home automation!  Time to party!!!"

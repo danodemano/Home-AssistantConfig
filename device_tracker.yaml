@@ -4,6 +4,9 @@
     shelley_ping: 192.168.55.152
     dan_ping: 192.168.9.69
     dan2_ping: 192.168.55.153
+    ps3: 192.168.52.12
+    ps4: 192.168.52.11
+    lgtv: 192.168.9.65
 #    nick: 192.168.51.101
 #    shannon: 192.168.51.107
 - platform: owntracks_http

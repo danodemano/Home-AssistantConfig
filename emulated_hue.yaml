@@ -1,0 +1,4 @@
+host_ip: 192.168.9.200
+exposed_domains:
+  - light
+  - switch

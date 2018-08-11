@@ -1,7 +1,7 @@
 #Required values are to be piped to InfluxDB
 #Only keep the minimum needed in MySQL for quick reference.
-#purge_interval: 1
-#purge_keep_days: 2
+purge_interval: 1
+purge_keep_days: 2
 db_url: !secret recorder_db_url
 exclude:
   domains:

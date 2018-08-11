@@ -119,3 +119,9 @@ switch.kids_mega_override:
 switch.video_pop:
   icon: mdi:video
   emulated_hue_hidden: true
+switch.neo_coolcam_power_plug_12a_switch:
+  icon: mdi:ceiling-light
+  emulated_hue_hidden: true
+switch.neo_coolcam_power_plug_12a_switch_2:
+  icon: mdi:radiator
+  emulated_hue_hidden: true

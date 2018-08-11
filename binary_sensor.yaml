@@ -42,3 +42,5 @@
       prob_given_false: 0.4
       platform: 'state'
       to_state: 'home'
+- platform: uptimerobot
+  api_key: !secret uptimerobot_api_key

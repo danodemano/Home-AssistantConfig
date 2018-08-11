@@ -1,31 +1,44 @@
 - platform: cert_expiry
   host: www.danodemano.com
   name: danodemano.com
+  port: 443
 - platform: cert_expiry
   host: www.madhooker.com
   name: madhooker.com
+  port: 443
 - platform: cert_expiry
   name: campohioadventure.com
   host: www.campohioadventure.com
+  port: 443
 - platform: cert_expiry
   name: danbunyard.com
   host: www.danbunyard.com
+  port: 443
+- platform: cert_expiry
+  name: danoniot.com
+  host: www.danoniot.com
+  port: 443
 - platform: cert_expiry
   name: ha.danodemano.com
   host: ha.danodemano.com
+  port: 443
 - platform: cert_expiry
   name: blueiris.danodemano.com
   host: blueiris.danodemano.com
+  port: 443
 - platform: cert_expiry
   name: nextcloud.danodemano.com
   host: nextcloud.danodemano.com
+  port: 443
 - platform: cert_expiry
   name: grafana.danodemano.com
   host: grafana.danodemano.com
+  port: 443
 - platform: cert_expiry
   name: qnap.danodemano.com
   host: qnap.danodemano.com
+  port: 443
 - platform: cert_expiry
   name: gateway.danodemano.com
-  port: 4444
   host: gateway.danodemano.com
+  port: 4444

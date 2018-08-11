@@ -9,3 +9,6 @@ kids_mega_override:
 enable_video_pop:
   name: Enable Video Pop on Kodi
   initial: off
+200k_celebration:
+  name: /r/homeautomation 200k!
+  initial: off

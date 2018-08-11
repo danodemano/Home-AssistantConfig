@@ -3,6 +3,7 @@
   name: Brix PC
   username: !secret kodi_user
   password: !secret kodi_pass
+  enable_websocket: false
   turn_off_action:
     service: media_player.kodi_call_method
     data:
@@ -11,3 +12,7 @@
 - platform: onkyo
   host: 192.168.52.10
   name: Onkyo Den
+- platform: alexa
+  email: !secret amazon_email
+  password: !secret amazon_password
+  url: amazon.com

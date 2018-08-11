@@ -83,3 +83,11 @@
           state: on
           transition: 2
           brightness: 255
+
+- name: Open the Garage Door
+  entities:
+    cover.garage_door_opener: on
+
+- name: Close the Garage Door
+  entities:
+    cover.garage_door_opener: off

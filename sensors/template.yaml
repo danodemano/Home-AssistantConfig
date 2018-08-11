@@ -419,3 +419,23 @@
           {%- else -%}
              nan
           {%- endif -%}
+    weather_alert:
+      friendly_name: "Weather Alert"
+      value_template: >-
+          {%- if states.sensor.pws_alerts.attributes.type != null -%}
+             {{(states.sensor.pws_alerts.attributes.type)}}
+          {%- else -%}
+             nan
+          {%- endif -%}
+    shelley_duration_to_home:
+      value_template: >-
+        {{ states.sensor.shelley_location_to_home.attributes.duration }}
+    shelley_current_location:
+      value_template: >-
+        {% if states.sensor.shelley_location_to_home.state %}{{ states.sensor.shelley_location_to_home.attributes.origin_addresses | replace("['","") | replace("']","")}}{% endif %}
+    dan_duration_to_home:
+      value_template: >-
+        {{ states.sensor.dan_location_to_home.attributes.duration }}
+    dan_current_location:
+      value_template: >-
+        {% if states.sensor.dan_location_to_home.state %}{{ states.sensor.dan_location_to_home.attributes.origin_addresses | replace("['","") | replace("']","")}}{% endif %}

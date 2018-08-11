@@ -17,6 +17,7 @@ default_view:
    - group.holidays
    - group.school_closings
    - group.snow_emergencies
+   - group.family_locations
    - sun.sun
    - sensor.moon
    - sensor.zestimate
@@ -102,6 +103,7 @@ servers:
    - group.qnap_12tb
    - group.qnap_vm
    - group.certs
+   - group.uptimes
    - group.server_grafana
 
 system_health:
@@ -146,6 +148,8 @@ pets:
    - switch.snake_heaters_124
    - light.gecko_heater_67
    - switch.gecko_ceramic_heater_132
+   - switch.neo_coolcam_power_plug_12a_switch
+   - switch.neo_coolcam_power_plug_12a_switch_2
    - sensor.gecko_humidity
    - sensor.gecko_temperature
 
@@ -173,6 +177,7 @@ hvac_main:
 #   - sensor.inside_humidity
 #   - climate.main_thermostat_39
     - climate.main_thermostat_heating_1
+    - climate.main_thermostat_cooling_1
 
 living_area:
  name: 'Dining/Living Area'
@@ -530,6 +535,24 @@ certs:
   - sensor.qnapdanodemanocom
   - sensor.gatewaydanodemanocom
 
+uptimes:
+  name: Uptime Robot
+  entities:
+  - binary_sensor.12tb_qnap
+  - binary_sensor.blue_iris
+  - binary_sensor.bunyard_pics
+  - binary_sensor.consolidated_electric_web
+  - binary_sensor.danodemano_mail
+  - binary_sensor.danodemano_ssh
+  - binary_sensor.danodemano_web
+  - binary_sensor.ebill
+  - binary_sensor.grafana
+  - binary_sensor.home_assistant
+  - binary_sensor.home_internet
+  - binary_sensor.madhooker_web
+  - binary_sensor.nextcloud
+  - binary_sensor.routerboard
+
 server_grafana:
   name: Server Grafana
   entities:
@@ -622,3 +645,11 @@ school_closings:
   control: hidden
   entities:
   - sensor.big_walnut_lsd_status
+
+family_locations:
+  name: Family Locations
+  entities:
+  - sensor.shelley_duration_to_home
+  - sensor.shelley_current_location
+  - sensor.dan_duration_to_home
+  - sensor.dan_current_location
