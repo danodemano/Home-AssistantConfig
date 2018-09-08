@@ -303,3 +303,8 @@ backyard_camera_pop:
   alias: "Backyard Camera Pop"
   sequence:
     - service: shell_command.backyard_camera
+
+front_walk_trigger:
+  alias: "Front Walk Trigger Record"
+  sequence:
+    - service: shell_command.trigger_fw

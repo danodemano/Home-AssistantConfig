@@ -30,6 +30,8 @@ http:
 #  ssl_certificate: /etc/ssl/localcerts/fullchain.pem
 #  ssl_key: /etc/ssl/localcerts/privkey.pem
   use_x_forwarded_for: True
+  trusted_proxies:
+    - 192.168.54.3
   ip_ban_enabled: true
   login_attempts_threshold: 10
   trusted_networks:
@@ -109,9 +111,9 @@ remote:
 #    password: !secret usps_password
 
 #Google Calendar integration
-google:
-  client_id: !secret google_client_id
-  client_secret: !secret google_client_secret
+#google:
+#  client_id: !secret google_client_id
+#  client_secret: !secret google_client_secret
 
 #IFTTT Integration
 ifttt:

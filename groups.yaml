@@ -595,6 +595,7 @@ random:
   - light.master_2
   - remote.den
   - light.den_tv_leds
+  - script.front_walk_trigger
 
 test_plug:
   name: Test Plug

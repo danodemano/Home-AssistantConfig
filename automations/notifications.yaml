@@ -167,6 +167,8 @@
     - service: notify.push
       data:
         message: "Front Door Opened"
+    - service: shell_command.trigger_lr
+    - service: shell_command.trigger_fw
 - id: sliding_door_opened
   alias: Sliding Door Alert
   trigger:
@@ -188,7 +190,8 @@
             url: http://192.168.53.118/snap.jpeg
     - service: notify.push
       data:
-        message: "Front Door Opened"
+        message: "Sliding Door Opened"
+    - service: shell_command.trigger_pa
 - id: craft_to_drive_door_opened
   alias: Craft to Drive Door Alert
   trigger:
@@ -205,6 +208,8 @@
     - service: notify.push
       data:
         message: "Craft to Drive Door Opened"
+    - service: shell_command.trigger_pa
+    - service: shell_command.trigger_cr
 - id: craft_to_patio_opened
   alias: Craft to Patio Door Alert
   trigger:
@@ -221,6 +226,8 @@
     - service: notify.push
       data:
         message: "Craft to Patio Door Opened"
+    - service: shell_command.trigger_pa
+    - service: shell_command.trigger_cr
 - id: garage_door_opened
   alias: Garage Door Alert
   trigger:
@@ -249,6 +256,8 @@
     - service: notify.push
       data:
         message: "Garage Door Opened"
+    - service: shell_command.trigger_ga
+    - service: shell_command.trigger_dw
 #- id: basement_door_opened
 #  alias: Basement Door Alert
 #  trigger:
@@ -263,6 +272,17 @@
 #        data:
 #          displaytime: 20000
 #          icon: "warning"
+- id: basement_door_opened
+  alias: Basement Door Alert
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.door_basement_52
+      to: 'on'
+  action:
+    - service: media_player.alexa_tts
+      data_template:
+        entity_id: media_player.den
+        message: "The outside temperature is {{states ('sensor.dark_sky_apparent_temperature') }} degrees ... Command execution, complete !"
 - id: alert_when_shelley_home
   alias: Alert when Shelley home
   trigger:
