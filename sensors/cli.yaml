@@ -44,3 +44,6 @@
 - platform: command_line
   name: "/r/homeautomation Subsribers"
   command: 'php /scripts/hasub_sub.php'
+- platform: command_line
+  name: "IO Latency"
+  command: '/scripts/disk_io.sh'

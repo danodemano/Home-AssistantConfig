@@ -13,7 +13,7 @@ switch.patio:
 switch.front_outside_lights:
   friendly_name: Front Outside Lights
   icon: mdi:lightbulb
-switch.holiday_lights_148:
+switch.holiday_lights:
   icon: mdi:lightbulb
 switch.living_room:
   friendly_name: Living Room

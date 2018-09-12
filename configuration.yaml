@@ -69,6 +69,7 @@ logger:
 zwave:
   usb_path: /dev/ttyACM0
   network_key: !secret zwave_network_key
+  device_config: !include zwave_device_config.yaml
 
 #For the Amazon Echos
 emulated_hue: !include emulated_hue.yaml

@@ -28,3 +28,516 @@ sensor.vision_zp3111_multisensor_4in1_sourcenodeid_2:
 sensor.vision_zp3111_multisensor_4in1_system:
   ignored: true
   polling_intensity: 0
+sensor.alarm_level_13:
+  ignored: true
+  polling_intensity: 0
+sensor.alarm_type_13:
+  ignored: true
+  polling_intensity: 0
+sensor.sensative_unknown_type0003_id000a_burglar:
+  ignored: true
+  polling_intensity: 0
+sensor.sensative_unknown_type0003_id000a_flood:
+  ignored: true
+  polling_intensity: 0
+sensor.sensative_unknown_type0003_id000a_heat:
+  ignored: true
+  polling_intensity: 0
+sensor.sensative_unknown_type0003_id000a_moisture:
+  ignored: true
+  polling_intensity: 0
+binary_sensor.sensative_unknown_type0003_id000a_sensor:
+  ignored: true
+  polling_intensity: 0
+sensor.sensative_unknown_type0003_id000a_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.norbert_light_current:
+  ignored: true
+  polling_intensity: 0
+sensor.norbert_light_energy:
+  ignored: true
+  polling_intensity: 0
+sensor.norbert_light_power:
+  ignored: true
+  polling_intensity: 0
+sensor.norbert_light_previous_reading_2:
+  ignored: true
+  polling_intensity: 0
+sensor.norbert_light_previous_reading:
+  ignored: true
+  polling_intensity: 0
+sensor.norbert_light_voltage:
+  ignored: true
+  polling_intensity: 0
+sensor.server_rack_previous_reading_4:
+  ignored: true
+  polling_intensity: 0
+sensor.server_rack_previous_reading:
+  ignored: true
+  polling_intensity: 0
+sensor.server_rack_previous_reading_2:
+  ignored: true
+  polling_intensity: 0
+sensor.server_rack_previous_reading_3:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_current:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_energy_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_energy:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_power:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_power_factor:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_previous_reading_5:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_previous_reading_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_previous_reading_6:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_previous_reading_3:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_previous_reading:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_previous_reading_4:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_unknown_type201a_id1aa4_voltage:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_alarm_level_4:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_alarm_type_4:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_appliance_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_burglar_3:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_emergency:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_luminance_3:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_power_management_3:
+  ignored: true
+  polling_intensity: 0
+binary_sensor.vision_zp3111_multisensor_4in1_sensor_4:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_sourcenodeid_3:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_burglar:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_luminance:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_power_management:
+  ignored: true
+  polling_intensity: 0
+binary_sensor.vision_zp3111_multisensor_4in1_sensor:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_220:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_188:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_200:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_245:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_235:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_154:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_178:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_163:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_155:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_141:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_247:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_229:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_196:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_216:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_161:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_193:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_224:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_128:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_175:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_233:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_153:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_221:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_244:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_157:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_170:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_192:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_139:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_222:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_158:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_130:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_168:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_214:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_149:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_189:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_208:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_183:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_126:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_219:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_225:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_129:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_241:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_172:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_205:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_204:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_203:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_148:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_201:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_144:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_173:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_206:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_162:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_160:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_191:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_234:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_134:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_230:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_215:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_238:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_179:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_240:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_210:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_212:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_213:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_138:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_194:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_164:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_151:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_209:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_217:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_171:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_131:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_145:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_202:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_246:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_250:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_249:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_187:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_236:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_242:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_177:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_174:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_135:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_152:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_146:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_147:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_165:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_133:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_182:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_223:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_207:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_218:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_137:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_184:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_150:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_228:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_232:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_156:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_159:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_167:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_226:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_140:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_190:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_248:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_186:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_181:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_239:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_237:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_243:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_185:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_136:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_198:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_143:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_166:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_231:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_142:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_211:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_169:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_195:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_227:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_176:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_132:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_180:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_197:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_199:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_unknown_127:
+  ignored: true
+  polling_intensity: 0

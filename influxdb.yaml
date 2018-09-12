@@ -92,3 +92,7 @@ include:
     - sensor.fedex_home
     - sensor.vision_zp3111_multisensor_4in1_relative_humidity
     - sensor.vision_zp3111_multisensor_4in1_temperature
+    - sensor.io_latency_min
+    - sensor.io_latency_avg
+    - sensor.io_latency_max
+    - sensor.io_latency_sd

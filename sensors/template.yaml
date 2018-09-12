@@ -439,3 +439,20 @@
     dan_current_location:
       value_template: >-
         {% if states.sensor.dan_location_to_home.state %}{{ states.sensor.dan_location_to_home.attributes.origin_addresses | replace("['","") | replace("']","")}}{% endif %}
+
+    io_latency_min:
+      value_template: "{% set list = states.sensor.io_latency.state.split('|') %} {{ list[0] }}"
+      friendly_name: 'IO Latency Min'
+      unit_of_measurement: 'usec'
+    io_latency_avg:
+      value_template: "{% set list = states.sensor.io_latency.state.split('|') %} {{ list[1] }}"
+      friendly_name: 'IO Latency Avg'
+      unit_of_measurement: 'usec'
+    io_latency_max:
+      value_template: "{% set list = states.sensor.io_latency.state.split('|') %} {{ list[2] }}"
+      friendly_name: 'IO Latency Max'
+      unit_of_measurement: 'usec'
+    io_latency_sd:
+      value_template: "{% set list = states.sensor.io_latency.state.split('|') %} {{ list[3] }}"
+      friendly_name: 'IO Latency SD'
+      unit_of_measurement: 'usec'

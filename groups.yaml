@@ -113,6 +113,7 @@ system_health:
   entities:
    - group.battery
    - group.database
+   - group.io_latency
    - sensor.processor_use
    - sensor.disk_use_percent_
    - sensor.memory_use_percent
@@ -326,7 +327,7 @@ holidays:
   name: "Holiday Stuff"
   control: hidden
   entities:
-    - switch.holiday_lights_148
+    - switch.holiday_lights
     - switch.holiday_mode
 
 holiday_lights:
@@ -574,6 +575,14 @@ database:
   - sensor.database_size
   - sensor.influxdb_size
   - script.clean_recorder_db
+
+io_latency:
+  name: IO Latency
+  entities:
+  - sensor.io_latency_min
+  - sensor.io_latency_avg
+  - sensor.io_latency_max
+  - sensor.io_latency_sd
 
 bayesian:
   name: Bayesian Home
