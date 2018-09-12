@@ -90,3 +90,5 @@ include:
     - sensor.usps_home_packages
     - sensor.ups_home
     - sensor.fedex_home
+    - sensor.vision_zp3111_multisensor_4in1_relative_humidity
+    - sensor.vision_zp3111_multisensor_4in1_temperature

@@ -7,26 +7,6 @@
 #  command: '/bin/bash -c "/scripts/veraSensorValue.sh 80 humidity"'
 #  unit_of_measurement: "%"
 - platform: command_line
-  name: "Gecko Temperature"
-  command: '/bin/bash -c "/scripts/veraSensorValue.sh 155 temperature"'
-  unit_of_measurement: "°F"
-- platform: command_line
-  name: "Gecko Humidity"
-  command: '/bin/bash -c "/scripts/veraSensorValue.sh 157 humidity"'
-  unit_of_measurement: "%"
-- platform: command_line
-  name: "Den Temperature"
-  command: '/bin/bash -c "/scripts/veraSensorValue.sh 159 temperature"'
-  unit_of_measurement: "°F"
-- platform: command_line
-  name: "Den Humidity"
-  command: '/bin/bash -c "/scripts/veraSensorValue.sh 161 humidity"'
-  unit_of_measurement: "%"
-- platform: command_line
-  name: "Inside Humidity"
-  command: '/bin/bash -c "/scripts/veraSensorValue.sh 41 humidity"'
-  unit_of_measurement: "%"
-- platform: command_line
   name: "XRP to USD"
   command: 'python3 /scripts/kraken_ripple.py'
   unit_of_measurement: "USD"

@@ -184,3 +184,7 @@ sensor.dan_duration_to_home:
 sensor.dan_current_location:
   friendly_name: Dan Location
   icon: mdi:map-marker
+sensor.vision_zp3111_multisensor_4in1_temperature:
+  icon: mdi:thermometer
+sensor.vision_zp3111_multisensor_4in1_relative_humidity:
+  icon: mdi:water-percent

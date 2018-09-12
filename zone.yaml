@@ -6,9 +6,13 @@
   latitude: !secret shelley_work_lat
   longitude: !secret shelley_work_lon
   radius: 300
-- name: Kids School
-  latitude: !secret kids_school_lat
-  longitude: !secret kids_school_lon
+- name: Shannon School
+  latitude: !secret shannon_school_lat
+  longitude: !secret shannon_school_lon
+  radius: 250
+- name: Nick School
+  latitude: !secret nick_school_lat
+  longitude: !secret nick_school_lon
   radius: 250
 - name: Folks
   latitude: !secret folks_lat
@@ -30,3 +34,7 @@
   latitude: !secret shelley_folks_lat
   longitude: !secret shelley_folks_lon
   radius: 100
+- name: Westerville Rec Center
+  latitude: !secret westerville_rec_center_lat
+  longitude: !secret westerville_rec_center_lon
+  radius: 200

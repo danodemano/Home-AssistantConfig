@@ -1,0 +1,30 @@
+sensor.vision_zp3111_multisensor_4in1_alarm_level_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_alarm_type_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_appliance:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_burglar_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_clock:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_luminance_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_power_management_2:
+  ignored: true
+  polling_intensity: 0
+binary_sensor.vision_zp3111_multisensor_4in1_sensor_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_sourcenodeid_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3111_multisensor_4in1_system:
+  ignored: true
+  polling_intensity: 0

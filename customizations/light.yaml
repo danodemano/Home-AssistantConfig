@@ -1,6 +1,6 @@
 light.dining_room:
   friendly_name: Dining Room Light
-light.gecko_heater_67:
+switch.vision_unknown_type201a_id1aa4_switch:
   icon: mdi:crop-square
   emulated_hue_hidden: true
 light.master_1:

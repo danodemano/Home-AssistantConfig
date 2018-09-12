@@ -146,12 +146,14 @@ pets:
    - switch.norbert_light_switch
    - switch.norbert_heat_130
    - switch.snake_heaters_124
-   - light.gecko_heater_67
-   - switch.gecko_ceramic_heater_132
+   - switch.vision_unknown_type201a_id1aa4_switch
+   - switch.leviton_dzpa12bw_plugin_outlet_switch
    - switch.neo_coolcam_power_plug_12a_switch
    - switch.neo_coolcam_power_plug_12a_switch_2
    - sensor.gecko_humidity
    - sensor.gecko_temperature
+   - sensor.vision_zp3111_multisensor_4in1_relative_humidity
+   - sensor.vision_zp3111_multisensor_4in1_temperature
 
 vacation_mode:
   name: "Vacation Switches"
@@ -586,30 +588,16 @@ random:
   entities:
   - light.hank_unknown_type0101_id0004_level
   - group.couch_plug_stuff
-  - group.test_plug
   - group.bayesian
   - group.misc_stuff
   - group.oomi_test
   - group.dome_test
+  - group.leak_test
   - light.master_1
   - light.master_2
   - remote.den
   - light.den_tv_leds
   - script.front_walk_trigger
-
-test_plug:
-  name: Test Plug
-  control: hidden
-  entities:
-  - switch.vision_unknown_type201a_id1aa4_switch
-  - sensor.vision_unknown_type201a_id1aa4_current
-  - sensor.vision_unknown_type201a_id1aa4_energy
-  - sensor.vision_unknown_type201a_id1aa4_energy_2
-  - sensor.vision_unknown_type201a_id1aa4_power
-  - sensor.vision_unknown_type201a_id1aa4_power_factor
-  - sensor.vision_unknown_type201a_id1aa4_previous_reading
-  - sensor.vision_unknown_type201a_id1aa4_previous_reading_2
-  - sensor.vision_unknown_type201a_id1aa4_voltage
 
 oomi_test:
   name: Oomi Test
@@ -632,6 +620,17 @@ dome_test:
   - sensor.dome_motion_detector_burglar_2
   - sensor.dome_motion_detector_luminance_2
   - sensor.dome_motion_detector_sourcenodeid_2
+
+leak_test:
+  name: Leak Test
+  control: hidden
+  entities:
+  - binary_sensor.aeotec_dsb45_water_sensor_sensor
+  - sensor.aeotec_dsb45_water_sensor_alarm_level
+  - sensor.aeotec_dsb45_water_sensor_alarm_type
+  - sensor.aeotec_dsb45_water_sensor_flood
+  - sensor.aeotec_dsb45_water_sensor_sourcenodeid
+  - zwave.aeotec_dsb45_water_sensor
 
 snow_emergencies:
   name: Snow Emergencies
