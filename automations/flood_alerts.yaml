@@ -2,7 +2,7 @@
   alias: 'Flood Water Heater - Triggered'
   trigger:
   - platform: state
-    entity_id: binary_sensor.aeotec_dsb45_water_sensor_sensor_6
+    entity_id: binary_sensor.leak_water_heater
     to: 'on'
   action:
     - service: notify.dantext
@@ -22,7 +22,7 @@
   alias: 'Flood Sump Pump - Triggered'
   trigger:
   - platform: state
-    entity_id: binary_sensor.aeotec_dsb45_water_sensor_sensor_2
+    entity_id: binary_sensor.leak_sump_pump
     to: 'on'
   action:
     - service: notify.dantext
@@ -42,7 +42,7 @@
   alias: 'Flood Wet Corner - Triggered'
   trigger:
   - platform: state
-    entity_id: binary_sensor.aeotec_dsb45_water_sensor_sensor
+    entity_id: binary_sensor.leak_wet_corner
     to: 'on'
   action:
     - service: notify.dantext

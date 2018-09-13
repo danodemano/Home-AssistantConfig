@@ -30,14 +30,14 @@ switch.master_night_stuff_42:
   friendly_name: Master Night Stuff
   icon: mdi:weather-night
   emulated_hue_hidden: true
-switch.leviton_dzpa12bw_plugin_outlet_switch:
+switch.gecko_ceramic_heat:
   icon: mdi:lightbulb-outline
+  emulated_hue_hidden: true
+switch.gecko_uth_heater:
+  icon: mdi:crop-square
   emulated_hue_hidden: true
 switch.snake_heaters_124:
   icon: mdi:crop-square
-  emulated_hue_hidden: true
-switch.gecko_ceramic_heater_132:
-  icon: mdi:lightbulb-outline
   emulated_hue_hidden: true
 switch.door_back_sliding_99:
   emulated_hue_hidden: true
@@ -51,12 +51,6 @@ switch.door_front_97:
 switch.door_garage_to_den_53:
   emulated_hue_hidden: true
   icon: mdi:shield
-switch.leak_sump_pump_43:
-  emulated_hue_hidden: true
-switch.leak_water_heater_21:
-  emulated_hue_hidden: true
-switch.leak_wet_corner_44:
-  emulated_hue_hidden: true
 switch.safe_117:
   emulated_hue_hidden: true
 switch.server_rack_status_63:
@@ -119,9 +113,9 @@ switch.kids_mega_override:
 switch.video_pop:
   icon: mdi:video
   emulated_hue_hidden: true
-switch.neo_coolcam_power_plug_12a_switch:
+switch.anole_light_switch:
   icon: mdi:ceiling-light
   emulated_hue_hidden: true
-switch.neo_coolcam_power_plug_12a_switch_2:
+switch.anole_heat_switch:
   icon: mdi:radiator
   emulated_hue_hidden: true

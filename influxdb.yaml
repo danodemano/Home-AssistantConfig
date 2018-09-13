@@ -84,14 +84,14 @@ include:
     - sensor.us_air_quality_index_4
     - sensor.allergy_index_today
     - sun.sun
-    - sensor.sensative_unknown_type0003_id000a_luminance
+    - sensor.master_luminance
     - sensor.sensative_unknown_type0003_id000a_temperature
     - sensor.usps_home_mail
     - sensor.usps_home_packages
     - sensor.ups_home
     - sensor.fedex_home
-    - sensor.vision_zp3111_multisensor_4in1_relative_humidity
-    - sensor.vision_zp3111_multisensor_4in1_temperature
+    - sensor.norbert_humidity
+    - sensor.norbert_temperature
     - sensor.io_latency_min
     - sensor.io_latency_avg
     - sensor.io_latency_max

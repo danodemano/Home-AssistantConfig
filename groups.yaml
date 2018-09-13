@@ -147,14 +147,14 @@ pets:
    - switch.norbert_light_switch
    - switch.norbert_heat_130
    - switch.snake_heaters_124
-   - switch.vision_unknown_type201a_id1aa4_switch
-   - switch.leviton_dzpa12bw_plugin_outlet_switch
-   - switch.neo_coolcam_power_plug_12a_switch
-   - switch.neo_coolcam_power_plug_12a_switch_2
+   - switch.gecko_uth_heater
+   - switch.gecko_ceramic_heat
+   - switch.anole_light_switch
+   - switch.anole_heat_switch
    - sensor.gecko_humidity
    - sensor.gecko_temperature
-   - sensor.vision_zp3111_multisensor_4in1_relative_humidity
-   - sensor.vision_zp3111_multisensor_4in1_temperature
+   - sensor.norbert_humidity
+   - sensor.norbert_temperature
 
 vacation_mode:
   name: "Vacation Switches"
@@ -214,8 +214,8 @@ master:
 #  - light.master_1
 #  - light.master_2
   - switch.master_night_stuff_42
-  - sensor.sensative_unknown_type0003_id000a_luminance
-  - sensor.sensative_unknown_type0003_id000a_temperature
+  - sensor.master_luminance
+  - sensor.master_temperature
 
 wol:
  name: 'Wake on LAN'
@@ -227,9 +227,9 @@ wol:
 leak:
  name: 'Leak Sensors'
  entities:
-  - binary_sensor.leak_water_heater_21
-  - binary_sensor.leak_sump_pump_43
-  - binary_sensor.leak_wet_corner_44
+  - binary_sensor.leak_water_heater
+  - binary_sensor.leak_sump_pump
+  - binary_sensor.leak_wet_corner
 
 battery:
  name: 'Battery Levels'

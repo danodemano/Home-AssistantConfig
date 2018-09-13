@@ -34,15 +34,15 @@ binarysensor.blue_iris_livingroom:
 binarysensor.blue_iris_patio:
   friendly_name: Motion Patio
   icon: mdi:camera
-binary_sensor.aeotec_dsb45_water_sensor_sensor_6:
+binary_sensor.leak_water_heater:
   friendly name: Leak Water Heater
   icon: mdi:water
   device_class: moisture
-binary_sensor.aeotec_dsb45_water_sensor_sensor_2:
+binary_sensor.leak_sump_pump:
   friendly name: Leak Sump Pump
   icon: mdi:water
   device_class: moisture
-binary_sensor.aeotec_dsb45_water_sensor_sensor:
+binary_sensor.leak_wet_corner:
   friendly name: Leak Wet Corner
   icon: mdi:water
   device_class: moisture

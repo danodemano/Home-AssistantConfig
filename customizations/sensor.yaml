@@ -166,10 +166,10 @@ sensor.morrow:
   icon: mdi:snowflake
 sensor.big_walnut_lsd_status:
   icon: mdi:school
-sensor.sensative_unknown_type0003_id000a_luminance:
+sensor.master_luminance:
   icon: mdi:lightbulb-outline
   friendly_name: Master Luminance
-sensor.sensative_unknown_type0003_id000a_temperature:
+sensor.master_temperature:
   icon: mdi:thermometer
   friendly_name: Master Temperature
 sensor.shelley_duration_to_home:
@@ -184,7 +184,7 @@ sensor.dan_duration_to_home:
 sensor.dan_current_location:
   friendly_name: Dan Location
   icon: mdi:map-marker
-sensor.vision_zp3111_multisensor_4in1_temperature:
+sensor.norbert_temperature:
   icon: mdi:thermometer
-sensor.vision_zp3111_multisensor_4in1_relative_humidity:
+sensor.norbert_humidity:
   icon: mdi:water-percent
