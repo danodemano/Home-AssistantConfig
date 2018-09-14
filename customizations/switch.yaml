@@ -36,7 +36,7 @@ switch.gecko_ceramic_heat:
 switch.gecko_uth_heater:
   icon: mdi:crop-square
   emulated_hue_hidden: true
-switch.snake_heaters_124:
+switch.snake_heaters:
   icon: mdi:crop-square
   emulated_hue_hidden: true
 switch.door_back_sliding_99:

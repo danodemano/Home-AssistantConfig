@@ -172,6 +172,9 @@ sensor.master_luminance:
 sensor.master_temperature:
   icon: mdi:thermometer
   friendly_name: Master Temperature
+sensor.master_real_temp:
+  icon: mdi:thermometer
+  friendly_name: Master Real Temp
 sensor.shelley_duration_to_home:
   friendly_name: Shelley From Home
   icon: mdi:car

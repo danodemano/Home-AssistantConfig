@@ -85,7 +85,8 @@ include:
     - sensor.allergy_index_today
     - sun.sun
     - sensor.master_luminance
-    - sensor.sensative_unknown_type0003_id000a_temperature
+    - sensor.master_temperature
+    - sensor.master_real_temp
     - sensor.usps_home_mail
     - sensor.usps_home_packages
     - sensor.ups_home

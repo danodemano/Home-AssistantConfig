@@ -174,17 +174,17 @@
     door_basement_state:
       friendly_name: 'Door Basement'
       value_template: >-
-          {%- if is_state("binary_sensor.door_basement_52", "off") -%}
+          {%- if is_state("sensor.door_basement_raw", "0") -%}
               Closed
-          {%- elif is_state("binary_sensor.door_basement_52", "on") -%}
+          {%- elif is_state("sensor.door_basement_raw", "255") -%}
               Open
           {%- else -%}
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('binary_sensor.door_basement_52', 'off') %}
+          {% if is_state('sensor.door_basement_raw', '0') %}
              mdi:door-closed
-          {% elif is_state('binary_sensor.door_basement_52', 'on') %}
+          {% elif is_state('sensor.door_basement_raw', '255') %}
              mdi:door-open
           {% else %}
              mid:help
@@ -192,17 +192,17 @@
     door_garage_to_den_state:
       friendly_name: 'Door Garage to Den'
       value_template: >-
-          {%- if is_state("binary_sensor.door_garage_to_den_53", "off") -%}
+          {%- if is_state("sensor.door_garage_to_den_raw", "0") -%}
               Closed
-          {%- elif is_state("binary_sensor.door_garage_to_den_53", "on") -%}
+          {%- elif is_state("sensor.door_garage_to_den_raw", "255") -%}
               Open
           {%- else -%}
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('binary_sensor.door_garage_to_den_53', 'off') %}
+          {% if is_state('sensor.door_garage_to_den_raw', '0') %}
              mdi:door-closed
-          {% elif is_state('binary_sensor.door_garage_to_den_53', 'on') %}
+          {% elif is_state('sensor.door_garage_to_den_raw', '255') %}
              mdi:door-open
           {% else %}
              mid:help
@@ -228,17 +228,17 @@
     door_back_sliding_state:
       friendly_name: 'Door Back Sliding'
       value_template: >-
-          {%- if is_state("binary_sensor.vision_zd2102_eu_doorwindow_sensor_sensor", "off") -%}
+          {%- if is_state("sensor.door_back_sliding_raw", "0") -%}
               Closed
-          {%- elif is_state("binary_sensor.vision_zd2102_eu_doorwindow_sensor_sensor", "on") -%}
+          {%- elif is_state("sensor.door_back_sliding_raw", "255") -%}
               Open
           {%- else -%}
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('binary_sensor.vision_zd2102_eu_doorwindow_sensor_sensor', 'off') %}
+          {% if is_state('sensor.door_back_sliding_raw', '0') %}
              mdi:door-closed
-          {% elif is_state('binary_sensor.vision_zd2102_eu_doorwindow_sensor_sensor', 'on') %}
+          {% elif is_state('sensor.door_back_sliding_raw', '255') %}
              mdi:door-open
           {% else %}
              mid:help
@@ -264,17 +264,17 @@
     window_den_state:
       friendly_name: 'Window Den'
       value_template: >-
-          {%- if is_state("binary_sensor.window_den_96", "off") -%}
+          {%- if is_state("sensor.window_den_raw", "0") -%}
               Closed
-          {%- elif is_state("binary_sensor.window_den_96", "on") -%}
+          {%- elif is_state("sensor.window_den_raw", "255") -%}
               Open
           {%- else -%}
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('binary_sensor.window_den_96', 'off') %}
+          {% if is_state('sensor.window_den_raw', '0') %}
              mdi:window-closed
-          {% elif is_state('binary_sensor.window_den_96', 'on') %}
+          {% elif is_state('sensor.window_den_raw', '255') %}
              mdi:window-open
           {% else %}
              mid:help
@@ -282,17 +282,17 @@
     window_kitchen_state:
       friendly_name: 'Window Kitchen State'
       value_template: >-
-          {%- if is_state("binary_sensor.window_kitchen_100", "off") -%}
+          {%- if is_state("sensor.window_kitchen_raw", "0") -%}
               Closed
-          {%- elif is_state("binary_sensor.window_kitchen_100", "on") -%}
+          {%- elif is_state("sensor.window_kitchen_raw", "255") -%}
               Open
           {%- else -%}
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('binary_sensor.window_kitchen_100', 'off') %}
+          {% if is_state('sensor.window_kitchen_raw', '0') %}
              mdi:window-closed
-          {% elif is_state('binary_sensor.window_kitchen_100', 'on') %}
+          {% elif is_state('sensor.window_kitchen_raw', '255') %}
              mdi:window-open
           {% else %}
              mid:help
@@ -373,6 +373,7 @@
           {% endif %}
     outside_humidity:
       friendly_name: "Outside Humidity"
+      unit_of_measurement: '%'
       value_template: >-
           {%- if states.sensor.pws_relative_humidity.state|float >= 0 and states.sensor.pws_relative_humidity.state|float <= 100 -%}
              {{(states.sensor.pws_relative_humidity.state)}}
@@ -381,6 +382,7 @@
           {%- endif -%}   
     brian_humidity:
       friendly_name: "Brian Humidity"
+      unit_of_measurement: '%'
       value_template: >-
           {%- if states.sensor.pws_relative_humidity_2.state|float >= 0 and states.sensor.pws_relative_humidity_2.state|float <= 100 -%}
              {{(states.sensor.pws_relative_humidity_2.state)}}
@@ -389,6 +391,7 @@
           {%- endif -%}
     guy_humidity:
       friendly_name: "Guy Humidity"
+      unit_of_measurement: '%'
       value_template: >-
           {%- if states.sensor.pws_relative_humidity_3.state|float >= 0 and states.sensor.pws_relative_humidity_3.state|float <= 100 -%}
              {{(states.sensor.pws_relative_humidity_3.state)}}
@@ -397,6 +400,7 @@
           {%- endif -%}
     outside_temp:
       friendly_name: "Outside Temperature"
+      unit_of_measurement: '°F'
       value_template: >-
           {%- if states.sensor.pws_temp_f.state|float >= -50 and states.sensor.pws_temp_f.state|float <= 150 -%}
              {{(states.sensor.pws_temp_f.state)}}
@@ -405,6 +409,7 @@
           {%- endif -%}   
     brian_temp:
       friendly_name: "Brian Temperature"
+      unit_of_measurement: '°F'
       value_template: >-
           {%- if states.sensor.pws_temp_f_2.state|float >= -50 and states.sensor.pws_temp_f_2.state|float <= 150 -%}
              {{(states.sensor.pws_temp_f_2.state)}}
@@ -413,9 +418,19 @@
           {%- endif -%}
     guy_temp:
       friendly_name: "Guy Temperature"
+      unit_of_measurement: '°F'
       value_template: >-
           {%- if states.sensor.pws_temp_f_3.state|float >= -50 and states.sensor.pws_temp_f_3.state|float <= 150 -%}
              {{(states.sensor.pws_temp_f_3.state)}}
+          {%- else -%}
+             nan
+          {%- endif -%}
+    master_real_temp:
+      friendly_name: "Master Real Temp"
+      unit_of_measurement: '°F'
+      value_template: >-
+          {%- if states.sensor.master_temperature.state|float >= 40 and states.sensor.master_temperature.state|float <= 90 -%}
+             {{(states.sensor.master_temperature.state)}}
           {%- else -%}
              nan
           {%- endif -%}

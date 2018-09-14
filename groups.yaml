@@ -111,7 +111,6 @@ system_health:
   icon: mdi:heart
   view: yes
   entities:
-   - group.battery
    - group.database
    - group.io_latency
    - sensor.processor_use
@@ -146,7 +145,7 @@ pets:
  entities:
    - switch.norbert_light_switch
    - switch.norbert_heat_130
-   - switch.snake_heaters_124
+   - switch.snake_heaters
    - switch.gecko_uth_heater
    - switch.gecko_ceramic_heat
    - switch.anole_light_switch
@@ -215,7 +214,7 @@ master:
 #  - light.master_2
   - switch.master_night_stuff_42
   - sensor.master_luminance
-  - sensor.master_temperature
+  - sensor.master_real_temp
 
 wol:
  name: 'Wake on LAN'
