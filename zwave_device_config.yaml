@@ -643,3 +643,174 @@ binary_sensor.vision_zd2102_eu_doorwindow_sensor_sensor_6:
 sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_6:
   ignored: true
   polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_alarm_level_2:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_alarm_type_2:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_flood_2:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_sourcenodeid_2:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_alarm_level_6:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_alarm_type_6:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_flood_6:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_sourcenodeid_6:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_flood:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_dsb45_water_sensor_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_alarm_type_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_current_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_energy_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_exporting_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_interval_6:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_interval_7:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_interval_8:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_interval_5:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_power_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_power_management_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_previous_reading_8:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_previous_reading_5:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_previous_reading_6:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_previous_reading_7:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_sourcenodeid_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_voltage_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_current:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_energy:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_exporting:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_interval:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_interval_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_interval_4:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_interval_3:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_power:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_power_management:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_previous_reading_3:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_previous_reading_2:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_previous_reading_4:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_previous_reading:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_voltage:
+  ignored: true
+  polling_intensity: 0
+sensor.neo_coolcam_power_plug_12a_alarm_level_2:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control_8:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar_8:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_clock_3:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_emergency_3:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_homehealth_4:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_power_management_5:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_8:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_system_5:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control_7:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_appliance_6:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar_7:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_7:
+  ignored: true
+  polling_intensity: 0

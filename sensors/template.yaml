@@ -138,17 +138,17 @@
     door_craft_to_patio_state:
       friendly_name: 'Door Craft to Patio'
       value_template: >-
-          {%- if is_state("binary_sensor.door_craft_to_patio_133", "off") -%}
+          {%- if is_state("sensor.door_craft_room_to_patio_raw", "0") -%}
               Closed
-          {%- elif is_state("binary_sensor.door_craft_to_patio_133", "on") -%}
+          {%- elif is_state("sensor.door_craft_room_to_patio_raw", "255") -%}
               Open
           {%- else -%}
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('binary_sensor.door_craft_to_patio_133', 'off') %}
+          {% if is_state('sensor.door_craft_room_to_patio_raw', '0') %}
              mdi:door-closed
-          {% elif is_state('binary_sensor.door_craft_to_patio_133', 'on') %}
+          {% elif is_state('sensor.door_craft_room_to_patio_raw', '255') %}
              mdi:door-open
           {% else %}
              mid:help
@@ -156,17 +156,17 @@
     door_craft_to_drive_state:
       friendly_name: 'Door Craft to Drive'
       value_template: >-
-          {%- if is_state("binary_sensor.door_craft_to_drive_134", "off") -%}
+          {%- if is_state("sensor.craft_room_to_driveway_raw", "0") -%}
               Closed
-          {%- elif is_state("binary_sensor.door_craft_to_drive_134", "on") -%}
+          {%- elif is_state("sensor.craft_room_to_driveway_raw", "255") -%}
               Open
           {%- else -%}
               FAILED
           {%- endif -%}
       icon_template: >-
-          {% if is_state('binary_sensor.door_craft_to_drive_134', 'off') %}
+          {% if is_state('sensor.craft_room_to_driveway_raw', '0') %}
              mdi:door-closed
-          {% elif is_state('binary_sensor.door_craft_to_drive_134', 'on') %}
+          {% elif is_state('sensor.craft_room_to_driveway_raw', '255') %}
              mdi:door-open
           {% else %}
              mid:help
