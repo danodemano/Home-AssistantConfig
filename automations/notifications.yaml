@@ -149,8 +149,8 @@
   alias: Front Door Alert
   trigger:
     - platform: state
-      entity_id: binary_sensor.door_front_97
-      to: 'on'
+      entity_id: sensor.door_front_state
+      to: 'open'
   action:
     - service: notify.slacknotify
       data:
@@ -169,12 +169,13 @@
         message: "Front Door Opened"
     - service: shell_command.trigger_lr
     - service: shell_command.trigger_fw
+    - service: shell_command.trigger_dw
 - id: sliding_door_opened
   alias: Sliding Door Alert
   trigger:
     - platform: state
-      entity_id: binary_sensor.door_back_sliding_99
-      to: 'on'
+      entity_id: sensor.door_back_sliding_state
+      to: 'open'
   action:
     - service: notify.slacknotify
       data:
@@ -192,12 +193,13 @@
       data:
         message: "Sliding Door Opened"
     - service: shell_command.trigger_pa
+    - service: shell_command.trigger_gp
 - id: craft_to_drive_door_opened
   alias: Craft to Drive Door Alert
   trigger:
     - platform: state
-      entity_id: binary_sensor.door_craft_to_drive_134
-      to: 'on'
+      entity_id: sensor.door_craft_to_drive_state
+      to: 'open'
   action:
     - service: notify.slacknotify
       data:
@@ -209,13 +211,15 @@
       data:
         message: "Craft to Drive Door Opened"
     - service: shell_command.trigger_pa
+    - service: shell_command.trigger_gp
     - service: shell_command.trigger_cr
+    - service: shell_command.trigger_dw
 - id: craft_to_patio_opened
   alias: Craft to Patio Door Alert
   trigger:
     - platform: state
-      entity_id: binary_sensor.door_craft_to_patio_133
-      to: 'on'
+      entity_id: sensor.door_craft_to_patio_state
+      to: 'open'
   action:
     - service: notify.slacknotify
       data:
@@ -227,6 +231,7 @@
       data:
         message: "Craft to Patio Door Opened"
     - service: shell_command.trigger_pa
+    - service: shell_command.trigger_gp
     - service: shell_command.trigger_cr
 - id: garage_door_opened
   alias: Garage Door Alert
@@ -258,12 +263,13 @@
         message: "Garage Door Opened"
     - service: shell_command.trigger_ga
     - service: shell_command.trigger_dw
+    - service: shell_command.trigger_fw
 #- id: basement_door_opened
 #  alias: Basement Door Alert
 #  trigger:
 #    - platform: state
-#      entity_id: binary_sensor.door_basement_52
-#      to: 'on'
+#      entity_id: sensor.door_basement_state
+#      to: 'open'
 #  action:
 #    - service: notify.kodinotify
 #      data:
@@ -272,29 +278,29 @@
 #        data:
 #          displaytime: 20000
 #          icon: "warning"
-- id: basement_door_opened
-  alias: Basement Door Alert
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.door_basement_52
-      to: 'on'
-  action:
-    - service: media_player.alexa_tts
-      data_template:
-        entity_id: media_player.den
-        message: "The outside temperature is {{states ('sensor.dark_sky_apparent_temperature') }} degrees ... Command execution, complete !"
-- id: alert_when_shelley_home
-  alias: Alert when Shelley home
-  trigger:
-    platform: event
-    event_type: image_processing.found_plate
-    event_data:
-      entity_id: image_processing.openalpr_driveway
-      plate: ESY8722
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Shelley Home!'
-        data:
-          file:
-            url: http://192.168.53.110/snap.jpeg
+#- id: basement_door_opened
+#  alias: Basement Door Alert
+#  trigger:
+#    - platform: state
+#      entity_id: sensor.door_basement_state
+#      to: 'open'
+#  action:
+#    - service: media_player.alexa_tts
+#      data_template:
+#        entity_id: media_player.den
+#        message: "The outside temperature is {{states ('sensor.dark_sky_apparent_temperature') }} degrees ... Command execution, complete !"
+#- id: alert_when_shelley_home
+#  alias: Alert when Shelley home
+#  trigger:
+#    platform: event
+#    event_type: image_processing.found_plate
+#    event_data:
+#      entity_id: image_processing.openalpr_driveway
+#      plate: ESY8722
+#  action:
+#    - service: notify.slacknotify
+#      data:
+#        message: 'Shelley Home!'
+#        data:
+#          file:
+#            url: http://192.168.53.110/snap.jpeg

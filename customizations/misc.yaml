@@ -1,6 +1,3 @@
-climate.main_thermostat_39:
-  friendly_name: Thermostat Control
-  icon: mdi:settings
 cover.garage_door_opener:
   icon: mdi:garage
   emulated_hue_hidden: true

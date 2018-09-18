@@ -1,12 +1,3 @@
-binary_sensor.leak_water_heater_21:
-  sensor_class: moisture
-  icon: mdi:water
-binary_sensor.leak_sump_pump_43:
-  sensor_class: moisture
-  icon: mdi:water
-binary_sensor.leak_wet_corner_44:
-  sensor_class: moisture
-  icon: mdi:water
 binarysensor.blue_iris_backyard:
   friendly_name: Motion Backyard
   icon: mdi:camera

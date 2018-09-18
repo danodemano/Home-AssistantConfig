@@ -13,7 +13,7 @@ views:
     title: Pets
     entities:
     - switch.norbert_light_switch
-    - switch.norbert_heat
+    - switch.norbert_heat_130
     - switch.snake_heaters
     - switch.gecko_uth_heater
     - switch.gecko_ceramic_heat
@@ -33,7 +33,7 @@ views:
   - type: entities
     title: Den Area
     entities:
-    - switch.den_av
+    - switch.den_av_128
     - light.den
     - sensor.den_humidity
     - sensor.den_temperature
@@ -45,7 +45,7 @@ views:
     title: Master Bedroom
     entities:
     - light.master
-    - switch.master_night_stuff
+    - switch.master_night_stuff_42
     - sensor.master_luminance
     - sensor.master_real_temp
   - type: entities
@@ -135,7 +135,7 @@ views:
     - sensor.door_back_sliding_state
     - sensor.door_craft_to_drive_state
     - sensor.door_craft_to_patio_state
-    - sensor.door_garage_state
+    - cover.garage_door_opener
   - type: entities
     title: Window Status
     entities:
@@ -149,7 +149,6 @@ views:
     title: Security Misc
     entities:
     - switch.video_pop
-    - cover.garage_door_opener
   - type: entities
     title: Camera Motion Detection
     entities:
@@ -198,7 +197,7 @@ views:
   - type: entities
     title: Vacation Switches
     entities:
-    - switch.water_heater
+    - switch.hot_water_heater_19
     - switch.vacation_mode
   - type: entities
     title: Camera Group
@@ -225,7 +224,7 @@ views:
     title: Pets
     entities:
     - switch.norbert_light_switch
-    - switch.norbert_heat
+    - switch.norbert_heat_130
     - switch.snake_heaters
     - switch.gecko_uth_heater
     - switch.gecko_ceramic_heat
@@ -241,6 +240,14 @@ views:
     - binary_sensor.leak_water_heater
     - binary_sensor.leak_sump_pump
     - binary_sensor.leak_wet_corner
+  - type: entities
+    title: Power Usage
+    entities:
+    - sensor.ac_watts
+    - sensor.dryer_watts
+    - sensor.furnace1_watts
+    - sensor.furnace2_watts
+    - sensor.hot_water_heater_watts
   - type: entities
     title: Main Thermostat
     entities:
@@ -262,7 +269,7 @@ views:
     - sensor.door_back_sliding_state
     - sensor.door_craft_to_drive_state
     - sensor.door_craft_to_patio_state
-    - sensor.door_garage_state
+    - cover.garage_door_opener
   - type: entities
     title: Window Status
     entities:
@@ -461,12 +468,21 @@ views:
     - sensor.dome_motion_detector_burglar_2
     - sensor.dome_motion_detector_luminance_2
     - sensor.dome_motion_detector_sourcenodeid_2
+  - type: entities
+    title: Leak Test
+    entities:
+    - binary_sensor.aeotec_dsb45_water_sensor_sensor
+    - sensor.aeotec_dsb45_water_sensor_alarm_level
+    - sensor.aeotec_dsb45_water_sensor_alarm_type
+    - sensor.aeotec_dsb45_water_sensor_flood
+    - sensor.aeotec_dsb45_water_sensor_sourcenodeid
+    - zwave.aeotec_dsb45_water_sensor
 - cards:
   - card_config:
       title: All Entities
     filter:
     - {}
     type: entity-filter
-  name: All Entities
+  title: All Entities
   tab_icon: mdi:settings
 

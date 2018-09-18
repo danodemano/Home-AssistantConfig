@@ -1,10 +1,15 @@
 input_boolean.vacation_mode:
   icon: mdi:beach
+  emulated_hue_hidden: true
 input_boolean.holiday_mode:
   icon: mdi:pine-tree
+  emulated_hue_hidden: true
 input_boolean.kids_override:
   icon: mdi:debug-step-over
+  emulated_hue_hidden: true
 input_boolean.kids_mega_override:
   icon: mdi:stop-circle-outline
+  emulated_hue_hidden: true
 input_boolean.enable_video_pop:
   icon: mdi:video
+  emulated_hue_hidden: true
