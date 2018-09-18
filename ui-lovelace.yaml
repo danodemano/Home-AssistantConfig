@@ -1,6 +1,6 @@
 name: Home
 views:
-- name: Bunyard
+- title: Bunyard
   tab_icon: mdi:home-variant
   cards:
   - type: entities
@@ -102,7 +102,7 @@ views:
     - sensor.dan_current_location
   - type: picture-entity
     entity: camera.usps_home_mail
-- name: Security
+- title: Security
   tab_icon: mdi:lock
   cards:
   - type: entities
@@ -161,7 +161,7 @@ views:
     - binarysensor.blue_iris_gatepatio
     - binarysensor.blue_iris_livingroom
     - binarysensor.blue_iris_patio
-- name: Kids
+- title: Kids
   tab_icon: mdi:account
   cards:
   - type: entities
@@ -191,7 +191,7 @@ views:
     entities:
     - script.nick_wifi_throttle
     - script.nick_wifi_unthrottle
-- name: Vacation
+- title: Vacation
   tab_icon: mdi:beach
   cards:
   - type: entities
@@ -286,14 +286,14 @@ views:
     - sensor.server_rack_voltage
     - sensor.server_rack_environment_relative_humidity
     - sensor.server_rack_environment_temperature
-- name: Media
+- title: Media
   tab_icon: mdi:video-input-component
   cards:
   - type: media-control
     entity: media_player.brix_pc
   - type: media-control
     entity: media_player.onkyo_den
-- name: Servers
+- title: Servers
   tab_icon: mdi:server
   cards:
   - type: entities
@@ -415,7 +415,7 @@ views:
     - sensor.grafana_used_disk_space
     - sensor.grafana_used_inodes
     - sensor.grafana_used_ram
-- name: System Health
+- title: System Health
   tab_icon: mdi:heart
   cards:
   - type: entities
@@ -431,18 +431,9 @@ views:
     - sensor.io_latency_avg
     - sensor.io_latency_max
     - sensor.io_latency_sd
-- name: Random
+- title: Random
   tab_icon: mdi:developer-board
   cards:
-  - type: entities
-    title: Couch Plug Stuff
-    entities:
-    - sensor.couch_plug_current
-    - sensor.couch_plug_energy
-    - sensor.couch_plug_power
-    - sensor.couch_plug_previous_reading
-    - sensor.couch_plug_voltage
-    - switch.couch_plug_switch
   - type: entities
     title: Bayesian Home
     entities:
@@ -492,6 +483,6 @@ views:
     filter:
     - {}
     type: entity-filter
-  name: All Entities
+  title: All Entities
   tab_icon: mdi:settings
 

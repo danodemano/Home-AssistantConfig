@@ -99,7 +99,7 @@ sensor.furnace1_watts:
   icon: mdi:flash-red-eye
 sensor.furnace2_watts:
   icon: mdi:flash-red-eye
-sensor.hot_water_heater_watts:
+sensor.water_heater_power:
   icon: mdi:flash-red-eye
 sensor.dan_home_to_work:
   icon: mdi:car

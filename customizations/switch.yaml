@@ -5,7 +5,7 @@ switch.front_walk_lights:
 switch.norbert_light_switch:
   friendly_name: Norbert Light
   icon: mdi:lightbulb
-switch.norbert_heat_130:
+switch.norbert_heat:
   icon: mdi:lightbulb-outline
 switch.patio:
   friendly_name: Patio Light
@@ -24,9 +24,9 @@ switch.kids_tv:
 switch.lr_dry_sink:
   friendly_name: LR Dry Sink
   icon: mdi:power-plug
-switch.den_av_128:
+switch.den_av:
   icon: mdi:television
-switch.master_night_stuff_42:
+switch.master_night_stuff:
   friendly_name: Master Night Stuff
   icon: mdi:weather-night
   emulated_hue_hidden: true

@@ -37,6 +37,27 @@
       data:
         message: 'CHEST FREEZER LEFT OPEN!'
 
+- id: safe_opened
+  alias: Safe Opened
+  trigger:
+    platform: state
+    entity_id: sensor.safe_state
+    from: 'Closed'
+    to: 'Open'
+  action:
+    - service: notify.dantext
+      data:
+        message: 'SAFE OPENED!'
+    - service: notify.danemail
+      data:
+        message: 'SAFE OPENED!'
+    - service: notify.shelleytext
+      data:
+        message: 'SAFE OPENED!'
+    - service: notify.shelleyemail
+      data:
+        message: 'SAFE OPENED!'
+
 #- alias: Monitor Traffic
 #  trigger:
 #    platform: state

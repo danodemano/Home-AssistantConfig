@@ -11,7 +11,6 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/New_York
 
-  #customize: !include customizations.yaml
   customize: !include_dir_merge_named customizations/
 
 # Enables the frontend
@@ -61,9 +60,6 @@ map:
 
 logger:
   default: warn
-#  logs:
-#    pyHS100: debug
-#    homeassistant.components.light.tplink: debug
 
 #Zwave Config
 zwave:
@@ -75,15 +71,6 @@ zwave:
 emulated_hue: !include emulated_hue.yaml
 
 recorder: !include recorder.yaml
-
-#Connect to the Hue hub
-#light:
-#  - platform: hue
-#    host: 192.168.9.204
-#    scan_interval: 30
-#  - platform: tplink
-#    host: 192.168.9.199
-#    name: Den
 
 light:
   - platform: flux_led
@@ -120,25 +107,12 @@ remote:
 ifttt:
   key: !secret ifttt_key
 
-#Vera integration
-vera:
-  vera_controller_url: http://192.168.9.205:3480/
-
 #Alarm panel
 alarm_control_panel:
   - platform: manual
     name: Home Alarm
     code: !secret alarm_code
     delay_time: 30
-
-#customizer:
-#  custom_ui: local
-
-#panel_iframe:
-# nodered:
-#   title: 'Node-Red'
-#   icon: 'mdi:shuffle-variant'
-#   url: 'http://192.168.9.200:1880/'
 
 #MQTT discovery broker
 #mqtt:
@@ -183,7 +157,7 @@ automation: !include_dir_merge_list automations
 
 script: !include scripts.yaml
 
-scene: !include scenes.yaml
+#scene: !include scenes.yaml
 
 alexa:
 

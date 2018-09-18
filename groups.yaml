@@ -48,12 +48,6 @@ security:
    - alarm_control_panel.home_alarm
    - group.camera_motion
 
-security_misc:
-  name: Security Misc
-  control: hidden
-  entities:
-    - switch.video_pop
-
 kids:
   name: "Kids"
   icon: mdi:account
@@ -119,6 +113,52 @@ system_health:
    - sensor.since_last_boot
    - zwave.aeotec_zw090_zstick_gen5_us
 
+random:
+  name: Random
+  icon: mdi:developer-board
+  view: yes
+  entities:
+  - light.hank_unknown_type0101_id0004_level
+  - group.bayesian
+  - group.misc_stuff
+  - group.oomi_test
+  - group.dome_test
+  - group.leak_test
+  - light.master_1
+  - light.master_2
+  - remote.den
+  - light.den_tv_leds
+  - script.front_walk_trigger
+
+oomi_test:
+  name: Oomi Test
+  control: hidden
+  entities:
+  - sensor.oomi_ft100_multisensor_6_burglar
+  - sensor.oomi_ft100_multisensor_6_luminance
+  - sensor.oomi_ft100_multisensor_6_relative_humidity
+  - sensor.oomi_ft100_multisensor_6_sourcenodeid
+  - sensor.oomi_ft100_multisensor_6_temperature
+  - sensor.oomi_ft100_multisensor_6_ultraviolet
+  - binary_sensor.sensor
+  - sensor.alarm_level_2
+  - sensor.alarm_type_2
+
+dome_test:
+  name: Dome Test
+  control: hidden
+  entities:
+  - sensor.dome_motion_detector_burglar_2
+  - sensor.dome_motion_detector_luminance_2
+  - sensor.dome_motion_detector_sourcenodeid_2
+
+security_misc:
+  name: Security Misc
+  control: hidden
+  entities:
+    - switch.video_pop
+    - cover.garage_door_opener
+  
 cameras_group:
  name: Camera Group
  entities:
@@ -144,7 +184,7 @@ pets:
  control: hidden
  entities:
    - switch.norbert_light_switch
-   - switch.norbert_heat_130
+   - switch.norbert_heat
    - switch.snake_heaters
    - switch.gecko_uth_heater
    - switch.gecko_ceramic_heat
@@ -159,25 +199,12 @@ vacation_mode:
   name: "Vacation Switches"
   control: hidden
   entities:
-    - switch.hot_water_heater_19
+    - switch.water_heater
     - switch.vacation_mode
-
-random_sliders:
-  name: "Random Time Sliders"
-  control: hidden
-  entities:
-    - input_number.random_hour
-    - input_number.random_minute
 
 hvac_main:
  name: 'Main Thermostat'
  entities:
-#   - sensor.climate_main_fan_state
-#   - sensor.climate_main_operating_state
-#   - sensor.climate_main_temperature
-#   - sensor.climate_main_temperature2
-#   - sensor.inside_humidity
-#   - climate.main_thermostat_39
     - climate.main_thermostat_heating_1
     - climate.main_thermostat_cooling_1
 
@@ -194,7 +221,7 @@ den_area:
  name: "Den Area"
  control: hidden
  entities:
-   - switch.den_av_128
+   - switch.den_av
    - light.den
    - sensor.den_humidity
    - sensor.den_temperature
@@ -210,8 +237,6 @@ master:
  control: hidden
  entities:
   - light.master
-#  - light.master_1
-#  - light.master_2
   - switch.master_night_stuff_42
   - sensor.master_luminance
   - sensor.master_real_temp
@@ -230,29 +255,6 @@ leak:
   - binary_sensor.leak_sump_pump
   - binary_sensor.leak_wet_corner
 
-battery:
- name: 'Battery Levels'
- entities:
- - sensor.climate_main_battery
- - sensor.leak_hot_water_heater_battery
- - sensor.leak_sump_pump_battery
- - sensor.leak_wet_corner_battery
- - sensor.door_basement_battery
- - sensor.door_garage_to_den_battery
- - sensor.door_back_sliding_battery
- - sensor.door_front_battery
- - sensor.window_craft_room_battery
- - sensor.window_den_battery
- - sensor.window_front_east_battery
- - sensor.window_front_west_battery
- - sensor.window_kitchen_battery
- - sensor.gecko_battery
- - sensor.server_rack_battery
- - sensor.door_craft_to_drive
- - sensor.door_craft_to_patio
- - sensor.chest_freezer_battery
- - sensor.den_climate_battery
-
 doors:
  name: 'Door Status'
  entities:
@@ -262,7 +264,7 @@ doors:
   - sensor.door_back_sliding_state
   - sensor.door_craft_to_drive_state
   - sensor.door_craft_to_patio_state
-  - cover.garage_door_opener
+  - sensor.door_garage_state
 
 windows:
  name: 'Window Status'
@@ -274,21 +276,6 @@ windows:
   - sensor.window_kitchen_state
   - sensor.window_den_status
 
-armed:
- name: 'Arm Devices!'
- entities:
-  - switch.door_basement_52
-  - switch.door_front_97
-  - switch.door_garage_to_den_53
-  - switch.door_back_sliding_99
-  - switch.door_craft_to_drive_134
-  - switch.door_craft_to_patio_133
-  - switch.window_craft_room_114
-  - switch.window_den_96
-  - switch.window_kitchen_100
-  - switch.window_lr_east_104
-  - switch.window_lr_west_113
-
 traveltimes:
  name: "Travel Times"
  entities:
@@ -296,15 +283,6 @@ traveltimes:
  - sensor.dan_work_to_home
  - sensor.shelley_home_to_work
  - sensor.shelley_work_to_home
-
-energy:
- name: "Power Usage"
- entities:
- - sensor.ac_watts
- - sensor.dryer_watts
- - sensor.furnace1_watts
- - sensor.furnace2_watts
- - sensor.hot_water_heater_watts
 
 server_rack:
  name: "Server Rack"
@@ -341,22 +319,14 @@ holiday_lights:
 home_electric:
  name: "Home Electric Usage"
  entities:
-# - sensor.home_energy_meter_power
  - sensor.home_watts_total
  - sensor.home_energy_meter_voltage
  - sensor.home_current_total
  - sensor.home_energy_total
-# - sensor.home_energy_meter_current
-# - sensor.home_energy_meter_energy
-#     - sensor.energy_monitor_current_7_20
-#     - sensor.energy_monitor_energy_7_0
-#     - sensor.energy_monitor_voltage_7_16
 
 weather:
  name: Weather
  entities:
- #- sensor.pws_temp_f
- #- sensor.pws_relative_humidity
  - sensor.outside_temp
  - sensor.outside_humidity
  - sensor.pws_alerts
@@ -373,17 +343,6 @@ internet:
  - sensor.speedtest_upload
  - sensor.wan_traffic_in_mean
  - sensor.wan_traffic_out_mean
-
-all_lights:
-  name: All lights
-  entities:
-    - light.den
-    - light.dining_room_36
-    - light.master
-    - switch.front_outside_lights_140
-    - switch.front_walk_lights_31
-    - switch.living_room_37
-    - switch.patio_light_32
 
 camera_motion:
   name: Camera Motion Detection
@@ -404,15 +363,6 @@ kids_wifi_toggle:
   entities: 
     - script.kids_wifi_on
     - script.kids_wifi_off
-
-kids_wifi_timing:
-  name: "Kids Wifi on/off Timing"
-  control: hidden
-  entities:
-    - input_number.kids_wifi_off_school
-    - input_number.kids_wifi_off_weekend
-    - input_number.kids_wifi_on_school
-    - input_number.kids_wifi_on_weekend
 
 kids_device_status:
   name: "Kids Device Wifi Status"
@@ -460,16 +410,6 @@ pihole_stats:
     - sensor.pihole_ads_percentage_blocked_today
     - sensor.pihole_dns_queries_today
     - sensor.pihole_domains_blocked
-
-couch_plug_stuff:
-  name: Couch Plug Stuff
-  entities:
-    - sensor.couch_plug_current
-    - sensor.couch_plug_energy
-    - sensor.couch_plug_power
-    - sensor.couch_plug_previous_reading
-    - sensor.couch_plug_voltage
-    - switch.couch_plug_switch
 
 qnap_12tb:
   name: QNAP Storage NAS
@@ -588,57 +528,6 @@ bayesian:
   entities:
   - binary_sensor.bayesian_presence_dan
   - binary_sensor.bayesian_presence_shelley
-
-random:
-  name: Random
-  icon: mdi:developer-board
-  view: yes
-  entities:
-  - light.hank_unknown_type0101_id0004_level
-  - group.couch_plug_stuff
-  - group.bayesian
-  - group.misc_stuff
-  - group.oomi_test
-  - group.dome_test
-  - group.leak_test
-  - light.master_1
-  - light.master_2
-  - remote.den
-  - light.den_tv_leds
-  - script.front_walk_trigger
-
-oomi_test:
-  name: Oomi Test
-  control: hidden
-  entities:
-  - sensor.oomi_ft100_multisensor_6_burglar
-  - sensor.oomi_ft100_multisensor_6_luminance
-  - sensor.oomi_ft100_multisensor_6_relative_humidity
-  - sensor.oomi_ft100_multisensor_6_sourcenodeid
-  - sensor.oomi_ft100_multisensor_6_temperature
-  - sensor.oomi_ft100_multisensor_6_ultraviolet
-  - binary_sensor.sensor
-  - sensor.alarm_level_2
-  - sensor.alarm_type_2
-
-dome_test:
-  name: Dome Test
-  control: hidden
-  entities:
-  - sensor.dome_motion_detector_burglar_2
-  - sensor.dome_motion_detector_luminance_2
-  - sensor.dome_motion_detector_sourcenodeid_2
-
-leak_test:
-  name: Leak Test
-  control: hidden
-  entities:
-  - binary_sensor.aeotec_dsb45_water_sensor_sensor
-  - sensor.aeotec_dsb45_water_sensor_alarm_level
-  - sensor.aeotec_dsb45_water_sensor_alarm_type
-  - sensor.aeotec_dsb45_water_sensor_flood
-  - sensor.aeotec_dsb45_water_sensor_sourcenodeid
-  - zwave.aeotec_dsb45_water_sensor
 
 snow_emergencies:
   name: Snow Emergencies

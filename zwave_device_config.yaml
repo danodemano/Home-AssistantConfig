@@ -548,7 +548,7 @@ sensor.server_rack_environment_alarm_type:
   ignored: true
   polling_intensity: 0
 sensor.server_rack_environment_burglar:
-  ignored: false
+  ignored: true
   polling_intensity: 0
 sensor.server_rack_environment_emergency:
   ignored: true
@@ -812,5 +812,209 @@ sensor.vision_zd2102_eu_doorwindow_sensor_burglar_7:
   ignored: true
   polling_intensity: 0
 sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_7:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_zw078_heavy_duty_smart_switch_gen5_current:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_zw078_heavy_duty_smart_switch_gen5_energy:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_zw078_heavy_duty_smart_switch_gen5_exporting:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_zw078_heavy_duty_smart_switch_gen5_interval:
+  ignored: true
+  polling_intensity: 0
+sensor.aeotec_zw078_heavy_duty_smart_switch_gen5_previous_reading:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_appliance:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_clock:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_homehealth:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control_10:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_appliance_7:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar_10:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_clock_4:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_emergency_4:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_homehealth_6:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_power_management_7:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_10:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control_9:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar_9:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_homehealth_5:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_power_management_6:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_9:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_system_6:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control_11:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_appliance_8:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar_11:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_clock_5:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_emergency_5:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_homehealth_7:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_11:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_access_control_12:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_appliance_9:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_burglar_12:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_clock_6:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_emergency_6:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_homehealth_8:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_power_management_8:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_sourcenodeid_12:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_system_7:
+  ignored: true
+  polling_intensity: 0
+sensor.linear_wadwaz1_doorwindow_sensor_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.linear_wadwaz1_doorwindow_sensor_burglar:
+  ignored: true
+  polling_intensity: 0
+binary_sensor.linear_wadwaz1_doorwindow_sensor_sensor:
+  ignored: true
+  polling_intensity: 0
+sensor.linear_wadwaz1_doorwindow_sensor_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.safeaccess_control:
+  ignored: true
+  polling_intensity: 0
+sensor.alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.safesourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.alarm_type_3:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_system:
+  ignored: true
+  polling_intensity: 0
+sensor.alarm_type_7:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zg8101_garage_door_detector_burglar:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zg8101_garage_door_detector_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_9:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_6:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_2:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_5:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_8:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_4:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_3:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_10:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_11:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_12:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_13:
+  ignored: true
+  polling_intensity: 0
+sensor.home_energy_meter_previous_reading_7:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zd2102_eu_doorwindow_sensor_alarm_type_2:
   ignored: true
   polling_intensity: 0
