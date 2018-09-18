@@ -18,27 +18,13 @@ dr_off_delay:
   max: 20
   step: .5
   initial: 1
-kids_wifi_off_school:
-  name: 'Kids Wifi Off School Night'
+internet_traffic_delta_in:
+  name: "Traffic IN Delta"
+  initial: 0
   min: 0
-  max: 23
-  step: 1
-  initial: 20
-kids_wifi_off_weekend:
-  name: 'Kids Wifi Off Weekend Night'
+  max: 1000000000000
+internet_traffic_delta_out:
+  name: "Traffic OUT Delta"
+  initial: 0
   min: 0
-  max: 23
-  step: 1
-  initial: 21
-kids_wifi_on_school:
-  name: 'Kids Wifi On School Day'
-  min: 0
-  max: 23
-  step: 1
-  initial: 6
-kids_wifi_on_weekend:
-  name: 'Kids Wifi On Weekend Day'
-  min: 0
-  max: 23
-  step: 1
-  initial: 8
+  max: 1000000000000

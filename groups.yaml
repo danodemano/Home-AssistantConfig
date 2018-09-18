@@ -94,6 +94,7 @@ servers:
    - group.wol
    - group.pihole_stats
    - group.internet
+   - group.snmp_monitor
    - group.qnap_12tb
    - group.qnap_vm
    - group.certs
@@ -341,8 +342,6 @@ internet:
  - sensor.speedtest_download
  - sensor.speedtest_ping
  - sensor.speedtest_upload
- - sensor.wan_traffic_in_mean
- - sensor.wan_traffic_out_mean
 
 camera_motion:
   name: Camera Motion Detection
@@ -550,3 +549,12 @@ family_locations:
   - sensor.shelley_current_location
   - sensor.dan_duration_to_home
   - sensor.dan_current_location
+
+snmp_monitor:
+  name: Bandwith Monitoring
+  view: no
+  entities:
+    - sensor.internet_speed_in
+    - sensor.internet_speed_out
+    - sensor.wan_traffic_in_mean
+    - sensor.wan_traffic_out_mean

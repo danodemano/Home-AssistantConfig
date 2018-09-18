@@ -55,25 +55,9 @@ include:
     - sensor.eth_to_usd
     - sensor.dark_sky_cloud_coverage
     - sensor.dark_sky_wind_speed
-    - sensor.climate_main_battery
-    - sensor.leak_hot_water_heater_battery
-    - sensor.leak_sump_pump_battery
-    - sensor.leak_wet_corner_battery
-    - sensor.door_basement_battery
-    - sensor.door_garage_to_den_battery
-    - sensor.door_back_sliding_battery
-    - sensor.door_front_battery
-    - sensor.window_craft_room_battery
-    - sensor.window_den_battery
-    - sensor.window_front_east_battery
-    - sensor.window_front_west_battery
-    - sensor.window_kitchen_battery
-    - sensor.gecko_battery
     - sensor.server_rack_battery
     - sensor.door_craft_to_drive
     - sensor.door_craft_to_patio
-    - sensor.chest_freezer_battery
-    - sensor.den_climate_battery
     - sensor.pihole_ads_blocked_today
     - sensor.pihole_ads_percentage_blocked_today
     - sensor.pihole_dns_queries_today
@@ -98,3 +82,7 @@ include:
     - sensor.io_latency_avg
     - sensor.io_latency_max
     - sensor.io_latency_sd
+    - sensor.internet_speed_in
+    - sensor.internet_speed_out
+    - sensor.wan_traffic_in_mean
+    - sensor.wan_traffic_out_mean

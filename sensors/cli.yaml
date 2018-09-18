@@ -39,3 +39,7 @@
 - platform: command_line
   name: "IO Latency"
   command: '/scripts/disk_io.sh'
+- platform: command_line
+  name: snmp_sophos_wan_traffic
+  command: snmpget -v 2c -c public -Oqv 192.168.9.1 1.3.6.1.2.1.2.2.1.10.3 1.3.6.1.2.1.2.2.1.16.3 | tr '\n' '|'
+  scan_interval: 10
