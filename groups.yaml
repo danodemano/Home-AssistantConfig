@@ -237,7 +237,7 @@ master:
  control: hidden
  entities:
   - light.master
-  - switch.master_night_stuff_42
+  - switch.master_night_stuff
   - sensor.master_luminance
   - sensor.master_real_temp
 
