@@ -69,7 +69,6 @@ vacation:
     - group.cameras_group
     - group.pets
     - group.leak
-    - group.energy
     - group.hvac_main
     - group.home_electric
     - group.doors
@@ -208,6 +207,12 @@ hvac_main:
  entities:
     - climate.main_thermostat_heating_1
     - climate.main_thermostat_cooling_1
+    - input_select.hvac_operation_mode_main
+    - input_select.hvac_fan_mode_main
+    - input_number.hvac_target_temp_main
+    - sensor.main_thermostat_fan_mode
+    - sensor.main_thermostat_relative_humidity
+    - sensor.main_thermostat_temperature
 
 living_area:
  name: 'Dining/Living Area'
@@ -324,6 +329,7 @@ home_electric:
  - sensor.home_energy_meter_voltage
  - sensor.home_current_total
  - sensor.home_energy_total
+ - sensor.water_heater_power
 
 weather:
  name: Weather

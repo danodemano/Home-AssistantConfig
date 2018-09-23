@@ -28,3 +28,8 @@ internet_traffic_delta_out:
   initial: 0
   min: 0
   max: 1000000000000
+hvac_target_temp_main:
+  name: 'Set Target Temp'
+  min: 60
+  max: 80
+  step: 1

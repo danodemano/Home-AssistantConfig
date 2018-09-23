@@ -364,6 +364,11 @@
       value_template: >-
         {% if states.sensor.dan_location_to_home.state %}{{ states.sensor.dan_location_to_home.attributes.origin_addresses | replace("['","") | replace("']","")}}{% endif %}
 
+    main_thermostat_fan_mode:
+      friendly_name: Fan Mode
+      value_template: >-
+        {{ states.climate.main_thermostat_heating_1.attributes.fan_mode }}
+
     io_latency_min:
       value_template: "{% set list = states.sensor.io_latency.state.split('|') %} {{ list[0] }}"
       friendly_name: 'IO Latency Min'

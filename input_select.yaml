@@ -1,0 +1,16 @@
+hvac_fan_mode_main:
+  name: 'Fan Mode'
+  options:
+    - 'Auto'
+    - 'On'
+  initial: Auto
+  icon: mdi:fan
+hvac_operation_mode_main:
+  name: 'Operating Mode'
+  options:
+    - 'Auto'
+    - 'Cool'
+    - 'Heat'
+    - 'Off'
+  initial: 'Off'
+  icon: mdi:settings

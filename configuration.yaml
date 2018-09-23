@@ -151,6 +151,8 @@ input_boolean: !include input_boolean.yaml
 
 input_number: !include input_number.yaml
 
+input_select: !include input_select.yaml
+
 history_graph: !include history_graph.yaml
 
 automation: !include_dir_merge_list automations

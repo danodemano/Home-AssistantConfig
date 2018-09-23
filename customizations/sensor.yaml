@@ -20,10 +20,6 @@ sensor.pws_wind_mph:
   icon: mdi:weather-windy
 sensor.market_price:
   friendly_name: BTC to USD
-sensor.climate_main_fan_state:
-  icon: mdi:fan
-sensor.climate_main_operating_state:
-  icon: mdi:settings-box
 sensor.inside_humidity:
   friendly_name: Inside Humidity
   icon: mdi:water-percent
@@ -38,8 +34,12 @@ sensor.server_rack_environment_temperature:
 sensor.server_rack_environment_relative_humidity:
   friendly_name: Server Rack Humidity
   icon: mdi:water-percent
-sensor.climate_main_temperature:
+sensor.main_thermostat_temperature:
+  friendly_name: Temperature
   icon: mdi:thermometer-lines
+sensor.main_thermostat_relative_humidity:
+  friendly_name: Humidity
+  icon: mdi:water-percent
 cover.garage_door_opener:
   friendly_name: Garage Door
 sensor.water_heater_power:
@@ -147,3 +147,5 @@ sensor.wan_traffic_in_mean:
 sensor.wan_traffic_out_mean:
   friendly_name: 'WAN Upload Average'
   icon: mdi:upload
+sensor.main_thermostat_fan_mode:
+  icon: mdi:fan

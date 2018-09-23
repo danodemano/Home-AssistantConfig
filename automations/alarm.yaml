@@ -91,9 +91,9 @@
     - platform: state
       entity_id: sensor.door_front_state
       to: 'Open'
-    - platform: state
-      entity_id: sensor.door_garage_to_den_state
-      to: 'Open'
+#    - platform: state
+#      entity_id: sensor.door_garage_to_den_state
+#      to: 'Open'
     - platform: state
       entity_id: sensor.window_craft_room_state
       to: 'Open'
