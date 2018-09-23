@@ -14,3 +14,9 @@ hvac_operation_mode_main:
     - 'Off'
   initial: 'Off'
   icon: mdi:settings
+tts_endpoint_select:
+  name: 'TTS Endpoint Select'
+  options:
+    - 'All'
+  initial: 'All'
+  icon: mdi:volume-high

@@ -35,6 +35,8 @@
     - apparent_temperature_max
     - apparent_temperature_min
     - precip_intensity_max
+    - uv_index
+    - moon_phase
     - icon
     - nearest_storm_distance
 

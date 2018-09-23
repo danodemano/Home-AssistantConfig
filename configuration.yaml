@@ -153,6 +153,8 @@ input_number: !include input_number.yaml
 
 input_select: !include input_select.yaml
 
+input_text: !include input_text.yaml
+
 history_graph: !include history_graph.yaml
 
 automation: !include_dir_merge_list automations

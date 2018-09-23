@@ -250,3 +250,28 @@
       data_template:
         entity_id: input_number.internet_traffic_delta_out
         value: '{{ ((trigger.to_state.state | int - trigger.from_state.state | int) * 8 ) / ( as_timestamp(trigger.to_state.last_updated) - as_timestamp(trigger.from_state.last_updated) ) }}'
+
+- id: set_tts_endpoint_options
+  alias: Set TTS Endpoint Options
+  trigger:
+    platform: time
+    minutes: '/10'
+    seconds: 00
+  action:
+     service: input_select.select_option
+     data_template:
+      entity_id: input_select.tts_endpoint_select
+      options: >-
+        {%- set domains = [states.media_player ] -%}
+        {%- for domain in domains -%}
+        {%- if loop.first -%}
+        {%- endif -%}
+        {%- for item in domain if (item.attributes.media_content_type is defined and item.attributes['media_content_type'] == 'standby' and item.name != 'This Device' ) -%}
+        {%- if (item.attributes.media_content_type is defined and item.attributes['media_content_type'] == 'standby' and item.name != 'This Device' ) -%}
+        {{ item.name }}
+        {% endif -%}
+        {%- if "standby" in item.name -%}
+        {{ item.name }} ({{ item.state }}),
+        {% endif -%}
+        {%- endfor -%}
+        {%- endfor -%}

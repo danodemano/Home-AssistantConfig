@@ -124,6 +124,7 @@ random:
   - group.oomi_test
   - group.dome_test
   - group.leak_test
+  - group.tts_send
   - light.master_1
   - light.master_2
   - remote.den
@@ -564,3 +565,11 @@ snmp_monitor:
     - sensor.internet_speed_out
     - sensor.wan_traffic_in_mean
     - sensor.wan_traffic_out_mean
+
+tts_send:
+  name: TTS Send
+  view: no
+  entities:
+    - input_select.tts_endpoint_select
+    - input_text.tts_text
+    - script.update_tts_endpoints
