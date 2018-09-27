@@ -119,6 +119,10 @@ alarm_control_panel:
 #  discovery: true
 #  discovery_prefix: homeassistant
 
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+
 mqtt:
   broker: 192.168.9.56
 

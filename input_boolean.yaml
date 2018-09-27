@@ -12,3 +12,5 @@ enable_video_pop:
 200k_celebration:
   name: /r/homeautomation 200k!
   initial: off
+enable_hvac_periodic_fan:
+  name: Enable Periodic Fan

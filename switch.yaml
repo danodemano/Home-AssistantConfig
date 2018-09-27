@@ -8,6 +8,13 @@
   host: 192.168.9.27
 - platform: template
   switches:
+    fan_circulate:
+      value_template: '{{ states.input_boolean.enable_hvac_periodic_fan.state }}'
+      friendly_name: 'Enable Periodic Fan'
+      turn_on:
+        service: script.fan_circulate_on
+      turn_off:
+        service: script.fan_circulate_off
     holiday_mode:
       value_template: '{{ states.input_boolean.holiday_mode.state }}'
       friendly_name: 'Holiday Mode'

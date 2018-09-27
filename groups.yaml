@@ -12,7 +12,8 @@ default_view:
    - group.master
    - group.hvac_main
    - group.home_electric
-   - group.weather
+#   - group.weather
+   - weather.dark_sky
    - group.packages
    - group.holidays
    - group.school_closings
@@ -214,6 +215,7 @@ hvac_main:
     - sensor.main_thermostat_fan_mode
     - sensor.main_thermostat_relative_humidity
     - sensor.main_thermostat_temperature
+    - switch.fan_circulate
 
 living_area:
  name: 'Dining/Living Area'
@@ -318,8 +320,8 @@ holiday_lights:
   name: "Light that turn on for Holiday"
   control: hidden
   entities:
-    - switch.holiday_lights_148
-    - switch.patio_light_32
+    - switch.holiday_lights
+    - switch.patio_light
 #    - switch.front_walk_lights_31
 #    - switch.front_outside_lights_140
 
@@ -362,6 +364,7 @@ camera_motion:
     - binarysensor.blue_iris_gatepatio
     - binarysensor.blue_iris_livingroom
     - binarysensor.blue_iris_patio
+    - binary_sensor.camera_basement
 
 kids_wifi_toggle:
   name: "Kids Wifi Buttons"
@@ -573,3 +576,24 @@ tts_send:
     - input_select.tts_endpoint_select
     - input_text.tts_text
     - script.update_tts_endpoints
+
+alarm_all_lights:
+  name: Alarm All Lights
+  view: no
+  entities:
+    - light.master_1
+    - light.master_2
+    - light.master
+    - light.den_tv_leds
+    - light.den
+    - light.den_2
+    - light.outside
+
+alarm_all_switches:
+  name: Alarm All Switches
+  view: no
+  entities:
+    - switch.living_room
+    - switch.holiday_lights
+    - switch.front_walk_lights
+    - switch.patio

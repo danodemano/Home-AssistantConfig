@@ -1,2 +1,3 @@
 tts_text:
   name: TTS Text
+  initial: 'Testing'

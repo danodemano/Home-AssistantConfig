@@ -52,6 +52,9 @@ switch.coffee_pot:
 switch.holiday_mode:
   icon: mdi:pine-tree
   emulated_hue_hidden: true
+switch.fan_circulate:
+  icon: mdi:fan
+  emulated_hue_hidden: true
 switch.vacation_mode:
   icon: mdi:beach
   emulated_hue_hidden: true

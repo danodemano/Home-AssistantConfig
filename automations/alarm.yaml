@@ -57,10 +57,14 @@
       from: 'off'
       to: 'on'
   action:
-    service: alarm_control_panel.alarm_disarm
-    entity_id: alarm_control_panel.home_alarm
-    data: 
-      code: !secret alarm_code
+    - service: alarm_control_panel.alarm_disarm
+      entity_id: alarm_control_panel.home_alarm
+      data: 
+        code: !secret alarm_code
+    - service: switch.turn_off
+      entity_id: switch.burglar_alarm
+    - service: script.turn_off
+      entity_id: script.light_loop
 
 - alias: 'Disarm when Shelley home'
   trigger:
@@ -69,10 +73,14 @@
       from: 'off'
       to: 'on'
   action:
-    service: alarm_control_panel.alarm_disarm
-    entity_id: alarm_control_panel.home_alarm
-    data: 
-      code: !secret alarm_code
+    - service: alarm_control_panel.alarm_disarm
+      entity_id: alarm_control_panel.home_alarm
+      data: 
+        code: !secret alarm_code
+    - service: switch.turn_off
+      entity_id: switch.burglar_alarm
+    - service: script.turn_off
+      entity_id: script.light_loop
 
 - alias: 'Trigger alarm while armed away'
   trigger:
@@ -131,3 +139,5 @@
     - service: notify.shelleytext
       data:
         message: 'HOME ALARM TRIGGERED!'
+#    - service: switch.turn_on
+#      entity_id: switch.burglar_alarm

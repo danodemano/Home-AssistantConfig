@@ -44,3 +44,19 @@
       to_state: 'home'
 - platform: uptimerobot
   api_key: !secret uptimerobot_api_key
+
+- platform: template
+  sensors:
+    camera_basement:
+      friendly_name: 'Basement Camera'
+      device_class: motion
+      value_template: >-
+          {%- if states.binary_sensor.blue_iris_basement == 'on' -%}
+              on
+          {%- elif states.binary_sensor.blue_iris_basement == 'off' -%}
+              off
+          {%- else -%}
+              off
+          {%- endif -%}
+      #value_template: "{{ states.binary_sensor.blue_iris_basement == 'on' }}"
+      entity_id: binary_sensor.blue_iris_basement

@@ -73,6 +73,14 @@ dummy:
         entity_id: script.dummy
         domain: script
 
+fan_circulate_on:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.enable_hvac_periodic_fan
+fan_circulate_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.enable_hvac_periodic_fan
 holiday_mode_on:
   sequence:
     - service: homeassistant.turn_on
@@ -141,3 +149,35 @@ update_tts_endpoints:
   sequence: 
     - service: automation.trigger
       entity_id: automation.set_tts_endpoint_options
+
+#### USED WHEN THE ALARM IS TRIGGERED ####
+#### FLASHES ALL LIGHTS IN THE HOUSE  ####
+light_flash:
+  alias: Light flash on
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: group.alarm_all_lights
+    - service: switch.turn_on
+      data:
+        entity_id: group.alarm_all_switches
+    - delay:
+        seconds: 1
+    - service: light.turn_off
+      data:
+        entity_id: group.alarm_all_lights
+    - service: switch.turn_off
+      data:
+        entity_id: group.alarm_all_switches
+    - service: script.turn_on
+      data:
+        entity_id: script.light_loop
+light_loop:
+  alias: Light flash loop
+  sequence:
+    - delay:
+        # time for flash light off
+        seconds: 1
+    - service: script.turn_on
+      data:
+          entity_id: script.light_flash

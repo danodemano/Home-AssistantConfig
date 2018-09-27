@@ -18,5 +18,12 @@ tts_endpoint_select:
   name: 'TTS Endpoint Select'
   options:
     - 'All'
+    - 'basement'
+    - 'craft_room'
+    - 'den'
+    - 'living_room'
+    - 'master'
+    - 'nick'
+    - 'shannon'
   initial: 'All'
   icon: mdi:volume-high
