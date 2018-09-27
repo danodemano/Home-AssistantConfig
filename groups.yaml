@@ -355,16 +355,24 @@ internet:
 camera_motion:
   name: Camera Motion Detection
   entities:
-    - binarysensor.blue_iris_backyard
-    - binarysensor.blue_iris_basement
-    - binarysensor.blue_iris_craftroom
-    - binarysensor.blue_iris_driveway
-    - binarysensor.blue_iris_frontwalk
-    - binarysensor.blue_iris_garage
-    - binarysensor.blue_iris_gatepatio
-    - binarysensor.blue_iris_livingroom
-    - binarysensor.blue_iris_patio
+    - binary_sensor.blue_iris_backyard
+    - binary_sensor.blue_iris_basement
+    - binary_sensor.blue_iris_craftroom
+    - binary_sensor.blue_iris_driveway
+    - binary_sensor.blue_iris_frontwalk
+    - binary_sensor.blue_iris_garage
+    - binary_sensor.blue_iris_gatepatio
+    - binary_sensor.blue_iris_livingroom
+    - binary_sensor.blue_iris_patio
     - binary_sensor.camera_basement
+    - binary_sensor.camera_backyard
+    - binary_sensor.camera_craftroom
+    - binary_sensor.camera_driveway
+    - binary_sensor.camera_frontwalk
+    - binary_sensor.camera_garage
+    - binary_sensor.camera_gatepatio
+    - binary_sensor.camera_livingroom
+    - binary_sensor.camera_patio
 
 kids_wifi_toggle:
   name: "Kids Wifi Buttons"
