@@ -47,120 +47,142 @@
 
 - platform: template
   sensors:
+    home_power_status:
+      friendly_name: 'Home Power Status'
+      #device_class: power
+      value_template: >-
+          {%- if is_state("binary_sensor.home_power", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.home_power", "off") -%}
+              False
+          #This accounts for no state during startup until the sensor registers 
+          {%- else -%}
+              True
+          {%- endif -%}
+    #   icon_template: >-
+    #       {% if is_state("binary_sensor.home_power", "on") %}
+    #          mdi:power-on
+    #       {% elif is_state("binary_sensor.home_power", "off") %}
+    #          mdi:power-off
+    #       #This accounts for no state during startup until the sensor registers
+    #       {% else %}
+    #          mdi:power-on
+    #       {% endif %}
+      entity_id: binary_sensor.home_power
     camera_basement:
       friendly_name: 'Camera Basement'
       device_class: motion
       value_template: >-
-          {%- if states.binary_sensor.blue_iris_basement == 'on' -%}
-              on
-          {%- elif states.binary_sensor.blue_iris_basement == 'off' -%}
-              off
+          {%- if is_state("binary_sensor.blue_iris_basement", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.blue_iris_basement", "off") -%}
+              False
           #This accounts for no state during startup until the sensor registers 
           {%- else -%}
-              off
+              False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_basement
     camera_backyard:
       friendly_name: 'Camera Backyard'
       device_class: motion
       value_template: >-
-          {%- if states.binary_sensor.blue_iris_backyard == 'on' -%}
-              on
-          {%- elif states.binary_sensor.blue_iris_backyard == 'off' -%}
-              off
+          {%- if is_state("binary_sensor.blue_iris_backyard", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.blue_iris_backyard", "off") -%}
+              False
           #This accounts for no state during startup until the sensor registers 
           {%- else -%}
-              off
+              False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_backyard
     camera_craftroom:
       friendly_name: 'Camera Craft Room'
       device_class: motion
       value_template: >-
-          {%- if states.binary_sensor.blue_iris_craftroom == 'on' -%}
-              on
-          {%- elif states.binary_sensor.blue_iris_craftroom == 'off' -%}
-              off
+          {%- if is_state("binary_sensor.blue_iris_craftroom", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.blue_iris_craftroom", "off") -%}
+              False
           #This accounts for no state during startup until the sensor registers 
           {%- else -%}
-              off
+              False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_craftroom
     camera_driveway:
       friendly_name: 'Camera Driveway'
       device_class: motion
       value_template: >-
-          {%- if states.binary_sensor.blue_iris_driveway == 'on' -%}
-              on
-          {%- elif states.binary_sensor.blue_iris_driveway == 'off' -%}
-              off
+          {%- if is_state("binary_sensor.blue_iris_driveway", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.blue_iris_driveway", "off") -%}
+              False
           #This accounts for no state during startup until the sensor registers 
           {%- else -%}
-              off
+              False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_driveway
     camera_frontwalk:
       friendly_name: 'Camera Front Walk'
       device_class: motion
       value_template: >-
-          {%- if states.binary_sensor.blue_iris_frontwalk == 'on' -%}
-              on
-          {%- elif states.binary_sensor.blue_iris_frontwalk == 'off' -%}
-              off
+          {%- if is_state("binary_sensor.blue_iris_frontwalk", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.blue_iris_frontwalk", "off") -%}
+              False
           #This accounts for no state during startup until the sensor registers 
           {%- else -%}
-              off
+              False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_frontwalk
     camera_garage:
       friendly_name: 'Camera Garage'
       device_class: motion
       value_template: >-
-          {%- if states.binary_sensor.blue_iris_garaget == 'on' -%}
-              on
-          {%- elif states.binary_sensor.blue_iris_garage == 'off' -%}
-              off
+          {%- if is_state("binary_sensor.blue_iris_garage", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.blue_iris_garage", "off") -%}
+              False
           #This accounts for no state during startup until the sensor registers 
           {%- else -%}
-              off
+              False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_garage
     camera_gatepatio:
       friendly_name: 'Camera Gate/Patio'
       device_class: motion
       value_template: >-
-          {%- if states.binary_sensor.blue_iris_gatepatio == 'on' -%}
-              on
-          {%- elif states.binary_sensor.blue_iris_gatepatio == 'off' -%}
-              off
+          {%- if is_state("binary_sensor.blue_iris_gatepatio", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.blue_iris_gatepatio", "off") -%}
+              False
           #This accounts for no state during startup until the sensor registers 
           {%- else -%}
-              off
+              False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_gatepatio
     camera_livingroom:
       friendly_name: 'Camera Living Room'
       device_class: motion
       value_template: >-
-          {%- if states.binary_sensor.blue_iris_livingroom == 'on' -%}
-              on
-          {%- elif states.binary_sensor.blue_iris_livingroom == 'off' -%}
-              off
+          {%- if is_state("binary_sensor.blue_iris_livingroom", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.blue_iris_livingroom", "off") -%}
+              False
           #This accounts for no state during startup until the sensor registers 
           {%- else -%}
-              off
+              False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_livingroom
     camera_patio:
       friendly_name: 'Camera Patio'
       device_class: motion
       value_template: >-
-          {%- if states.binary_sensor.blue_iris_patio == 'on' -%}
-              on
-          {%- elif states.binary_sensor.blue_iris_patio == 'off' -%}
-              off
+          {%- if is_state("binary_sensor.blue_iris_patio", "on") -%}
+              True
+          {%- elif is_state("binary_sensor.blue_iris_patio", "off") -%}
+              False
           #This accounts for no state during startup until the sensor registers 
           {%- else -%}
-              off
+              False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_patio

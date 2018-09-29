@@ -33,6 +33,7 @@ default_view:
    - sensor.eth_to_usd
    - sensor.430_walnutview_dr
    - binary_sensor.iss
+   - binary_sensor.home_power_status
    - camera.usps_home_mail
    - sensor.dark_sky_cloud_coverage
    - sensor.dark_sky_wind_speed
@@ -76,6 +77,7 @@ vacation:
     - group.windows
     - group.server_rack
     - climate.water_heater
+    - binary_sensor.home_power_status
 
 media:
   name: Media
