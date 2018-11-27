@@ -43,3 +43,11 @@
   name: snmp_sophos_wan_traffic
   command: snmpget -v 2c -c public -Oqv 192.168.9.1 1.3.6.1.2.1.2.2.1.10.3 1.3.6.1.2.1.2.2.1.16.3 | tr '\n' '|'
   scan_interval: 10
+- platform: command_line
+  command: python3 -c "import requests; print(requests.get('https://pypi.python.org/pypi/homeassistant/json').json()['info']['version'])"
+  name: Current HA Version
+  scan_interval: 3600
+- platform: command_line
+  command: /scripts/check_ha_mysql.sh
+  name: Connection to MySql
+  scan_interval: 60

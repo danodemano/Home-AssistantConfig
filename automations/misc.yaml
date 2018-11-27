@@ -171,7 +171,7 @@
     conditions:
       - condition: template
         value_template: >-
-          {%- set threshold = 40 -%}
+          {%- set threshold = 30 -%}
           {%- for item in states.light if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
           {%- if loop.first -%}
           {{ true }}
@@ -179,7 +179,7 @@
           {%- endfor -%}
       - condition: template
         value_template: >-
-          {%- set threshold = 40 -%}
+          {%- set threshold = 30 -%}
           {%- for item in states.switch if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
           {%- if loop.first -%}
           {{ true }}
@@ -187,7 +187,7 @@
           {%- endfor -%}
       - condition: template
         value_template: >-
-          {%- set threshold = 40 -%}
+          {%- set threshold = 30 -%}
           {%- for item in states.sensor if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
           {%- if loop.first -%}
           {{ true }}
@@ -195,7 +195,7 @@
           {%- endfor -%}
       - condition: template
         value_template: >-
-          {%- set threshold = 40 -%}
+          {%- set threshold = 30 -%}
           {%- for item in states.zwave if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
           {%- if loop.first -%}
           {{ true }}
@@ -203,7 +203,7 @@
           {%- endfor -%}
       - condition: template
         value_template: >-
-          {%- set threshold = 40 -%}
+          {%- set threshold = 30 -%}
           {%- for item in states.lock if (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold) or ("battery" in item.name | lower and ((item.state | int < threshold and item.state|int != 0) or item.state | lower == "low" or item.state | lower == "unknown")) -%}
           {%- if loop.first -%}
           {{ true }}
@@ -213,7 +213,7 @@
     - service: notify.danemail
       data_template:
         message: >-
-          {%- set threshold = 40 -%}
+          {%- set threshold = 30 -%}
           {%- set domains = [states.light, states.switch, states.sensor, states.zwave, states.lock ] -%}
           {%- for domain in domains -%}
           {%- if loop.first -%}

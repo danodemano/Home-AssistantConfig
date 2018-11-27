@@ -12,6 +12,9 @@
 - platform: onkyo
   host: 192.168.52.10
   name: Onkyo Den
+  #sources:
+  #  video6: 'PC'
+  #  cd: 'Record'
 - platform: alexa
   email: !secret amazon_email
   password: !secret amazon_password

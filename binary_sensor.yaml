@@ -49,6 +49,8 @@
   sensors:
     home_power_status:
       friendly_name: 'Home Power Status'
+      #delay_off:
+      #  seconds: 90
       #device_class: power
       value_template: >-
           {%- if is_state("binary_sensor.home_power", "on") -%}
@@ -186,3 +188,79 @@
               False
           {%- endif -%}
       entity_id: binary_sensor.blue_iris_patio
+
+    den_ps3_status:
+      friendly_name: 'Den PS3'
+      value_template: >-
+          {%- if is_state("device_tracker.den_ps3", "home") -%}
+              True
+          {%- elif is_state("device_tracker.den_ps3", "not_home") -%}
+              False
+          #This accounts for no state during startup until the sensor registers 
+          {%- else -%}
+              False
+          {%- endif -%}
+      entity_id: device_tracker.den_ps3
+    den_ps4_status:
+      friendly_name: 'Den PS4'
+      value_template: >-
+          {%- if is_state("device_tracker.den_ps4", "home") -%}
+              True
+          {%- elif is_state("device_tracker.den_ps4", "not_home") -%}
+              False
+          #This accounts for no state during startup until the sensor registers 
+          {%- else -%}
+              False
+          {%- endif -%}
+      entity_id: device_tracker.den_ps4
+    den_amp_status:
+      friendly_name: 'Den AMP'
+      value_template: >-
+          {%- if is_state("device_tracker.den_amp", "home") -%}
+              True
+          {%- elif is_state("device_tracker.den_amp", "not_home") -%}
+              False
+          #This accounts for no state during startup until the sensor registers 
+          {%- else -%}
+              False
+          {%- endif -%}
+      entity_id: device_tracker.den_amp
+    den_lgtv_status:
+      friendly_name: 'Den LG TV'
+      value_template: >-
+          {%- if is_state("device_tracker.den_lgtv", "home") -%}
+              True
+          {%- elif is_state("device_tracker.den_lgtv", "not_home") -%}
+              False
+          #This accounts for no state during startup until the sensor registers 
+          {%- else -%}
+              False
+          {%- endif -%}
+      entity_id: device_tracker.den_lgtv
+
+    craft_motion:
+      friendly_name: 'Craft Room Motion'
+      device_class: motion
+      value_template: >-
+          {%- if is_state("sensor.craft_room_motion", "255") -%}
+              True
+          {%- elif is_state("sensor.craft_room_motion", "0") -%}
+              False
+          #This accounts for no state during startup until the sensor registers 
+          {%- else -%}
+              False
+          {%- endif -%}
+      entity_id: sensor.craft_room_motion
+
+    connection_to_mysql:
+      friendly_name: 'Connection to MySQL'
+      value_template: >-
+          {%- if is_state("sensor.connection_to_mysql", "True") -%}
+              True
+          {%- elif is_state("sensor.connection_to_mysql", "False") -%}
+              False
+          #This accounts for no state during startup until the sensor registers 
+          {%- else -%}
+              True
+          {%- endif -%}
+      entity_id: sensor.connection_to_mysql

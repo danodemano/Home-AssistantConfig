@@ -1018,3 +1018,15 @@ sensor.home_energy_meter_previous_reading_7:
 sensor.vision_zd2102_eu_doorwindow_sensor_alarm_type_2:
   ignored: true
   polling_intensity: 0
+sensor.vision_zp3102_pir_motion_sensor_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3102_pir_motion_sensor_burglar:
+  ignored: true
+  polling_intensity: 0
+binary_sensor.vision_zp3102_pir_motion_sensor_sensor:
+  ignored: true
+  polling_intensity: 0
+sensor.vision_zp3102_pir_motion_sensor_sourcenodeid:
+  ignored: true
+  polling_intensity: 0

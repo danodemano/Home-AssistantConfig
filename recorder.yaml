@@ -12,7 +12,10 @@ exclude:
     - camera
     - zwave
     - group
-    - input_number
+    #- input_number
+    #- input_boolean
+    #- input_select
+    #- input_text
     - scene
     - zone
   entities:

@@ -4,12 +4,20 @@
     shelley_ping: 192.168.55.152
     dan_ping: 192.168.9.69
     dan2_ping: 192.168.55.153
-    ps3: 192.168.52.12
-    ps4: 192.168.52.11
-    lgtv: 192.168.9.65
+#    ps3: 192.168.52.12
+#    ps4: 192.168.52.11
+#    lgtv: 192.168.9.65
 #    nick: 192.168.51.101
 #    shannon: 192.168.51.107
+- platform: ping
+  consider_home: 30
+  hosts:
+    den_amp: 192.168.52.10
+    den_ps3: 192.168.52.12
+    den_ps4: 192.168.52.11
+    den_lgtv: 192.168.9.65
 - platform: owntracks_http
+- platform: gpslogger
 - platform: unifi
   username: !secret unifi_user
   password: !secret unifi_pass

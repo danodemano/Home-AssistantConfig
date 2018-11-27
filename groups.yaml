@@ -19,6 +19,7 @@ default_view:
    - group.school_closings
    - group.snow_emergencies
    - group.family_locations
+   - group.craft_room
    - sun.sun
    - sensor.moon
    - sensor.zestimate
@@ -28,12 +29,14 @@ default_view:
    - device_tracker.nick_phone
    - device_tracker.dan2_owntracks
    - device_tracker.shelley_owntracks
+   - device_tracker.fa7be1a01138
    - sensor.btc_to_usd
    - sensor.xrp_to_usd
    - sensor.eth_to_usd
    - sensor.430_walnutview_dr
    - binary_sensor.iss
    - binary_sensor.home_power_status
+   - binary_sensor.connection_to_mysql
    - camera.usps_home_mail
    - sensor.dark_sky_cloud_coverage
    - sensor.dark_sky_wind_speed
@@ -76,7 +79,7 @@ vacation:
     - group.doors
     - group.windows
     - group.server_rack
-    - climate.water_heater
+    - water_heater.water_heater
     - binary_sensor.home_power_status
 
 media:
@@ -114,6 +117,8 @@ system_health:
    - sensor.disk_use_percent_
    - sensor.memory_use_percent
    - sensor.since_last_boot
+   - sensor.current_version
+   - sensor.current_ha_version
    - zwave.aeotec_zw090_zstick_gen5_us
 
 random:
@@ -228,6 +233,14 @@ living_area:
   - switch.living_room
   - switch.lr_dry_sink
 
+craft_room:
+  name: "Craft Area"
+  control: hidden
+  entities:
+  - switch.craft_room_light
+  - binary_sensor.craft_motion
+  - sensor.craft_room_temperature
+
 den_area:
  name: "Den Area"
  control: hidden
@@ -236,6 +249,10 @@ den_area:
    - light.den
    - sensor.den_humidity
    - sensor.den_temperature
+   - binary_sensor.den_ps3_status
+   - binary_sensor.den_ps4_status
+   - binary_sensor.den_amp_status
+   - binary_sensor.den_lgtv_status
 
 kitchen:
  name: "Kitchen"
@@ -317,6 +334,8 @@ holidays:
   entities:
     - switch.holiday_lights
     - switch.holiday_mode
+    - switch.lr_railing
+    - input_select.holiday_selector
 
 holiday_lights:
   name: "Light that turn on for Holiday"
@@ -357,15 +376,15 @@ internet:
 camera_motion:
   name: Camera Motion Detection
   entities:
-    - binary_sensor.blue_iris_backyard
-    - binary_sensor.blue_iris_basement
-    - binary_sensor.blue_iris_craftroom
-    - binary_sensor.blue_iris_driveway
-    - binary_sensor.blue_iris_frontwalk
-    - binary_sensor.blue_iris_garage
-    - binary_sensor.blue_iris_gatepatio
-    - binary_sensor.blue_iris_livingroom
-    - binary_sensor.blue_iris_patio
+    # - binary_sensor.blue_iris_backyard
+    # - binary_sensor.blue_iris_basement
+    # - binary_sensor.blue_iris_craftroom
+    # - binary_sensor.blue_iris_driveway
+    # - binary_sensor.blue_iris_frontwalk
+    # - binary_sensor.blue_iris_garage
+    # - binary_sensor.blue_iris_gatepatio
+    # - binary_sensor.blue_iris_livingroom
+    # - binary_sensor.blue_iris_patio
     - binary_sensor.camera_basement
     - binary_sensor.camera_backyard
     - binary_sensor.camera_craftroom

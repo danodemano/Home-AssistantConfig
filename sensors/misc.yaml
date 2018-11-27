@@ -123,6 +123,8 @@
       arg: eth0
     - type: since_last_boot
 
+- platform: version
+
 - platform: moon
 
 - platform: haveibeenpwned
@@ -154,18 +156,22 @@
   country: usa
   show_on_map: false
 
-- platform: sense
-  email: !secret sense_email
-  password: !secret sense_password
-  monitored_conditions:
-    - active_usage
-    - daily_usage
-    - weekly_usage
-    - monthly_usage
-    - yearly_usage
+#- platform: sense
+#  email: !secret sense_email
+#  password: !secret sense_password
+#  monitored_conditions:
+#    - active_usage
+#    - daily_usage
+#    - weekly_usage
+#    - monthly_usage
+#    - yearly_usage
 
 - platform: season
   type: astronomical
+
+- platform: illuminance
+  name: Outside Illuminance
+  entity_id: sensor.dark_sky_icon
 
 - platform: statistics
   name: 'WAN Traffic In'

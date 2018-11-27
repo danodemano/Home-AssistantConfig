@@ -27,3 +27,11 @@ tts_endpoint_select:
     - 'shannon'
   initial: 'All'
   icon: mdi:volume-high
+holiday_selector:
+  name: 'Holiday Mode'
+  options:
+    - 'None'
+    - 'Halloween'
+    - 'Christmas'
+  initial: 'None'
+  icon: mdi:pine-tree

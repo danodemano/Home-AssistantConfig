@@ -143,3 +143,5 @@ sensor.wan_traffic_out_mean:
   icon: mdi:upload
 sensor.main_thermostat_fan_mode:
   icon: mdi:fan
+sensor.current_version:
+  friendly_name: 'My HA Version'

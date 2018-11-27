@@ -23,9 +23,9 @@ switch.living_room:
 switch.kids_tv:
   friendly_name: Kids TV
   icon: mdi:television
-switch.lr_dry_sink:
-  friendly_name: LR Dry Sink
-  icon: mdi:power-plug
+switch.lr_railing:
+  friendly_name: LR Railing
+  icon: mdi:stairs
 switch.den_av:
   icon: mdi:television
 switch.master_night_stuff:
