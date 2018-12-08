@@ -28,7 +28,7 @@
   unit_of_measurement: "MB"
 - platform: command_line
   name: "BTC to USD"
-  command: 'python3 /scripts/coinbase_btc.py'
+  command: 'python3 /scripts/kraken_btc.py'
   unit_of_measurement: "USD"
 - platform: command_line
   name: "Kids WiFi Status"
@@ -51,3 +51,6 @@
   command: /scripts/check_ha_mysql.sh
   name: Connection to MySql
   scan_interval: 60
+- platform: command_line
+  name: Last Alexa
+  command: '/scripts/alexa_remote_control.sh'

@@ -88,3 +88,6 @@ include:
     - sensor.wan_traffic_out_mean
     - sensor.main_thermostat_fan_mode
     - binary_sensor.home_power_status
+    - sensor.outside_illuminance
+    - sensor.climate_living_room_temperature
+    - sensor.climate_living_room_humidity

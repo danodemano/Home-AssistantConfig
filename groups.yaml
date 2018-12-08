@@ -10,7 +10,7 @@ default_view:
    - group.den_area
    - group.kitchen
    - group.master
-   - group.hvac_main
+#   - group.hvac_main
    - group.home_electric
 #   - group.weather
    - weather.dark_sky
@@ -40,6 +40,8 @@ default_view:
    - camera.usps_home_mail
    - sensor.dark_sky_cloud_coverage
    - sensor.dark_sky_wind_speed
+   - sensor.outside_illuminance
+   - climate.living_room
 
 security:
  name: Security
@@ -232,6 +234,8 @@ living_area:
   - switch.kids_tv
   - switch.living_room
   - switch.lr_dry_sink
+  - sensor.climate_living_room_temperature
+  - sensor.climate_living_room_humidity
 
 craft_room:
   name: "Craft Area"
@@ -335,6 +339,7 @@ holidays:
     - switch.holiday_lights
     - switch.holiday_mode
     - switch.lr_railing
+    - switch.lr_holiday_lights
     - input_select.holiday_selector
 
 holiday_lights:

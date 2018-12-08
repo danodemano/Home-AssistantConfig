@@ -31,9 +31,9 @@ http:
     - 192.168.54.3
   ip_ban_enabled: true
   login_attempts_threshold: 10
-  trusted_networks:
+#  trusted_networks:
 #    - 192.168.9.0/24
-    - 10.242.2.0/24
+#    - 10.242.2.0/24
 
 # Enables support for tracking state changes over time.
 history:
@@ -122,6 +122,9 @@ mqtt:
 
 linode:
   access_token: !secret linode_api_key
+
+ecobee:
+  api_key: !secret ecobee_api_key
 
 binary_sensor: !include binary_sensor.yaml
 

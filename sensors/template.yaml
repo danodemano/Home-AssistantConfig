@@ -16,6 +16,14 @@
       friendly_name: 'Heat Set Point'
       unit_of_measurement: '°F'
       value_template: '{{ states.climate.main_thermostat_heating_1.attributes.temperature }}'
+    climate_living_room_temperature:
+      friendly_name: 'Living Room Temperature'
+      unit_of_measurement: '°F'
+      value_template: '{{ states.climate.living_room.attributes.current_temperature }}'
+    climate_living_room_humidity:
+      friendly_name: 'Living Room Humidity'
+      unit_of_measurement: '%'
+      value_template: '{{ states.climate.living_room.attributes.actual_humidity }}'
     door_garage_state:
       friendly_name: 'Door Garage'
       value_template: >-

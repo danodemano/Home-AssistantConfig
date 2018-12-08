@@ -2,7 +2,7 @@ temps:
   name: "Temperatures"
   entities:
     - sensor.den_temperature
-    - sensor.main_thermostat_temperature
+    - sensor.climate_living_room_temperature
     - sensor.outside_temp
   hours_to_show: 24
   refresh: 300
@@ -10,7 +10,7 @@ humidity:
   name: "Humidity"
   entities:
     - sensor.den_humidity
-    - sensor.main_thermostat_relative_humidity
+    - sensor.climate_living_room_humidity
     - sensor.outside_humidity
   hours_to_show: 24
   refresh: 300
