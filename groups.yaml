@@ -29,7 +29,7 @@ default_view:
    - device_tracker.nick_phone
    - device_tracker.dan2_owntracks
    - device_tracker.shelley_owntracks
-   - device_tracker.fa7be1a01138
+   - device_tracker.dan_gpslogger
    - sensor.btc_to_usd
    - sensor.xrp_to_usd
    - sensor.eth_to_usd
@@ -83,6 +83,7 @@ vacation:
     - group.server_rack
     - water_heater.water_heater
     - binary_sensor.home_power_status
+    - switch.burglar_alarm
 
 media:
   name: Media
@@ -135,11 +136,15 @@ random:
   - group.dome_test
   - group.leak_test
   - group.tts_send
+  - group.mailbox_test
   - light.master_1
   - light.master_2
   - remote.den
   - light.den_tv_leds
   - script.front_walk_trigger
+  - input_boolean.test1
+  - input_boolean.test2
+  - input_boolean.test3
 
 oomi_test:
   name: Oomi Test
@@ -163,6 +168,17 @@ dome_test:
   - sensor.dome_motion_detector_luminance_2
   - sensor.dome_motion_detector_sourcenodeid_2
 
+mailbox_test:
+  name: Mailbox Test
+  control: hidden
+  entities:
+  - binary_sensor.dome_motion_detector_sensor
+  - sensor.dome_motion_detector_alarm_level
+  - sensor.dome_motion_detector_alarm_type
+  - sensor.dome_motion_detector_burglar_3
+  - sensor.dome_motion_detector_luminance_3
+  - ensor.dome_motion_detector_sourcenodeid_3
+
 security_misc:
   name: Security Misc
   control: hidden
@@ -176,7 +192,7 @@ cameras_group:
    - camera.driveway
    - camera.back_gatepatio
    - camera.front_walk
-   - camera.backyardshed
+   - camera.backyard
    - camera.patio
    - camera.garage
    - camera.basement

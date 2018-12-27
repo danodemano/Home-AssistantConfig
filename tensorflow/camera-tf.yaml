@@ -1,0 +1,21 @@
+- platform: tensorflow
+  source:
+    - entity_id: camera.driveway
+    - entity_id: camera.back_gatepatio
+    - entity_id: camera.front_walk
+    - entity_id: camera.backyard
+    - entity_id: camera.patio
+    - entity_id: camera.garage
+    - entity_id: camera.basement
+    - entity_id: camera.living_room
+    - entity_id: camera.craft_room
+  file_out:
+    - "/root/.homeassistant/tensorflow/images/{{ camera_entity.split('.')[1] }}_latest.jpg"
+    - "/root/.homeassistant/tensorflow/images/{{ camera_entity.split('.')[1] }}_{{ now().strftime('%Y%m%d_%H%M%S') }}.jpg"
+  scan_interval: 604800
+  model:
+    graph: /root/.homeassistant/tensorflow/frozen_inference_graph.pb
+    # categories:
+    #   - person
+    #   - car
+    #   - truck

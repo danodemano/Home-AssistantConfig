@@ -35,3 +35,26 @@
   destination: !secret travel_home
   name: Shelley location to Home
   scan_interval: 300
+
+# - platform: waze_travel_time
+#   name: Test 1
+#   origin: !secret travel_shelley_work
+#   destination: !secret travel_home
+#   region: 'US'
+
+# - platform: waze_travel_time
+#   name: Test 2
+#   origin: !secret travel_home
+#   destination: !secret travel_shelley_work
+#   region: 'US'
+
+# - platform: waze_travel_time
+#   name: test123
+#   origin: 52.123630,-0.391921
+#   destination: 52.348053,-0.192345
+#   region: 'EU'
+# - platform: waze_travel_time
+#   name: test321
+#   origin: 1 Percy Road, Huntingdon, PE29 6SZ, UK
+#   destination: 22 Grange Lane, Cople, MK44 3TT, UK
+#   region: 'EU'

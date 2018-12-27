@@ -33,5 +33,12 @@ holiday_selector:
     - 'None'
     - 'Halloween'
     - 'Christmas'
-  initial: 'None'
+    - 'Veterans Day'
+    - 'Peace Officer Week'
+    - 'Fallen Firefighters'
+    - 'Independence Day'
+    - 'Valentine Day'
+    - 'St. Patrick Day'
+    - 'Memorial Day'
+  #initial: 'None'
   icon: mdi:pine-tree

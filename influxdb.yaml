@@ -91,3 +91,10 @@ include:
     - sensor.outside_illuminance
     - sensor.climate_living_room_temperature
     - sensor.climate_living_room_humidity
+    #Remove these
+    - sensor.dome_motion_detector_alarm_level
+    - sensor.dome_motion_detector_alarm_type
+    - sensor.dome_motion_detector_burglar_3
+    - sensor.dome_motion_detector_luminance_3
+    - sensor.dome_motion_detector_sourcenodeid_3
+    - binary_sensor.dome_motion_detector_sensor

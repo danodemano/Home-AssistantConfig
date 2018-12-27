@@ -4,6 +4,11 @@
 *.crt
 *.key
 *.old
+*.jpg
+*.pb
+*.index
+*.meta
+*.data-00000-of-00001
 www
 logs
 OZW_Log.txt
@@ -35,3 +40,6 @@ ip_bans.yaml
 gitupdate.sh
 appdaemon.yaml
 emulated_hue_ids.json
+/tensorflow/object_detection/
+/tensorflow/saved_model/
+/tensorflow/images/

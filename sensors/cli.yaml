@@ -51,6 +51,6 @@
   command: /scripts/check_ha_mysql.sh
   name: Connection to MySql
   scan_interval: 60
-- platform: command_line
-  name: Last Alexa
-  command: '/scripts/alexa_remote_control.sh'
+# - platform: command_line
+#   name: Last Alexa
+#   command: '/scripts/alexa_remote_control.sh'

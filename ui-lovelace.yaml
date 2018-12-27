@@ -1,472 +1,653 @@
-name: Home
-views:
-- title: Bunyard
-  tab_icon: mdi:home-variant
-  cards:
-  - type: entities
-    title: Outdoor Lights
-    entities:
-    - switch.front_walk_lights
-    - switch.patio
-    - light.outside
-  - type: entities
-    title: Pets
-    entities:
-    - switch.norbert_light_switch
-    - switch.norbert_heat
-    - switch.snake_heaters
-    - switch.gecko_uth_heater
-    - switch.gecko_ceramic_heat
-    - switch.anole_light_switch
-    - switch.anole_heat_switch
-    - sensor.gecko_humidity
-    - sensor.gecko_temperature
-    - sensor.norbert_humidity
-    - sensor.norbert_temperature
-  - type: entities
-    title: Dining/Living Area
-    entities:
-    - light.dining_room
-    - switch.kids_tv
-    - switch.living_room
-    - switch.lr_dry_sink
-  - type: entities
-    title: Den Area
-    entities:
-    - switch.den_av
-    - light.den
-    - sensor.den_humidity
-    - sensor.den_temperature
-  - type: entities
-    title: Kitchen
-    entities:
-    - switch.coffee_pot
-  - type: entities
-    title: Master Bedroom
-    entities:
-    - light.master
-    - switch.master_night_stuff
-    - sensor.master_luminance
-    - sensor.master_real_temp
-  - type: entities
-    title: Main Thermostat
-    entities:
-    - climate.main_thermostat_heating_1
-    - climate.main_thermostat_cooling_1
-  - type: entities
-    title: Home Electric Usage
-    entities:
-    - sensor.home_watts_total
-    - sensor.home_energy_meter_voltage
-    - sensor.home_current_total
-    - sensor.home_energy_total
-  - type: entities
-    title: Weather
-    entities:
-    - sensor.outside_temp
-    - sensor.outside_humidity
-    - sensor.pws_alerts
-    - sensor.pws_weather
-    - sensor.pws_wind_dir
-    - sensor.pws_wind_mph
-  - type: picture-entity
-    entity: camera.ohio_radar
-  - type: entities
-    title: Mail
-    entities:
-    - sensor.usps_home_mail
-    - sensor.usps_home_packages
-    - sensor.ups_home
-    - sensor.fedex_home
-  - type: entities
-    title: Holiday Stuff
-    entities:
-    - switch.holiday_lights
-    - switch.holiday_mode
-  - type: entities
-    title: School Closings
-    entities:
-    - sensor.big_walnut_lsd_status
-  - type: entities
-    title: Snow Emergencies
-    entities:
-    - sensor.delaware
-    - sensor.franklin
-    - sensor.morrow
-  - type: entities
-    title: Family Locations
-    entities:
-    - sensor.shelley_duration_to_home
-    - sensor.shelley_current_location
-    - sensor.dan_duration_to_home
-    - sensor.dan_current_location
-  - type: picture-entity
-    entity: camera.usps_home_mail
-- title: Security
-  tab_icon: mdi:lock
-  cards:
-  - type: entities
-    title: Camera Group
-    entities: []
-  - type: picture-entity
-    entity: camera.driveway
-  - type: picture-entity
-    entity: camera.back_gatepatio
-  - type: picture-entity
-    entity: camera.front_walk
-  - type: picture-entity
-    entity: camera.backyardshed
-  - type: picture-entity
-    entity: camera.patio
-  - type: picture-entity
-    entity: camera.garage
-  - type: picture-entity
-    entity: camera.basement
-  - type: picture-entity
-    entity: camera.living_room
-  - type: picture-entity
-    entity: camera.craft_room
-  - type: entities
-    title: Door Status
-    entities:
-    - sensor.door_garage_to_den_state
-    - sensor.door_basement_state
-    - sensor.door_front_state
-    - sensor.door_back_sliding_state
-    - sensor.door_craft_to_drive_state
-    - sensor.door_craft_to_patio_state
-    - sensor.door_garage_state
-  - type: entities
-    title: Window Status
-    entities:
-    - sensor.window_craft_room_state
-    - sensor.window_den_state
-    - sensor.window_front_east_state
-    - sensor.window_front_west_state
-    - sensor.window_kitchen_state
-    - sensor.window_den_status
-  - type: entities
-    title: Security Misc
-    entities:
-    - switch.video_pop
-    - cover.garage_door_opener
-  - type: entities
-    title: Camera Motion Detection
-    entities:
-    - binarysensor.blue_iris_backyard
-    - binarysensor.blue_iris_basement
-    - binarysensor.blue_iris_craftroom
-    - binarysensor.blue_iris_driveway
-    - binarysensor.blue_iris_frontwalk
-    - binarysensor.blue_iris_garage
-    - binarysensor.blue_iris_gatepatio
-    - binarysensor.blue_iris_livingroom
-    - binarysensor.blue_iris_patio
-- title: Kids
-  tab_icon: mdi:account
-  cards:
-  - type: entities
-    title: Kids Wifi Buttons
-    entities:
-    - script.kids_wifi_on
-    - script.kids_wifi_off
-  - type: entities
-    title: Kids Device Wifi Status
-    entities:
-    - sensor.nick_phone_wifi_state
-    - sensor.shannon_phone_wifi_state
-  - type: entities
-    title: Kids Individual Control
-    entities:
-    - script.nick_wifi_on
-    - script.nick_wifi_off
-    - script.shannon_wifi_on
-    - script.shannon_wifi_off
-  - type: entities
-    title: Kids Misc
-    entities:
-    - switch.kids_override
-    - switch.kids_mega_override
-  - type: entities
-    title: Kids Throttle
-    entities:
-    - script.nick_wifi_throttle
-    - script.nick_wifi_unthrottle
-- title: Vacation
-  tab_icon: mdi:beach
-  cards:
-  - type: entities
-    title: Vacation Switches
-    entities:
-    - switch.water_heater
-    - switch.vacation_mode
-  - type: entities
-    title: Camera Group
-    entities: []
-  - type: picture-entity
-    entity: camera.driveway
-  - type: picture-entity
-    entity: camera.back_gatepatio
-  - type: picture-entity
-    entity: camera.front_walk
-  - type: picture-entity
-    entity: camera.backyardshed
-  - type: picture-entity
-    entity: camera.patio
-  - type: picture-entity
-    entity: camera.garage
-  - type: picture-entity
-    entity: camera.basement
-  - type: picture-entity
-    entity: camera.living_room
-  - type: picture-entity
-    entity: camera.craft_room
-  - type: entities
-    title: Pets
-    entities:
-    - switch.norbert_light_switch
-    - switch.norbert_heat
-    - switch.snake_heaters
-    - switch.gecko_uth_heater
-    - switch.gecko_ceramic_heat
-    - switch.anole_light_switch
-    - switch.anole_heat_switch
-    - sensor.gecko_humidity
-    - sensor.gecko_temperature
-    - sensor.norbert_humidity
-    - sensor.norbert_temperature
-  - type: entities
-    title: Leak Sensors
-    entities:
-    - binary_sensor.leak_water_heater
-    - binary_sensor.leak_sump_pump
-    - binary_sensor.leak_wet_corner
-  - type: entities
-    title: Main Thermostat
-    entities:
-    - climate.main_thermostat_heating_1
-    - climate.main_thermostat_cooling_1
-  - type: entities
-    title: Home Electric Usage
-    entities:
-    - sensor.home_watts_total
-    - sensor.home_energy_meter_voltage
-    - sensor.home_current_total
-    - sensor.home_energy_total
-  - type: entities
-    title: Door Status
-    entities:
-    - sensor.door_garage_to_den_state
-    - sensor.door_basement_state
-    - sensor.door_front_state
-    - sensor.door_back_sliding_state
-    - sensor.door_craft_to_drive_state
-    - sensor.door_craft_to_patio_state
-    - sensor.door_garage_state
-  - type: entities
-    title: Window Status
-    entities:
-    - sensor.window_craft_room_state
-    - sensor.window_den_state
-    - sensor.window_front_east_state
-    - sensor.window_front_west_state
-    - sensor.window_kitchen_state
-    - sensor.window_den_status
-  - type: entities
-    title: Server Rack
-    entities:
-    - sensor.server_rack_power
-    - sensor.server_rack_voltage
-    - sensor.server_rack_environment_relative_humidity
-    - sensor.server_rack_environment_temperature
-- title: Media
-  tab_icon: mdi:video-input-component
-  cards:
-  - type: media-control
-    entity: media_player.brix_pc
-  - type: media-control
-    entity: media_player.onkyo_den
-- title: Servers
-  tab_icon: mdi:server
-  cards:
-  - type: entities
-    title: Server Rack
-    entities:
-    - sensor.server_rack_power
-    - sensor.server_rack_voltage
-    - sensor.server_rack_environment_relative_humidity
-    - sensor.server_rack_environment_temperature
-  - type: entities
-    title: Wake on LAN
-    entities:
-    - switch.vm1
-    - switch.vm2
-  - type: entities
-    title: Pi-Hole Stats
-    entities:
-    - sensor.pihole_ads_blocked_today
-    - sensor.pihole_ads_percentage_blocked_today
-    - sensor.pihole_dns_queries_today
-    - sensor.pihole_domains_blocked
-  - type: entities
-    title: Internet Health
-    entities:
-    - sensor.speedtest_download
-    - sensor.speedtest_ping
-    - sensor.speedtest_upload
-    - sensor.wan_traffic_in_mean
-    - sensor.wan_traffic_out_mean
-  - type: entities
-    title: QNAP Storage NAS
-    entities:
-    - sensor.12tbnas_cpu_temperature
-    - sensor.12tbnas_cpu_usage
-    - sensor.12tbnas_free_space_datavol1
-    - sensor.12tbnas_memory_available
-    - sensor.12tbnas_memory_usage
-    - sensor.12tbnas_memory_used
-    - sensor.12tbnas_network_down_eth0
-    - sensor.12tbnas_network_down_eth1
-    - sensor.12tbnas_network_link_eth0
-    - sensor.12tbnas_network_link_eth1
-    - sensor.12tbnas_network_up_eth0
-    - sensor.12tbnas_network_up_eth1
-    - sensor.12tbnas_smart_status_drive_01
-    - sensor.12tbnas_smart_status_drive_02
-    - sensor.12tbnas_smart_status_drive_03
-    - sensor.12tbnas_smart_status_drive_04
-    - sensor.12tbnas_status
-    - sensor.12tbnas_system_temperature
-    - sensor.12tbnas_temperature_drive_01
-    - sensor.12tbnas_temperature_drive_02
-    - sensor.12tbnas_temperature_drive_03
-    - sensor.12tbnas_temperature_drive_04
-    - sensor.12tbnas_used_space_datavol1
-    - sensor.12tbnas_volume_used_datavol1
-  - type: entities
-    title: QNAP VM NAS
-    entities:
-    - sensor.vmnas1_cpu_temperature
-    - sensor.vmnas1_cpu_usage
-    - sensor.vmnas1_free_space_datavol1
-    - sensor.vmnas1_memory_available
-    - sensor.vmnas1_memory_usage
-    - sensor.vmnas1_memory_used
-    - sensor.vmnas1_network_down_eth0
-    - sensor.vmnas1_network_down_eth1
-    - sensor.vmnas1_network_link_eth0
-    - sensor.vmnas1_network_link_eth1
-    - sensor.vmnas1_network_up_eth0
-    - sensor.vmnas1_network_up_eth1
-    - sensor.vmnas1_smart_status_drive_01
-    - sensor.vmnas1_smart_status_drive_02
-    - sensor.vmnas1_status
-    - sensor.vmnas1_system_temperature
-    - sensor.vmnas1_temperature_drive_01
-    - sensor.vmnas1_temperature_drive_02
-    - sensor.vmnas1_used_space_datavol1
-    - sensor.vmnas1_volume_used_datavol1
-  - type: entities
-    title: Certificate Expirations
-    entities:
-    - sensor.danodemanocom
-    - sensor.madhookercom
-    - sensor.campohioadventurecom
-    - sensor.danbunyardcom
-    - sensor.hadanodemanocom
-    - sensor.blueirisdanodemanocom
-    - sensor.nextclouddanodemanocom
-    - sensor.grafanadanodemanocom
-    - sensor.qnapdanodemanocom
-    - sensor.gatewaydanodemanocom
-  - type: entities
-    title: Uptime Robot
-    entities:
-    - binary_sensor.12tb_qnap
-    - binary_sensor.blue_iris
-    - binary_sensor.bunyard_pics
-    - binary_sensor.consolidated_electric_web
-    - binary_sensor.danodemano_mail
-    - binary_sensor.danodemano_ssh
-    - binary_sensor.danodemano_web
-    - binary_sensor.ebill
-    - binary_sensor.grafana
-    - binary_sensor.home_assistant
-    - binary_sensor.home_internet
-    - binary_sensor.madhooker_web
-    - binary_sensor.nextcloud
-    - binary_sensor.routerboard
-  - type: entities
-    title: Server Grafana
-    entities:
-    - sensor.grafana_15min_load
-    - sensor.grafana_5min_load
-    - sensor.grafana_1min_load
-    - sensor.grafana_free_ram
-    - sensor.grafana_total_ram
-    - sensor.grafana_uptime
-    - sensor.grafana_used_disk_space
-    - sensor.grafana_used_inodes
-    - sensor.grafana_used_ram
-- title: System Health
-  tab_icon: mdi:heart
-  cards:
-  - type: entities
-    title: Database
-    entities:
-    - sensor.database_size
-    - sensor.influxdb_size
-    - script.clean_recorder_db
-  - type: entities
-    title: IO Latency
-    entities:
-    - sensor.io_latency_min
-    - sensor.io_latency_avg
-    - sensor.io_latency_max
-    - sensor.io_latency_sd
-- title: Random
-  tab_icon: mdi:developer-board
-  cards:
-  - type: entities
-    title: Bayesian Home
-    entities:
-    - binary_sensor.bayesian_presence_dan
-    - binary_sensor.bayesian_presence_shelley
-  - type: entities
-    title: Misc Stuff
-    entities: []
-  - type: history-graph
-    entity: history_graph.temperatures
-  - type: history-graph
-    entity: history_graph.humidity
-  - type: history-graph
-    entity: history_graph.temperature_comparison
-  - type: history-graph
-    entity: history_graph.humidity_comparison
-  - type: entities
-    title: Oomi Test
-    entities:
-    - sensor.oomi_ft100_multisensor_6_burglar
-    - sensor.oomi_ft100_multisensor_6_luminance
-    - sensor.oomi_ft100_multisensor_6_relative_humidity
-    - sensor.oomi_ft100_multisensor_6_sourcenodeid
-    - sensor.oomi_ft100_multisensor_6_temperature
-    - sensor.oomi_ft100_multisensor_6_ultraviolet
-    - binary_sensor.sensor
-    - sensor.alarm_level_2
-    - sensor.alarm_type_2
-  - type: entities
-    title: Dome Test
-    entities:
-    - sensor.dome_motion_detector_burglar_2
-    - sensor.dome_motion_detector_luminance_2
-    - sensor.dome_motion_detector_sourcenodeid_2
-- cards:
-  - card_config:
-      title: All Entities
-    filter:
-    - {}
-    type: entity-filter
-  name: All Entities
-  tab_icon: mdi:settings
 
+# This file was automatically generated by lovelace_migrate.py
+# https://github.com/dale3h/python-lovelace
+
+title: Home
+views:
+  - title: Bunyard
+    icon: mdi:home-variant
+    cards:
+      - type: entities
+        entities:
+          - sensor.moon
+          - device_tracker.nick_phone
+          - binary_sensor.connection_to_mysql
+          - binary_sensor.iss
+          - sensor.xrp_to_usd
+          - sensor.btc_to_usd
+          - device_tracker.dan_gpslogger
+          - sensor.outside_illuminance
+          - sensor.eth_to_usd
+          - sensor.dark_sky_wind_speed
+          - binary_sensor.home_power_status
+          - device_tracker.shelley_owntracks
+          - device_tracker.dan2_owntracks
+          - sensor.allergy_index_today
+          - sensor.zestimate
+          - sensor.dark_sky_cloud_coverage
+          - device_tracker.shannon_phone
+          - climate.living_room
+          - sun.sun
+      - type: entities
+        title: Snow Emergencies
+        show_header_toggle: false
+        entities:
+          - sensor.delaware
+          - sensor.morrow
+          - sensor.franklin
+      - type: entities
+        title: Master Bedroom
+        show_header_toggle: false
+        entities:
+          - light.master
+          - switch.master_night_stuff
+          - sensor.master_real_temp
+          - sensor.master_luminance
+      - type: entities
+        title: Craft Area
+        show_header_toggle: false
+        entities:
+          - switch.craft_room_light
+          - binary_sensor.craft_motion
+          - sensor.craft_room_temperature
+      - type: entities
+        title: Outdoor Lights
+        show_header_toggle: true
+        entities:
+          - light.outside
+          - switch.patio
+          - switch.front_walk_lights
+      - type: entities
+        title: Kitchen
+        show_header_toggle: false
+        entities:
+          - switch.coffee_pot
+      - type: weather-forecast
+        entity: weather.dark_sky
+      - type: entities
+        title: Home Electric Usage
+        show_header_toggle: true
+        entities:
+          - sensor.home_energy_total
+          - sensor.home_energy_meter_voltage
+          - sensor.water_heater_power
+          - sensor.home_watts_total
+          - sensor.home_current_total
+      - type: entities
+        title: School Closings
+        show_header_toggle: false
+        entities:
+          - sensor.big_walnut_lsd_status
+      - type: entities
+        title: Holiday Stuff
+        show_header_toggle: false
+        entities:
+          - switch.holiday_lights
+          - switch.lr_railing
+          - input_select.holiday_selector
+          - switch.holiday_mode
+          - switch.lr_holiday_lights
+      - type: entities
+        title: Pets
+        show_header_toggle: false
+        entities:
+          - sensor.gecko_humidity
+          - sensor.gecko_temperature
+          - sensor.norbert_humidity
+          - switch.gecko_ceramic_heat
+          - switch.norbert_light_switch
+          - switch.norbert_heat
+          - switch.snake_heaters
+          - sensor.norbert_temperature
+          - switch.anole_light_switch
+          - switch.gecko_uth_heater
+          - switch.anole_heat_switch
+      - type: entities
+        title: Dining/Living Area
+        show_header_toggle: false
+        entities:
+          - switch.living_room
+          - sensor.climate_living_room_humidity
+          - switch.kids_tv
+          - light.dining_room
+          - sensor.climate_living_room_temperature
+      - type: entities
+        title: Family Locations
+        show_header_toggle: true
+        entities:
+          - sensor.shelley_duration_to_home
+          - sensor.dan_duration_to_home
+          - sensor.dan_current_location
+          - sensor.shelley_current_location
+      - type: entities
+        title: Mail
+        show_header_toggle: true
+        entities:
+          - sensor.fedex_home
+          - sensor.ups_home
+      - type: entities
+        title: Den Area
+        show_header_toggle: false
+        entities:
+          - binary_sensor.den_amp_status
+          - sensor.den_humidity
+          - light.den
+          - sensor.den_temperature
+          - binary_sensor.den_ps4_status
+          - binary_sensor.den_lgtv_status
+          - switch.den_av
+          - binary_sensor.den_ps3_status
+  - title: Media
+    icon: mdi:video-input-component
+    cards:
+      - type: media-control
+        entity: media_player.onkyo_den
+      - type: media-control
+        entity: media_player.brix_pc
+  - title: Security
+    icon: mdi:lock
+    cards:
+      - type: entities
+        entities:
+          - alarm_control_panel.home_alarm
+      - type: entities
+        title: Camera Motion Detection
+        show_header_toggle: true
+        entities:
+          - binary_sensor.camera_livingroom
+          - binary_sensor.camera_gatepatio
+          - binary_sensor.camera_craftroom
+          - binary_sensor.camera_frontwalk
+          - binary_sensor.camera_basement
+          - binary_sensor.camera_garage
+          - binary_sensor.camera_patio
+          - binary_sensor.camera_driveway
+          - binary_sensor.camera_backyard
+      - type: entities
+        title: Security Misc
+        show_header_toggle: false
+        entities:
+          - cover.garage_door_opener
+          - switch.video_pop
+      - type: picture-entity
+        title: Garage
+        entity: camera.garage
+        camera_image: camera.garage
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Basement
+        entity: camera.basement
+        camera_image: camera.basement
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Front Walk
+        entity: camera.front_walk
+        camera_image: camera.front_walk
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Patio
+        entity: camera.patio
+        camera_image: camera.patio
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Backyard/Shed
+        entity: camera.backyardshed
+        camera_image: camera.backyardshed
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Back Gate/Patio
+        entity: camera.back_gatepatio
+        camera_image: camera.back_gatepatio
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Driveway
+        entity: camera.driveway
+        camera_image: camera.driveway
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Craft Room
+        entity: camera.craft_room
+        camera_image: camera.craft_room
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Living Room
+        entity: camera.living_room
+        camera_image: camera.living_room
+        show_info: true
+        tap_action: dialog
+      - type: entities
+        title: Window Status
+        show_header_toggle: true
+        entities:
+          - sensor.window_craft_room_state
+          - sensor.window_front_east_state
+          - sensor.window_front_west_state
+          - sensor.window_den_state
+          - sensor.window_kitchen_state
+      - type: entities
+        title: Door Status
+        show_header_toggle: true
+        entities:
+          - sensor.door_garage_to_den_state
+          - sensor.door_front_state
+          - sensor.door_craft_to_drive_state
+          - sensor.door_back_sliding_state
+          - sensor.door_garage_state
+          - sensor.door_basement_state
+          - sensor.door_craft_to_patio_state
+  - title: Random
+    icon: mdi:developer-board
+    cards:
+      - type: entities
+        entities:
+          - script.front_walk_trigger
+          - input_boolean.test2
+          - input_boolean.test1
+          - remote.den
+          - input_boolean.test3
+          - light.den_tv_leds
+      - type: entities
+        title: Oomi Test
+        show_header_toggle: false
+        entities:
+          - sensor.alarm_type_2
+          - sensor.alarm_level_2
+          - sensor.oomi_ft100_multisensor_6_temperature
+          - binary_sensor.sensor
+          - sensor.oomi_ft100_multisensor_6_luminance
+          - sensor.oomi_ft100_multisensor_6_relative_humidity
+          - sensor.oomi_ft100_multisensor_6_burglar
+          - sensor.oomi_ft100_multisensor_6_ultraviolet
+          - sensor.oomi_ft100_multisensor_6_sourcenodeid
+      - type: entities
+        title: Mailbox Test
+        show_header_toggle: false
+        entities:
+          - sensor.dome_motion_detector_alarm_type
+          - binary_sensor.dome_motion_detector_sensor
+          - sensor.dome_motion_detector_burglar_3
+          - sensor.dome_motion_detector_luminance_3
+          - sensor.dome_motion_detector_alarm_level
+      - type: entities
+        title: Bayesian Home
+        show_header_toggle: true
+        entities:
+          - binary_sensor.bayesian_presence_dan
+          - binary_sensor.bayesian_presence_shelley
+      - type: entities
+        title: Dome Test
+        show_header_toggle: false
+        entities:
+          - sensor.dome_motion_detector_sourcenodeid_2
+          - sensor.dome_motion_detector_luminance_2
+          - sensor.dome_motion_detector_burglar_2
+      - type: entities
+        title: TTS Send
+        show_header_toggle: true
+        entities:
+          - input_text.tts_text
+          - input_select.tts_endpoint_select
+          - script.update_tts_endpoints
+      - type: history-graph
+        title: Humidity
+        hours_to_show: 24
+        refresh_interval: 300
+        entities:
+          - sensor.den_humidity
+          - sensor.climate_living_room_humidity
+          - sensor.outside_humidity
+      - type: history-graph
+        title: Humidity Comparison
+        hours_to_show: 24
+        refresh_interval: 300
+        entities:
+          - sensor.outside_humidity
+          - sensor.brian_humidity
+          - sensor.guy_humidity
+      - type: history-graph
+        title: Temperature Comparison
+        hours_to_show: 24
+        refresh_interval: 300
+        entities:
+          - sensor.outside_temp
+          - sensor.brian_temp
+          - sensor.guy_temp
+      - type: history-graph
+        title: Temperatures
+        hours_to_show: 24
+        refresh_interval: 300
+        entities:
+          - sensor.den_temperature
+          - sensor.climate_living_room_temperature
+          - sensor.outside_temp
+  - title: Kids
+    icon: mdi:account
+    cards:
+      - type: entities
+        entities:
+          - sensor.kids_wifi_status
+      - type: entities
+        title: Kids Wifi Buttons
+        show_header_toggle: false
+        entities:
+          - script.kids_wifi_off
+          - script.kids_wifi_on
+      - type: entities
+        title: Kids Individual Control
+        show_header_toggle: false
+        entities:
+          - script.nick_wifi_off
+          - script.shannon_wifi_on
+          - script.nick_wifi_on
+          - script.shannon_wifi_off
+      - type: entities
+        title: Kids Misc
+        show_header_toggle: false
+        entities:
+          - switch.kids_override
+          - switch.kids_mega_override
+      - type: entities
+        title: Kids Device Wifi Status
+        show_header_toggle: false
+        entities:
+          - sensor.shannon_phone_wifi_state
+          - sensor.nick_phone_wifi_state
+      - type: entities
+        title: Kids Throttle
+        show_header_toggle: false
+        entities:
+          - script.nick_wifi_throttle
+          - script.nick_wifi_unthrottle
+  - title: Vacation
+    icon: mdi:beach
+    cards:
+      - type: entities
+        entities:
+          - water_heater.water_heater
+          - binary_sensor.home_power_status
+      - type: entities
+        title: Leak Sensors
+        show_header_toggle: true
+        entities:
+          - binary_sensor.leak_sump_pump
+          - binary_sensor.leak_water_heater
+          - binary_sensor.leak_wet_corner
+      - type: entities
+        title: Vacation Switches
+        show_header_toggle: false
+        entities:
+          - switch.water_heater
+          - switch.vacation_mode
+      - type: entities
+        title: Pets
+        show_header_toggle: false
+        entities:
+          - sensor.gecko_humidity
+          - sensor.gecko_temperature
+          - sensor.norbert_humidity
+          - switch.gecko_ceramic_heat
+          - switch.norbert_light_switch
+          - switch.norbert_heat
+          - switch.snake_heaters
+          - sensor.norbert_temperature
+          - switch.anole_light_switch
+          - switch.gecko_uth_heater
+          - switch.anole_heat_switch
+      - type: entities
+        title: Window Status
+        show_header_toggle: true
+        entities:
+          - sensor.window_craft_room_state
+          - sensor.window_front_east_state
+          - sensor.window_front_west_state
+          - sensor.window_den_state
+          - sensor.window_kitchen_state
+      - type: entities
+        title: Server Rack
+        show_header_toggle: true
+        entities:
+          - sensor.server_rack_voltage
+          - sensor.server_rack_environment_temperature
+          - sensor.server_rack_power
+          - sensor.server_rack_environment_relative_humidity
+      - type: picture-entity
+        title: Garage
+        entity: camera.garage
+        camera_image: camera.garage
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Basement
+        entity: camera.basement
+        camera_image: camera.basement
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Front Walk
+        entity: camera.front_walk
+        camera_image: camera.front_walk
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Patio
+        entity: camera.patio
+        camera_image: camera.patio
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Backyard/Shed
+        entity: camera.backyardshed
+        camera_image: camera.backyardshed
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Back Gate/Patio
+        entity: camera.back_gatepatio
+        camera_image: camera.back_gatepatio
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Driveway
+        entity: camera.driveway
+        camera_image: camera.driveway
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Craft Room
+        entity: camera.craft_room
+        camera_image: camera.craft_room
+        show_info: true
+        tap_action: dialog
+      - type: picture-entity
+        title: Living Room
+        entity: camera.living_room
+        camera_image: camera.living_room
+        show_info: true
+        tap_action: dialog
+      - type: entities
+        title: Main Thermostat
+        show_header_toggle: true
+        entities:
+          - switch.fan_circulate
+          - input_select.hvac_fan_mode_main
+          - sensor.main_thermostat_fan_mode
+          - input_select.hvac_operation_mode_main
+          - input_number.hvac_target_temp_main
+      - type: entities
+        title: Door Status
+        show_header_toggle: true
+        entities:
+          - sensor.door_garage_to_den_state
+          - sensor.door_front_state
+          - sensor.door_craft_to_drive_state
+          - sensor.door_back_sliding_state
+          - sensor.door_garage_state
+          - sensor.door_basement_state
+          - sensor.door_craft_to_patio_state
+      - type: entities
+        title: Home Electric Usage
+        show_header_toggle: true
+        entities:
+          - sensor.home_energy_total
+          - sensor.home_energy_meter_voltage
+          - sensor.water_heater_power
+          - sensor.home_watts_total
+          - sensor.home_current_total
+  - title: Servers
+    icon: mdi:server
+    cards:
+      - type: entities
+        title: Certificate Expirations
+        show_header_toggle: true
+        entities:
+          - sensor.campohioadventurecom
+          - sensor.danbunyardcom
+          - sensor.hadanodemanocom
+          - sensor.nextclouddanodemanocom
+          - sensor.danodemanocom
+          - sensor.grafanadanodemanocom
+          - sensor.madhookercom
+          - sensor.blueirisdanodemanocom
+          - sensor.qnapdanodemanocom
+          - sensor.gatewaydanodemanocom
+      - type: entities
+        title: Pi-Hole Stats
+        show_header_toggle: true
+        entities:
+          - sensor.pihole_ads_percentage_blocked_today
+          - sensor.pihole_ads_blocked_today
+          - sensor.pihole_dns_queries_today
+          - sensor.pihole_domains_blocked
+      - type: entities
+        title: Uptime Robot
+        show_header_toggle: true
+        entities:
+          - binary_sensor.consolidated_electric_web
+          - binary_sensor.bunyard_pics
+          - binary_sensor.danodemano_web
+          - binary_sensor.routerboard
+          - binary_sensor.danodemano_ssh
+          - binary_sensor.home_internet
+          - binary_sensor.ebill
+          - binary_sensor.blue_iris
+          - binary_sensor.12tb_qnap
+          - binary_sensor.danodemano_mail
+          - binary_sensor.madhooker_web
+          - binary_sensor.grafana
+          - binary_sensor.home_assistant
+          - binary_sensor.nextcloud
+      - type: entities
+        title: Internet Health
+        show_header_toggle: true
+        entities:
+          - sensor.speedtest_ping
+          - sensor.speedtest_download
+          - sensor.speedtest_upload
+      - type: entities
+        title: Wake on LAN
+        show_header_toggle: false
+        entities:
+          - switch.vm2
+          - switch.vm1
+      - type: entities
+        title: Server Rack
+        show_header_toggle: true
+        entities:
+          - sensor.server_rack_voltage
+          - sensor.server_rack_environment_temperature
+          - sensor.server_rack_power
+          - sensor.server_rack_environment_relative_humidity
+      - type: entities
+        title: QNAP VM NAS
+        show_header_toggle: true
+        entities:
+          - sensor.vmnas1_memory_usage
+          - sensor.vmnas1_network_down_eth1
+          - sensor.vmnas1_memory_used
+          - sensor.vmnas1_network_up_eth0
+          - sensor.vmnas1_network_up_eth1
+          - sensor.vmnas1_used_space_datavol1
+          - sensor.vmnas1_free_space_datavol1
+          - sensor.vmnas1_status
+          - sensor.vmnas1_temperature_drive_02
+          - sensor.vmnas1_smart_status_drive_02
+          - sensor.vmnas1_memory_available
+          - sensor.vmnas1_cpu_usage
+          - sensor.vmnas1_smart_status_drive_01
+          - sensor.vmnas1_network_link_eth0
+          - sensor.vmnas1_system_temperature
+          - sensor.vmnas1_temperature_drive_01
+          - sensor.vmnas1_volume_used_datavol1
+          - sensor.vmnas1_network_link_eth1
+          - sensor.vmnas1_cpu_temperature
+          - sensor.vmnas1_network_down_eth0
+      - type: entities
+        title: Bandwith Monitoring
+        show_header_toggle: true
+        entities:
+          - sensor.wan_traffic_out_mean
+          - sensor.internet_speed_in
+          - sensor.wan_traffic_in_mean
+          - sensor.internet_speed_out
+      - type: entities
+        title: QNAP Storage NAS
+        show_header_toggle: true
+        entities:
+          - sensor.12tbnas_cpu_usage
+          - sensor.12tbnas_cpu_temperature
+          - sensor.12tbnas_system_temperature
+          - sensor.12tbnas_volume_used_datavol1
+          - sensor.12tbnas_temperature_drive_01
+          - sensor.12tbnas_smart_status_drive_01
+          - sensor.12tbnas_smart_status_drive_02
+          - sensor.12tbnas_network_link_eth0
+          - sensor.12tbnas_smart_status_drive_03
+          - sensor.12tbnas_memory_available
+          - sensor.12tbnas_network_link_eth1
+          - sensor.12tbnas_smart_status_drive_04
+          - sensor.12tbnas_memory_usage
+          - sensor.12tbnas_temperature_drive_03
+          - sensor.12tbnas_network_down_eth1
+          - sensor.12tbnas_network_up_eth1
+          - sensor.12tbnas_memory_used
+          - sensor.12tbnas_free_space_datavol1
+          - sensor.12tbnas_temperature_drive_04
+          - sensor.12tbnas_status
+          - sensor.12tbnas_used_space_datavol1
+          - sensor.12tbnas_network_up_eth0
+          - sensor.12tbnas_network_down_eth0
+          - sensor.12tbnas_temperature_drive_02
+  - title: System Health
+    icon: mdi:heart
+    cards:
+      - type: entities
+        entities:
+          - sensor.current_ha_version
+          - sensor.processor_use
+          - sensor.memory_use_percent
+          - sensor.current_version
+          - sensor.disk_use_percent_
+          - zwave.aeotec_zw090_zstick_gen5_us
+      - type: entities
+        title: Database
+        show_header_toggle: true
+        entities:
+          - sensor.influxdb_size
+          - script.clean_recorder_db
+          - sensor.database_size
+      - type: entities
+        title: IO Latency
+        show_header_toggle: true
+        entities:
+          - sensor.io_latency_sd
+          - sensor.io_latency_min
+          - sensor.io_latency_max
+          - sensor.io_latency_avg

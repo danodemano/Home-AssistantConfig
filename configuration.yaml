@@ -22,7 +22,7 @@ frontend:
 config:
 
 http:
-  api_password: !secret http_password
+#  api_password: !secret http_password
   base_url: !secret http_base_url
 #  ssl_certificate: /etc/ssl/localcerts/fullchain.pem
 #  ssl_key: /etc/ssl/localcerts/privkey.pem
@@ -77,7 +77,7 @@ remote:
     host: 192.168.9.208
     activity: Watch TV
 
-#usps:
+# usps:
 #  name: "USPS Home"
 #  username: !secret usps_username
 #  password: !secret usps_password
@@ -101,7 +101,12 @@ alarm_control_panel:
   - platform: manual
     name: Home Alarm
     code: !secret alarm_code
-    delay_time: 30
+    armed_night:
+      delay_time: 0
+    armed_home:
+      delay_time: 30
+    armed_away:
+      delay_time: 60
 
 #MQTT discovery broker
 #mqtt:
@@ -125,6 +130,10 @@ linode:
 
 ecobee:
   api_key: !secret ecobee_api_key
+
+wunderlist:
+  client_id: !secret wunderlist_client_id
+  access_token: !secret wunderlist_access_token
 
 binary_sensor: !include binary_sensor.yaml
 
@@ -172,4 +181,5 @@ zone: !include zone.yaml
 
 water_heater: !include water_heater.yaml
 
-image_processing: !include image_processing.yaml
+#image_processing: !include image_processing.yaml
+image_processing: !include_dir_merge_list tensorflow

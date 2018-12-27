@@ -14,3 +14,7 @@ enable_video_pop:
   initial: off
 enable_hvac_periodic_fan:
   name: Enable Periodic Fan
+alarm_trigger:
+  name: Used to trigger burglar alarm
+night_alarm:
+  name: Trigger night alarm actions

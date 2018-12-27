@@ -264,3 +264,17 @@
               True
           {%- endif -%}
       entity_id: sensor.connection_to_mysql
+
+    door_basement_test:
+        friendly_name: 'Door Basement Test'
+        device_class: door
+        value_template: >-
+            {%- if is_state("sensor.door_basement_raw", 255) -%}
+            True
+            {%- elif is_state("sensor.door_basement_raw", 0) -%}
+            False
+            #This accounts for no state during startup until the sensor registers
+            {%- else -%}
+            False
+            {%- endif -%}
+            entity_id: sensor.door_basement_raw
