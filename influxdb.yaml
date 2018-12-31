@@ -91,6 +91,19 @@ include:
     - sensor.outside_illuminance
     - sensor.climate_living_room_temperature
     - sensor.climate_living_room_humidity
+    - sensor.weather_outside_altimeter
+    - sensor.weather_outside_barometer
+    - sensor.weather_outside_battery
+    - sensor.weather_outside_dewpoint
+    - sensor.weather_outside_heatindex
+    - sensor.weather_outside_humidity
+    - sensor.weather_outside_pressure
+    - sensor.weather_outside_rain
+    - sensor.weather_outside_rain_rate
+    - sensor.weather_outside_temp
+    - sensor.weather_outside_wind_dir
+    - sensor.weather_outside_wind_speed
+    - sensor.weather_outside_windchill
     #Remove these
     - sensor.dome_motion_detector_alarm_level
     - sensor.dome_motion_detector_alarm_type

@@ -2,6 +2,10 @@
   latitude: !secret dan_work_lat
   longitude: !secret dan_work_lon
   radius: 200
+- name: Dan Work MG
+  latitude: !secret dan_work_mg_lat
+  longitude: !secret dan_work_mg_lon
+  radius: 200
 - name: Shelley Work
   latitude: !secret shelley_work_lat
   longitude: !secret shelley_work_lon

@@ -1,150 +1,150 @@
-- id: driveway_motion_alert
-  alias: Driveway Motion Alert
-  trigger:
-    - platform: state
-      entity_id: binarysensor.blue_iris_driveway
-      to: 'on'
-  condition:
-    condition: or
-    conditions:
-      - condition: template
-        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Motion Alert Driveway'
-        data:
-          file:
-            url: http://192.168.53.110/snap.jpeg
-- id: backyard_motion_alert
-  alias: Backyard Motion Alert
-  trigger:
-    - platform: state
-      entity_id: binarysensor.blue_iris_backyard
-      to: 'on'
-  condition:
-    condition: or
-    conditions:
-      - condition: template
-        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Motion Alert Backyard'
-        data:
-          file:
-            url: http://192.168.53.113/snap.jpeg
-- id: basement_motion_alert
-  alias: Basement Motion Alert
-  trigger:
-    - platform: state
-      entity_id: binarysensor.blue_iris_basement
-      to: 'on'
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Motion Alert Basement'
-        data:
-          file:
-            url: http://192.168.53.114/snap.jpeg
-- id: craftroom_motion_alert
-  alias: Craft Room Motion Alert
-  trigger:
-    - platform: state
-      entity_id: binarysensor.blue_iris_craftroom
-      to: 'on'
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Motion Alert Craft Room'
-        data:
-          file:
-            url: http://192.168.53.116/snap.jpeg
-- id: frontwalk_motion_alert
-  alias: Front Walk Motion Alert
-  trigger:
-    - platform: state
-      entity_id: binarysensor.blue_iris_frontwalk
-      to: 'on'
-  condition:
-    condition: or
-    conditions:
-      - condition: template
-        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Motion Alert Front Walk'
-        data:
-          file:
-            url: http://192.168.53.111/snap.jpeg
-- id: garage_motion_alert
-  alias: Garage Motion Alert
-  trigger:
-    - platform: state
-      entity_id: binarysensor.blue_iris_garage
-      to: 'on'
-  condition:
-    condition: or
-    conditions:
-      - condition: template
-        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Motion Alert Garage'
-        data:
-          file:
-            url: http://192.168.53.117/snap.jpeg
-- id: gatepatio_motion_alert
-  alias: Gate/Patio Motion Alert
-  trigger:
-    - platform: state
-      entity_id: binarysensor.blue_iris_gatepatio
-      to: 'on'
-  condition:
-    condition: or
-    conditions:
-      - condition: template
-        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Motion Alert Gate/Patio'
-        data:
-          file:
-            url: http://192.168.53.112/snap.jpeg
-- id: livingroom_motion_alert
-  alias: Living Room Motion Alert
-  trigger:
-    - platform: state
-      entity_id: binarysensor.blue_iris_livingroom
-      to: 'on'
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Motion Alert Living Room'
-        data:
-          file:
-            url: http://192.168.53.115/snap.jpeg
-- id: patio_motion_alert
-  alias: Patio Motion Alert
-  trigger:
-    - platform: state
-      entity_id: binarysensor.blue_iris_patio
-      to: 'on'
-  condition:
-    condition: or
-    conditions:
-      - condition: template
-        value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
-  action:
-    - service: notify.slacknotify
-      data:
-        message: 'Motion Alert Patio'
-        data:
-          file:
-            url: http://192.168.53.118/snap.jpeg
+# - id: driveway_motion_alert
+#   alias: Driveway Motion Alert
+#   trigger:
+#     - platform: state
+#       entity_id: binarysensor.blue_iris_driveway
+#       to: 'on'
+#   condition:
+#     condition: or
+#     conditions:
+#       - condition: template
+#         value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
+#   action:
+#     - service: notify.slacknotify
+#       data:
+#         message: 'Motion Alert Driveway'
+#         data:
+#           file:
+#             url: http://192.168.53.110/snap.jpeg
+# - id: backyard_motion_alert
+#   alias: Backyard Motion Alert
+#   trigger:
+#     - platform: state
+#       entity_id: binarysensor.blue_iris_backyard
+#       to: 'on'
+#   condition:
+#     condition: or
+#     conditions:
+#       - condition: template
+#         value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
+#   action:
+#     - service: notify.slacknotify
+#       data:
+#         message: 'Motion Alert Backyard'
+#         data:
+#           file:
+#             url: http://192.168.53.113/snap.jpeg
+# - id: basement_motion_alert
+#   alias: Basement Motion Alert
+#   trigger:
+#     - platform: state
+#       entity_id: binarysensor.blue_iris_basement
+#       to: 'on'
+#   action:
+#     - service: notify.slacknotify
+#       data:
+#         message: 'Motion Alert Basement'
+#         data:
+#           file:
+#             url: http://192.168.53.114/snap.jpeg
+# - id: craftroom_motion_alert
+#   alias: Craft Room Motion Alert
+#   trigger:
+#     - platform: state
+#       entity_id: binarysensor.blue_iris_craftroom
+#       to: 'on'
+#   action:
+#     - service: notify.slacknotify
+#       data:
+#         message: 'Motion Alert Craft Room'
+#         data:
+#           file:
+#             url: http://192.168.53.116/snap.jpeg
+# - id: frontwalk_motion_alert
+#   alias: Front Walk Motion Alert
+#   trigger:
+#     - platform: state
+#       entity_id: binarysensor.blue_iris_frontwalk
+#       to: 'on'
+#   condition:
+#     condition: or
+#     conditions:
+#       - condition: template
+#         value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
+#   action:
+#     - service: notify.slacknotify
+#       data:
+#         message: 'Motion Alert Front Walk'
+#         data:
+#           file:
+#             url: http://192.168.53.111/snap.jpeg
+# - id: garage_motion_alert
+#   alias: Garage Motion Alert
+#   trigger:
+#     - platform: state
+#       entity_id: binarysensor.blue_iris_garage
+#       to: 'on'
+#   condition:
+#     condition: or
+#     conditions:
+#       - condition: template
+#         value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
+#   action:
+#     - service: notify.slacknotify
+#       data:
+#         message: 'Motion Alert Garage'
+#         data:
+#           file:
+#             url: http://192.168.53.117/snap.jpeg
+# - id: gatepatio_motion_alert
+#   alias: Gate/Patio Motion Alert
+#   trigger:
+#     - platform: state
+#       entity_id: binarysensor.blue_iris_gatepatio
+#       to: 'on'
+#   condition:
+#     condition: or
+#     conditions:
+#       - condition: template
+#         value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
+#   action:
+#     - service: notify.slacknotify
+#       data:
+#         message: 'Motion Alert Gate/Patio'
+#         data:
+#           file:
+#             url: http://192.168.53.112/snap.jpeg
+# - id: livingroom_motion_alert
+#   alias: Living Room Motion Alert
+#   trigger:
+#     - platform: state
+#       entity_id: binarysensor.blue_iris_livingroom
+#       to: 'on'
+#   action:
+#     - service: notify.slacknotify
+#       data:
+#         message: 'Motion Alert Living Room'
+#         data:
+#           file:
+#             url: http://192.168.53.115/snap.jpeg
+# - id: patio_motion_alert
+#   alias: Patio Motion Alert
+#   trigger:
+#     - platform: state
+#       entity_id: binarysensor.blue_iris_patio
+#       to: 'on'
+#   condition:
+#     condition: or
+#     conditions:
+#       - condition: template
+#         value_template: '{{ states.sensor.dark_sky_wind_speed.state < 5 }}'
+#   action:
+#     - service: notify.slacknotify
+#       data:
+#         message: 'Motion Alert Patio'
+#         data:
+#           file:
+#             url: http://192.168.53.118/snap.jpeg
 - id: front_door_opened
   alias: Front Door Alert
   trigger:
@@ -152,21 +152,21 @@
       entity_id: sensor.door_front_state
       to: 'open'
   action:
-    - service: notify.slacknotify
-      data:
-        message: 'Front Door Opened'
-        data:
-          file:
-            url: http://192.168.53.115/snap.jpeg
-    - service: notify.slacknotify
-      data:
-        message: 'Front Door Opened'
-        data:
-          file:
-            url: http://192.168.53.111/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Front Door Opened"
+    # - service: notify.slacknotify
+    #   data:
+    #     message: 'Front Door Opened'
+    #     data:
+    #       file:
+    #         url: http://192.168.53.115/snap.jpeg
+    # - service: notify.slacknotify
+    #   data:
+    #     message: 'Front Door Opened'
+    #     data:
+    #       file:
+    #         url: http://192.168.53.111/snap.jpeg
+    # - service: notify.push
+    #   data:
+    #     message: "Front Door Opened"
     - service: shell_command.trigger_lr
     - service: shell_command.trigger_fw
     - service: shell_command.trigger_dw
@@ -177,21 +177,21 @@
       entity_id: sensor.door_back_sliding_state
       to: 'open'
   action:
-    - service: notify.slacknotify
-      data:
-        message: 'Sliding Door Opened'
-        data:
-          file:
-            url: http://192.168.53.112/snap.jpeg
-    - service: notify.slacknotify
-      data:
-        message: 'Sliding Door Opened'
-        data:
-          file:
-            url: http://192.168.53.118/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Sliding Door Opened"
+    # - service: notify.slacknotify
+    #   data:
+    #     message: 'Sliding Door Opened'
+    #     data:
+    #       file:
+    #         url: http://192.168.53.112/snap.jpeg
+    # - service: notify.slacknotify
+    #   data:
+    #     message: 'Sliding Door Opened'
+    #     data:
+    #       file:
+    #         url: http://192.168.53.118/snap.jpeg
+    # - service: notify.push
+      # data:
+      #   message: "Sliding Door Opened"
     - service: shell_command.trigger_pa
     - service: shell_command.trigger_gp
 - id: craft_to_drive_door_opened
@@ -201,15 +201,15 @@
       entity_id: sensor.door_craft_to_drive_state
       to: 'open'
   action:
-    - service: notify.slacknotify
-      data:
-        message: 'Craft to Drive Door Opened'
-        data:
-          file:
-            url: http://192.168.53.116/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Craft to Drive Door Opened"
+    # - service: notify.slacknotify
+    #   data:
+    #     message: 'Craft to Drive Door Opened'
+    #     data:
+    #       file:
+    #         url: http://192.168.53.116/snap.jpeg
+    # - service: notify.push
+    #   data:
+    #     message: "Craft to Drive Door Opened"
     - service: shell_command.trigger_pa
     - service: shell_command.trigger_gp
     - service: shell_command.trigger_cr
@@ -221,15 +221,15 @@
       entity_id: sensor.door_craft_to_patio_state
       to: 'open'
   action:
-    - service: notify.slacknotify
-      data:
-        message: 'Craft to Patio Door Opened'
-        data:
-          file:
-            url: http://192.168.53.112/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Craft to Patio Door Opened"
+    # - service: notify.slacknotify
+    #   data:
+    #     message: 'Craft to Patio Door Opened'
+    #     data:
+    #       file:
+    #         url: http://192.168.53.112/snap.jpeg
+    # - service: notify.push
+    #   data:
+    #     message: "Craft to Patio Door Opened"
     - service: shell_command.trigger_pa
     - service: shell_command.trigger_gp
     - service: shell_command.trigger_cr
@@ -240,27 +240,27 @@
       entity_id: cover.garage_door_opener
       to: 'open'
   action:
-    - service: notify.slacknotify
-      data:
-        message: 'Garage Door Opened'
-        data:
-          file:
-            url: http://192.168.53.117/snap.jpeg
-    - service: notify.slacknotify
-      data:
-        message: 'Garage Door Opened'
-        data:
-          file:
-            url: http://192.168.53.110/snap.jpeg
-    - service: notify.slacknotify
-      data:
-        message: 'Garage Door Opened'
-        data:
-          file:
-            url: http://192.168.53.111/snap.jpeg
-    - service: notify.push
-      data:
-        message: "Garage Door Opened"
+    # - service: notify.slacknotify
+    #   data:
+    #     message: 'Garage Door Opened'
+    #     data:
+    #       file:
+    #         url: http://192.168.53.117/snap.jpeg
+    # - service: notify.slacknotify
+    #   data:
+    #     message: 'Garage Door Opened'
+    #     data:
+    #       file:
+    #         url: http://192.168.53.110/snap.jpeg
+    # - service: notify.slacknotify
+    #   data:
+    #     message: 'Garage Door Opened'
+    #     data:
+    #       file:
+    #         url: http://192.168.53.111/snap.jpeg
+    # - service: notify.push
+    #   data:
+    #     message: "Garage Door Opened"
     - service: shell_command.trigger_ga
     - service: shell_command.trigger_dw
     - service: shell_command.trigger_fw

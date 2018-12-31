@@ -145,3 +145,36 @@ sensor.main_thermostat_fan_mode:
   icon: mdi:fan
 sensor.current_version:
   friendly_name: 'My HA Version'
+sensor.weather_outside_altimeter:
+  friendly_name:  Outside Altimeter'
+sensor.weather_outside_barometer:
+  friendly_name: 'Outside Barometer'
+sensor.weather_outside_battery:
+  friendly_name: 'Outside Battery'
+  icon: mdi:battery
+sensor.weather_outside_dewpoint:
+  friendly_name: 'Outside Dewpoint'
+sensor.weather_outside_heatindex:
+  friendly_name: 'Outside Heat Index'
+  icon: mdi:white-balance-sunny
+sensor.weather_outside_humidity:
+  friendly_name: 'Outside Humidity'
+  icon: mdi:water-percent
+sensor.weather_outside_pressure:
+  friendly_name: 'Outside Pressure'
+sensor.weather_outside_rain:
+  friendly_name: 'Outside Rain'
+sensor.weather_outside_rain_rate:
+  friendly_name: 'Outside Rain Rate'
+sensor.weather_outside_temp:
+  friendly_name: 'Outside Temperature'
+  icon: mdi:thermometer
+sensor.weather_outside_wind_dir:
+  friendly_name: 'Outside Wind Direction'
+  icon: mdi:compass
+sensor.weather_outside_wind_speed:
+  friendly_name: 'Outside Wind Speed'
+  icon: mdi:speedometer
+sensor.weather_outside_windchill:
+  friendly_name: 'Outside Wind Chill'
+  icon: mdi:weather-windy

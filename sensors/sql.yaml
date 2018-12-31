@@ -13,3 +13,52 @@
     - name: Big Walnut LSD Status
       query: 'SELECT `status` FROM `school` WHERE `school` = "Big Walnut LSD";'
       column: 'status'
+- platform: sql
+  db_url: !secret weather_db_url
+  queries:
+    - name: weather_outside_temp
+      query: 'SELECT ROUND(`outTemp`,2) AS outTemp FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'outTemp'
+      unit_of_measurement: '°F'
+    - name: weather_outside_humidity
+      query: 'SELECT ROUND(`outHumidity`,2) AS outHumidity FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'outHumidity'
+      unit_of_measurement: '%'
+    - name: weather_outside_barometer
+      query: 'SELECT ROUND(`barometer`,2) AS barometer FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'barometer'
+      unit_of_measurement: 'in'
+    - name: weather_outside_pressure
+      query: 'SELECT ROUND(`pressure`,2) AS pressure FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'pressure'
+    - name: weather_outside_altimeter
+      query: 'SELECT ROUND(`altimeter`,2) AS altimeter FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'altimeter'
+    - name: weather_outside_wind_speed
+      query: 'SELECT ROUND(`windSpeed`,2) AS windSpeed FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'windSpeed'
+    - name: weather_outside_wind_dir
+      query: 'SELECT ROUND(`windDir`,2) AS windDir FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'windDir'
+    - name: weather_outside_rain_rate
+      query: 'SELECT ROUND(`rainRate`,2) AS rainRate FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'rainRate'
+    - name: weather_outside_rain
+      query: 'SELECT ROUND(`rain`,2) AS rain FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'rain'
+    - name: weather_outside_dewpoint
+      query: 'SELECT ROUND(`dewpoint`,2) AS dewpoint FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'dewpoint'
+      unit_of_measurement: '°F'
+    - name: weather_outside_windchill
+      query: 'SELECT ROUND(`windchill`,2) AS windchill FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'windchill'
+      unit_of_measurement: '°F'
+    - name: weather_outside_heatindex
+      query: 'SELECT ROUND(`heatindex`,2) AS heatindex FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
+      column: 'heatindex'
+      unit_of_measurement: '°F'
+    - name: weather_outside_battery
+      query: 'SELECT (ROUND(`outTempBatteryStatus`,2)*100) AS outTempBatteryStatus FROM `archive` ORDER BY `dateTime` DESC LIMIT 1'
+      column: 'outTempBatteryStatus'
+      unit_of_measurement: '%'
