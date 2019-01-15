@@ -12,10 +12,6 @@
       friendly_name: 'Home Energy Total'
       unit_of_measurement: "kWh"
       value_template: "{{ states('sensor.home_energy_meter_energy')|round + states('sensor.home_energy_meter_energy_2')|round }}"
-    climate_main_heat_set_point:
-      friendly_name: 'Heat Set Point'
-      unit_of_measurement: '°F'
-      value_template: '{{ states.climate.main_thermostat_heating_1.attributes.temperature }}'
     climate_living_room_temperature:
       friendly_name: 'Living Room Temperature'
       unit_of_measurement: '°F'
@@ -24,6 +20,24 @@
       friendly_name: 'Living Room Humidity'
       unit_of_measurement: '%'
       value_template: '{{ states.climate.living_room.attributes.actual_humidity }}'
+    climate_living_room_current_operation:
+      friendly_name: 'Living Room Operation'
+      value_template: '{{ states.climate.living_room.attributes.operation }}'
+    climate_living_room_aux_heat:
+      friendly_name: 'Living Room Aux Heat'
+      value_template: '{{ states.climate.living_room.attributes.aux_heat }}'
+    anole_heat_bulb_power:
+      friendly_name: 'Anole Heat Bulb Power'
+      value_template: '{{ states.switch.anole_heat_switch.attributes.power_consumption }}'
+      unit_of_measurement: 'W'
+    anole_light_bulb_power:
+      friendly_name: 'Anole Light Bulb Power'
+      value_template: '{{ states.switch.anole_light_switch.attributes.power_consumption }}'
+      unit_of_measurement: 'W'
+    norbert_light_bulb_power:
+      friendly_name: 'Norbert Light Bulb Power'
+      value_template: '{{ states.switch.norbert_light_switch.attributes.power_consumption }}'
+      unit_of_measurement: 'W'
     door_garage_state:
       friendly_name: 'Door Garage'
       value_template: >-
@@ -372,11 +386,6 @@
       value_template: >-
         {% if states.sensor.dan_location_to_home.state %}{{ states.sensor.dan_location_to_home.attributes.origin_addresses | replace("['","") | replace("']","")}}{% endif %}
 
-    main_thermostat_fan_mode:
-      friendly_name: Fan Mode
-      value_template: >-
-        {{ states.climate.main_thermostat_heating_1.attributes.fan_mode }}
-
     io_latency_min:
       value_template: "{% set list = states.sensor.io_latency.state.split('|') %} {{ list[0] }}"
       friendly_name: 'IO Latency Min'
@@ -407,3 +416,32 @@
       friendly_name: 'Internet Speed OUT'
       value_template: '{{ ((states.input_number.internet_traffic_delta_out.state | float ) / 1000000 ) | round(2) }}'
       unit_of_measurement: 'Mbps'
+
+    wind_dir_friendly:
+        friendly_name: 'Wind Direction'
+        value_template: >-
+            {% set wind_dir = states.sensor.weather_outside_wind_speed.state %}
+            {% if wind_dir | float<=11 %}North
+            {% elif wind_dir | float>348 %}North
+            {% elif 11 < (wind_dir|float) <=34 %}NNE
+            {% elif 34 < (wind_dir|float) <=56 %}NE
+            {% elif 56 < (wind_dir|float) <=79 %}}ENE
+            {% elif 79 < (wind_dir|float) <=101 %}East
+            {% elif 101 < (wind_dir|float) <=124 %}ESE
+            {% elif 124 < (wind_dir|float) <=146 %}SE
+            {% elif 146 < (wind_dir|float) <=169 %}SSE
+            {% elif 169 < (wind_dir|float) <=191 %}South
+            {% elif 191 < (wind_dir|float) <=214 %}SSW
+            {% elif 214 < (wind_dir|float) <=236 %}SW
+            {% elif 236 < (wind_dir|float) <=259 %}WSW
+            {% elif 259 < (wind_dir|float) <=281 %}West
+            {% elif 281 < (wind_dir|float) <=304 %}WWN
+            {% elif 304 < (wind_dir|float) <=326 %}NW
+            {% elif 326 < (wind_dir|float) <=348 %}NNW
+            {% else %}None
+            {%- endif %}
+
+    media_pc_used_ram:
+        friendly_name: "Media PC Used RAM"
+        unit_of_measurement: '%'
+        value_template: "{{100-(states('sensor.media_pc_free_ram') | float / states('sensor.media_pc_total_ram') | float * 100) | round }}"

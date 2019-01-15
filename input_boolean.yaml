@@ -18,3 +18,25 @@ alarm_trigger:
   name: Used to trigger burglar alarm
 night_alarm:
   name: Trigger night alarm actions
+enable_video_alerts:
+  name: Enable Pushover/TensorFlow Alerts
+wallmote_1:
+  name: Wallmote Top Left 1
+wallmote_2:
+  name: Wallmote Top Right 2
+wallmote_3:
+  name: Wallmote Bottom Left 3
+wallmote_4:
+  name: Wallmote Bottom Right 4
+wallmote_5:
+  name: Wallmote Top Left 5
+wallmote_6:
+  name: Wallmote Top Right 6
+wallmote_7:
+  name: Wallmote Bottom Left 7
+wallmote_8:
+  name: Wallmote Bottom Right 8
+nick_grounded:
+  name: Nick Grounded?
+shannon_grounded:
+  name: Shannon Grounded?

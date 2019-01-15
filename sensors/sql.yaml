@@ -37,9 +37,11 @@
     - name: weather_outside_wind_speed
       query: 'SELECT ROUND(`windSpeed`,2) AS windSpeed FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
       column: 'windSpeed'
+      unit_of_measurement: mph
     - name: weather_outside_wind_dir
       query: 'SELECT ROUND(`windDir`,2) AS windDir FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
       column: 'windDir'
+      unit_of_measurement: °
     - name: weather_outside_rain_rate
       query: 'SELECT ROUND(`rainRate`,2) AS rainRate FROM `archive` ORDER BY `dateTime` DESC LIMIT 1;'
       column: 'rainRate'

@@ -128,23 +128,23 @@
     event_type: ''
     platform: event
 
-- id: '15033356445646'
-  alias: wallmote test
-  trigger:
-  - event_data:
-      entity_id: zwave.wallmote
-      scene_id: 1
-      scene_data: 0
-    event_type: zwave.scene_activated
-    platform: event
-  condition: []
-  action:
-    service: notify.dantext
-    data_template:
-      message: >
-        Testing!
+# - id: '15033356445646'
+#   alias: wallmote test
+#   trigger:
+#   - event_data:
+#       entity_id: zwave.wallmote
+#       scene_id: 1
+#       scene_data: 0
+#     event_type: zwave.scene_activated
+#     platform: event
+#   condition: []
+#   action:
+#     service: notify.dantext
+#     data_template:
+#       message: >
+#         Testing!
 
-- alias: Wallmote - Test
+- alias: Wallmote 1
   hide_entity: true
   initial_state: true
   trigger:
@@ -155,12 +155,106 @@
       scene_id: 1
       scene_data: 0
   action:
-    service: light.toggle
-    entity_id: light.den_2
-#    service: notify.dantext
-#    data_template:
-#      message: >
-#        This is a test!
+    service: input_boolean.turn_on
+    entity_id: input_boolean.wallmote_1
+
+- alias: Wallmote 2
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.aeotec_zw130_wallmote_quad
+      scene_id: 2
+      scene_data: 0
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.wallmote_2
+
+- alias: Wallmote 3
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.aeotec_zw130_wallmote_quad
+      scene_id: 3
+      scene_data: 0
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.wallmote_3
+
+- alias: Wallmote 4
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.aeotec_zw130_wallmote_quad
+      scene_id: 4
+      scene_data: 0
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.wallmote_4
+
+- alias: Wallmote 5
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.aeotec_zw130_wallmote_quad
+      scene_id: 1
+      scene_data: 2
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.wallmote_5
+
+- alias: Wallmote 6
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.aeotec_zw130_wallmote_quad
+      scene_id: 2
+      scene_data: 2
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.wallmote_6
+
+- alias: Wallmote 7
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.aeotec_zw130_wallmote_quad
+      scene_id: 3
+      scene_data: 2
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.wallmote_7
+
+- alias: Wallmote 8
+  hide_entity: true
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: zwave.scene_activated
+    event_data:
+      entity_id: zwave.aeotec_zw130_wallmote_quad
+      scene_id: 4
+      scene_data: 2
+  action:
+    service: input_boolean.turn_on
+    entity_id: input_boolean.wallmote_8
 
 - alias: 'Battery Alert'
   trigger:

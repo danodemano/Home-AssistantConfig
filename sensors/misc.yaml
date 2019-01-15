@@ -171,7 +171,8 @@
 
 - platform: illuminance
   name: Outside Illuminance
-  entity_id: sensor.dark_sky_icon
+  #entity_id: sensor.dark_sky_icon
+  entity_id: weather.dark_sky
 
 - platform: statistics
   name: 'WAN Traffic In'

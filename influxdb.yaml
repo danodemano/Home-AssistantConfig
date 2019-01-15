@@ -2,19 +2,7 @@ host: 192.168.9.52
 database: hass
 include:
   entities:
-    - sensor.ac_watts
-    - sensor.dryer_watts
-    - sensor.furnace1_watts
-    - sensor.furnace2_watts
-    - sensor.hot_water_heater_watts
-    - sensor.water_heater_power
-    #- sensor.home_energy_meter_power
-    #- sensor.home_energy_meter_energy
-    - sensor.home_energy_meter_voltage
-    #- sensor.home_energy_meter_current
-    - sensor.home_watts_total
-    - sensor.home_current_total
-    - sensor.home_energy_total
+    #Weather
     - sensor.outside_humidity
     - sensor.pws_temp_f
     - sensor.pws_wind_dir
@@ -30,67 +18,9 @@ include:
     - sensor.pws_temp_f_3
     - sensor.pws_wind_dir_3
     - sensor.pws_wind_mph_3
-    - sensor.climate_main_temperature2
-    - sensor.main_thermostat_relative_humidity_31_5_3
-    - sensor.main_thermostat_temperature
-    - sensor.main_thermostat_relative_humidity
-    - sensor.gecko_humidity
-    - sensor.gecko_temperature
-    - sensor.server_rack_environment_relative_humidity
-    - sensor.server_rack_environment_temperature
-    - sensor.server_rack_power
-    - sensor.server_rack_voltage
-    - sensor.speedtest_download
-    - sensor.speedtest_ping
-    - sensor.speedtest_upload
-    - sensor.den_temperature
-    - sensor.den_humidity
-    - sensor.couch_plug_voltage
-    - sensor.processor_use
-    - sensor.disk_use_percent_
-    - sensor.memory_use_percent
-    - sensor.xrp_to_usd
-    - sensor.market_price
-    - sensor.btc_to_usd
-    - sensor.eth_to_usd
     - sensor.dark_sky_cloud_coverage
     - sensor.dark_sky_wind_speed
-    - sensor.server_rack_battery
-    - sensor.door_craft_to_drive
-    - sensor.door_craft_to_patio
-    - sensor.pihole_ads_blocked_today
-    - sensor.pihole_ads_percentage_blocked_today
-    - sensor.pihole_dns_queries_today
-    - sensor.pihole_domains_blocked
-    - sensor.rhomeautomation_subsribers
-    - sensor.database_size
-    - sensor.influxdb_size
-    - sensor.zestimate
-    - sensor.us_air_quality_index_4
-    - sensor.allergy_index_today
     - sun.sun
-    - sensor.master_luminance
-    - sensor.master_temperature
-    - sensor.master_real_temp
-    - sensor.usps_home_mail
-    - sensor.usps_home_packages
-    - sensor.ups_home
-    - sensor.fedex_home
-    - sensor.norbert_humidity
-    - sensor.norbert_temperature
-    - sensor.io_latency_min
-    - sensor.io_latency_avg
-    - sensor.io_latency_max
-    - sensor.io_latency_sd
-    - sensor.internet_speed_in
-    - sensor.internet_speed_out
-    - sensor.wan_traffic_in_mean
-    - sensor.wan_traffic_out_mean
-    - sensor.main_thermostat_fan_mode
-    - binary_sensor.home_power_status
-    - sensor.outside_illuminance
-    - sensor.climate_living_room_temperature
-    - sensor.climate_living_room_humidity
     - sensor.weather_outside_altimeter
     - sensor.weather_outside_barometer
     - sensor.weather_outside_battery
@@ -104,6 +34,92 @@ include:
     - sensor.weather_outside_wind_dir
     - sensor.weather_outside_wind_speed
     - sensor.weather_outside_windchill
+
+    #Home
+    - sensor.ac_watts
+    - sensor.dryer_watts
+    - sensor.furnace1_watts
+    - sensor.furnace2_watts
+    - sensor.hot_water_heater_watts
+    - sensor.water_heater_power
+    - sensor.home_energy_meter_voltage
+    - sensor.home_watts_total
+    - sensor.home_current_total
+    - sensor.home_energy_total
+    - sensor.climate_main_temperature2
+    - sensor.main_thermostat_relative_humidity_31_5_3
+    - sensor.main_thermostat_temperature
+    - sensor.main_thermostat_relative_humidity
+    - sensor.den_temperature
+    - sensor.den_humidity
+    - sensor.master_luminance
+    - sensor.master_temperature
+    - sensor.master_real_temp
+    - sensor.main_thermostat_fan_mode
+    - binary_sensor.home_power_status
+    - sensor.climate_living_room_temperature
+    - sensor.climate_living_room_humidity
+    - sensor.craft_room_temperature
+
+    #Pets
+    - sensor.gecko_humidity
+    - sensor.gecko_temperature
+    - sensor.norbert_humidity
+    - sensor.norbert_temperature
+    - sensor.anole_heat_bulb_power
+    - sensor.anole_light_bulb_power
+    - sensor.norbert_light_bulb_power
+
+    #Servers
+    - sensor.server_rack_environment_relative_humidity
+    - sensor.server_rack_environment_temperature
+    - sensor.server_rack_power
+    - sensor.server_rack_voltage
+    - sensor.speedtest_download
+    - sensor.speedtest_ping
+    - sensor.speedtest_upload
+    - sensor.processor_use
+    - sensor.disk_use_percent_
+    - sensor.memory_use_percent
+    - sensor.server_rack_battery
+    - sensor.pihole_ads_blocked_today
+    - sensor.pihole_ads_percentage_blocked_today
+    - sensor.pihole_dns_queries_today
+    - sensor.pihole_domains_blocked
+    - sensor.database_size
+    - sensor.influxdb_size
+    - sensor.io_latency_min
+    - sensor.io_latency_avg
+    - sensor.io_latency_max
+    - sensor.io_latency_sd
+    - sensor.internet_speed_in
+    - sensor.internet_speed_out
+    - sensor.wan_traffic_in_mean
+    - sensor.wan_traffic_out_mean
+    - sensor.media_pc_15m_load
+    - sensor.media_pc_1m_load
+    - sensor.media_pc_5m_load
+    - sensor.media_pc_disk_usage
+    - sensor.media_pc_free_ram
+    - sensor.media_pc_inode_usage
+    - sensor.media_pc_total_ram
+    - sensor.media_pc_used_ram
+
+    #Misc
+    - sensor.xrp_to_usd
+    - sensor.market_price
+    - sensor.btc_to_usd
+    - sensor.eth_to_usd
+    - sensor.rhomeautomation_subsribers
+    - sensor.zestimate
+    - sensor.us_air_quality_index_4
+    - sensor.allergy_index_today
+    - sensor.usps_home_mail
+    - sensor.usps_home_packages
+    - sensor.ups_home
+    - sensor.fedex_home
+    - sensor.outside_illuminance
+
     #Remove these
     - sensor.dome_motion_detector_alarm_level
     - sensor.dome_motion_detector_alarm_type

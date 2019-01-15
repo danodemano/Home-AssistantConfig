@@ -148,7 +148,7 @@ sensor.current_version:
 sensor.weather_outside_altimeter:
   friendly_name:  Outside Altimeter'
 sensor.weather_outside_barometer:
-  friendly_name: 'Outside Barometer'
+  friendly_name: 'Outside Barometric Pressure'
 sensor.weather_outside_battery:
   friendly_name: 'Outside Battery'
   icon: mdi:battery

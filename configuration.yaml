@@ -10,7 +10,7 @@ homeassistant:
   unit_system: imperial
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/New_York
-
+  # This one has to be here
   customize: !include_dir_merge_named customizations/
 
 # Enables the frontend
@@ -24,16 +24,11 @@ config:
 http:
 #  api_password: !secret http_password
   base_url: !secret http_base_url
-#  ssl_certificate: /etc/ssl/localcerts/fullchain.pem
-#  ssl_key: /etc/ssl/localcerts/privkey.pem
   use_x_forwarded_for: True
   trusted_proxies:
     - 192.168.54.3
   ip_ban_enabled: true
   login_attempts_threshold: 10
-#  trusted_networks:
-#    - 192.168.9.0/24
-#    - 10.242.2.0/24
 
 # Enables support for tracking state changes over time.
 history:
@@ -52,14 +47,9 @@ logger:
 
 #Zwave Config
 zwave:
-  usb_path: /dev/ttyACM0
+  usb_path: /dev/ttyACM1
   network_key: !secret zwave_network_key
   device_config: !include zwave_device_config.yaml
-
-#For the Amazon Echos
-emulated_hue: !include emulated_hue.yaml
-
-recorder: !include recorder.yaml
 
 light:
   - platform: flux_led
@@ -88,9 +78,9 @@ remote:
 #    password: !secret usps_password
 
 #Google Calendar integration
-#google:
-#  client_id: !secret google_client_id
-#  client_secret: !secret google_client_secret
+google:
+ client_id: !secret google_client_id
+ client_secret: !secret google_client_secret
 
 #IFTTT Integration
 ifttt:
@@ -135,51 +125,30 @@ wunderlist:
   client_id: !secret wunderlist_client_id
   access_token: !secret wunderlist_access_token
 
-binary_sensor: !include binary_sensor.yaml
-
-notify: !include notify.yaml
-
-influxdb: !include influxdb.yaml
-
-cover: !include cover.yaml
-
-shell_command: !include shell_command.yaml
-
-sensor: !include_dir_merge_list sensors
-
-camera: !include cameras.yaml
-
-device_tracker: !include device_tracker.yaml
-
-switch: !include switch.yaml
-
-media_player: !include media_player.yaml
-
-group: !include groups.yaml
-
-input_boolean: !include input_boolean.yaml
-
-input_number: !include input_number.yaml
-
-input_select: !include input_select.yaml
-
-input_text: !include input_text.yaml
-
-history_graph: !include history_graph.yaml
-
-automation: !include_dir_merge_list automations
-
-script: !include scripts.yaml
-
-#scene: !include scenes.yaml
-
 alexa:
 
+#INCLUDES
+binary_sensor: !include binary_sensor.yaml
+notify: !include notify.yaml
+influxdb: !include influxdb.yaml
+cover: !include cover.yaml
+shell_command: !include shell_command.yaml
+sensor: !include_dir_merge_list sensors
+camera: !include cameras.yaml
+device_tracker: !include device_tracker.yaml
+switch: !include switch.yaml
+media_player: !include media_player.yaml
+group: !include groups.yaml
+input_boolean: !include input_boolean.yaml
+input_number: !include input_number.yaml
+input_select: !include input_select.yaml
+input_text: !include input_text.yaml
+history_graph: !include history_graph.yaml
+automation: !include_dir_merge_list automations
+script: !include scripts.yaml
 intent_script: !include intent_script.yaml
-
 zone: !include zone.yaml
-
 water_heater: !include water_heater.yaml
-
-#image_processing: !include image_processing.yaml
 image_processing: !include_dir_merge_list tensorflow
+emulated_hue: !include emulated_hue.yaml
+recorder: !include recorder.yaml

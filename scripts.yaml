@@ -27,12 +27,14 @@ nick_wifi_on:
   sequence:
     - service: shell_command.wifi_nick_enable
     - service: shell_command.wifi_nick_enable_tablet
+    - service: shell_command.wifi_nick_enable_roku
 
 nick_wifi_off:
   alias: "Nick Wifi Off"
   sequence:
     - service: shell_command.wifi_nick_disable
     - service: shell_command.wifi_nick_disable_tablet
+    - service: shell_command.wifi_nick_disable_roku
 
 nick_wifi_throttle:
   alias: "Nick Wifi Throttle"
@@ -50,11 +52,13 @@ shannon_wifi_on:
   alias: "Shannon Wifi On"
   sequence:
     - service: shell_command.wifi_shannon_enable
+    - service: shell_command.wifi_shannon_enable_roku
 
 shannon_wifi_off:
   alias: "Shannon Wifi Off"
   sequence:
     - service: shell_command.wifi_shannon_disable
+    - service: shell_command.wifi_shannon_disable_roku
 
 clean_recorder_db:
   alias: "Clean the local DB"
@@ -121,6 +125,22 @@ video_pop_off:
   sequence:
     - service: homeassistant.turn_off
       entity_id: input_boolean.enable_video_pop
+nick_grounded_on:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.nick_grounded
+nick_grounded_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.nick_grounded
+shannon_grounded_on:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.shannon_grounded
+shannon_grounded_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.shannon_grounded
 
 front_walk_camera_pop:
   alias: "Front Walk Camera Pop"

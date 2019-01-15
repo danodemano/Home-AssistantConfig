@@ -1,8 +1,8 @@
-toggle_tv: curl -g 'http://192.168.9.201:8081/json?pass=arduino&plain=[{%22type%22:%22raw%22,%22data%22:[2450,600,%201250,600,%20700,600,%201250,600,%20700,600,%201250,600,%20700,600,%20700,600,%201250,600,%20700,600,%20700,600,%20700,600,%20700],%22khz%22:50,%22pulse%22:10}]'
-tplink_den_on: tplight on 192.168.9.199
-tplink_den_off: tplight off 192.168.9.199
-tplink_den_red: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":0,"hue":0,"saturation":100}}}'
-tplink_den_white: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":2500,"hue":0,"saturation":0}}}'
+# toggle_tv: curl -g 'http://192.168.9.201:8081/json?pass=arduino&plain=[{%22type%22:%22raw%22,%22data%22:[2450,600,%201250,600,%20700,600,%201250,600,%20700,600,%201250,600,%20700,600,%20700,600,%201250,600,%20700,600,%20700,600,%20700,600,%20700],%22khz%22:50,%22pulse%22:10}]'
+# tplink_den_on: tplight on 192.168.9.199
+# tplink_den_off: tplight off 192.168.9.199
+# tplink_den_red: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":0,"hue":0,"saturation":100}}}'
+# tplink_den_white: tplight raw 192.168.9.199 '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"ignore_default":1,"on_off":1,"color_temp":2500,"hue":0,"saturation":0}}}'
 bi_active: curl http://192.168.53.55:81/admin?profile=1
 bi_home: curl http://192.168.53.55:81/admin?profile=3
 bi_away: curl http://192.168.53.55:81/admin?profile=4
@@ -12,14 +12,18 @@ wifi_kids_disable: php /scripts/ubnt/toggle_network.php Dev_Kids false false
 wifi_kids_enable: php /scripts/ubnt/toggle_network.php Dev_Kids true false
 wifi_nick_enable: php /scripts/ubnt/toggle_station.php 74:4a:a4:bc:bd:99 true
 wifi_nick_enable_tablet: php /scripts/ubnt/toggle_station.php f0:27:2d:05:bf:b7 true
+wifi_nick_enable_roku: php /scripts/ubnt/toggle_station.php d0:4d:2c:bd:ce:8b true
 wifi_nick_disable: php /scripts/ubnt/toggle_station.php 74:4a:a4:bc:bd:99 false
 wifi_nick_disable_tablet: php /scripts/ubnt/toggle_station.php 6f0:27:2d:05:bf:b7 false
+wifi_nick_disable_roku: php /scripts/ubnt/toggle_station.php d0:4d:2c:bd:ce:8b false
 wifi_nick_throttle: php /scripts/ubnt/change_user_group.php 59ddec4ed5de1d39674a449b 5a7f7237d5dea28996ca7d2f
 wifi_nick_throttle_tablet: php /scripts/ubnt/change_user_group.php 59e919a3d5de1d39674a6893 5a7f7237d5dea28996ca7d2f
 wifi_nick_unthrottle: php /scripts/ubnt/change_user_group.php 59ddec4ed5de1d39674a449b default
 wifi_nick_unthrottle_tablet: php /scripts/ubnt/change_user_group.php 59e919a3d5de1d39674a6893 default
 wifi_shannon_enable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d true
+wifi_shannon_enable_roku: php /scripts/ubnt/toggle_station.php d0:4d:2c:b2:10:fb true
 wifi_shannon_disable: php /scripts/ubnt/toggle_station.php 5c:af:06:97:59:8d false
+wifi_shannon_disable_roku: php /scripts/ubnt/toggle_station.php d0:4d:2c:b2:10:fb false
 front_walk_camera: flock -n /var/run/camerapop.lockfile -c "/scripts/show_camera.sh 1"
 driveway_camera: flock -n /var/run/camerapop.lockfile -c "/scripts/show_camera.sh 2"
 patio_camera: flock -n /var/run/camerapop.lockfile -c "/scripts/show_camera.sh 3"

@@ -50,3 +50,17 @@
         service: script.video_pop_on
       turn_off:
         service: script.video_pop_off
+    nick_grounded:
+      value_template: '{{ states.input_boolean.nick_grounded.state }}'
+      friendly_name: 'Nick Grounded?'
+      turn_on:
+        service: script.nick_grounded_on
+      turn_off:
+        service: script.nick_grounded_off
+    shannon_grounded:
+      value_template: '{{ states.input_boolean.shannon_grounded.state }}'
+      friendly_name: 'Shannon Grounded?'
+      turn_on:
+        service: script.shannon_grounded_on
+      turn_off:
+        service: script.shannon_grounded_off
