@@ -16,7 +16,7 @@
     den_ps3: 192.168.52.12
     den_ps4: 192.168.52.11
     den_lgtv: 192.168.9.65
-    kids_tv: 192.168.51.108
+    #kids_tv: 192.168.51.108
     kids_xbox: 192.168.51.105
 #- platform: owntracks_http
 - platform: gpslogger

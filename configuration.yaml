@@ -48,6 +48,7 @@ logger:
 #Zwave Config
 zwave:
   usb_path: /dev/ttyACM1
+  autoheal: false
   network_key: !secret zwave_network_key
   device_config: !include zwave_device_config.yaml
 
