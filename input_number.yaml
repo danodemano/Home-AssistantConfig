@@ -33,3 +33,15 @@ hvac_target_temp_main:
   min: 60
   max: 80
   step: 1
+anova_temp:
+  name: 'Anova Temperature'
+  min: 60
+  max: 200
+  step: 1
+  mode: box
+anova_duration:
+  name: 'Anova Cook Duration'
+  min: 1
+  max: 2160
+  step: 1
+  mode: box

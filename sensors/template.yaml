@@ -38,6 +38,39 @@
       friendly_name: 'Norbert Light Bulb Power'
       value_template: '{{ states.switch.norbert_light_switch.attributes.power_consumption }}'
       unit_of_measurement: 'W'
+    anova_is_timer_running:
+      friendly_name: 'Anova - Is Timer Running'
+      value_template: '{{ states.sensor.anova_status.attributes.is_timer_running }}'
+    anova_job_stage:
+      friendly_name: 'Anova - Job Stage'
+      value_template: '{{ states.sensor.anova_status.attributes.job_stage }}'
+    anova_timer_length:
+      friendly_name: 'Anova - Timer Length'
+      value_template: '{{ states.sensor.anova_status.attributes.timer_length/60 }}'
+    anova_job_start_time:
+      friendly_name: 'Anova - Job Start Time'
+      value_template: '{{ states.sensor.anova_status.attributes.job_start_time }}'
+    anova_is_running:
+      friendly_name: 'Anova - Is Running'
+      value_template: '{{ states.sensor.anova_status.attributes.is_running }}'
+    anova_duration:
+      friendly_name: 'Anova - Duration'
+      value_template: '{{ states.sensor.anova_status.attributes.duration }}'
+    anova_alarm_active:
+      friendly_name: 'Anova - Alarm Active'
+      value_template: '{{ states.sensor.anova_status.attributes.alarm_active }}'
+    anova_target_temp:
+      friendly_name: 'Anova - Target Temp'
+      value_template: '{{ states.sensor.anova_status.attributes.target_temp }}'
+    anova_speaker_mode:
+      friendly_name: 'Anova - Speaker Mode'
+      value_template: '{{ states.sensor.anova_status.attributes.speaker_mode }}'
+    anova_current_temp:
+      friendly_name: 'Anova - Current Temp'
+      value_template: '{{ states.sensor.anova_status.attributes.current_temp }}'
+    anova_temp_unit:
+      friendly_name: 'Anova - Temp Unit'
+      value_template: '{{ states.sensor.anova_status.attributes.temp_unit }}'
     door_garage_state:
       friendly_name: 'Door Garage'
       value_template: >-

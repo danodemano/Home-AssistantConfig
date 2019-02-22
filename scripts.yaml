@@ -77,6 +77,19 @@ dummy:
         entity_id: script.dummy
         domain: script
 
+anova_start:
+  alias: "Anova Start"
+  sequence:
+    - service: shell_command.anova_start
+      # data_template:
+      #   temperature: "{{ states.input_number.anova_temp.state }}"
+      #   duration: "{{ states.input_number.anova_duration.state }}"
+
+anova_stop:
+  alias: "Anova Stop"
+  sequence:
+    - service: shell_command.anova_stop
+
 fan_circulate_on:
   sequence:
     - service: homeassistant.turn_on

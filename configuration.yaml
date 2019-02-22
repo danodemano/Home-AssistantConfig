@@ -12,6 +12,9 @@ homeassistant:
   time_zone: America/New_York
   # This one has to be here
   customize: !include_dir_merge_named customizations/
+  # Enable 2FA
+  auth_mfa_modules:
+    - type: totp
 
 # Enables the frontend
 frontend:
@@ -42,12 +45,15 @@ sun:
 #Enable the map
 map:
 
+# Enable the system health
+system_health:
+
 logger:
   default: warn
 
 #Zwave Config
 zwave:
-  usb_path: /dev/ttyACM1
+  usb_path: /dev/ttyACM0
   autoheal: false
   network_key: !secret zwave_network_key
   device_config: !include zwave_device_config.yaml

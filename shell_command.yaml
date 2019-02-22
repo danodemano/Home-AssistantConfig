@@ -37,3 +37,5 @@ trigger_pa: curl "http://192.168.53.55:81/admin?camera=Patio&trigger"
 trigger_gp: curl "http://192.168.53.55:81/admin?camera=GatePatio&trigger"
 trigger_ba: curl "http://192.168.53.55:81/admin?camera=Basement&trigger"
 trigger_by: curl "http://192.168.53.55:81/admin?camera=Backyard&trigger"
+anova_start: '/scripts/anova_control.py -m start -t "{{ states.input_number.anova_temp.state | int }}" -d "{{ states.input_number.anova_duration.state | int }}"'
+anova_stop: '/scripts/anova_control.py -m stop'

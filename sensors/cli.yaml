@@ -51,6 +51,28 @@
   command: /scripts/check_ha_mysql.sh
   name: Connection to MySql
   scan_interval: 60
+- platform: command_line
+  command: /scripts/time_diff.sh
+  name: Time Drift
+  scan_interval: 300
+  unit_of_measurement: "s"
+- platform: command_line
+  command: /scripts/anova_control.py -m status -o h
+  name: Anova Status
+  json_attributes:
+    - current_temp
+    - is_running
+    - is_timer_running
+    - speaker_mode
+    - target_temp
+    - temp_unit
+    - timer_length
+    - alarm_active
+    - job_stage
+    - duration
+    - job_start_time
+  value_template: '{{value_json.current_temp}}'
+  scan_interval: 60
 # - platform: command_line
 #   name: Last Alexa
 #   command: '/scripts/alexa_remote_control.sh'

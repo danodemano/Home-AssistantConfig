@@ -24,7 +24,7 @@
 
 - platform: google_travel_time
   api_key: !secret google_travel_time_api_key
-  origin: device_tracker.dan2_owntracks
+  origin: device_tracker.dan_gpslogger
   destination: !secret travel_home
   name: Dan location to Home
   scan_interval: 300

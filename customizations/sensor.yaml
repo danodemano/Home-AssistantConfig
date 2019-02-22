@@ -178,3 +178,27 @@ sensor.weather_outside_wind_speed:
 sensor.weather_outside_windchill:
   friendly_name: 'Outside Wind Chill'
   icon: mdi:weather-windy
+
+#Anova cooker
+sensor.anova_is_timer_running:
+  icon: mdi:restart
+sensor.anova_job_stage:
+  icon: mdi:clipboard-flow
+sensor.anova_timer_length:
+  icon: mdi:timer
+sensor.anova_job_start_time:
+  icon: mdi:calendar-clock
+sensor.anova_is_running:
+  icon: mdi:clock-fast
+sensor.anova_duration:
+  icon: mdi:camera-timer
+sensor.anova_alarm_active:
+  icon: mdi:alarm
+sensor.anova_target_temp:
+  icon: mdi:thermometer
+sensor.anova_speaker_mode:
+  icon: mdi:volume-high
+sensor.anova_current_temp:
+  icon: mdi:thermometer-lines
+sensor.anova_temp_unit:
+  icon: mdi:oil-temperature

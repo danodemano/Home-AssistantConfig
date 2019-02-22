@@ -19,7 +19,7 @@
     #kids_tv: 192.168.51.108
     kids_xbox: 192.168.51.105
 #- platform: owntracks_http
-- platform: gpslogger
+#- platform: gpslogger
 - platform: unifi
   username: !secret unifi_user
   password: !secret unifi_pass

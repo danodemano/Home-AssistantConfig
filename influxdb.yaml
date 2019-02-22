@@ -79,7 +79,7 @@ include:
     - sensor.speedtest_ping
     - sensor.speedtest_upload
     - sensor.processor_use
-    - sensor.disk_use_percent_
+    - sensor.disk_use_percent
     - sensor.memory_use_percent
     - sensor.server_rack_battery
     - sensor.pihole_ads_blocked_today
