@@ -37,3 +37,11 @@ binary_sensor.leak_wet_corner:
   friendly name: Leak Wet Corner
   icon: mdi:water
   device_class: moisture
+binary_sensor.anova_is_timer_running:
+  icon: mdi:restart
+binary_sensor.anova_is_running:
+  icon: mdi:clock-fast
+binary_sensor.anova_speaker_mode:
+  icon: mdi:volume-high
+binary_sensor.anova_alarm_active:
+  icon: mdi:alarm

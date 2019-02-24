@@ -68,11 +68,12 @@
     - temp_unit
     - timer_length
     - alarm_active
+    - job_type
     - job_stage
     - duration
     - job_start_time
   value_template: '{{value_json.current_temp}}'
-  scan_interval: 60
+  scan_interval: 15
 # - platform: command_line
 #   name: Last Alexa
 #   command: '/scripts/alexa_remote_control.sh'

@@ -279,6 +279,55 @@
           {%- endif -%}
       entity_id: sensor.connection_to_mysql
 
+    anova_is_timer_running:
+      friendly_name: 'Is Timer Running'
+      value_template: >-
+          {%- if is_state("sensor.anova_is_timer_running", "True") -%}
+              True
+          {%- elif is_state("sensor.anova_is_timer_running", "False") -%}
+              False
+          #This accounts for no state if cooker is offline
+          {%- else -%}
+              False
+          {%- endif -%}
+      entity_id: sensor.anova_is_timer_running
+    anova_is_running:
+      friendly_name: 'Is Running'
+      value_template: >-
+          {%- if is_state("sensor.anova_is_running", "True") -%}
+              True
+          {%- elif is_state("sensor.anova_is_running", "False") -%}
+              False
+          #This accounts for no state if cooker is offline
+          {%- else -%}
+              False
+          {%- endif -%}
+      entity_id: sensor.anova_is_running
+    anova_speaker_mode:
+      friendly_name: 'Speaker Mode'
+      value_template: >-
+          {%- if is_state("sensor.anova_speaker_mode", "True") -%}
+              True
+          {%- elif is_state("sensor.anova_speaker_mode", "False") -%}
+              False
+          #This accounts for no state if cooker is offline
+          {%- else -%}
+              True
+          {%- endif -%}
+      entity_id: sensor.anova_speaker_mode
+    anova_alarm_active:
+      friendly_name: 'Alarm Active'
+      value_template: >-
+          {%- if is_state("sensor.anova_alarm_active", "True") -%}
+              True
+          {%- elif is_state("sensor.anova_alarm_active", "False") -%}
+              False
+          #This accounts for no state if cooker is offline
+          {%- else -%}
+              False
+          {%- endif -%}
+      entity_id: sensor.anova_alarm_active
+
     door_basement_test:
         friendly_name: 'Door Basement Test'
         device_class: door

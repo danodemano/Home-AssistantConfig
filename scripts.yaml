@@ -90,6 +90,11 @@ anova_stop:
   sequence:
     - service: shell_command.anova_stop
 
+anova_icebath:
+  alias: "Anova Ice Bath"
+  sequence:
+    - service: shell_command.anova_icebath
+
 fan_circulate_on:
   sequence:
     - service: homeassistant.turn_on

@@ -184,6 +184,8 @@ sensor.anova_is_timer_running:
   icon: mdi:restart
 sensor.anova_job_stage:
   icon: mdi:clipboard-flow
+sensor.anova_job_type:
+  icon: mdi:briefcase
 sensor.anova_timer_length:
   icon: mdi:timer
 sensor.anova_job_start_time:

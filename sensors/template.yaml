@@ -39,37 +39,57 @@
       value_template: '{{ states.switch.norbert_light_switch.attributes.power_consumption }}'
       unit_of_measurement: 'W'
     anova_is_timer_running:
-      friendly_name: 'Anova - Is Timer Running'
+      friendly_name: 'Is Timer Running'
       value_template: '{{ states.sensor.anova_status.attributes.is_timer_running }}'
+    anova_job_type:
+      friendly_name: 'Job Type'
+      value_template: '{{ states.sensor.anova_status.attributes.job_type }}'
     anova_job_stage:
-      friendly_name: 'Anova - Job Stage'
+      friendly_name: 'Job Stage'
       value_template: '{{ states.sensor.anova_status.attributes.job_stage }}'
     anova_timer_length:
-      friendly_name: 'Anova - Timer Length'
-      value_template: '{{ states.sensor.anova_status.attributes.timer_length/60 }}'
+      friendly_name: 'Cook Time Remaining'
+      # value_template: >-
+      #     {%- if states.sensor.anova_status.attributes.timer_length != None -%}
+      #        {{ (states.sensor.anova_status.attributes.timer_length/60) | round(0) }}
+      #     {%- else -%}
+      #        N/A
+      #     {%- endif -%}
+      value_template: '{{ (states.sensor.anova_status.attributes.timer_length/60) | round(0) }}'
+      unit_of_measurement: 'min'
     anova_job_start_time:
-      friendly_name: 'Anova - Job Start Time'
-      value_template: '{{ states.sensor.anova_status.attributes.job_start_time }}'
+      friendly_name: 'Job Start Time'
+      #Convert to local time/date and format more human friendly
+      value_template: '{{ as_timestamp(states.sensor.anova_status.attributes.job_start_time) | timestamp_custom("%x %X") }}'
     anova_is_running:
-      friendly_name: 'Anova - Is Running'
+      friendly_name: 'Is Running'
       value_template: '{{ states.sensor.anova_status.attributes.is_running }}'
     anova_duration:
-      friendly_name: 'Anova - Duration'
-      value_template: '{{ states.sensor.anova_status.attributes.duration }}'
+      friendly_name: 'Cook Duration'
+      # value_template: >-
+      #     {%- if states.sensor.anova_status.attributes.duration != None -%}
+      #        {{ (states.sensor.anova_status.attributes.duration/60) | round(0) }}
+      #     {%- else -%}
+      #        N/A
+      #     {%- endif -%}
+      value_template: '{{ (states.sensor.anova_status.attributes.duration/60) | round(0) }}'
+      unit_of_measurement: 'min'
     anova_alarm_active:
-      friendly_name: 'Anova - Alarm Active'
+      friendly_name: 'Alarm Active'
       value_template: '{{ states.sensor.anova_status.attributes.alarm_active }}'
     anova_target_temp:
-      friendly_name: 'Anova - Target Temp'
+      friendly_name: 'Target Temp'
       value_template: '{{ states.sensor.anova_status.attributes.target_temp }}'
+      unit_of_measurement: '°F'
     anova_speaker_mode:
-      friendly_name: 'Anova - Speaker Mode'
+      friendly_name: 'Speaker Mode'
       value_template: '{{ states.sensor.anova_status.attributes.speaker_mode }}'
     anova_current_temp:
-      friendly_name: 'Anova - Current Temp'
+      friendly_name: 'Current Temp'
       value_template: '{{ states.sensor.anova_status.attributes.current_temp }}'
+      unit_of_measurement: '°F'
     anova_temp_unit:
-      friendly_name: 'Anova - Temp Unit'
+      friendly_name: 'Temp Unit'
       value_template: '{{ states.sensor.anova_status.attributes.temp_unit }}'
     door_garage_state:
       friendly_name: 'Door Garage'
