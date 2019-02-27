@@ -19,3 +19,6 @@ input_boolean.nick_grounded:
 input_boolean.shannon_grounded:
   icon: mdi:arrow-down-bold-circle
   emulated_hue_hidden: true
+input_boolean.anova_scheduled:
+  icon: mdi:clock-outline
+  emulated_hue_hidden: true

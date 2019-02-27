@@ -327,6 +327,15 @@
               False
           {%- endif -%}
       entity_id: sensor.anova_alarm_active
+    anova_scheduled:
+      friendly_name: 'Is Scheduled'
+      value_template: >-
+          {%- if is_state("input_boolean.anova_scheduled", "on") -%}
+              True
+          {%- elif is_state("input_boolean.anova_scheduled", "off") -%}
+              False
+          {%- endif -%}
+      entity_id: input_boolean.anova_scheduled
 
     door_basement_test:
         friendly_name: 'Door Basement Test'

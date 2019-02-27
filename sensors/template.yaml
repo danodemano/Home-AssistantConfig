@@ -473,7 +473,7 @@
     wind_dir_friendly:
         friendly_name: 'Wind Direction'
         value_template: >-
-            {% set wind_dir = states.sensor.weather_outside_wind_speed.state %}
+            {% set wind_dir = states.sensor.weather_outside_wind_dir.state %}
             {% if wind_dir | float<=11 %}North
             {% elif wind_dir | float>348 %}North
             {% elif 11 < (wind_dir|float) <=34 %}NNE

@@ -181,3 +181,12 @@
 - platform: statistics
   name: 'WAN Traffic Out'
   entity_id: sensor.internet_speed_out
+
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+    - 'date_time'
+    - 'time_date'
+    - 'time_utc'
+    - 'beat'

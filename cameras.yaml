@@ -87,3 +87,9 @@
   username: !secret bi_username
   password: !secret bi_password
   authentication: basic
+- platform: mjpeg
+  mjpeg_url: http://192.168.53.55:81/mjpg/Norbert
+  name: Norbert
+  username: !secret bi_username
+  password: !secret bi_password
+  authentication: basic

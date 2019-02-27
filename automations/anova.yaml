@@ -1,0 +1,12 @@
+- id: anova_cooker_start
+  alias: 'Anova Cooker Start'
+  trigger:
+    platform: template
+    value_template: "{{ states('sensor.date_time') == (states.input_datetime.anova_start_time.attributes.timestamp | int | timestamp_custom('%Y-%m-%d, %H:%M', True)) }}"
+  action:
+    service: script.turn_on
+    entity_id: script.anova_start
+  condition:
+    condition: state
+    entity_id: input_boolean.anova_scheduled
+    state: 'on'

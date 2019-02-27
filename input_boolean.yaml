@@ -40,3 +40,5 @@ nick_grounded:
   name: Nick Grounded?
 shannon_grounded:
   name: Shannon Grounded?
+anova_scheduled:
+  name: Schedule Cook
