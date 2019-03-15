@@ -18,6 +18,16 @@
   server: 192.168.9.1
   recipient: !secret shelley_text
   sender: !secret email_from
+- name: shannontext
+  platform: smtp
+  server: 192.168.9.1
+  recipient: !secret shannon_text
+  sender: !secret email_from
+- name: nicktext
+  platform: smtp
+  server: 192.168.9.1
+  recipient: !secret nick_text
+  sender: !secret email_from
 - name: push
   platform: html5
   gcm_api_key: !secret push_gcm_api_key

@@ -58,11 +58,11 @@ zwave:
   network_key: !secret zwave_network_key
   device_config: !include zwave_device_config.yaml
 
-light:
-  - platform: flux_led
-    devices:
-      192.168.9.216:
-        name: den_tv_leds
+# light:
+#   - platform: flux_led
+#     devices:
+#       192.168.9.216:
+#         name: den_tv_leds
 
 hue:
   bridges:
@@ -131,6 +131,13 @@ ecobee:
 wunderlist:
   client_id: !secret wunderlist_client_id
   access_token: !secret wunderlist_access_token
+
+#Custom component - beta media player: https://github.com/keatontaylor/alexa_media_player
+alexa_media:
+  accounts:
+    email: !secret amazon_email
+    password: !secret amazon_password
+    url: amazon.com
 
 alexa:
 

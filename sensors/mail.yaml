@@ -3,12 +3,12 @@
 #  username: !secret usps_username
 #  password: !secret usps_password
 
-- platform: ups
-  name: "UPS Home"
-  username: !secret ups_username
-  password: !secret ups_password
+# - platform: ups
+#   name: "UPS Home"
+#   username: !secret ups_username
+#   password: !secret ups_password
 
-- platform: fedex
-  name: "FedEx Home"
-  username: !secret fedex_username
-  password: !secret fedex_password
+# - platform: fedex
+#   name: "FedEx Home"
+#   username: !secret fedex_username
+#   password: !secret fedex_password
