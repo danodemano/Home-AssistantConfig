@@ -26,13 +26,25 @@
     climate_living_room_aux_heat:
       friendly_name: 'Living Room Aux Heat'
       value_template: '{{ states.climate.living_room.attributes.aux_heat }}'
-    anole_heat_bulb_power:
-      friendly_name: 'Anole Heat Bulb Power'
-      value_template: '{{ states.switch.anole_heat_switch.attributes.power_consumption }}'
+    climate_living_room_equipment_running:
+      friendly_name: 'Living Room Equipment Running'
+      value_template: '{{ states.climate.living_room.attributes.equipment_running }}'
+    climate_living_room_fan_mode:
+      friendly_name: 'Living Room Fan Mode'
+      value_template: '{{ states.climate.living_room.attributes.fan_mode }}'
+    climate_living_room_fan:
+      friendly_name: 'Living Room Fan'
+      value_template: '{{ states.climate.living_room.attributes.fan }}'
+    climate_living_room_operation_mode:
+      friendly_name: 'Living Room Operation Mode'
+      value_template: '{{ states.climate.living_room.attributes.operation_mode }}'
+    frog_heat_bulb_power:
+      friendly_name: 'Frog Heat Bulb Power'
+      value_template: '{{ states.switch.frog_heat_switch.attributes.power_consumption }}'
       unit_of_measurement: 'W'
-    anole_light_bulb_power:
-      friendly_name: 'Anole Light Bulb Power'
-      value_template: '{{ states.switch.anole_light_switch.attributes.power_consumption }}'
+    frog_light_bulb_power:
+      friendly_name: 'Frog Light Bulb Power'
+      value_template: '{{ states.switch.frog_light_switch.attributes.power_consumption }}'
       unit_of_measurement: 'W'
     norbert_light_bulb_power:
       friendly_name: 'Norbert Light Bulb Power'
@@ -91,6 +103,9 @@
     anova_temp_unit:
       friendly_name: 'Temp Unit'
       value_template: '{{ states.sensor.anova_status.attributes.temp_unit }}'
+    anova_end_time:
+      friendly_name: 'End Time'
+      value_template: '{{ ((now().strftime("%s") | int + ((states.sensor.anova_timer_length.state | int) * 60)) | timestamp_custom("%H:%M")) }}'
     door_garage_state:
       friendly_name: 'Door Garage'
       value_template: >-
@@ -355,60 +370,60 @@
           {% else %}
              mdi:cellphone
           {% endif %}
-    outside_humidity:
-      friendly_name: "Outside Humidity"
-      unit_of_measurement: '%'
-      value_template: >-
-          {%- if states.sensor.pws_relative_humidity.state|float >= 0 and states.sensor.pws_relative_humidity.state|float <= 100 -%}
-             {{(states.sensor.pws_relative_humidity.state)}}
-          {%- else -%}
-             nan
-          {%- endif -%}   
-    brian_humidity:
-      friendly_name: "Brian Humidity"
-      unit_of_measurement: '%'
-      value_template: >-
-          {%- if states.sensor.pws_relative_humidity_2.state|float >= 0 and states.sensor.pws_relative_humidity_2.state|float <= 100 -%}
-             {{(states.sensor.pws_relative_humidity_2.state)}}
-          {%- else -%}
-             nan
-          {%- endif -%}
-    guy_humidity:
-      friendly_name: "Guy Humidity"
-      unit_of_measurement: '%'
-      value_template: >-
-          {%- if states.sensor.pws_relative_humidity_3.state|float >= 0 and states.sensor.pws_relative_humidity_3.state|float <= 100 -%}
-             {{(states.sensor.pws_relative_humidity_3.state)}}
-          {%- else -%}
-             nan
-          {%- endif -%}
-    outside_temp:
-      friendly_name: "Outside Temperature"
-      unit_of_measurement: '°F'
-      value_template: >-
-          {%- if states.sensor.pws_temp_f.state|float >= -50 and states.sensor.pws_temp_f.state|float <= 150 -%}
-             {{(states.sensor.pws_temp_f.state)}}
-          {%- else -%}
-             nan
-          {%- endif -%}   
-    brian_temp:
-      friendly_name: "Brian Temperature"
-      unit_of_measurement: '°F'
-      value_template: >-
-          {%- if states.sensor.pws_temp_f_2.state|float >= -50 and states.sensor.pws_temp_f_2.state|float <= 150 -%}
-             {{(states.sensor.pws_temp_f_2.state)}}
-          {%- else -%}
-             nan
-          {%- endif -%}
-    guy_temp:
-      friendly_name: "Guy Temperature"
-      unit_of_measurement: '°F'
-      value_template: >-
-          {%- if states.sensor.pws_temp_f_3.state|float >= -50 and states.sensor.pws_temp_f_3.state|float <= 150 -%}
-             {{(states.sensor.pws_temp_f_3.state)}}
-          {%- else -%}
-             nan
-          {%- endif -%}
+    # outside_humidity:
+    #   friendly_name: "Outside Humidity"
+    #   unit_of_measurement: '%'
+    #   value_template: >-
+    #       {%- if states.sensor.pws_relative_humidity.state|float >= 0 and states.sensor.pws_relative_humidity.state|float <= 100 -%}
+    #          {{(states.sensor.pws_relative_humidity.state)}}
+    #       {%- else -%}
+    #          nan
+    #       {%- endif -%}   
+    # brian_humidity:
+    #   friendly_name: "Brian Humidity"
+    #   unit_of_measurement: '%'
+    #   value_template: >-
+    #       {%- if states.sensor.pws_relative_humidity_2.state|float >= 0 and states.sensor.pws_relative_humidity_2.state|float <= 100 -%}
+    #          {{(states.sensor.pws_relative_humidity_2.state)}}
+    #       {%- else -%}
+    #          nan
+    #       {%- endif -%}
+    # guy_humidity:
+    #   friendly_name: "Guy Humidity"
+    #   unit_of_measurement: '%'
+    #   value_template: >-
+    #       {%- if states.sensor.pws_relative_humidity_3.state|float >= 0 and states.sensor.pws_relative_humidity_3.state|float <= 100 -%}
+    #          {{(states.sensor.pws_relative_humidity_3.state)}}
+    #       {%- else -%}
+    #          nan
+    #       {%- endif -%}
+    # outside_temp:
+    #   friendly_name: "Outside Temperature"
+    #   unit_of_measurement: '°F'
+    #   value_template: >-
+    #       {%- if states.sensor.pws_temp_f.state|float >= -50 and states.sensor.pws_temp_f.state|float <= 150 -%}
+    #          {{(states.sensor.pws_temp_f.state)}}
+    #       {%- else -%}
+    #          nan
+    #       {%- endif -%}   
+    # brian_temp:
+    #   friendly_name: "Brian Temperature"
+    #   unit_of_measurement: '°F'
+    #   value_template: >-
+    #       {%- if states.sensor.pws_temp_f_2.state|float >= -50 and states.sensor.pws_temp_f_2.state|float <= 150 -%}
+    #          {{(states.sensor.pws_temp_f_2.state)}}
+    #       {%- else -%}
+    #          nan
+    #       {%- endif -%}
+    # guy_temp:
+    #   friendly_name: "Guy Temperature"
+    #   unit_of_measurement: '°F'
+    #   value_template: >-
+    #       {%- if states.sensor.pws_temp_f_3.state|float >= -50 and states.sensor.pws_temp_f_3.state|float <= 150 -%}
+    #          {{(states.sensor.pws_temp_f_3.state)}}
+    #       {%- else -%}
+    #          nan
+    #       {%- endif -%}
     master_real_temp:
       friendly_name: "Master Real Temp"
       unit_of_measurement: '°F'

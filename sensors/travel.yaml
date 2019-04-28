@@ -31,7 +31,7 @@
 
 - platform: google_travel_time
   api_key: !secret google_travel_time_api_key
-  origin: device_tracker.shelley_owntracks
+  origin: device_tracker.shelley_gpslogger
   destination: !secret travel_home
   name: Shelley location to Home
   scan_interval: 300

@@ -30,15 +30,19 @@
     - minutely_summary
     - hourly_summary
     - daily_summary
-    - temperature_max
-    - temperature_min
-    - apparent_temperature_max
-    - apparent_temperature_min
+    # - temperature_max
+    # - temperature_min
+    # - apparent_temperature_max
+    # - apparent_temperature_min
     - precip_intensity_max
     - uv_index
     - moon_phase
     - icon
     - nearest_storm_distance
+
+#County list from here https://alerts.weather.gov/cap/oh.php?x=2
+- platform: nws_alerts
+  zone_id: 'OHZ004,OHZ055,OHZ037,OHZ045,OHZ036,OHZ047,OHZ056'
 
 # - platform: wunderground
 #   api_key: !secret wunderground_api_key
@@ -190,3 +194,7 @@
     - 'time_date'
     - 'time_utc'
     - 'beat'
+
+- platform: email
+  email: !secret email_scraping_email
+  password: !secret email_scraping_password

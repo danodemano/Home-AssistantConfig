@@ -30,8 +30,9 @@
   sender: !secret email_from
 - name: push
   platform: html5
-  gcm_api_key: !secret push_gcm_api_key
-  gcm_sender_id: !secret push_gcm_sender_id
+  vapid_pub_key: !secret push_cloud_messaging_pub_key
+  vapid_prv_key: !secret push_cloud_messaging_prv_key
+  vapid_email: !secret push_cloud_messaging_email
 - name: slacknotify
   platform: slack
   api_key: !secret slack_api_key
@@ -45,3 +46,5 @@
   platform: pushover
   api_key: !secret pushover_api_key
   user_key: !secret pushover_user_key
+- name: ecobee
+  platform: ecobee

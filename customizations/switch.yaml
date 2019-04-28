@@ -73,9 +73,12 @@ switch.nick_grounded:
 switch.shannon_grounded:
   icon: mdi:arrow-down-bold-circle
   emulated_hue_hidden: true
-switch.anole_light_switch:
+switch.frog_light_switch:
   icon: mdi:ceiling-light
   emulated_hue_hidden: true
-switch.anole_heat_switch:
+switch.frog_heat_switch:
   icon: mdi:radiator
+  emulated_hue_hidden: true
+switch.den_camera:
+  icon: mdi:cctv
   emulated_hue_hidden: true

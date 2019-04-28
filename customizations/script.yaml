@@ -16,3 +16,5 @@ script.shannon_wifi_off:
   icon: mdi:wifi-off
 script.clean_recorder_db:
   icon: mdi:delete
+script.set_bi_yard_work:
+  icon: mdi:tree

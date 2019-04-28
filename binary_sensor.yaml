@@ -37,7 +37,7 @@
       prob_given_false: 0.2
       platform: 'state'
       to_state: 'home'
-    - entity_id: 'device_tracker.shelley_owntracks'
+    - entity_id: 'device_tracker.shelley_gpslogger'
       prob_given_true: 0.9
       prob_given_false: 0.4
       platform: 'state'
@@ -279,6 +279,33 @@
           {%- endif -%}
       entity_id: sensor.connection_to_mysql
 
+    #This is used to create a dynamic card on the UI that only shows if there is an event of importance
+    relevant_alert:
+      friendly_name: Any Relevant Alerts
+      value_template: >-
+          {%- if not is_state("sensor.big_walnut_lsd_status", "Open") -%}
+              True
+          {%- elif not is_state("sensor.delaware", "No Emergency") -%}
+              True
+          {%- elif not is_state("sensor.franklin", "No Emergency") -%}
+              True
+          {%- elif not is_state("sensor.morrow", "No Emergency") -%}
+              True
+          {%- elif not is_state("sensor.nws_alerts", "0") -%}
+              True
+          {%- else -%}
+              False
+          {%- endif -%}
+
+    #These are all used for the Anova cooker
+    anova_online:
+      friendly_name: Is Anova Online
+      value_template: >-
+          {%- if is_state("sensor.anova_target_temp", "None") -%}
+              False
+          {%- else -%}
+              True
+          {%- endif -%}
     anova_is_timer_running:
       friendly_name: 'Is Timer Running'
       value_template: >-

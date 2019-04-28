@@ -41,3 +41,10 @@ alarm_all_switches:
     - switch.holiday_lights
     - switch.front_walk_lights
     - switch.patio
+
+master_all:
+  name: Master Lights
+  view: no
+  entities:
+    - light.master_dan
+    - light.master_shelley

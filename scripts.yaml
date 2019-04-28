@@ -188,6 +188,11 @@ update_tts_endpoints:
     - service: automation.trigger
       entity_id: automation.set_tts_endpoint_options
 
+set_bi_yard_work:
+  alias: "Yard Work Override"
+  sequence:
+    - service: shell_command.bi_yardwork
+
 #### USED WHEN THE ALARM IS TRIGGERED ####
 #### FLASHES ALL LIGHTS IN THE HOUSE  ####
 light_flash:

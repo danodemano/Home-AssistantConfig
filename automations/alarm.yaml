@@ -1,70 +1,70 @@
-- alias: 'Alarm away when Dan leave'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.bayesian_presence_dan
-      from: 'on'
-      to: 'off'
-  action:
-    service: alarm_control_panel.alarm_arm_away
-    entity_id: alarm_control_panel.home_alarm
-    data: 
-      code: !secret alarm_code
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: binary_sensor.bayesian_presence_shelley
-        state: 'off'
+# - alias: 'Alarm away when Dan leave'
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.bayesian_presence_dan
+#       from: 'on'
+#       to: 'off'
+#   action:
+#     service: alarm_control_panel.alarm_arm_away
+#     entity_id: alarm_control_panel.home_alarm
+#     data: 
+#       code: !secret alarm_code
+#   condition:
+#     condition: and
+#     conditions:
+#       - condition: state
+#         entity_id: binary_sensor.bayesian_presence_shelley
+#         state: 'off'
 
-- alias: 'Alarm away when Shelley leave'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.bayesian_presence_shelley
-      from: 'on'
-      to: 'off'
-  action:
-    service: alarm_control_panel.alarm_arm_away
-    entity_id: alarm_control_panel.home_alarm
-    data: 
-      code: !secret alarm_code
-  condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: binary_sensor.bayesian_presence_dan
-        state: 'off'
+# - alias: 'Alarm away when Shelley leave'
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.bayesian_presence_shelley
+#       from: 'on'
+#       to: 'off'
+#   action:
+#     service: alarm_control_panel.alarm_arm_away
+#     entity_id: alarm_control_panel.home_alarm
+#     data: 
+#       code: !secret alarm_code
+#   condition:
+#     condition: and
+#     conditions:
+#       - condition: state
+#         entity_id: binary_sensor.bayesian_presence_dan
+#         state: 'off'
 
-- alias: 'Disarm when Dan home'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.bayesian_presence_dan
-      from: 'off'
-      to: 'on'
-  action:
-    - service: alarm_control_panel.alarm_disarm
-      entity_id: alarm_control_panel.home_alarm
-      data: 
-        code: !secret alarm_code
-    - service: switch.turn_off
-      entity_id: switch.burglar_alarm
-    - service: script.turn_off
-      entity_id: script.light_loop
+# - alias: 'Disarm when Dan home'
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.bayesian_presence_dan
+#       from: 'off'
+#       to: 'on'
+#   action:
+#     - service: alarm_control_panel.alarm_disarm
+#       entity_id: alarm_control_panel.home_alarm
+#       data: 
+#         code: !secret alarm_code
+#     - service: switch.turn_off
+#       entity_id: switch.burglar_alarm
+#     - service: script.turn_off
+#       entity_id: script.light_loop
 
-- alias: 'Disarm when Shelley home'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.bayesian_presence_shelley
-      from: 'off'
-      to: 'on'
-  action:
-    - service: alarm_control_panel.alarm_disarm
-      entity_id: alarm_control_panel.home_alarm
-      data: 
-        code: !secret alarm_code
-    - service: switch.turn_off
-      entity_id: switch.burglar_alarm
-    - service: script.turn_off
-      entity_id: script.light_loop
+# - alias: 'Disarm when Shelley home'
+#   trigger:
+#     - platform: state
+#       entity_id: binary_sensor.bayesian_presence_shelley
+#       from: 'off'
+#       to: 'on'
+#   action:
+#     - service: alarm_control_panel.alarm_disarm
+#       entity_id: alarm_control_panel.home_alarm
+#       data: 
+#         code: !secret alarm_code
+#     - service: switch.turn_off
+#       entity_id: switch.burglar_alarm
+#     - service: script.turn_off
+#       entity_id: script.light_loop
 
 - alias: 'Trigger alarm while armed away'
   trigger:

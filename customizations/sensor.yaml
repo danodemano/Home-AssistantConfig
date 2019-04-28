@@ -1,23 +1,23 @@
-sensor.pws_temp_f:
-  friendly_name: Outside Temp
-sensor.pws_temp_f_2:
-  friendly_name: Brian Temp
-sensor.pws_temp_f_3:
-  friendly_name: Guy Temp
-sensor.pws_alerts:
-  friendly_name: Weather Alerts
-  icon: mdi:alert
-sensor.pws_relative_humidity:
-  friendly_name: Outside Humidity
-  icon: mdi:water-percent
-sensor.pws_weather:
-  friendly_name: Weather
-sensor.pws_wind_dir:
-  friendly_name: Wind Direction
-  icon: mdi:compass
-sensor.pws_wind_mph:
-  friendly_name: Wind MPH
-  icon: mdi:weather-windy
+# sensor.pws_temp_f:
+#   friendly_name: Outside Temp
+# sensor.pws_temp_f_2:
+#   friendly_name: Brian Temp
+# sensor.pws_temp_f_3:
+#   friendly_name: Guy Temp
+# sensor.pws_alerts:
+#   friendly_name: Weather Alerts
+#   icon: mdi:alert
+# sensor.pws_relative_humidity:
+#   friendly_name: Outside Humidity
+#   icon: mdi:water-percent
+# sensor.pws_weather:
+#   friendly_name: Weather
+# sensor.pws_wind_dir:
+#   friendly_name: Wind Direction
+#   icon: mdi:compass
+# sensor.pws_wind_mph:
+#   friendly_name: Wind MPH
+#   icon: mdi:weather-windy
 sensor.market_price:
   friendly_name: BTC to USD
 sensor.inside_humidity:
@@ -34,14 +34,12 @@ sensor.server_rack_environment_temperature:
 sensor.server_rack_environment_relative_humidity:
   friendly_name: Server Rack Humidity
   icon: mdi:water-percent
-sensor.main_thermostat_temperature:
-  friendly_name: Temperature
-  icon: mdi:thermometer-lines
-sensor.main_thermostat_relative_humidity:
-  friendly_name: Humidity
-  icon: mdi:water-percent
-cover.garage_door_opener:
-  friendly_name: Garage Door
+# sensor.main_thermostat_temperature:
+#   friendly_name: Temperature
+#   icon: mdi:thermometer-lines
+# sensor.main_thermostat_relative_humidity:
+#   friendly_name: Humidity
+#   icon: mdi:water-percent
 sensor.water_heater_power:
   icon: mdi:flash-red-eye
 #sensor.dan_home_to_work:
@@ -63,6 +61,10 @@ sensor.speedtest_upload:
 sensor.gecko_humidity:
   icon: mdi:water-percent
 sensor.gecko_temperature:
+  icon: mdi:thermometer
+sensor.frog_humidity:
+  icon: mdi:water-percent
+sensor.frog_temperature:
   icon: mdi:thermometer
 sensor.den_humidity:
   icon: mdi:water-percent
@@ -141,10 +143,30 @@ sensor.wan_traffic_in_mean:
 sensor.wan_traffic_out_mean:
   friendly_name: 'WAN Upload Average'
   icon: mdi:upload
-sensor.main_thermostat_fan_mode:
-  icon: mdi:fan
+# sensor.main_thermostat_fan_mode:
+#   icon: mdi:fan
 sensor.current_version:
   friendly_name: 'My HA Version'
+
+#Main Thermostat Sensors
+sensor.climate_living_room_aux_heat:
+  icon: mdi:radiator
+sensor.climate_living_room_current_operation:
+  icon: mdi:settings
+sensor.climate_living_room_operation_mode:
+  icon: mdi:thermostat
+sensor.climate_living_room_equipment_running:
+  icon: mdi:animation
+sensor.climate_living_room_fan:
+  icon: mdi:fan
+sensor.climate_living_room_fan_mode:
+  icon: mdi:rotate-right
+sensor.climate_living_room_humidity:
+  icon: mdi:water-percent
+sensor.climate_living_room_temperature:
+  icon: mdi:thermometer
+
+#Weather station sensors
 sensor.weather_outside_altimeter:
   friendly_name:  Outside Altimeter'
 sensor.weather_outside_barometer:
@@ -204,3 +226,5 @@ sensor.anova_current_temp:
   icon: mdi:thermometer-lines
 sensor.anova_temp_unit:
   icon: mdi:oil-temperature
+sensor.anova_end_time:
+  icon: mdi:clock-outline

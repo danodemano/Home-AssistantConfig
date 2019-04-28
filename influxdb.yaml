@@ -57,8 +57,14 @@ include:
     - sensor.master_real_temp
     - sensor.main_thermostat_fan_mode
     - binary_sensor.home_power_status
-    - sensor.climate_living_room_temperature
+    - sensor.climate_living_room_aux_heat
+    - sensor.climate_living_room_operation_mode
+    - sensor.climate_living_room_current_operation
+    - sensor.climate_living_room_equipment_running
+    - sensor.climate_living_room_fan
+    - sensor.climate_living_room_fan_mode
     - sensor.climate_living_room_humidity
+    - sensor.climate_living_room_temperature
     - sensor.craft_room_temperature
 
     #Pets
@@ -66,8 +72,10 @@ include:
     - sensor.gecko_temperature
     - sensor.norbert_humidity
     - sensor.norbert_temperature
-    - sensor.anole_heat_bulb_power
-    - sensor.anole_light_bulb_power
+    - sensor.frog_humidity
+    - sensor.frog_temperature
+    - sensor.frog_heat_bulb_power
+    - sensor.frog_light_bulb_power
     - sensor.norbert_light_bulb_power
 
     #Servers

@@ -48,6 +48,19 @@ map:
 # Enable the system health
 system_health:
 
+#Custom updater configuration
+custom_updater:
+  track:
+    - cards
+    - components
+    - python_scripts
+  component_urls:
+    - https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/custom_components.json
+    - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
+    - https://raw.githubusercontent.com/ljmerza/tracking-number-card/master/custom_updater.json
+  python_script_urls:
+    - https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/python_scripts.json
+
 logger:
   default: warn
 
@@ -158,7 +171,7 @@ input_number: !include input_number.yaml
 input_select: !include input_select.yaml
 input_text: !include input_text.yaml
 input_datetime: !include input_datetime.yaml
-history_graph: !include history_graph.yaml
+#history_graph: !include history_graph.yaml
 automation: !include_dir_merge_list automations
 script: !include scripts.yaml
 intent_script: !include intent_script.yaml

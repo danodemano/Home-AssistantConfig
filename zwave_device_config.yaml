@@ -1033,3 +1033,30 @@ sensor.vision_zp3102_pir_motion_sensor_sourcenodeid:
 sensor.oomi_ft100_multisensor_6_relative_humidity_2:
   ignored: false
   polling_intensity: 120
+sensor.hank_hkzw_so01_smart_plug_previous_reading:
+  ignored: true
+  polling_intensity: 0
+switch.hank_hkzw_so01_smart_plug_switch:
+  ignored: true
+  polling_intensity: 0
+sensor.oomi_ft100_multisensor_6_alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.oomi_ft100_multisensor_6_burglar_2:
+  ignored: true
+  polling_intensity: 0
+binary_sensor.oomi_ft100_multisensor_6_sensor:
+  ignored: true
+  polling_intensity: 0
+sensor.oomi_ft100_multisensor_6_sourcenodeid_2:
+  ignored: true
+  polling_intensity: 0
+sensor.oomi_ft100_multisensor_6_ultraviolet_2:
+  ignored: true
+  polling_intensity: 0
+sensor.oomi_ft100_multisensor_6_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.oomi_ft100_multisensor_6_luminance_2:
+  ignored: true
+  polling_intensity: 0

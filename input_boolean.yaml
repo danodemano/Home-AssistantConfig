@@ -42,3 +42,7 @@ shannon_grounded:
   name: Shannon Grounded?
 anova_scheduled:
   name: Schedule Cook
+den_camera_override:
+  name: Den Camera Override
+night_time:
+  name: Night Time
