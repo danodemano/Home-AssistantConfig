@@ -12,7 +12,7 @@ dark_clear:
   border-color: '#383C46'                                                         # Grey border
 
   # Header
-  primary-color: '#363941'                                                        # Background
+  primary-color: '#6A6B74'                                                        # Background - Default #363941
   text-primary-color: 'var(--text-color)'                                         # Text
   
   # Left Menu

@@ -1060,3 +1060,21 @@ sensor.oomi_ft100_multisensor_6_alarm_type:
 sensor.oomi_ft100_multisensor_6_luminance_2:
   ignored: true
   polling_intensity: 0
+sensor.zooz_zse40_4_in_1_sensor_alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zse40_4_in_1_sensor_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zse40_4_in_1_sensor_burglar:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zse40_4_in_1_sensor_power_management:
+  ignored: true
+  polling_intensity: 0
+binary_sensor.zooz_zse40_4_in_1_sensor_sensor:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zse40_4_in_1_sensor_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
