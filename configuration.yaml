@@ -62,6 +62,7 @@ custom_updater:
   card_urls:
     - https://raw.githubusercontent.com/ljmerza/tracking-number-card/master/custom_updater.json
     - https://raw.githubusercontent.com/rdehuyss/homeassistant-lovelace-google-calendar-card/master/custom_updater.json
+    - https://raw.githubusercontent.com/atomic7777/atomic_calendar/master/tracker.json
 
 logger:
   default: warn
