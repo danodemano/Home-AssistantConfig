@@ -42,27 +42,47 @@ logbook:
 # Track the sun
 sun:
 
+#Enabled discovery
+discovery:
+
 #Enable the map
 map:
 
 # Enable the system health
 system_health:
 
+# HACS - https://custom-components.github.io/hacs/
+hacs:
+  token: 32d44606e67cb9fcf67405c5cb853f9093a0bb4c
+
 #Custom updater configuration
-custom_updater:
-  track:
-    - cards
-    - components
-    - python_scripts
-  component_urls:
-    - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
-    - https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/custom_components.json
-  python_script_urls:
-    - https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/python_scripts.json
-  card_urls:
-    - https://raw.githubusercontent.com/ljmerza/tracking-number-card/master/custom_updater.json
-    - https://raw.githubusercontent.com/rdehuyss/homeassistant-lovelace-google-calendar-card/master/custom_updater.json
-    - https://raw.githubusercontent.com/atomic7777/atomic_calendar/master/tracker.json
+# custom_updater:
+#   track:
+#     - cards
+#     - components
+#     - python_scripts
+#   component_urls:
+#     - https://raw.githubusercontent.com/keatontaylor/alexa_media_player/master/custom_components.json
+#     - https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/custom_components.json
+#   python_script_urls:
+#     - https://raw.githubusercontent.com/pnbruckner/homeassistant-config/master/python_scripts.json
+#   card_urls:
+#     - https://raw.githubusercontent.com/ljmerza/tracking-number-card/master/custom_updater.json
+#     - https://raw.githubusercontent.com/rdehuyss/homeassistant-lovelace-google-calendar-card/master/custom_updater.json
+#     - https://raw.githubusercontent.com/atomic7777/atomic_calendar/master/tracker.json
+
+#Variable custom component - https://github.com/rogro82/hass-variables
+variable:
+# Stores the last time the filter was changed
+  furnace_filter:
+    value: 0
+    name: Furnace filter change date
+    restore: true
+# Stores the total runtime since the last filter change (updated nightly with an automation)
+  hvac_runtime:
+    value: 0
+    name: HVAC runtime
+    restore: true
 
 logger:
   default: warn
@@ -91,6 +111,10 @@ remote:
     name: Den
     host: 192.168.9.208
     activity: Watch TV
+  - platform: harmony
+    name: Master
+    host: 192.168.9.209
+    activity: Master AC on/off
 
 # usps:
 #  name: "USPS Home"
@@ -151,12 +175,71 @@ wunderlist:
   client_id: !secret wunderlist_client_id
   access_token: !secret wunderlist_access_token
 
+octoprint:
+  host: 192.168.9.33
+  api_key: !secret octoprint_api_key
+  name: 'Ender 3'
+  bed: true
+  number_of_tools: 1
+
+iqvia:
+  zip_code: !secret home_zip
+  monitored_conditions:
+    - allergy_average_forecasted
+    - allergy_index_today
+    - allergy_index_tomorrow
+    - asthma_average_forecasted
+    - asthma_index_today
+    - asthma_index_tomorrow
+    - disease_average_forecasted
+    - disease_index_today
+
+#Enable the person component
+person:
+
+#Enable the UniFi component
+unifi:
+  controllers:
+    - host: 192.168.9.47
+      site: ihj7qv3c
+
+#Enable the Pi-hole component
+pi_hole:
+  host: '192.168.54.2'
+  ssl: false
+  verify_ssl: false
+
+#Custom z-wave panel: https://gist.github.com/AdamNaj/cbf4d792a22f443fe9d354e4dca4de00
+panel_custom:
+  - name: zwavegraph2
+    sidebar_title: Z-Wave Graph
+    sidebar_icon: mdi:access-point-network
+    url_path: zwave
+
+#Additional panels
+panel_iframe:
+  esphome:
+    title: 'ESPHome'
+    url: 'http://192.168.9.200:6052'
+    icon: mdi:car-esp
+  pihole:
+    title: 'Pi-Hole'
+    url: 'http://192.168.54.2/admin/'
+    icon: mdi:pi-hole
+  octoprint:
+    title: 'OctoPrint'
+    url: 'http://192.168.9.33/'
+    icon: mdi:printer-3d
+
 #Custom component - beta media player: https://github.com/keatontaylor/alexa_media_player
 alexa_media:
   accounts:
     email: !secret amazon_email
     password: !secret amazon_password
     url: amazon.com
+
+#Custom component - circardian lighting: https://github.com/claytonjn/hass-circadian_lighting
+circadian_lighting:
 
 alexa:
 
@@ -184,5 +267,5 @@ intent_script: !include intent_script.yaml
 zone: !include zone.yaml
 water_heater: !include water_heater.yaml
 image_processing: !include_dir_merge_list tensorflow
-emulated_hue: !include emulated_hue.yaml
+#emulated_hue: !include emulated_hue.yaml
 recorder: !include recorder.yaml

@@ -43,6 +43,13 @@
         service: script.kids_mega_override_on
       turn_off:
         service: script.kids_mega_override_off
+    kids_summer_toggle:
+      value_template: '{{ states.input_boolean.kids_summer_toggle.state }}'
+      friendly_name: 'Kids Summer WiFi Override'
+      turn_on:
+        service: script.kids_summer_toggle_on
+      turn_off:
+        service: script.kids_summer_toggle_off
     video_pop:
       value_template: '{{ states.input_boolean.enable_video_pop.state }}'
       friendly_name: 'Enable Video Pop'

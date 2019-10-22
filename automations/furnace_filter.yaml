@@ -1,0 +1,13 @@
+# Automation to update the total runtime stored in the hvac_runtime variable
+- id: 'store_hvac_runtime'
+  alias: Store HVAC runtime nightly
+  initial_state: 'on'
+  trigger:
+  - platform: time
+    at: '23:59:00'
+  condition: []
+  action:
+  - service: variable.set_variable
+    data:
+      variable: hvac_runtime
+      value_template: "{{ (states('sensor.furnace_filter_life') | float) | round(1) }}"

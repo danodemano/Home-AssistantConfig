@@ -147,6 +147,10 @@ sensor.wan_traffic_out_mean:
 #   icon: mdi:fan
 sensor.current_version:
   friendly_name: 'My HA Version'
+sensor.ender_3_actual_tool0_temp:
+  friendly_name: 'Ender 3 actual extruder temp'
+sensor.ender_3_target_tool0_temp:
+  friendly_name: 'Ender 3 target extruder temp'
 
 #Main Thermostat Sensors
 sensor.climate_living_room_aux_heat:

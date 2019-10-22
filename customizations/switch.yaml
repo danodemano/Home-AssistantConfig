@@ -64,6 +64,9 @@ switch.kids_override:
 switch.kids_mega_override:
   icon: mdi:stop-circle-outline
   emulated_hue_hidden: true
+switch.kids_summer_toggle:
+  icon: mdi:white-balance-sunny
+  emulated_hue_hidden: true
 switch.video_pop:
   icon: mdi:video
   emulated_hue_hidden: true

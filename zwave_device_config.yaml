@@ -1078,3 +1078,183 @@ binary_sensor.zooz_zse40_4_in_1_sensor_sensor:
 sensor.zooz_zse40_4_in_1_sensor_sourcenodeid:
   ignored: true
   polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_exporting:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_interval_2:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_interval:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_interval_4:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_interval_3:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_power_management:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_previous_reading_3:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_previous_reading_2:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_previous_reading_4:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_previous_reading:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_sourcenodeid:
+  ignored: true
+  polling_intensity: 0
+sensor.shenzhen_neo_electronics_co_ltd_unknown_type_0100_id_1027_energy:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_alarm_level:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_alarm_type:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_energy_4:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_energy_5:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_energy_3:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_energy:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_energy_2:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_energy_6:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_exporting_4:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_exporting_2:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_exporting:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_exporting_5:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_exporting_6:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_exporting_3:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_11:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_7:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_5:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_4:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_3:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_12:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_10:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_6:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_8:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_9:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_interval_2:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_power_5:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_power_6:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_power_2:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_power_3:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_power:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_power_4:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_power_management:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_4:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_12:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_11:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_3:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_5:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_8:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_7:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_2:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_9:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_6:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_previous_reading_10:
+  ignored: true
+  polling_intensity: 0
+sensor.zooz_zen20_v2_0_power_strip_sourcenodeid:
+  ignored: true
+  polling_intensity: 0

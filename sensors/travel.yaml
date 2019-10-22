@@ -24,14 +24,14 @@
 
 - platform: google_travel_time
   api_key: !secret google_travel_time_api_key
-  origin: device_tracker.dan_gpslogger
+  origin: device_tracker.dan_gpslogger_2
   destination: !secret travel_home
   name: Dan location to Home
   scan_interval: 300
 
 - platform: google_travel_time
   api_key: !secret google_travel_time_api_key
-  origin: device_tracker.shelley_gpslogger
+  origin: device_tracker.shelley_gpslogger_2
   destination: !secret travel_home
   name: Shelley location to Home
   scan_interval: 300

@@ -21,14 +21,10 @@ from .const import (
     ALEXA_COMPONENTS, CONF_DEBUG, CONF_ACCOUNTS, CONF_INCLUDE_DEVICES,
     CONF_EXCLUDE_DEVICES, DATA_ALEXAMEDIA, DOMAIN, MIN_TIME_BETWEEN_SCANS,
     MIN_TIME_BETWEEN_FORCED_SCANS, SCAN_INTERVAL, SERVICE_UPDATE_LAST_CALLED,
-    ATTR_EMAIL
+    ATTR_EMAIL, STARTUP, __version__
 )
 
 # from .config_flow import configured_instances
-
-REQUIREMENTS = ['alexapy==0.5.0']
-
-__version__ = '1.2.5'
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -88,8 +84,9 @@ def setup(hass, config, discovery_info=None):
     if DATA_ALEXAMEDIA not in hass.data:
         hass.data[DATA_ALEXAMEDIA] = {}
         hass.data[DATA_ALEXAMEDIA]['accounts'] = {}
-    from alexapy import AlexaLogin
-
+    from alexapy import AlexaLogin, __version__ as alexapy_version
+    _LOGGER.info(STARTUP)
+    _LOGGER.info("Loaded alexapy==%s", alexapy_version)
     config = config.get(DOMAIN)
     for account in config[CONF_ACCOUNTS]:
         # if account[CONF_EMAIL] in configured_instances(hass):
@@ -107,7 +104,7 @@ def setup(hass, config, discovery_info=None):
     return True
 
 
-async def setup_platform_callback(hass, config, login, callback_data):
+def setup_platform_callback(hass, config, login, callback_data):
     """Handle response from configurator.
 
     Args:
@@ -115,16 +112,15 @@ async def setup_platform_callback(hass, config, login, callback_data):
                           request_configuration and configuration_callback
     """
     _LOGGER.debug(("Status: %s got captcha: %s securitycode: %s"
-                   " Claimsoption: %s VerificationCode: %s"),
+                   " Claimsoption: %s AuthSelectOption: %s "
+                   " VerificationCode: %s"),
                   login.status,
                   callback_data.get('captcha'),
                   callback_data.get('securitycode'),
                   callback_data.get('claimsoption'),
+                  callback_data.get('authselectoption'),
                   callback_data.get('verificationcode'))
-    login.login(captcha=callback_data.get('captcha'),
-                securitycode=callback_data.get('securitycode'),
-                claimsoption=callback_data.get('claimsoption'),
-                verificationcode=callback_data.get('verificationcode'))
+    login.login(data=callback_data)
     test_login_status(hass, config, login,
                       setup_platform_callback)
 
@@ -133,12 +129,20 @@ def request_configuration(hass, config, login, setup_platform_callback):
     """Request configuration steps from the user using the configurator."""
     configurator = hass.components.configurator
 
-    async def configuration_callback(callback_data):
+    def configuration_callback(callback_data):
         """Handle the submitted configuration."""
-        hass.async_add_job(setup_platform_callback, hass, config,
-                           login, callback_data)
+        hass.add_job(setup_platform_callback, hass, config,
+                     login, callback_data)
     status = login.status
     email = login.email
+    # links = ""
+    footer = ""
+    if 'error_message' in status and status['error_message']:
+        footer = ('\n<b>NOTE: Actual Amazon error message in red below. '
+                  'Remember password will be provided automatically'
+                  ' and Amazon error message normally appears first!</b>')
+    # if login.links:
+    #     links = '\n\nGo to link with link# (e.g. link0)\n' + login.links
     # Get Captcha
     if (status and 'captcha_image_url' in status and
             status['captcha_image_url'] is not None):
@@ -146,8 +150,10 @@ def request_configuration(hass, config, login, setup_platform_callback):
             "Alexa Media Player - Captcha - {}".format(email),
             configuration_callback,
             description=('Please enter the text for the captcha.'
-                         ' Please enter anything if the image is missing.'
-                         ),
+                         ' Please hit confirm to reload image.'
+                         # + links
+                         + footer
+                        ),
             description_image=status['captcha_image_url'],
             submit_caption="Confirm",
             fields=[{'id': 'captcha', 'name': 'Captcha'}]
@@ -157,7 +163,9 @@ def request_configuration(hass, config, login, setup_platform_callback):
         config_id = configurator.request_config(
             "Alexa Media Player - 2FA - {}".format(email),
             configuration_callback,
-            description=('Please enter your Two-Factor Security code.'),
+            description=('Please enter your Two-Factor Security code.'
+                         # + links
+                         + footer),
             submit_caption="Confirm",
             fields=[{'id': 'securitycode', 'name': 'Security Code'}]
         )
@@ -169,11 +177,27 @@ def request_configuration(hass, config, login, setup_platform_callback):
                 "Alexa Media Player - Verification Method - {}".format(email),
                 configuration_callback,
                 description=('Please select the verification method. '
-                             '(e.g., sms or email).<br />{}').format(
-                                 options
-                ),
+                             '(e.g., sms or email).\n{}'.format(options)
+                             # + links
+                             + footer),
                 submit_caption="Confirm",
                 fields=[{'id': 'claimsoption', 'name': 'Option'}]
+            )
+        else:
+            configuration_callback({})
+    elif (status and 'authselect_required' in status and
+          status['authselect_required']):  # Get picker method
+        options = status['authselect_message']
+        if options:
+            config_id = configurator.request_config(
+                "Alexa Media Player - OTP Method - {}".format(email),
+                configuration_callback,
+                description=('Please select the OTP method. '
+                             '(e.g., 0, 1).<br />{}'.format(options)
+                             # + links
+                             + footer),
+                submit_caption="Confirm",
+                fields=[{'id': 'authselectoption', 'name': 'Option'}]
             )
         else:
             configuration_callback({})
@@ -182,7 +206,9 @@ def request_configuration(hass, config, login, setup_platform_callback):
         config_id = configurator.request_config(
             "Alexa Media Player - Verification Code - {}".format(email),
             configuration_callback,
-            description=('Please enter received verification code.'),
+            description=('Please enter received verification code.'
+                         # + links
+                         + footer),
             submit_caption="Confirm",
             fields=[{'id': 'verificationcode', 'name': 'Verification Code'}]
         )
@@ -200,8 +226,8 @@ def request_configuration(hass, config, login, setup_platform_callback):
             config_id,
             status['error_message'])
     if len(hass.data[DATA_ALEXAMEDIA]['accounts'][email]['config']) > 1:
-        configurator.async_request_done((hass.data[DATA_ALEXAMEDIA]
-                                         ['accounts'][email]['config']).pop(0))
+        configurator.request_done((hass.data[DATA_ALEXAMEDIA]
+                                   ['accounts'][email]['config']).pop(0))
 
 
 def test_login_status(hass, config, login,
@@ -209,8 +235,8 @@ def test_login_status(hass, config, login,
     """Test the login status and spawn requests for info."""
     if 'login_successful' in login.status and login.status['login_successful']:
         _LOGGER.debug("Setting up Alexa devices")
-        hass.async_add_job(setup_alexa, hass, config,
-                           login)
+        hass.add_job(setup_alexa, hass, config,
+                     login)
         return
     if ('captcha_required' in login.status and
             login.status['captcha_required']):
@@ -221,15 +247,17 @@ def test_login_status(hass, config, login,
     elif ('claimspicker_required' in login.status and
           login.status['claimspicker_required']):
         _LOGGER.debug("Creating configurator to select verification option")
+    elif ('authselect_required' in login.status and
+          login.status['authselect_required']):
+        _LOGGER.debug("Creating configurator to select OTA option")
     elif ('verificationcode_required' in login.status and
           login.status['verificationcode_required']):
         _LOGGER.debug("Creating configurator to enter verification code")
     elif ('login_failed' in login.status and
           login.status['login_failed']):
         _LOGGER.debug("Creating configurator to start new login attempt")
-    hass.async_add_job(request_configuration, hass, config, login,
-                       setup_platform_callback
-                       )
+    hass.add_job(request_configuration, hass, config, login,
+                 setup_platform_callback)
 
 
 def setup_alexa(hass, config, login_obj):
@@ -267,13 +295,14 @@ def setup_alexa(hass, config, login_obj):
         devices = AlexaAPI.get_devices(login_obj)
         bluetooth = AlexaAPI.get_bluetooth(login_obj)
         preferences = AlexaAPI.get_device_preferences(login_obj)
+        dnd = AlexaAPI.get_dnd_state(login_obj)
         _LOGGER.debug("%s: Found %s devices, %s bluetooth",
                       hide_email(email),
                       len(devices) if devices is not None else '',
                       len(bluetooth) if bluetooth is not None else '')
         if ((devices is None or bluetooth is None)
-                and not hass.data[DATA_ALEXAMEDIA]
-                                 ['accounts'][email]['config']):
+                and not (hass.data[DATA_ALEXAMEDIA]
+                         ['accounts'][email]['config'])):
             _LOGGER.debug("Alexa API disconnected; attempting to relogin")
             login_obj.login_with_cookie()
             test_login_status(hass, config, login_obj, setup_platform_callback)
@@ -324,6 +353,14 @@ def setup_alexa(hass, config, login_obj):
                     _LOGGER.debug("Locale %s found for %s",
                                   device['locale'],
                                   hide_serial(device['serialNumber']))
+
+            for dev in dnd['doNotDisturbDeviceStatusList']:
+                if dev['deviceSerialNumber'] == device['serialNumber']:
+                    device['dnd'] = dev['enabled']
+                    _LOGGER.debug("DND %s found for %s",
+                                  device['dnd'],
+                                  hide_serial(device['serialNumber']))
+
             (hass.data[DATA_ALEXAMEDIA]
              ['accounts']
              [email]
@@ -376,9 +413,9 @@ def setup_alexa(hass, config, login_obj):
             hass.bus.fire(('{}_{}'.format(DOMAIN, hide_email(email)))[0:32],
                           {'last_called_change': last_called})
         (hass.data[DATA_ALEXAMEDIA]
-                  ['accounts']
-                  [email]
-                  ['last_called']) = last_called
+         ['accounts']
+         [email]
+         ['last_called']) = last_called
 
     def update_bluetooth_state(login_obj, device_serial):
         """Update the bluetooth state on ws bluetooth event."""
@@ -418,18 +455,19 @@ def setup_alexa(hass, config, login_obj):
         This will only attempt one login before failing.
         """
         from alexapy import WebsocketEchoClient
+        websocket = None
         try:
             websocket = WebsocketEchoClient(login_obj,
                                             ws_handler,
+                                            ws_open_handler,
                                             ws_close_handler,
                                             ws_error_handler)
             _LOGGER.debug("%s: Websocket created: %s", hide_email(email),
                           websocket)
         except BaseException as exception_:
-            _LOGGER.debug("%s: Websocket failed: %s falling back to polling",
+            _LOGGER.debug("%s: Websocket creation failed: %s",
                           hide_email(email),
                           exception_)
-            websocket = None
         return websocket
 
     def ws_handler(message_obj):
@@ -458,15 +496,21 @@ def setup_alexa(hass, config, login_obj):
             serial = None
             if command == 'PUSH_ACTIVITY':
                 #  Last_Alexa Updated
-                serial = (json_payload
-                          ['key']
-                          ['entryId']).split('#')[2]
-                last_called = {
-                    'serialNumber': serial,
-                    'timestamp': json_payload['timestamp']
-                }
+                if (json_payload
+                        ['key']
+                        ['entryId']).find('#') != -1:
+                    serial = (json_payload
+                              ['key']
+                              ['entryId']).split('#')[2]
+                    last_called = {
+                        'serialNumber': serial,
+                        'timestamp': json_payload['timestamp']
+                    }
                 if (serial and serial in existing_serials):
                     update_last_called(login_obj, last_called)
+                hass.bus.fire(('{}_{}'.format(DOMAIN,
+                                              hide_email(email)))[0:32],
+                              {'push_activity': json_payload})
             elif command == 'PUSH_AUDIO_PLAYER_STATE':
                 # Player update
                 serial = (json_payload['dopplerId']['deviceSerialNumber'])
@@ -503,6 +547,15 @@ def setup_alexa(hass, config, login_obj):
                     hass.bus.fire(('{}_{}'.format(DOMAIN,
                                                   hide_email(email)))[0:32],
                                   {'bluetooth_change': bluetooth_state})
+            elif command == 'PUSH_MEDIA_QUEUE_CHANGE':
+                # Player availability update
+                serial = (json_payload['dopplerId']['deviceSerialNumber'])
+                if (serial and serial in existing_serials):
+                    _LOGGER.debug("Updating media_player queue %s",
+                                  json_payload)
+                    hass.bus.fire(('{}_{}'.format(DOMAIN,
+                                                  hide_email(email)))[0:32],
+                                  {'queue_state': json_payload})
             if (serial and serial not in existing_serials
                     and serial not in (hass.data[DATA_ALEXAMEDIA]
                                        ['accounts']
@@ -513,16 +566,40 @@ def setup_alexa(hass, config, login_obj):
                  ['accounts'][email]['new_devices']) = True
                 update_devices(no_throttle=True)
 
+    def ws_open_handler():
+        """Handle websocket open."""
+        email = login_obj.email
+        _LOGGER.debug("%s: Websocket succesfully connected",
+                      hide_email(email))
+        (hass.data[DATA_ALEXAMEDIA]
+         ['accounts'][email]['websocketerror']) = 0  # set errors to 0
+
     def ws_close_handler():
         """Handle websocket close.
 
-        This should attempt to reconnect.
+        This should attempt to reconnect up to 5 times
         """
+        from time import sleep
         email = login_obj.email
-        _LOGGER.debug("%s: Received websocket close; attempting reconnect",
-                      hide_email(email))
-        (hass.data[DATA_ALEXAMEDIA]['accounts']
-         [email]['websocket']) = ws_connect()
+        errors = (hass.data
+                  [DATA_ALEXAMEDIA]['accounts'][email]['websocketerror'])
+        delay = 5*2**errors
+        if (errors < 5):
+            _LOGGER.debug("%s: Websocket closed; reconnect #%i in %is",
+                          hide_email(email),
+                          errors,
+                          delay)
+            sleep(delay)
+            if (not (hass.data
+                     [DATA_ALEXAMEDIA]['accounts'][email]['websocket'])):
+                    (hass.data[DATA_ALEXAMEDIA]['accounts']
+                     [email]['websocket']) = ws_connect()
+        else:
+            _LOGGER.debug("%s: Websocket closed; retries exceeded; polling",
+                          hide_email(email))
+            (hass.data[DATA_ALEXAMEDIA]['accounts']
+             [email]['websocket']) = None
+            update_devices()
 
     def ws_error_handler(message):
         """Handle websocket error.
@@ -532,10 +609,15 @@ def setup_alexa(hass, config, login_obj):
         specification, websockets will issue a close after every error.
         """
         email = login_obj.email
-        _LOGGER.debug("%s: Received websocket error %s",
+        errors = (hass.data[DATA_ALEXAMEDIA]
+                  ['accounts'][email]['websocketerror'])
+        _LOGGER.debug("%s: Received websocket error #%i %s",
                       hide_email(email),
+                      errors,
                       message)
         (hass.data[DATA_ALEXAMEDIA]['accounts'][email]['websocket']) = None
+        (hass.data[DATA_ALEXAMEDIA]
+         ['accounts'][email]['websocketerror']) = errors + 1
     include = config.get(CONF_INCLUDE_DEVICES)
     exclude = config.get(CONF_EXCLUDE_DEVICES)
     scan_interval = config.get(CONF_SCAN_INTERVAL)
@@ -561,6 +643,6 @@ def setup_alexa(hass, config, login_obj):
     # Clear configurator. We delay till here to avoid leaving a modal orphan
     for config_id in hass.data[DATA_ALEXAMEDIA]['accounts'][email]['config']:
         configurator = hass.components.configurator
-        configurator.async_request_done(config_id)
+        configurator.request_done(config_id)
     hass.data[DATA_ALEXAMEDIA]['accounts'][email]['config'] = []
     return True

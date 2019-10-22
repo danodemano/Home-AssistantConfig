@@ -15,7 +15,7 @@
   scan_interval: 604800
   model:
     graph: /root/.homeassistant/tensorflow/frozen_inference_graph.pb
-    # categories:
-    #   - person
-    #   - car
-    #   - truck
+    #categories:
+    #  - person
+    #  - car
+    #  - truck

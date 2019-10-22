@@ -102,18 +102,18 @@
   display_options:
   - market_price_usd
 
-- platform: pi_hole
-  host: 192.168.54.2
-  monitored_conditions:
-  - ads_blocked_today
-  - ads_percentage_today
-  - dns_queries_today
-  - domains_being_blocked
-  - queries_cached
-  - queries_forwarded
-  - unique_clients
-  - unique_domains
-  - clients_ever_seen
+#- platform: pi_hole
+#  host: 192.168.54.2
+#  monitored_conditions:
+#  - ads_blocked_today
+#  - ads_percentage_today
+#  - dns_queries_today
+#  - domains_being_blocked
+#  - queries_cached
+#  - queries_forwarded
+#  - unique_clients
+#  - unique_domains
+#  - clients_ever_seen
 
 - platform: systemmonitor
   resources:
@@ -131,20 +131,20 @@
 
 - platform: moon
 
-- platform: haveibeenpwned
-  email: 
-    - !secret dan_email
-    - !secret shelley_email
+# - platform: haveibeenpwned
+#   email: 
+#     - !secret dan_email
+#     - !secret shelley_email
 
-- platform: pollen
-  zip_code: !secret home_zip
-  monitored_conditions:
-    - allergy_average_forecasted
-    - allergy_average_historical
-    - allergy_index_today
-    - allergy_index_tomorrow
-    - allergy_index_yesterday
-    - disease_average_forecasted
+# - platform: pollen
+#   zip_code: !secret home_zip
+#   monitored_conditions:
+#     - allergy_average_forecasted
+#     - allergy_average_historical
+#     - allergy_index_today
+#     - allergy_index_tomorrow
+#     - allergy_index_yesterday
+#     - disease_average_forecasted
 
 - platform: zestimate
   api_key: !secret zillow_api_key

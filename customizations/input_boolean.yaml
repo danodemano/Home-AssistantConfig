@@ -10,6 +10,9 @@ input_boolean.kids_override:
 input_boolean.kids_mega_override:
   icon: mdi:stop-circle-outline
   emulated_hue_hidden: true
+input_boolean.kids_summer_toggle:
+  icon: mdi:white-balance-sunny
+  emulated_hue_hidden: true
 input_boolean.enable_video_pop:
   icon: mdi:video
   emulated_hue_hidden: true

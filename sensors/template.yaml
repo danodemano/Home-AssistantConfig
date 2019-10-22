@@ -50,6 +50,10 @@
       friendly_name: 'Norbert Light Bulb Power'
       value_template: '{{ states.switch.norbert_light_switch.attributes.power_consumption }}'
       unit_of_measurement: 'W'
+    3d_printer_power:
+      friendly_name: '3D Printer Power'
+      value_template: "{{ state_attr('switch.3d_printer', 'power_consumption') | float }}"
+      unit_of_measurement: 'W'
     anova_is_timer_running:
       friendly_name: 'Is Timer Running'
       value_template: '{{ states.sensor.anova_status.attributes.is_timer_running }}'

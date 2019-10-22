@@ -20,10 +20,10 @@
     kids_xbox: 192.168.51.105
 #- platform: owntracks_http
 #- platform: gpslogger
-- platform: unifi
-  username: !secret unifi_user
-  password: !secret unifi_pass
-  host: 192.168.9.47
-  port: 8443
-  site_id: ihj7qv3c
-  verify_ssl: false
+#- platform: unifi
+#  username: !secret unifi_user
+#  password: !secret unifi_pass
+#  host: 192.168.9.47
+#  port: 8443
+#  site_id: ihj7qv3c
+#  verify_ssl: false

@@ -135,6 +135,14 @@ kids_mega_override_off:
   sequence:
     - service: homeassistant.turn_off
       entity_id: input_boolean.kids_mega_override
+kids_summer_toggle_on:
+  sequence:
+    - service: homeassistant.turn_on
+      entity_id: input_boolean.kids_summer_toggle
+kids_summer_toggle_off:
+  sequence:
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.kids_summer_toggle
 video_pop_on:
   sequence:
     - service: homeassistant.turn_on
@@ -224,3 +232,33 @@ light_loop:
     - service: script.turn_on
       data:
           entity_id: script.light_flash
+
+# Filter change date update script
+furnace_filter_date:
+  alias: Furnace filter change date
+  sequence:
+  - service: variable.set_variable
+    data:
+      variable: furnace_filter
+      value_template: '{{ now() }}'
+  - service: variable.set_variable
+    data:
+      variable: hvac_runtime
+      value_template: "{{ (0 - (states('sensor.cooling_before_last_filter_change') | float) - (states('sensor.heating_before_last_filter_change') | float)) | round(2) }}"
+
+#Doorbell alert that's called from Node-RED
+alert_on_doorbell:
+  alias: Doorbell Alert
+  sequence:
+    - service: notify.dantext
+      data_template:
+          message: 'Doorbell was pressed!'
+          data:
+            images:
+              - /tmp/frontwalk.jpg
+    - service: notify.shelleytext
+      data_template:
+          message: 'Doorbell was pressed!'
+          data:
+            images:
+              - /tmp/frontwalk.jpg

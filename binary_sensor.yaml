@@ -17,7 +17,7 @@
       prob_given_false: 0.2
       platform: 'state'
       to_state: 'home'
-    - entity_id: 'device_tracker.dan_gpslogger'
+    - entity_id: 'device_tracker.dan_gpslogger_2'
       prob_given_true: 0.9
       prob_given_false: 0.4
       platform: 'state'
@@ -37,7 +37,7 @@
       prob_given_false: 0.2
       platform: 'state'
       to_state: 'home'
-    - entity_id: 'device_tracker.shelley_gpslogger'
+    - entity_id: 'device_tracker.shelley_gpslogger_2'
       prob_given_true: 0.9
       prob_given_false: 0.4
       platform: 'state'
@@ -292,6 +292,20 @@
           {%- elif not is_state("sensor.morrow", "No Emergency") -%}
               True
           {%- elif not is_state("sensor.nws_alerts", "0") -%}
+              True
+          {%- else -%}
+              False
+          {%- endif -%}
+
+    #This is used to create a dynamic card on the UI if the 3d printer is in-use
+    3d_printer_in_use:
+      friendly_name: 3D Printer In-use
+      value_template: >-
+          {%- if is_state("switch.3d_printer", "on") -%}
+              True
+          {%- elif is_state("switch.3d_printer_fan", "on") -%}
+              True
+          {%- elif is_state("switch.3d_printer_light", "on") -%}
               True
           {%- else -%}
               False
